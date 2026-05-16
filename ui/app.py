@@ -14,11 +14,6 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
-try:
-    from streamlit_autorefresh import st_autorefresh
-except Exception:
-    st_autorefresh = None
-
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from configs.settings import (
@@ -48,8 +43,6 @@ from ui.components.tables import (
     render_results_table,
     render_top_earnings,
 )
-
-AUTO_REFRESH_SECONDS = 900
 
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
@@ -156,14 +149,6 @@ def _query_db(query_fn, default, *args, **kwargs):
         if not conn:
             return default() if callable(default) else default
         return query_fn(conn, *args, **kwargs)
-
-
-def _wire_auto_refresh():
-    if st_autorefresh:
-        st_autorefresh(
-            interval=AUTO_REFRESH_SECONDS * 1000,
-            key="fo_platform_auto_refresh",
-        )
 
 
 # ── Sidebar ───────────────────────────────────────────────────────────────────
@@ -328,7 +313,6 @@ def _empty_kpis() -> dict:
 # ═══════════════════════════════════════════════════════════════════════════════
 def main():
     _css()
-    _wire_auto_refresh()
 
     conn = _safe_conn()
     if not conn:

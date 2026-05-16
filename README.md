@@ -217,9 +217,8 @@ After full setup, verify each layer:
 - 4:30 PM IST every weekday
 - 8:00 AM IST once on weekends
 
-The Streamlit dashboard reads Neon on each load and auto-refreshes the open
-browser tab every 15 minutes. This only reruns the dashboard; it does not run
-the ingestion pipeline.
+The Streamlit dashboard reads Neon on each load. Use the sidebar refresh button
+if you already have the tab open and want to reload the latest database state.
 
 **To manually trigger a refresh:**
 - GitHub Actions tab → Run workflow, OR
