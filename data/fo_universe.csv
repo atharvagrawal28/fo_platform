@@ -1,0 +1,220 @@
+symbol,company_name_hint,sector,sub_sector,market_cap_tier
+ADANIENT,Adani Enterprises,Diversified,Conglomerate,large
+ADANIPORTS,Adani Ports,Infrastructure,Ports & Logistics,large
+APOLLOHOSP,Apollo Hospitals,Healthcare,Hospitals,large
+ASIANPAINT,Asian Paints,Consumer Goods,Paints,large
+AXISBANK,Axis Bank,Banking,Private Bank,large
+BAJAJ-AUTO,Bajaj Auto,Automobile,Two Wheelers,large
+BAJAJFINSV,Bajaj Finserv,Financial Services,Insurance,large
+BAJFINANCE,Bajaj Finance,Financial Services,NBFC,large
+BHARTIARTL,Bharti Airtel,Telecom,Telecom Services,large
+BPCL,BPCL,Oil & Gas,Refining & Marketing,large
+BRITANNIA,Britannia Industries,Consumer Goods,FMCG,large
+CIPLA,Cipla,Pharmaceuticals,Generics,large
+COALINDIA,Coal India,Metals & Mining,Coal,large
+DIVISLAB,Divis Laboratories,Pharmaceuticals,API,large
+DLF,DLF,Real Estate,Residential,large
+DRREDDY,Dr Reddys Laboratories,Pharmaceuticals,Generics,large
+EICHERMOT,Eicher Motors,Automobile,Two Wheelers,large
+GRASIM,Grasim Industries,Diversified,Conglomerate,large
+HCLTECH,HCL Technologies,Information Technology,IT Services,large
+HDFCAMC,HDFC AMC,Financial Services,Asset Management,large
+HDFCBANK,HDFC Bank,Banking,Private Bank,large
+HDFCLIFE,HDFC Life,Financial Services,Insurance,large
+HEROMOTOCO,Hero MotoCorp,Automobile,Two Wheelers,large
+HINDALCO,Hindalco Industries,Metals & Mining,Aluminium,large
+HINDUNILVR,Hindustan Unilever,Consumer Goods,FMCG,large
+ICICIBANK,ICICI Bank,Banking,Private Bank,large
+ICICIGI,ICICI Lombard,Financial Services,Insurance,large
+ICICIPRULI,ICICI Prudential Life,Financial Services,Insurance,large
+INDUSINDBK,IndusInd Bank,Banking,Private Bank,large
+INFY,Infosys,Information Technology,IT Services,large
+IOC,Indian Oil Corporation,Oil & Gas,Refining & Marketing,large
+ITC,ITC,Consumer Goods,FMCG,large
+JSWSTEEL,JSW Steel,Metals & Mining,Steel,large
+KOTAKBANK,Kotak Mahindra Bank,Banking,Private Bank,large
+LT,Larsen & Toubro,Infrastructure,Engineering & Construction,large
+LTIM,LTIMindtree,Information Technology,IT Services,large
+M&M,Mahindra & Mahindra,Automobile,SUV & Tractors,large
+MARUTI,Maruti Suzuki,Automobile,Passenger Vehicles,large
+NESTLEIND,Nestle India,Consumer Goods,FMCG,large
+NTPC,NTPC,Power,Generation,large
+ONGC,ONGC,Oil & Gas,Exploration & Production,large
+POWERGRID,Power Grid,Power,Transmission,large
+RELIANCE,Reliance Industries,Oil & Gas,Conglomerate,large
+SBILIFE,SBI Life Insurance,Financial Services,Insurance,large
+SBIN,State Bank of India,Banking,Public Bank,large
+SHRIRAMFIN,Shriram Finance,Financial Services,NBFC,large
+TATAMOTORS,Tata Motors,Automobile,Passenger & Commercial,large
+TATASTEEL,Tata Steel,Metals & Mining,Steel,large
+TCS,Tata Consultancy Services,Information Technology,IT Services,large
+TECHM,Tech Mahindra,Information Technology,IT Services,large
+TITAN,Titan Company,Consumer Goods,Jewellery & Watches,large
+TRENT,Trent,Consumer Goods,Retail,large
+ULTRACEMCO,UltraTech Cement,Cement,Cement,large
+ZOMATO,Zomato,Consumer Goods,Food Delivery,large
+AARTIIND,Aarti Industries,Chemicals,Specialty Chemicals,mid
+ABCAPITAL,Aditya Birla Capital,Financial Services,NBFC,mid
+ABFRL,Aditya Birla Fashion,Consumer Goods,Retail,mid
+ACC,ACC,Cement,Cement,mid
+ALKEM,Alkem Laboratories,Pharmaceuticals,Generics,mid
+AMBUJACEM,Ambuja Cements,Cement,Cement,mid
+APOLLOTYRE,Apollo Tyres,Automobile,Tyres,mid
+ASHOKLEY,Ashok Leyland,Automobile,Commercial Vehicles,mid
+ASTRAL,Astral,Infrastructure,Pipes,mid
+ATUL,Atul,Chemicals,Specialty Chemicals,mid
+AUBANK,AU Small Finance Bank,Banking,Small Finance Bank,mid
+AUROPHARMA,Aurobindo Pharma,Pharmaceuticals,Generics,mid
+BALKRISIND,Balkrishna Industries,Automobile,Tyres,mid
+BANDHANBNK,Bandhan Bank,Banking,Private Bank,mid
+BANKBARODA,Bank of Baroda,Banking,Public Bank,mid
+BATAINDIA,Bata India,Consumer Goods,Footwear,mid
+BEL,Bharat Electronics,Defence,Electronics,mid
+BERGEPAINT,Berger Paints,Consumer Goods,Paints,mid
+BHEL,BHEL,Infrastructure,Heavy Engineering,mid
+BIOCON,Biocon,Pharmaceuticals,Biologics,mid
+BOSCHLTD,Bosch,Automobile,Auto Components,mid
+BSOFT,Birlasoft,Information Technology,IT Services,mid
+CANBK,Canara Bank,Banking,Public Bank,mid
+CANFINHOME,Can Fin Homes,Financial Services,Housing Finance,mid
+CASTROLIND,Castrol India,Oil & Gas,Lubricants,mid
+CEATLTD,CEAT,Automobile,Tyres,mid
+CENTRALBK,Central Bank,Banking,Public Bank,mid
+CESC,CESC,Power,Distribution,mid
+CHOLAFIN,Cholamandalam Finance,Financial Services,NBFC,mid
+COFORGE,Coforge,Information Technology,IT Services,mid
+COLPAL,Colgate Palmolive,Consumer Goods,FMCG,mid
+CONCOR,Container Corporation,Infrastructure,Logistics,mid
+COROMANDEL,Coromandel International,Chemicals,Agrochemicals,mid
+CROMPTON,Crompton Greaves Consumer,Consumer Goods,Electricals,mid
+CUB,City Union Bank,Banking,Private Bank,mid
+CUMMINSIND,Cummins India,Infrastructure,Engineering,mid
+DABUR,Dabur India,Consumer Goods,FMCG,mid
+DALBHARAT,Dalmia Bharat,Cement,Cement,mid
+DEEPAKNTR,Deepak Nitrite,Chemicals,Specialty Chemicals,mid
+DELTACORP,Delta Corp,Consumer Goods,Gaming,mid
+DIVI,Divis Laboratories,Pharmaceuticals,API,large
+EICHERMOT,Eicher Motors,Automobile,Two Wheelers,large
+ESCORTS,Escorts Kubota,Automobile,Tractors,mid
+EXIDEIND,Exide Industries,Automobile,Batteries,mid
+FEDERALBNK,Federal Bank,Banking,Private Bank,mid
+FORTIS,Fortis Healthcare,Healthcare,Hospitals,mid
+GAIL,GAIL,Oil & Gas,Gas Distribution,large
+GMRINFRA,GMR Airports,Infrastructure,Airports,mid
+GNFC,GNFC,Chemicals,Fertilizers,mid
+GODREJCP,Godrej Consumer Products,Consumer Goods,FMCG,mid
+GODREJPROP,Godrej Properties,Real Estate,Residential,mid
+GRANULES,Granules India,Pharmaceuticals,Generics,mid
+GSPL,Gujarat State Petronet,Oil & Gas,Gas Distribution,mid
+GUJGASLTD,Gujarat Gas,Oil & Gas,Gas Distribution,mid
+HAL,Hindustan Aeronautics,Defence,Aerospace,large
+HAVELLS,Havells India,Consumer Goods,Electricals,large
+IBULHSGFIN,Indiabulls Housing,Financial Services,Housing Finance,mid
+IDFCFIRSTB,IDFC First Bank,Banking,Private Bank,mid
+IEX,Indian Energy Exchange,Financial Services,Exchange,mid
+IGL,Indraprastha Gas,Oil & Gas,Gas Distribution,mid
+INDHOTEL,Indian Hotels,Consumer Goods,Hospitality,mid
+INDIACEM,India Cements,Cement,Cement,mid
+INDIAMART,IndiaMART,Information Technology,E-Commerce,mid
+INDIANB,Indian Bank,Banking,Public Bank,mid
+INDIGO,IndiGo,Consumer Goods,Aviation,large
+INDUSTOWER,Indus Towers,Telecom,Infrastructure,large
+IPCALAB,IPCA Laboratories,Pharmaceuticals,Generics,mid
+IRCTC,IRCTC,Infrastructure,Railways,large
+JINDALSTEL,Jindal Steel & Power,Metals & Mining,Steel,mid
+JKCEMENT,JK Cement,Cement,Cement,mid
+JSL,Jindal Stainless,Metals & Mining,Steel,mid
+JSWENERGY,JSW Energy,Power,Generation,mid
+JUBLFOOD,Jubilant Foodworks,Consumer Goods,QSR,mid
+JUBLPHARMA,Jubilant Pharmova,Pharmaceuticals,Specialty,mid
+KALPATPOWR,Kalpataru Projects,Infrastructure,Engineering,mid
+KEC,KEC International,Infrastructure,Engineering,mid
+KPITTECH,KPIT Technologies,Information Technology,Auto Tech,mid
+LAURUSLABS,Laurus Labs,Pharmaceuticals,API,mid
+LICHSGFIN,LIC Housing Finance,Financial Services,Housing Finance,mid
+LICI,LIC of India,Financial Services,Insurance,large
+LTTS,L&T Technology Services,Information Technology,IT Services,mid
+LUPIN,Lupin,Pharmaceuticals,Generics,large
+M&MFIN,M&M Financial Services,Financial Services,NBFC,mid
+MANAPPURAM,Manappuram Finance,Financial Services,NBFC,mid
+MARICO,Marico,Consumer Goods,FMCG,large
+MAXHEALTH,Max Healthcare,Healthcare,Hospitals,mid
+MCX,MCX,Financial Services,Exchange,mid
+METROPOLIS,Metropolis Healthcare,Healthcare,Diagnostics,mid
+MFSL,Max Financial Services,Financial Services,Insurance,mid
+MGL,Mahanagar Gas,Oil & Gas,Gas Distribution,mid
+MOTHERSON,Samvardhana Motherson,Automobile,Auto Components,mid
+MPHASIS,Mphasis,Information Technology,IT Services,mid
+MRF,MRF,Automobile,Tyres,large
+MUTHOOTFIN,Muthoot Finance,Financial Services,NBFC,mid
+NATCOPHARM,Natco Pharma,Pharmaceuticals,Generics,mid
+NAUKRI,Info Edge,Information Technology,Internet,large
+NBCC,NBCC,Infrastructure,Construction,mid
+NHPC,NHPC,Power,Hydro,mid
+NMDC,NMDC,Metals & Mining,Iron Ore,mid
+NYKAA,FSN E-Commerce,Consumer Goods,Beauty,mid
+OBEROIRLTY,Oberoi Realty,Real Estate,Residential,mid
+OFSS,Oracle Financial Services,Information Technology,IT Services,large
+PAGEIND,Page Industries,Consumer Goods,Apparel,mid
+PAYTM,One97 Communications,Financial Services,Fintech,mid
+PEL,Piramal Enterprises,Financial Services,Conglomerate,mid
+PERSISTENT,Persistent Systems,Information Technology,IT Services,mid
+PETRONET,Petronet LNG,Oil & Gas,LNG,mid
+PFC,Power Finance Corporation,Financial Services,NBFC,large
+PIDILITIND,Pidilite Industries,Chemicals,Adhesives,large
+PIIND,PI Industries,Chemicals,Agrochemicals,mid
+PNB,Punjab National Bank,Banking,Public Bank,mid
+POLYCAB,Polycab India,Consumer Goods,Electricals,large
+POONAWALLA,Poonawalla Fincorp,Financial Services,NBFC,mid
+PVRINOX,PVR INOX,Consumer Goods,Entertainment,mid
+RAMCOCEM,Ramco Cements,Cement,Cement,mid
+RBLBANK,RBL Bank,Banking,Private Bank,mid
+RECLTD,REC,Financial Services,NBFC,large
+ROUTE,Route Mobile,Information Technology,Cloud Communications,mid
+SAIL,Steel Authority of India,Metals & Mining,Steel,mid
+SCHAEFFLER,Schaeffler India,Automobile,Auto Components,mid
+SHREECEM,Shree Cement,Cement,Cement,large
+SIEMENS,Siemens,Infrastructure,Engineering,large
+SJVN,SJVN,Power,Hydro,mid
+SONACOMS,Sona BLW Precision,Automobile,Auto Components,mid
+SRF,SRF,Chemicals,Specialty Chemicals,mid
+SBICARD,SBI Cards,Financial Services,Cards,large
+SUNPHARMA,Sun Pharmaceutical,Pharmaceuticals,Specialty,large
+SYNGENE,Syngene International,Pharmaceuticals,CRO,mid
+TANLA,Tanla Platforms,Information Technology,Cloud Communications,mid
+TATACHEM,Tata Chemicals,Chemicals,Diversified,mid
+TATACOMM,Tata Communications,Telecom,Data Services,mid
+TATACONSUM,Tata Consumer Products,Consumer Goods,FMCG,large
+TATAELXSI,Tata Elxsi,Information Technology,Design,mid
+TATATECH,Tata Technologies,Information Technology,Engineering,mid
+THERMAX,Thermax,Infrastructure,Engineering,mid
+TIINDIA,Tube Investments,Automobile,Auto Components,mid
+TORNTPHARM,Torrent Pharmaceuticals,Pharmaceuticals,Generics,mid
+TORNTPOWER,Torrent Power,Power,Distribution,mid
+TVSMOTOR,TVS Motor Company,Automobile,Two Wheelers,large
+UBL,United Breweries,Consumer Goods,Beverages,mid
+UNIONBANK,Union Bank of India,Banking,Public Bank,mid
+UNOMINDA,Uno Minda,Automobile,Auto Components,mid
+UPL,UPL,Chemicals,Agrochemicals,large
+VBL,Varun Beverages,Consumer Goods,Beverages,large
+VEDL,Vedanta,Metals & Mining,Diversified,large
+VOLTAS,Voltas,Consumer Goods,AC & Appliances,mid
+WELCORP,Welspun Corp,Infrastructure,Pipes,mid
+WIPRO,Wipro,Information Technology,IT Services,large
+YESBANK,Yes Bank,Banking,Private Bank,mid
+ZEEL,Zee Entertainment,Consumer Goods,Media,mid
+ZYDUSLIFE,Zydus Lifesciences,Pharmaceuticals,Generics,large
+CAMS,CAMS,Financial Services,Fintech,mid
+DELHIVERY,Delhivery,Infrastructure,Logistics,mid
+IRFC,IRFC,Financial Services,NBFC,large
+IREDA,IREDA,Financial Services,NBFC,mid
+JYOTHYLAB,Jyothy Labs,Consumer Goods,FMCG,mid
+NATIONALUM,National Aluminium,Metals & Mining,Aluminium,mid
+RATNAMANI,Ratnamani Metals,Metals & Mining,Pipes,mid
+GPIL,Godawari Power,Metals & Mining,Steel,mid
+JSPL,Jindal Steel & Power,Metals & Mining,Steel,mid
+MOIL,MOIL,Metals & Mining,Manganese,mid
+ELGIEQUIP,Elgi Equipments,Infrastructure,Compressors,mid
+GRINDWELL,Grindwell Norton,Chemicals,Abrasives,mid
+AIAENG,AIA Engineering,Metals & Mining,Engineering,mid
+CHALET,Chalet Hotels,Consumer Goods,Hospitality,mid

@@ -1,0 +1,218 @@
+symbol,sector,sub_sector
+ADANIENT,Diversified,Conglomerate
+ADANIPORTS,Infrastructure,Ports & Logistics
+APOLLOHOSP,Healthcare,Hospitals
+ASIANPAINT,Consumer Goods,Paints
+AXISBANK,Banking,Private Bank
+BAJAJ-AUTO,Automobile,Two Wheelers
+BAJAJFINSV,Financial Services,Insurance Holding
+BAJFINANCE,Financial Services,NBFC
+BHARTIARTL,Telecom,Telecom Services
+BPCL,Oil & Gas,Refining & Marketing
+BRITANNIA,Consumer Goods,FMCG
+CIPLA,Pharmaceuticals,Generics
+COALINDIA,Metals & Mining,Coal
+DIVISLAB,Pharmaceuticals,API
+DLF,Real Estate,Residential
+DRREDDY,Pharmaceuticals,Generics
+EICHERMOT,Automobile,Two Wheelers
+GRASIM,Diversified,Conglomerate
+HCLTECH,Information Technology,IT Services
+HDFCAMC,Financial Services,Asset Management
+HDFCBANK,Banking,Private Bank
+HDFCLIFE,Financial Services,Life Insurance
+HEROMOTOCO,Automobile,Two Wheelers
+HINDALCO,Metals & Mining,Aluminium
+HINDUNILVR,Consumer Goods,FMCG
+ICICIBANK,Banking,Private Bank
+ICICIGI,Financial Services,General Insurance
+ICICIPRULI,Financial Services,Life Insurance
+INDUSINDBK,Banking,Private Bank
+INFY,Information Technology,IT Services
+IOC,Oil & Gas,Refining & Marketing
+ITC,Consumer Goods,FMCG
+JSWSTEEL,Metals & Mining,Steel
+KOTAKBANK,Banking,Private Bank
+LT,Infrastructure,Engineering & Construction
+LTIM,Information Technology,IT Services
+M&M,Automobile,SUV & Tractors
+MARUTI,Automobile,Passenger Vehicles
+NESTLEIND,Consumer Goods,FMCG
+NTPC,Power,Thermal Generation
+ONGC,Oil & Gas,Exploration & Production
+POWERGRID,Power,Transmission
+RELIANCE,Oil & Gas,Conglomerate
+SBILIFE,Financial Services,Life Insurance
+SBIN,Banking,Public Bank
+SHRIRAMFIN,Financial Services,NBFC
+SUNPHARMA,Pharmaceuticals,Specialty
+TATAMOTORS,Automobile,Passenger & Commercial
+TATASTEEL,Metals & Mining,Steel
+TCS,Information Technology,IT Services
+TECHM,Information Technology,IT Services
+TITAN,Consumer Goods,Jewellery & Watches
+TRENT,Consumer Goods,Retail
+ULTRACEMCO,Cement,Cement
+WIPRO,Information Technology,IT Services
+ZOMATO,Consumer Goods,Food Delivery
+AARTIIND,Chemicals,Specialty Chemicals
+ABCAPITAL,Financial Services,NBFC
+ABFRL,Consumer Goods,Retail
+ACC,Cement,Cement
+ALKEM,Pharmaceuticals,Generics
+AMBUJACEM,Cement,Cement
+APOLLOTYRE,Automobile,Tyres
+ASHOKLEY,Automobile,Commercial Vehicles
+ASTRAL,Infrastructure,Pipes
+ATUL,Chemicals,Specialty Chemicals
+AUBANK,Banking,Small Finance Bank
+AUROPHARMA,Pharmaceuticals,Generics
+BALKRISIND,Automobile,Tyres
+BANDHANBNK,Banking,Private Bank
+BANKBARODA,Banking,Public Bank
+BATAINDIA,Consumer Goods,Footwear
+BEL,Defence,Electronics
+BERGEPAINT,Consumer Goods,Paints
+BHEL,Infrastructure,Heavy Engineering
+BIOCON,Pharmaceuticals,Biologics
+BOSCHLTD,Automobile,Auto Components
+BSOFT,Information Technology,IT Services
+CANBK,Banking,Public Bank
+CANFINHOME,Financial Services,Housing Finance
+CASTROLIND,Oil & Gas,Lubricants
+CEATLTD,Automobile,Tyres
+CENTRALBK,Banking,Public Bank
+CESC,Power,Distribution
+CHOLAFIN,Financial Services,NBFC
+COFORGE,Information Technology,IT Services
+COLPAL,Consumer Goods,FMCG
+CONCOR,Infrastructure,Logistics
+COROMANDEL,Chemicals,Agrochemicals
+CROMPTON,Consumer Goods,Electricals
+CUB,Banking,Private Bank
+CUMMINSIND,Infrastructure,Engineering
+DABUR,Consumer Goods,FMCG
+DALBHARAT,Cement,Cement
+DEEPAKNTR,Chemicals,Specialty Chemicals
+ESCORTS,Automobile,Tractors
+EXIDEIND,Automobile,Batteries
+FEDERALBNK,Banking,Private Bank
+FORTIS,Healthcare,Hospitals
+GAIL,Oil & Gas,Gas Distribution
+GLENMARK,Pharmaceuticals,Generics
+GMRINFRA,Infrastructure,Airports
+GNFC,Chemicals,Fertilizers
+GODREJCP,Consumer Goods,FMCG
+GODREJPROP,Real Estate,Residential
+GRANULES,Pharmaceuticals,Generics
+GSPL,Oil & Gas,Gas Distribution
+GUJGASLTD,Oil & Gas,Gas Distribution
+HAL,Defence,Aerospace
+HAVELLS,Consumer Goods,Electricals
+IBULHSGFIN,Financial Services,Housing Finance
+IDFCFIRSTB,Banking,Private Bank
+IEX,Financial Services,Exchange
+IGL,Oil & Gas,Gas Distribution
+INDHOTEL,Consumer Goods,Hospitality
+INDIACEM,Cement,Cement
+INDIAMART,Information Technology,Internet
+INDIANB,Banking,Public Bank
+INDIGO,Consumer Goods,Aviation
+INDUSTOWER,Telecom,Infrastructure
+IPCALAB,Pharmaceuticals,Generics
+IRCTC,Infrastructure,Railways
+IRFC,Financial Services,NBFC
+JINDALSTEL,Metals & Mining,Steel
+JKCEMENT,Cement,Cement
+JSL,Metals & Mining,Steel
+JSWENERGY,Power,Generation
+JUBLFOOD,Consumer Goods,QSR
+JUBLPHARMA,Pharmaceuticals,Specialty
+KALPATPOWR,Infrastructure,Engineering
+KEC,Infrastructure,Engineering
+KPITTECH,Information Technology,Auto Tech
+LAURUSLABS,Pharmaceuticals,API
+LICHSGFIN,Financial Services,Housing Finance
+LICI,Financial Services,Life Insurance
+LTTS,Information Technology,IT Services
+LUPIN,Pharmaceuticals,Generics
+M&MFIN,Financial Services,NBFC
+MANAPPURAM,Financial Services,NBFC
+MARICO,Consumer Goods,FMCG
+MAXHEALTH,Healthcare,Hospitals
+MCX,Financial Services,Exchange
+METROPOLIS,Healthcare,Diagnostics
+MFSL,Financial Services,Insurance
+MGL,Oil & Gas,Gas Distribution
+MOTHERSON,Automobile,Auto Components
+MPHASIS,Information Technology,IT Services
+MRF,Automobile,Tyres
+MUTHOOTFIN,Financial Services,NBFC
+NATCOPHARM,Pharmaceuticals,Generics
+NAUKRI,Information Technology,Internet
+NBCC,Infrastructure,Construction
+NHPC,Power,Hydro
+NMDC,Metals & Mining,Iron Ore
+NYKAA,Consumer Goods,Beauty
+OBEROIRLTY,Real Estate,Residential
+OFSS,Information Technology,IT Services
+PAGEIND,Consumer Goods,Apparel
+PAYTM,Financial Services,Fintech
+PEL,Financial Services,Conglomerate
+PERSISTENT,Information Technology,IT Services
+PETRONET,Oil & Gas,LNG
+PFC,Financial Services,NBFC
+PIDILITIND,Chemicals,Adhesives
+PIIND,Chemicals,Agrochemicals
+PNB,Banking,Public Bank
+POLYCAB,Consumer Goods,Electricals
+POONAWALLA,Financial Services,NBFC
+PVRINOX,Consumer Goods,Entertainment
+RAMCOCEM,Cement,Cement
+RBLBANK,Banking,Private Bank
+RECLTD,Financial Services,NBFC
+ROUTE,Information Technology,Cloud Communications
+SAIL,Metals & Mining,Steel
+SCHAEFFLER,Automobile,Auto Components
+SHREECEM,Cement,Cement
+SIEMENS,Infrastructure,Engineering
+SJVN,Power,Hydro
+SONACOMS,Automobile,Auto Components
+SRF,Chemicals,Specialty Chemicals
+SBICARD,Financial Services,Cards
+SYNGENE,Pharmaceuticals,CRO
+TANLA,Information Technology,Cloud Communications
+TATACHEM,Chemicals,Diversified
+TATACOMM,Telecom,Data Services
+TATACONSUM,Consumer Goods,FMCG
+TATAELXSI,Information Technology,Design
+TATATECH,Information Technology,Engineering
+THERMAX,Infrastructure,Engineering
+TIINDIA,Automobile,Auto Components
+TORNTPHARM,Pharmaceuticals,Generics
+TORNTPOWER,Power,Distribution
+TVSMOTOR,Automobile,Two Wheelers
+UBL,Consumer Goods,Beverages
+UNIONBANK,Banking,Public Bank
+UNOMINDA,Automobile,Auto Components
+UPL,Chemicals,Agrochemicals
+VBL,Consumer Goods,Beverages
+VEDL,Metals & Mining,Diversified
+VOLTAS,Consumer Goods,AC & Appliances
+WELCORP,Infrastructure,Pipes
+YESBANK,Banking,Private Bank
+ZEEL,Consumer Goods,Media
+ZYDUSLIFE,Pharmaceuticals,Generics
+CAMS,Financial Services,Fintech
+DELHIVERY,Infrastructure,Logistics
+JYOTHYLAB,Consumer Goods,FMCG
+NATIONALUM,Metals & Mining,Aluminium
+RATNAMANI,Metals & Mining,Pipes
+GPIL,Metals & Mining,Steel
+JSPL,Metals & Mining,Steel
+MOIL,Metals & Mining,Manganese
+ELGIEQUIP,Infrastructure,Compressors
+GRINDWELL,Chemicals,Abrasives
+AIAENG,Metals & Mining,Engineering
+EIHOTEL,Consumer Goods,Hospitality
+CHALET,Consumer Goods,Hospitality

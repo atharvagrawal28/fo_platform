@@ -1,0 +1,53 @@
+# .github/workflows/pipeline.yml
+# ─────────────────────────────────────────────────────────────────────────────
+# Runs the ingestion pipeline on a market-hours-aware schedule.
+# Uses Playwright + Chromium to bypass NSE/BSE bot detection.
+#
+# IST = UTC + 5:30
+# Market hours: 8 AM to 6 PM IST = 2:30 AM to 12:30 PM UTC
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: Earnings Pipeline
+
+on:
+  schedule:
+    # Market hours: Mon–Fri every 30 min (2:30 AM – 12:30 PM UTC = 8 AM – 6 PM IST)
+    - cron: '30 2-12 * * 1-5'
+    - cron: '0 3-12 * * 1-5'
+    # Off-hours weekdays: every 4 hours
+    - cron: '0 1,13,17,21 * * 1-5'
+    # Weekends: once daily at 8 AM IST
+    - cron: '30 2 * * 0,6'
+
+  # Manual trigger from GitHub Actions tab
+  workflow_dispatch:
+
+jobs:
+  run-pipeline:
+    name: Ingest Earnings Data
+    runs-on: ubuntu-latest
+    timeout-minutes: 15        # Playwright needs more time than plain requests
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      # ── Playwright: install Chromium browser ──────────────────────────────
+      # This downloads the Chromium binary that Playwright controls.
+      # --with-deps installs all OS-level libraries Chromium needs on Ubuntu.
+      - name: Install Playwright Chromium
+        run: playwright install chromium --with-deps
+
+      - name: Run ingestion pipeline
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: python pipeline/run.py
