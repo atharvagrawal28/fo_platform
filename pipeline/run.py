@@ -15,6 +15,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from configs.settings import DATABASE_URL
+from database.bootstrap import bootstrap_database
 from database.connection import get_connection
 from pipeline.enrich import enrich
 from pipeline.fetch import fetch_earnings
@@ -37,6 +38,13 @@ logger = logging.getLogger("pipeline.run")
 def run_pipeline() -> int:
     if not DATABASE_URL:
         logger.error("DATABASE_URL is not set.")
+        return 1
+
+    try:
+        logger.info("Bootstrapping database schema and reference data...")
+        bootstrap_database(DATABASE_URL)
+    except Exception as e:
+        logger.error("Database bootstrap failed: %s", e, exc_info=True)
         return 1
 
     run_id     = generate_run_id()

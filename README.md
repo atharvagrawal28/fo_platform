@@ -20,9 +20,10 @@ fo_platform/
 │   ├── validate.py    ← Explicit validation rules
 │   ├── enrich.py      ← F&O tag, sector, importance score
 │   ├── store.py       ← PostgreSQL upserts + analytics cache
-│   ├── seed.py        ← One-time CSV → DB loader (run once)
+│   ├── seed.py        ← CSV reference data upserts
 │   └── run.py         ← Orchestrator (entry point)
 ├── database/
+│   ├── bootstrap.py   ← Idempotent schema + seed bootstrap
 │   ├── connection.py  ← DB connection utility
 │   ├── queries.py     ← All dashboard SELECT queries
 │   └── migrations/
@@ -37,7 +38,8 @@ fo_platform/
 ├── configs/
 │   └── settings.py    ← All config in one place
 └── .github/workflows/
-    └── pipeline.yml   ← Scheduled ingestion
+    ├── pipeline.yml   ← Scheduled ingestion
+    └── keep_active.yml ← Monthly activity commit
 ```
 
 ---
@@ -92,45 +94,21 @@ Open `.env` in VS Code and paste your Neon connection string:
 DATABASE_URL=postgresql://user:pass@ep-xxx.ap-south-1.aws.neon.tech/neondb?sslmode=require
 ```
 
-#### Step 5: Create database schema (run once)
-```bash
-psql $DATABASE_URL -f database/migrations/001_initial_schema.sql
-```
+#### Step 5: Optional local smoke test
 
-**If `psql` is not installed:**
+For production, you can skip local migration, local seeding, and local scraping.
+The GitHub Actions pipeline now runs `database/bootstrap.py` automatically
+inside `python pipeline/run.py`, so a fresh Neon database is prepared from the
+cloud job before live data is ingested.
 
-Option A — Install it:
-- Windows: Download PostgreSQL installer from postgresql.org (includes psql)
-- Mac: `brew install postgresql`
-- Ubuntu: `sudo apt install postgresql-client`
-
-Option B — Use Neon's built-in SQL editor:
-1. Go to your Neon project dashboard
-2. Click **"SQL Editor"**
-3. Paste the entire contents of `database/migrations/001_initial_schema.sql`
-4. Click **Run**
-
-#### Step 6: Seed reference data (run once)
-```bash
-python pipeline/seed.py
-```
-This loads fo_universe.csv, sector_map.csv, and index membership files
-into PostgreSQL. Takes ~5 seconds.
-
-**Expected output:**
-```
-INFO | fo_universe: loaded 187 rows
-INFO | sector_map: loaded 187 rows
-INFO | ✅ Seed complete.
-```
-
-#### Step 7: Run the pipeline (test it works)
+If you still want to test locally:
 ```bash
 python pipeline/run.py
 ```
 
 **Expected output:**
 ```
+INFO | Bootstrapping database schema and reference data...
 INFO | Pipeline starting | run_id=run_20250514_083022_abc123
 INFO | Step 1/4: Fetching data...
 INFO | ✅ fetch success | source=nse rows=45
@@ -143,9 +121,11 @@ INFO | Store done | upserted=42
 INFO | Pipeline SUCCESS | duration=8.3s rows_stored=42 source=nse
 ```
 
-If NSE is blocked (common from cloud IPs), you'll see BSE fallback or sample data with a warning. That's expected behaviour — the pipeline is working correctly.
+If a local run is blocked by NSE/BSE, ignore the local result and use GitHub
+Actions as the production path. The production pipeline does not depend on your
+residential IP.
 
-#### Step 8: Run the dashboard locally
+#### Step 6: Run the dashboard locally
 ```bash
 streamlit run ui/app.py
 ```
@@ -188,7 +168,8 @@ GitHub Actions will now use this secret when running the pipeline.
 3. Click **"Run workflow"** → **Run workflow** (green button)
 4. Watch the logs — should complete in 60–120 seconds
 
-After this, it runs automatically on the market-hours schedule.
+After this, it runs automatically every weekday at 8:00 AM IST and 4:30 PM IST,
+plus once on weekends at 8:00 AM IST.
 
 ---
 
@@ -221,11 +202,10 @@ After full setup, verify each layer:
 
 | Check | Command / URL | Expected |
 |-------|---------------|----------|
-| DB schema exists | Neon SQL Editor: `\dt` | 6 tables listed |
+| DB bootstrap ran | Actions log | migration + seed logs before ingestion |
 | Reference data seeded | `SELECT COUNT(*) FROM fo_universe` | ~187 rows |
-| Pipeline runs locally | `python pipeline/run.py` | SUCCESS in logs |
+| Pipeline runs in GitHub | Actions tab → Earnings Pipeline | Green checkmark |
 | Dashboard loads locally | `streamlit run ui/app.py` | Opens at :8501 |
-| GitHub Actions runs | Actions tab → pipeline job | Green checkmark |
 | Streamlit Cloud live | your-app.streamlit.app | Dashboard with data |
 
 ---
@@ -233,11 +213,13 @@ After full setup, verify each layer:
 ## Daily Usage (Once Deployed)
 
 **You do nothing.** GitHub Actions runs the pipeline automatically:
-- Every 30 min during Indian market hours (8 AM – 6 PM IST)
-- Every 4 hours off-hours
-- Once daily on weekends
+- 8:00 AM IST every weekday
+- 4:30 PM IST every weekday
+- 8:00 AM IST once on weekends
 
-The Streamlit dashboard always shows the latest data from PostgreSQL.
+The Streamlit dashboard reads Neon on each load and auto-refreshes the open
+browser tab every 15 minutes. This only reruns the dashboard; it does not run
+the ingestion pipeline.
 
 **To manually trigger a refresh:**
 - GitHub Actions tab → Run workflow, OR
@@ -245,8 +227,21 @@ The Streamlit dashboard always shows the latest data from PostgreSQL.
 
 **To update the F&O universe list:**
 1. Edit `data/fo_universe.csv`
-2. Run `python pipeline/seed.py` (safe to re-run, uses upserts)
-3. Commit and push
+2. Commit and push
+3. Run the `Earnings Pipeline` workflow manually, or wait for the next schedule
+
+The pipeline bootstraps and seeds reference data before every ingestion, so the
+CSV change reaches Neon from GitHub without a local `seed.py` run.
+
+**Keep scheduled workflows active:**
+`.github/workflows/keep_active.yml` creates one empty commit on the 1st of each
+month. This is intentionally separate from ingestion so GitHub continues seeing
+repository activity even when you have not pushed code recently.
+
+**Keep Streamlit awake:**
+If you are using Streamlit Community Cloud and want to avoid cold starts, create
+a free UptimeRobot HTTPS monitor for your Streamlit app URL and ping it every
+6 hours. This does not touch Neon data; it only keeps the public dashboard warm.
 
 ---
 
@@ -257,8 +252,8 @@ The Streamlit dashboard always shows the latest data from PostgreSQL.
 | `DATABASE_URL is not set` | Add it to `.env` (local) or Streamlit Secrets (cloud) |
 | `Connection refused` | Check Neon dashboard — project must be active |
 | Pipeline shows "NSE failed" | Normal — BSE fallback activates automatically |
-| Dashboard shows "no data" | Run `python pipeline/run.py` first |
-| `psql: command not found` | Use Neon SQL Editor instead for schema migration |
+| Dashboard shows "no data" | Confirm the GitHub `DATABASE_URL` secret, then manually run `Earnings Pipeline` once |
+| Stale dashboard after idle time | Use the sidebar refresh button; the app also auto-reconnects before each DB query |
 | GitHub Actions job red | Check Actions logs; usually NSE timeout — next run auto-retries |
 | Streamlit Cloud error | Check App logs; usually missing `DATABASE_URL` in secrets |
 

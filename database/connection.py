@@ -67,10 +67,39 @@ def get_streamlit_connection(database_url: str):
     Called inside st.cache_resource in the Streamlit app.
     Returns a persistent connection reused across all Streamlit reruns.
 
-    Streamlit will call this once and cache the result.
-    If the connection drops, call st.cache_resource.clear() to force reconnect.
+    Streamlit reads only. Autocommit avoids long-lived idle transactions on
+    cached dashboard connections, especially when Neon suspends and resumes.
     """
-    return get_connection(database_url)
+    conn = get_connection(database_url)
+    conn.autocommit = True
+    return conn
+
+
+def ensure_connected(conn, database_url: str):
+    """
+    Return a healthy connection, rebuilding stale cached connections.
+
+    Neon free tier can suspend compute while Streamlit keeps a cached psycopg2
+    connection object. The first query after a long idle period may then fail
+    with an OperationalError/InterfaceError. This health check keeps that
+    failure from leaking into dashboard queries.
+    """
+    if not database_url:
+        return None
+
+    if conn is None or getattr(conn, "closed", 1) != 0:
+        logger.info("Opening Streamlit database connection.")
+        return get_streamlit_connection(database_url)
+
+    try:
+        with conn.cursor() as cur:
+            cur.execute("SELECT 1")
+            cur.fetchone()
+        return conn
+    except psycopg2.Error as e:
+        logger.warning("Cached database connection is stale; reconnecting: %s", e)
+        _close_quietly(conn)
+        return get_streamlit_connection(database_url)
 
 
 def run_query_df(conn, sql: str, params=None):
@@ -87,6 +116,20 @@ def run_query_df(conn, sql: str, params=None):
             if not rows:
                 return pd.DataFrame()
             return pd.DataFrame([dict(r) for r in rows])
+    except (psycopg2.OperationalError, psycopg2.InterfaceError):
+        logger.warning("Connection-level query failure. Caller should reconnect.")
+        raise
     except psycopg2.Error as e:
         logger.error("Query failed: %s | SQL: %s", e, sql[:200])
-        return __import__("pandas").DataFrame()
+        try:
+            conn.rollback()
+        except Exception:
+            pass
+        return pd.DataFrame()
+
+
+def _close_quietly(conn) -> None:
+    try:
+        conn.close()
+    except Exception:
+        pass

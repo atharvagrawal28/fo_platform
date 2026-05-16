@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS earnings_calendar (
     company_name     TEXT        NOT NULL,
     symbol           TEXT,
     meeting_type     TEXT        DEFAULT 'Quarterly Results',
-    source           TEXT,                          -- 'nse', 'bse', 'sample'
+    source           TEXT,                          -- 'nse_playwright', 'bse_requests', etc.
     -- Enriched columns (filled by enrich.py)
     sector           TEXT,
     is_fo            BOOLEAN     DEFAULT FALSE,

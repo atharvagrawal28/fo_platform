@@ -14,15 +14,24 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
+try:
+    from streamlit_autorefresh import st_autorefresh
+except Exception:
+    st_autorefresh = None
+
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from configs.settings import DATABASE_URL, LOOKAHEAD_DAYS
-from database.connection import get_streamlit_connection, run_query_df
+from configs.settings import (
+    DATABASE_URL,
+    LOOKAHEAD_DAYS,
+)
+from database.connection import ensure_connected, get_streamlit_connection
 from database.queries import (
     get_daily_distribution,
     get_kpis,
     get_last_pipeline_run,
     get_pipeline_health,
+    get_sector_options,
     get_sector_concentration,
     get_top_earnings,
     get_upcoming_results,
@@ -39,6 +48,8 @@ from ui.components.tables import (
     render_results_table,
     render_top_earnings,
 )
+
+AUTO_REFRESH_SECONDS = 900
 
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
@@ -100,16 +111,59 @@ def _css():
     """, unsafe_allow_html=True)
 
 
-# ── DB connection (cached for entire session) ─────────────────────────────────
+# ── DB connection (cached, health-checked before every query) ─────────────────
 @st.cache_resource
-def _get_conn():
+def _connection_holder():
+    if not DATABASE_URL:
+        return {"conn": None}
+    try:
+        return {"conn": get_streamlit_connection(DATABASE_URL)}
+    except Exception:
+        return {"conn": None}
+
+
+def _safe_conn():
     if not DATABASE_URL:
         return None
+
+    holder = _connection_holder()
     try:
-        return get_streamlit_connection(DATABASE_URL)
+        holder["conn"] = ensure_connected(holder.get("conn"), DATABASE_URL)
+        return holder["conn"]
     except Exception as e:
+        holder["conn"] = None
         st.error(f"❌ Database connection failed: {e}")
         return None
+
+
+def _query_db(query_fn, default, *args, **kwargs):
+    conn = _safe_conn()
+    if not conn:
+        return default() if callable(default) else default
+
+    try:
+        return query_fn(conn, *args, **kwargs)
+    except Exception:
+        holder = _connection_holder()
+        try:
+            if holder.get("conn"):
+                holder["conn"].close()
+        except Exception:
+            pass
+
+        holder["conn"] = None
+        conn = _safe_conn()
+        if not conn:
+            return default() if callable(default) else default
+        return query_fn(conn, *args, **kwargs)
+
+
+def _wire_auto_refresh():
+    if st_autorefresh:
+        st_autorefresh(
+            interval=AUTO_REFRESH_SECONDS * 1000,
+            key="fo_platform_auto_refresh",
+        )
 
 
 # ── Sidebar ───────────────────────────────────────────────────────────────────
@@ -118,17 +172,16 @@ def _sidebar() -> dict:
         st.markdown("## ⚙️ Filters")
         st.markdown("---")
 
-        search  = st.text_input("🔍 Search company", placeholder="e.g. Reliance…")
         fo_only = st.checkbox("F&O stocks only")
         n50_only = st.checkbox("Nifty 50 only")
 
         st.markdown("**Sector**")
-        conn = _get_conn()
+        conn = _safe_conn()
         sector_options = ["All"]
         if conn:
-            sec_df = get_sector_concentration(conn)
+            sec_df = _query_db(get_sector_options, pd.DataFrame)
             if not sec_df.empty:
-                sector_options += sec_df["sector"].tolist()
+                sector_options += sorted(sec_df["sector"].dropna().astype(str).unique())
         selected_sector = st.selectbox("Sector", sector_options, label_visibility="collapsed")
 
         st.markdown("**Date Range**")
@@ -146,7 +199,7 @@ def _sidebar() -> dict:
 
         # Pipeline status mini-panel
         if conn:
-            last = get_last_pipeline_run(conn)
+            last = _query_db(get_last_pipeline_run, {})
             if last:
                 status = last.get("status", "unknown")
                 s_color = "#00C896" if status == "success" else "#FF6B6B"
@@ -164,7 +217,7 @@ def _sidebar() -> dict:
                 )
 
     return dict(
-        search=search, fo_only=fo_only, n50_only=n50_only,
+        search="", fo_only=fo_only, n50_only=n50_only,
         sector=selected_sector, start=start, end=end,
     )
 
@@ -211,7 +264,11 @@ def _apply_filters(df: pd.DataFrame, f: dict) -> pd.DataFrame:
         return df
     d = df.copy()
     if f["search"].strip():
-        d = d[d["company_name"].str.contains(f["search"].strip(), case=False, na=False)]
+        term = f["search"].strip()
+        mask = d["company_name"].str.contains(term, case=False, na=False)
+        if "symbol" in d.columns:
+            mask = mask | d["symbol"].str.contains(term, case=False, na=False)
+        d = d[mask]
     if f["fo_only"]:
         d = d[d["is_fo"] == True]
     if f["n50_only"]:
@@ -246,10 +303,24 @@ DATABASE_URL=postgresql://user:pass@host/db?sslmode=require
 # ── Empty-DB state ────────────────────────────────────────────────────────────
 def _show_empty_db():
     st.warning(
-        "**Database is connected but has no data yet.**\n\n"
-        "Run the pipeline to populate it:\n```bash\npython pipeline/run.py\n```",
+        "**Database is connected, but the cloud pipeline has not written data yet.**\n\n"
+        "No local scraping is needed. Add `DATABASE_URL` as a GitHub Actions "
+        "secret, then trigger **Actions → Earnings Pipeline → Run workflow** "
+        "once. After that, GitHub Actions keeps Neon updated automatically and "
+        "this dashboard auto-refreshes to pick up the next successful run.",
         icon="📭",
     )
+
+
+def _empty_kpis() -> dict:
+    return {
+        "total": 0,
+        "fo_count": 0,
+        "today_count": 0,
+        "week_count": 0,
+        "nifty50_count": 0,
+        "fo_pct": 0.0,
+    }
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -257,20 +328,21 @@ def _show_empty_db():
 # ═══════════════════════════════════════════════════════════════════════════════
 def main():
     _css()
+    _wire_auto_refresh()
 
-    conn = _get_conn()
+    conn = _safe_conn()
     if not conn:
         _show_no_db()
 
     # Load all data
     with st.spinner("Loading from database…"):
-        all_results   = get_upcoming_results(conn)
-        kpis          = get_kpis(conn)
-        daily_dist    = get_daily_distribution(conn)
-        sector_conc   = get_sector_concentration(conn)
-        top_earnings  = get_top_earnings(conn, limit=10)
-        pipeline_logs = get_pipeline_health(conn, limit=10)
-        last_run      = get_last_pipeline_run(conn)
+        all_results   = _query_db(get_upcoming_results, pd.DataFrame)
+        kpis          = _query_db(get_kpis, _empty_kpis)
+        daily_dist    = _query_db(get_daily_distribution, pd.DataFrame)
+        sector_conc   = _query_db(get_sector_concentration, pd.DataFrame)
+        top_earnings  = _query_db(get_top_earnings, pd.DataFrame, limit=10)
+        pipeline_logs = _query_db(get_pipeline_health, pd.DataFrame, limit=10)
+        last_run      = _query_db(get_last_pipeline_run, {})
 
     # Sidebar filters
     filters = _sidebar()
@@ -301,10 +373,18 @@ def main():
         c1, c2 = st.columns([2, 1])
         with c1:
             st.markdown('<div class="sec-head">Daily Breakdown</div>', unsafe_allow_html=True)
-            st.plotly_chart(chart_daily_bar(daily_dist), use_container_width=True)
+            st.plotly_chart(
+                chart_daily_bar(daily_dist),
+                use_container_width=True,
+                key="overview_daily_breakdown",
+            )
         with c2:
             st.markdown('<div class="sec-head">F&O Split</div>', unsafe_allow_html=True)
-            st.plotly_chart(chart_fo_donut(filtered), use_container_width=True)
+            st.plotly_chart(
+                chart_fo_donut(filtered),
+                use_container_width=True,
+                key="overview_fo_split",
+            )
 
         st.markdown('<div class="sec-head">Top Earnings This Week</div>', unsafe_allow_html=True)
         render_top_earnings(top_earnings)
@@ -312,7 +392,13 @@ def main():
     # ── Tab 2: All Results ────────────────────────────────────────────────────
     with t2:
         st.markdown('<div class="sec-head">Upcoming Results</div>', unsafe_allow_html=True)
-        render_results_table(filtered)
+        table_search = st.text_input(
+            "Search company",
+            placeholder="Type company name or symbol...",
+            key="results_inline_search",
+        )
+        table_filtered = _apply_filters(all_results, {**filters, "search": table_search})
+        render_results_table(table_filtered)
 
     # ── Tab 3: F&O Spotlight ─────────────────────────────────────────────────
     with t3:
@@ -362,7 +448,11 @@ def main():
         else:
             sc1, sc2 = st.columns([2, 1])
             with sc1:
-                st.plotly_chart(chart_sector_bar(sector_conc), use_container_width=True)
+                st.plotly_chart(
+                    chart_sector_bar(sector_conc),
+                    use_container_width=True,
+                    key="sectors_concentration",
+                )
             with sc2:
                 st.markdown("**Sector Summary**")
                 display = sector_conc[["sector", "total_count", "fo_count"]].copy()
@@ -370,7 +460,11 @@ def main():
                 st.dataframe(display, use_container_width=True, height=380)
 
             st.markdown('<div class="sec-head">Importance by Date</div>', unsafe_allow_html=True)
-            st.plotly_chart(chart_importance_scatter(filtered), use_container_width=True)
+            st.plotly_chart(
+                chart_importance_scatter(filtered),
+                use_container_width=True,
+                key="sectors_importance_scatter",
+            )
 
     # ── Tab 5: Pipeline Health ────────────────────────────────────────────────
     with t5:

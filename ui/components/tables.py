@@ -91,7 +91,10 @@ def render_top_earnings(df: pd.DataFrame):
 def render_pipeline_health(df: pd.DataFrame, last_run: dict):
     """Pipeline health panel."""
     if not last_run:
-        st.warning("No successful pipeline runs found. Run `python pipeline/run.py` first.")
+        st.warning(
+            "No successful pipeline runs found yet. Trigger the GitHub Actions "
+            "`Earnings Pipeline` workflow once; scheduled runs continue after that."
+        )
         return
 
     # Status summary row

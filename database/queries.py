@@ -145,6 +145,23 @@ def get_sector_concentration(conn, days: int = 7) -> pd.DataFrame:
     return run_query_df(conn, sql)
 
 
+def get_sector_options(conn) -> pd.DataFrame:
+    """All known sectors for dashboard filtering, independent of current results."""
+    sql = """
+        SELECT DISTINCT sector
+        FROM (
+            SELECT sector FROM sector_map WHERE sector IS NOT NULL
+            UNION
+            SELECT sector FROM fo_universe WHERE sector IS NOT NULL
+            UNION
+            SELECT sector FROM earnings_calendar WHERE sector IS NOT NULL
+        ) s
+        WHERE TRIM(sector) <> ''
+        ORDER BY sector
+    """
+    return run_query_df(conn, sql)
+
+
 # ── Daily distribution ────────────────────────────────────────────────────────
 def get_daily_distribution(conn, days: int = 7) -> pd.DataFrame:
     """Results count per day — for bar/timeline charts."""
