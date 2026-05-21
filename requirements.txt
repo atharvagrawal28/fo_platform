@@ -1,27 +1,20 @@
-# F&O Earnings Intelligence Platform — Dependencies
+# F&O Earnings Intelligence Platform - Dependencies
 # Install: pip install -r requirements.txt
-# Then:    playwright install chromium
-# Python:  3.11 or 3.12
+# Python: 3.11 or 3.12
 
-# ── Dashboard ─────────────────────────────────────────────────────────────────
+# Dashboard
 streamlit>=1.35.0
 
-# ── Database ──────────────────────────────────────────────────────────────────
+# Database
 psycopg2-binary>=2.9.9
 
-# ── Data ──────────────────────────────────────────────────────────────────────
+# Data ingestion and parsing
 pandas>=2.2.0
-
-# ── Browser automation (bypasses NSE/BSE bot detection) ──────────────────────
-playwright>=1.44.0
-
-# ── HTTP / scraping fallback ──────────────────────────────────────────────────
 requests>=2.31.0
-beautifulsoup4>=4.12.0
-lxml>=5.1.0
+openpyxl>=3.1.2
 
-# ── Charts ────────────────────────────────────────────────────────────────────
+# Charts
 plotly>=5.20.0
 
-# ── Config ────────────────────────────────────────────────────────────────────
+# Config
 python-dotenv>=1.0.0

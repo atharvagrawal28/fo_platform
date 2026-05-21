@@ -50,7 +50,7 @@ TATASTEEL,Tata Steel,Metals & Mining,Steel,large
 TCS,Tata Consultancy Services,Information Technology,IT Services,large
 TECHM,Tech Mahindra,Information Technology,IT Services,large
 TITAN,Titan Company,Consumer Goods,Jewellery & Watches,large
-TRENT,Trent,Consumer Goods,Retail,large
+TRENT,Trent,Consumer Services,Retail,large
 ULTRACEMCO,UltraTech Cement,Cement,Cement,large
 ZOMATO,Zomato,Consumer Goods,Food Delivery,large
 AARTIIND,Aarti Industries,Chemicals,Specialty Chemicals,mid
@@ -69,7 +69,7 @@ BALKRISIND,Balkrishna Industries,Automobile,Tyres,mid
 BANDHANBNK,Bandhan Bank,Banking,Private Bank,mid
 BANKBARODA,Bank of Baroda,Banking,Public Bank,mid
 BATAINDIA,Bata India,Consumer Goods,Footwear,mid
-BEL,Bharat Electronics,Defence,Electronics,mid
+BEL,Bharat Electronics,Capital Goods,Defence Electronics,large
 BERGEPAINT,Berger Paints,Consumer Goods,Paints,mid
 BHEL,BHEL,Infrastructure,Heavy Engineering,mid
 BIOCON,Biocon,Pharmaceuticals,Biologics,mid
@@ -218,3 +218,6 @@ ELGIEQUIP,Elgi Equipments,Infrastructure,Compressors,mid
 GRINDWELL,Grindwell Norton,Chemicals,Abrasives,mid
 AIAENG,AIA Engineering,Metals & Mining,Engineering,mid
 CHALET,Chalet Hotels,Consumer Goods,Hospitality,mid
+ETERNAL,Eternal,Consumer Services,Food Delivery,large
+JIOFIN,Jio Financial Services,Financial Services,Financial Services,large
+TMPV,Tata Motors Passenger Vehicles,Automobile and Auto Components,Passenger Vehicles,large

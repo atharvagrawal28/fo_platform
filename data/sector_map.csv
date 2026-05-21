@@ -51,7 +51,7 @@ TATASTEEL,Metals & Mining,Steel
 TCS,Information Technology,IT Services
 TECHM,Information Technology,IT Services
 TITAN,Consumer Goods,Jewellery & Watches
-TRENT,Consumer Goods,Retail
+TRENT,Consumer Services,Retail
 ULTRACEMCO,Cement,Cement
 WIPRO,Information Technology,IT Services
 ZOMATO,Consumer Goods,Food Delivery
@@ -71,7 +71,7 @@ BALKRISIND,Automobile,Tyres
 BANDHANBNK,Banking,Private Bank
 BANKBARODA,Banking,Public Bank
 BATAINDIA,Consumer Goods,Footwear
-BEL,Defence,Electronics
+BEL,Capital Goods,Defence Electronics
 BERGEPAINT,Consumer Goods,Paints
 BHEL,Infrastructure,Heavy Engineering
 BIOCON,Pharmaceuticals,Biologics
@@ -216,3 +216,6 @@ GRINDWELL,Chemicals,Abrasives
 AIAENG,Metals & Mining,Engineering
 EIHOTEL,Consumer Goods,Hospitality
 CHALET,Consumer Goods,Hospitality
+ETERNAL,Consumer Services,Food Delivery
+JIOFIN,Financial Services,Financial Services
+TMPV,Automobile and Auto Components,Passenger Vehicles

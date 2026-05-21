@@ -20,11 +20,19 @@ load_dotenv()
 # ── Root paths ────────────────────────────────────────────────────────────────
 ROOT     = Path(__file__).parent.parent
 DATA_DIR = ROOT / "data"
+DATA_RAW_DIR = DATA_DIR / "raw"
 
 # ── Database ──────────────────────────────────────────────────────────────────
 DATABASE_URL = os.environ.get("DATABASE_URL", "")
 
 # ── API endpoints ─────────────────────────────────────────────────────────────
+NSE_BOARD_MEETINGS_PAGE_URL = "https://www.nseindia.com/companies-listing/corporate-filings-board-meetings"
+NSE_BOARD_MEETINGS_CSV_URL  = "https://www.nseindia.com/api/corporate-board-meetings"
+
+BSE_FORTHCOMING_RESULTS_PAGE_URL = "https://www.bseindia.com/corporates/Forth_Results.html?expandable=3"
+BSE_FORTHCOMING_RESULTS_CSV_URL  = "https://api.bseindia.com/BseIndiaAPI/api/DownloadCSV1/w"
+
+# Legacy API constants retained for older local scripts.
 NSE_HOME_URL     = "https://www.nseindia.com"
 NSE_PREFETCH_URL = "https://www.nseindia.com/market-data/upcoming-board-meetings"
 NSE_API_URL      = "https://www.nseindia.com/api/event-calendar"
@@ -33,9 +41,9 @@ BSE_API_URL  = "https://api.bseindia.com/BseIndiaAPI/api/ForwardResults/w"
 BSE_HTML_URL = "https://www.bseindia.com/corporates/forth_results"
 
 # ── Scraper behaviour ─────────────────────────────────────────────────────────
-REQUEST_TIMEOUT   = 20     # seconds
-MAX_RETRIES       = 3
-BACKOFF_BASE      = 2      # exponential: 2s, 4s, 8s
+REQUEST_TIMEOUT   = 30     # seconds
+MAX_RETRIES       = 2
+BACKOFF_BASE      = 2      # capped exponential backoff
 
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "

@@ -96,7 +96,7 @@ DATABASE_URL=postgresql://user:pass@ep-xxx.ap-south-1.aws.neon.tech/neondb?sslmo
 
 #### Step 5: Optional local smoke test
 
-For production, you can skip local migration, local seeding, and local scraping.
+For production, you can skip local migration and local seeding.
 The GitHub Actions pipeline now runs `database/bootstrap.py` automatically
 inside `python pipeline/run.py`, so a fresh Neon database is prepared from the
 cloud job before live data is ingested.

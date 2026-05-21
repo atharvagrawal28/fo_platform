@@ -1,56 +1,48 @@
 """
 pipeline/fetch.py
 -----------------
-Acquisition layer only.
+File-based acquisition layer.
 
-Fetch order:
-  1. NSE Playwright browser context + internal JSON API
-  2. NSE requests fallback + internal JSON API
-  3. BSE Playwright + real Corpforthresults JSON API
-  4. BSE requests fallback + real Corpforthresults JSON API
+Production ingestion now uses official downloadable NSE/BSE CSV files:
+
+  NSE corporate board meetings CSV
+  BSE forthcoming results CSV
+
+No headless-browser tooling, DOM scraping, or selector parsing is required for
+normal production operation.
 """
 
 from __future__ import annotations
 
 import logging
 import random
+import re
 import time
-from datetime import datetime
-from typing import Any, Callable
+import zipfile
+from dataclasses import dataclass
+from datetime import datetime, timedelta
+from pathlib import Path
+from typing import Iterable
 
 import pandas as pd
 import requests
 
 from configs.settings import (
     BACKOFF_BASE,
+    BSE_FORTHCOMING_RESULTS_CSV_URL,
+    BSE_FORTHCOMING_RESULTS_PAGE_URL,
+    DATA_RAW_DIR,
+    MAX_FUTURE_DAYS,
     MAX_RETRIES,
-    NSE_API_URL,
-    NSE_HOME_URL,
-    NSE_PREFETCH_URL,
+    NSE_BOARD_MEETINGS_CSV_URL,
+    NSE_BOARD_MEETINGS_PAGE_URL,
     REQUEST_TIMEOUT,
+    USER_AGENT,
 )
 
 logger = logging.getLogger(__name__)
 
-REALISTIC_USER_AGENT = (
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-    "AppleWebKit/537.36 (KHTML, like Gecko) "
-    "Chrome/136.0.0.0 Safari/537.36"
-)
-
-CHROMIUM_ARGS = [
-    "--disable-http2",
-    "--disable-blink-features=AutomationControlled",
-    "--disable-dev-shm-usage",
-    "--no-sandbox",
-]
-
-PLAYWRIGHT_TIMEOUT_MS = 60_000
-NSE_HOME_TIMEOUT_MS = 15_000
-HUMAN_WAIT_MS = 3_000
-
-BSE_PAGE_URL = "https://www.bseindia.com/corporates/Forth_Results.html?expandable=3"
-BSE_API_URL = "https://api.bseindia.com/BseIndiaAPI/api/Corpforthresults/w"
+OUTPUT_COLS = ["result_date", "company_name", "symbol", "meeting_type", "source"]
 
 RESULT_KEYWORDS = (
     "RESULT",
@@ -61,98 +53,156 @@ RESULT_KEYWORDS = (
     "UNAUDITED",
 )
 
-REQUEST_HEADERS = {
-    "User-Agent": REALISTIC_USER_AGENT,
-    "Accept": "application/json, text/plain, */*",
-    "Accept-Language": "en-US,en;q=0.9",
-    "Connection": "keep-alive",
-}
+CSV_ACCEPT = (
+    "text/csv, application/csv, application/vnd.ms-excel, "
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, "
+    "application/zip, */*"
+)
 
-BROWSER_HEADERS = {
-    "Accept": "application/json, text/plain, */*",
-    "Accept-Language": "en-US,en;q=0.9",
-}
+DOWNLOAD_ATTEMPTS = max(1, min(MAX_RETRIES, 2))
+MIN_DOWNLOAD_BYTES = 80
 
-OUTPUT_COLS = ["result_date", "company_name", "symbol", "meeting_type", "source"]
 
-STEALTH_INIT_SCRIPT = """
-Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
-Object.defineProperty(navigator, 'languages', { get: () => ['en-US', 'en'] });
-Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3, 4, 5] });
-window.chrome = window.chrome || { runtime: {} };
-"""
+@dataclass(frozen=True)
+class DownloadSpec:
+    name: str
+    source: str
+    url: str
+    referer: str
+    params: dict[str, str]
+    suffix: str = ".csv"
+    origin: str | None = None
 
 
 def fetch_earnings() -> tuple[pd.DataFrame, dict]:
+    """
+    Download official exchange files, parse them into the existing normalized
+    dataframe contract, and return metadata consumed by pipeline/run.py.
+    """
     start = datetime.now()
-    fallback_used = False
+    raw_dir = _ensure_raw_dir()
+    frames: list[pd.DataFrame] = []
+    raw_files: list[str] = []
+    failures: list[str] = []
 
-    sources: list[tuple[Callable[[], pd.DataFrame], str, int]] = [
-        (_fetch_nse_playwright, "nse_playwright", 1),
-        (_fetch_nse_requests, "nse_requests", 2),
-        (_fetch_bse_playwright, "bse_playwright", 1),
-        (_fetch_bse_requests, "bse_requests", 2),
-    ]
-
-    for index, (fn, label, attempts) in enumerate(sources):
-        if index:
-            logger.info("Fallback transition | trying source=%s", label)
-
+    for spec in _download_specs():
         try:
-            df = _with_retry(fn, label, attempts)
-            if df is None or df.empty:
-                raise ValueError(f"{label} returned no rows")
-
-            df = _standardize(df, label)
-            if df.empty:
-                raise ValueError(f"{label} returned no parseable dated rows")
-
-            duration = (datetime.now() - start).total_seconds()
-            logger.info(
-                "Fetch success | source=%s rows=%d duration_s=%.2f",
-                label,
-                len(df),
-                duration,
-            )
-            return df, {
-                "source": label,
-                "fallback_used": fallback_used,
-                "rows_fetched": len(df),
-                "fetch_duration_s": round(duration, 2),
-            }
+            path = _download_with_retry(spec, raw_dir)
+            raw_files.append(str(path))
+            frames.append(_parse_file_for_source(path, spec))
         except Exception as exc:
-            logger.warning("source=%s failed: %s", label, _short_error(exc))
-            fallback_used = True
+            failures.append(f"{spec.name}: {_short_error(exc)}")
+            logger.warning(
+                "Official download/parser failed | source=%s error=%s",
+                spec.source,
+                _short_error(exc),
+            )
+
+            cached = _latest_raw_file(raw_dir, spec.name)
+            if cached:
+                try:
+                    logger.info(
+                        "Fallback transition | source=%s using latest local raw file=%s",
+                        spec.source,
+                        cached.name,
+                    )
+                    raw_files.append(str(cached))
+                    frames.append(_parse_file_for_source(cached, spec))
+                except Exception as cached_exc:
+                    logger.warning(
+                        "Cached raw file failed | source=%s file=%s error=%s",
+                        spec.source,
+                        cached.name,
+                        _short_error(cached_exc),
+                    )
+
+    if not frames:
+        duration = (datetime.now() - start).total_seconds()
+        logger.error(
+            "All official file sources failed after %.1fs. Last database snapshot is preserved.",
+            duration,
+        )
+        raise RuntimeError(
+            "Official file ingestion failed. Last valid data preserved in database. "
+            + " | ".join(failures)
+        )
+
+    df = _standardize(pd.concat(frames, ignore_index=True))
+    if df.empty:
+        raise RuntimeError("Official files parsed successfully but produced zero dated result rows.")
 
     duration = (datetime.now() - start).total_seconds()
-    logger.error(
-        "All fetch sources failed after %.1fs. Last valid database snapshot is preserved.",
+    logger.info(
+        "Fetch success | source=official_files rows=%d duration_s=%.2f raw_files=%d",
+        len(df),
         duration,
+        len(raw_files),
     )
-    raise RuntimeError(
-        "All fetch sources failed. Last valid data preserved in database."
-    )
+    return df, {
+        "source": "official_files",
+        "fallback_used": bool(failures),
+        "rows_fetched": len(df),
+        "fetch_duration_s": round(duration, 2),
+        "raw_files": raw_files,
+        "source_failures": failures,
+    }
 
 
-def _with_retry(fn: Callable[[], pd.DataFrame], label: str, attempts: int) -> pd.DataFrame:
-    attempts = max(1, min(attempts, MAX_RETRIES))
+def _download_specs() -> list[DownloadSpec]:
+    today = datetime.today().date()
+    to_date = today + timedelta(days=MAX_FUTURE_DAYS)
+
+    return [
+        DownloadSpec(
+            name="nse_board_meetings",
+            source="nse_official_file",
+            url=NSE_BOARD_MEETINGS_CSV_URL,
+            referer=NSE_BOARD_MEETINGS_PAGE_URL,
+            params={
+                "index": "equities",
+                "from_date": today.strftime("%d-%m-%Y"),
+                "to_date": to_date.strftime("%d-%m-%Y"),
+                "csv": "true",
+            },
+        ),
+        DownloadSpec(
+            name="bse_forthcoming_results",
+            source="bse_official_file",
+            url=BSE_FORTHCOMING_RESULTS_CSV_URL,
+            referer=BSE_FORTHCOMING_RESULTS_PAGE_URL,
+            params={"fromdate": "", "scripcode": "", "todate": ""},
+            origin="https://www.bseindia.com",
+        ),
+    ]
+
+
+def _ensure_raw_dir() -> Path:
+    DATA_RAW_DIR.mkdir(parents=True, exist_ok=True)
+    return DATA_RAW_DIR
+
+
+def _download_with_retry(spec: DownloadSpec, raw_dir: Path) -> Path:
     last_exc: Exception | None = None
-
-    for attempt in range(1, attempts + 1):
+    for attempt in range(1, DOWNLOAD_ATTEMPTS + 1):
         try:
-            logger.info("source=%s attempt=%d/%d starting", label, attempt, attempts)
-            return fn()
+            logger.info(
+                "Official file download starting | source=%s attempt=%d/%d",
+                spec.source,
+                attempt,
+                DOWNLOAD_ATTEMPTS,
+            )
+            return _download_file(spec, raw_dir)
         except Exception as exc:
             last_exc = exc
-            if attempt >= attempts:
+            if attempt >= DOWNLOAD_ATTEMPTS:
                 break
 
             wait = min(5.0, (BACKOFF_BASE ** (attempt - 1)) + random.uniform(0.2, 0.8))
             logger.warning(
-                "source=%s attempt=%d/%d failed: %s | retrying in %.1fs",
-                label,
+                "Official file download retry | source=%s attempt=%d/%d error=%s wait_s=%.1f",
+                spec.source,
                 attempt,
-                attempts,
+                DOWNLOAD_ATTEMPTS,
                 _short_error(exc),
                 wait,
             )
@@ -162,377 +212,271 @@ def _with_retry(fn: Callable[[], pd.DataFrame], label: str, attempts: int) -> pd
     raise last_exc
 
 
-def _fetch_nse_playwright() -> pd.DataFrame:
-    """
-    NSE: create a realistic browser context, try homepage briefly, then fetch
-    the internal JSON API from the browser context. Do not navigate to the
-    board-meetings page because it often hangs.
-    """
-    from playwright.sync_api import Error as PlaywrightError
-    from playwright.sync_api import sync_playwright
-
-    with sync_playwright() as playwright:
-        browser = playwright.chromium.launch(headless=True, args=CHROMIUM_ARGS)
-        logger.info("NSE browser launched")
-
-        try:
-            context = browser.new_context(
-                user_agent=REALISTIC_USER_AGENT,
-                viewport={"width": 1366, "height": 768},
-                locale="en-US",
-            )
-            context.set_extra_http_headers(BROWSER_HEADERS)
-            context.add_init_script(STEALTH_INIT_SCRIPT)
-            logger.info("NSE context created")
-
-            page = context.new_page()
-            page.set_default_timeout(PLAYWRIGHT_TIMEOUT_MS)
-            page.set_default_navigation_timeout(PLAYWRIGHT_TIMEOUT_MS)
-
-            logger.info("NSE page loading | stage=homepage url=%s", NSE_HOME_URL)
-            try:
-                page.goto(
-                    NSE_HOME_URL,
-                    wait_until="domcontentloaded",
-                    timeout=NSE_HOME_TIMEOUT_MS,
-                )
-                logger.info("NSE page loaded | stage=homepage")
-                page.wait_for_timeout(HUMAN_WAIT_MS)
-                logger.info("NSE human-like wait complete | ms=%d", HUMAN_WAIT_MS)
-            except PlaywrightError as exc:
-                logger.warning("NSE homepage load issue: %s", _short_error(exc))
-
-            logger.info("NSE browser context JSON GET | url=%s", NSE_API_URL)
-            payload = _browser_context_json_get(context, NSE_API_URL, "NSE")
-            rows = _parse_nse_rows(_payload_records(payload), "nse_playwright")
-            logger.info("NSE rows extracted | rows=%d", len(rows))
-            return rows
-        finally:
-            browser.close()
-            logger.info("NSE browser closed")
-
-
-def _fetch_nse_requests() -> pd.DataFrame:
-    payload = _requests_json_get(NSE_API_URL, "NSE", referer=NSE_PREFETCH_URL)
-    rows = _parse_nse_rows(_payload_records(payload), "nse_requests")
-    logger.info("NSE rows extracted | source_url=%s rows=%d", NSE_API_URL, len(rows))
-    return rows
-
-
-def _fetch_bse_playwright() -> pd.DataFrame:
-    """
-    BSE live Angular flow:
-      page: https://www.bseindia.com/corporates/Forth_Results.html?expandable=3
-      API:  https://api.bseindia.com/BseIndiaAPI/api/Corpforthresults/w
-    """
-    from playwright.sync_api import Error as PlaywrightError
-    from playwright.sync_api import sync_playwright
-
-    captured: list[tuple[str, Any]] = []
-
-    with sync_playwright() as playwright:
-        browser = playwright.chromium.launch(headless=True, args=CHROMIUM_ARGS)
-        logger.info("BSE browser launched")
-
-        try:
-            context = browser.new_context(
-                user_agent=REALISTIC_USER_AGENT,
-                viewport={"width": 1366, "height": 768},
-                locale="en-US",
-            )
-            context.set_extra_http_headers(
-                {
-                    **BROWSER_HEADERS,
-                    "Origin": "https://www.bseindia.com",
-                    "Referer": BSE_PAGE_URL,
-                }
-            )
-            context.add_init_script(STEALTH_INIT_SCRIPT)
-            logger.info("BSE context created")
-
-            page = context.new_page()
-            page.set_default_timeout(PLAYWRIGHT_TIMEOUT_MS)
-            page.set_default_navigation_timeout(PLAYWRIGHT_TIMEOUT_MS)
-
-            def on_response(response):
-                if "/Corpforthresults/w" not in response.url or response.status != 200:
-                    return
-                try:
-                    data = response.json()
-                    captured.append((response.url, data))
-                    logger.info(
-                        "BSE XHR captured | url=%s rows=%d",
-                        response.url,
-                        len(_payload_records(data)),
-                    )
-                except Exception as exc:
-                    logger.debug("BSE XHR JSON parse failed: %s", exc)
-
-            page.on("response", on_response)
-
-            logger.info("BSE page loading | url=%s", BSE_PAGE_URL)
-            try:
-                page.goto(
-                    BSE_PAGE_URL,
-                    wait_until="networkidle",
-                    timeout=PLAYWRIGHT_TIMEOUT_MS,
-                )
-                logger.info("BSE page loaded")
-                page.wait_for_timeout(HUMAN_WAIT_MS)
-                logger.info("BSE human-like wait complete | ms=%d", HUMAN_WAIT_MS)
-            except PlaywrightError as exc:
-                logger.warning("BSE page load issue: %s", _short_error(exc))
-
-            if captured:
-                payload_url, payload = max(
-                    captured,
-                    key=lambda item: len(_payload_records(item[1])),
-                )
-                logger.info("BSE selected JSON payload | url=%s", payload_url)
-            else:
-                logger.info("BSE XHR not captured naturally; using browser context JSON")
-                payload = _browser_context_json_get(
-                    context,
-                    BSE_API_URL,
-                    "BSE",
-                    extra_headers={
-                        "Origin": "https://www.bseindia.com",
-                        "Referer": BSE_PAGE_URL,
-                    },
-                )
-
-            rows = _parse_bse_rows(_payload_records(payload), "bse_playwright")
-            logger.info("BSE rows extracted | rows=%d", len(rows))
-            return rows
-        finally:
-            browser.close()
-            logger.info("BSE browser closed")
-
-
-def _fetch_bse_requests() -> pd.DataFrame:
-    payload = _requests_json_get(
-        BSE_API_URL,
-        "BSE",
-        referer=BSE_PAGE_URL,
-        extra_headers={"Origin": "https://www.bseindia.com"},
-    )
-    rows = _parse_bse_rows(_payload_records(payload), "bse_requests")
-    logger.info("BSE rows extracted | source_url=%s rows=%d", BSE_API_URL, len(rows))
-    return rows
-
-
-def _browser_context_json_get(
-    context: Any,
-    url: str,
-    label: str,
-    extra_headers: dict[str, str] | None = None,
-) -> Any:
-    headers = dict(REQUEST_HEADERS)
-    if extra_headers:
-        headers.update(extra_headers)
-
-    response = context.request.get(url, headers=headers, timeout=PLAYWRIGHT_TIMEOUT_MS)
-    logger.info(
-        "%s browser context response | status=%s content_type=%s",
-        label,
-        response.status,
-        response.headers.get("content-type", ""),
-    )
-    if response.status >= 400:
-        raise ValueError(f"{label} browser context JSON GET failed: HTTP {response.status}")
-    return response.json()
-
-
-def _requests_json_get(
-    url: str,
-    label: str,
-    referer: str,
-    extra_headers: dict[str, str] | None = None,
-) -> Any:
-    headers = {**REQUEST_HEADERS, "Referer": referer}
-    if extra_headers:
-        headers.update(extra_headers)
+def _download_file(spec: DownloadSpec, raw_dir: Path) -> Path:
+    headers = {
+        "User-Agent": USER_AGENT,
+        "Accept": CSV_ACCEPT,
+        "Accept-Language": "en-US,en;q=0.9",
+        "Referer": spec.referer,
+        "Connection": "keep-alive",
+    }
+    if spec.origin:
+        headers["Origin"] = spec.origin
 
     session = requests.Session()
     session.headers.update(headers)
 
-    time.sleep(random.uniform(0.4, 1.2))
-    logger.info("%s requests JSON GET | url=%s", label, url)
-    response = session.get(url, timeout=REQUEST_TIMEOUT)
+    response = session.get(spec.url, params=spec.params, timeout=REQUEST_TIMEOUT)
+    content_type = response.headers.get("content-type", "")
     logger.info(
-        "%s requests response | status=%s content_type=%s bytes=%d",
-        label,
+        "Official file response | source=%s status=%s content_type=%s bytes=%d",
+        spec.source,
         response.status_code,
-        response.headers.get("content-type", ""),
+        content_type,
         len(response.content),
     )
     response.raise_for_status()
 
+    if len(response.content) < MIN_DOWNLOAD_BYTES:
+        raise ValueError(f"{spec.source} returned too few bytes")
+
+    body_start = response.content[:80].lstrip().lower()
+    if body_start.startswith(b"<html") or body_start.startswith(b"<!doctype"):
+        raise ValueError(f"{spec.source} returned HTML instead of a downloadable file")
+
+    suffix = _suffix_from_response(response, spec.suffix)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    path = raw_dir / f"{spec.name}_{timestamp}{suffix}"
+    tmp_path = path.with_suffix(path.suffix + ".tmp")
+    tmp_path.write_bytes(response.content)
+    tmp_path.replace(path)
+
+    logger.info(
+        "Official raw file saved | source=%s file=%s bytes=%d",
+        spec.source,
+        path,
+        path.stat().st_size,
+    )
+    return path
+
+
+def _suffix_from_response(response: requests.Response, default: str) -> str:
+    disposition = response.headers.get("content-disposition", "")
+    match = re.search(r"filename\*?=(?:UTF-8''|\"?)([^\";]+)", disposition, re.I)
+    if match:
+        suffix = Path(match.group(1).strip()).suffix.lower()
+        if suffix in {".csv", ".xlsx", ".zip"}:
+            return suffix
+
     content_type = response.headers.get("content-type", "").lower()
-    body_start = response.text.lstrip()[:1]
-    if "json" not in content_type and body_start not in {"[", "{"}:
-        raise ValueError(
-            f"{label} requests expected JSON but got content-type={content_type!r}"
-        )
-
-    return response.json()
+    if "spreadsheet" in content_type:
+        return ".xlsx"
+    if "zip" in content_type:
+        return ".zip"
+    return default
 
 
-def _payload_records(payload: Any) -> list[dict[str, Any]]:
-    if isinstance(payload, list):
-        return [row for row in payload if isinstance(row, dict)]
-
-    if isinstance(payload, dict):
-        for key in ("data", "Table", "results", "Table1"):
-            value = payload.get(key)
-            if isinstance(value, list):
-                return [row for row in value if isinstance(row, dict)]
-
-        for value in payload.values():
-            if isinstance(value, list) and value and isinstance(value[0], dict):
-                return value
-
-    return []
+def _latest_raw_file(raw_dir: Path, name: str) -> Path | None:
+    candidates = [
+        p for p in raw_dir.glob(f"{name}_*")
+        if p.suffix.lower() in {".csv", ".xlsx", ".zip"}
+    ]
+    if not candidates:
+        return None
+    return max(candidates, key=lambda p: p.stat().st_mtime)
 
 
-def _parse_nse_rows(records: list[dict[str, Any]], source: str) -> pd.DataFrame:
-    rows: list[dict[str, Any]] = []
+def _parse_file_for_source(path: Path, spec: DownloadSpec) -> pd.DataFrame:
+    raw_df = _read_structured_file(path)
+    logger.info(
+        "Raw file loaded | source=%s file=%s rows=%d cols=%d",
+        spec.source,
+        path.name,
+        len(raw_df),
+        len(raw_df.columns),
+    )
 
-    for item in records:
-        purpose = _first_text(item, "purpose", "bm_desc", "eventName", "event")
-        description = _first_text(item, "bm_desc", "description", "details")
-        result_text = f"{purpose} {description}".upper()
-        if not any(keyword in result_text for keyword in RESULT_KEYWORDS):
-            continue
+    if spec.source == "nse_official_file":
+        parsed = _parse_nse_board_meetings(raw_df, spec.source)
+    elif spec.source == "bse_official_file":
+        parsed = _parse_bse_forthcoming_results(raw_df, spec.source)
+    else:
+        raise ValueError(f"Unsupported official source: {spec.source}")
 
-        result_date = _first_text(
-            item,
-            "date",
-            "bm_date",
-            "bmDate",
-            "meeting_date",
-            "meetingDate",
-        )
-        company_name = _first_text(item, "company", "companyName", "nm", "name")
-        symbol = _first_text(item, "symbol", "sym", "scripCode", "scrip_code")
-
-        if not result_date or not company_name:
-            continue
-
-        rows.append(
-            {
-                "result_date": result_date,
-                "company_name": company_name,
-                "symbol": symbol.upper(),
-                "meeting_type": purpose or "Financial Results",
-                "source": source,
-            }
-        )
-
-    logger.info("NSE parser | raw_rows=%d result_rows=%d", len(records), len(rows))
-    if not rows:
-        raise ValueError("NSE JSON captured but zero results-related rows found")
-
-    return pd.DataFrame(rows)
+    logger.info(
+        "Rows extracted | source=%s file=%s rows=%d",
+        spec.source,
+        path.name,
+        len(parsed),
+    )
+    return parsed
 
 
-def _parse_bse_rows(records: list[dict[str, Any]], source: str) -> pd.DataFrame:
-    rows: list[dict[str, Any]] = []
-
-    for item in records:
-        result_date = _first_text(
-            item,
-            "meeting_date",
-            "MEETING_DATE",
-            "Date",
-            "result_date",
-        )
-        company_name = _first_text(
-            item,
-            "Long_Name",
-            "long_name",
-            "COMPANY_NAME",
-            "Company",
-            "short_name",
-        )
-        symbol = _first_text(
-            item,
-            "short_name",
-            "Symbol",
-            "SCRIP_ID",
-            "scrip_id",
-            "scrip_Code",
-            "SCRIP_CD",
-        )
-
-        if not result_date or not company_name:
-            continue
-
-        rows.append(
-            {
-                "result_date": result_date,
-                "company_name": company_name,
-                "symbol": symbol.upper(),
-                "meeting_type": "Forthcoming Results",
-                "source": source,
-            }
-        )
-
-    logger.info("BSE parser | raw_rows=%d result_rows=%d", len(records), len(rows))
-    if not rows:
-        raise ValueError("BSE JSON captured but zero forthcoming-results rows found")
-
-    return pd.DataFrame(rows)
+def _read_structured_file(path: Path) -> pd.DataFrame:
+    suffix = path.suffix.lower()
+    if suffix == ".zip":
+        return _read_zip_file(path)
+    if suffix == ".xlsx":
+        return pd.read_excel(path, engine="openpyxl")
+    if suffix == ".csv":
+        return _read_csv_file(path)
+    raise ValueError(f"Unsupported raw file extension: {path.suffix}")
 
 
-def _first_text(item: dict[str, Any], *keys: str) -> str:
-    for key in keys:
-        value = item.get(key)
-        if value is not None and str(value).strip():
-            return str(value).strip()
-    return ""
+def _read_zip_file(path: Path) -> pd.DataFrame:
+    extract_dir = path.parent / "extracted" / path.stem
+    extract_dir.mkdir(parents=True, exist_ok=True)
+
+    with zipfile.ZipFile(path) as zf:
+        members = [
+            m for m in zf.namelist()
+            if Path(m).suffix.lower() in {".csv", ".xlsx"}
+            and not m.endswith("/")
+        ]
+        if not members:
+            raise ValueError(f"No CSV/XLSX file found inside {path.name}")
+
+        member = members[0]
+        target = extract_dir / Path(member).name
+        target.write_bytes(zf.read(member))
+        logger.info("ZIP member extracted | zip=%s member=%s target=%s", path.name, member, target)
+        return _read_structured_file(target)
+
+
+def _read_csv_file(path: Path) -> pd.DataFrame:
+    last_exc: Exception | None = None
+    for encoding in ("utf-8-sig", "utf-8", "cp1252", "latin1"):
+        try:
+            return pd.read_csv(path, encoding=encoding)
+        except UnicodeDecodeError as exc:
+            last_exc = exc
+        except pd.errors.ParserError:
+            try:
+                return pd.read_csv(
+                    path,
+                    encoding=encoding,
+                    engine="python",
+                    on_bad_lines="skip",
+                )
+            except Exception as exc:
+                last_exc = exc
+    assert last_exc is not None
+    raise last_exc
+
+
+def _parse_nse_board_meetings(df: pd.DataFrame, source: str) -> pd.DataFrame:
+    d = _clean_dataframe(df)
+    _require_any(d, "nse", ["symbol"], ["company_name"], ["meeting_date"])
+
+    purpose = _text_series(d, "purpose")
+    details = _text_series(d, "details")
+    result_text = (purpose + " " + details).str.upper()
+    mask = result_text.apply(lambda value: any(keyword in value for keyword in RESULT_KEYWORDS))
+    d = d[mask].copy()
+
+    if d.empty:
+        raise ValueError("NSE file contained no financial-results board-meeting rows")
+
+    return pd.DataFrame(
+        {
+            "result_date": _text_series(d, "meeting_date"),
+            "company_name": _text_series(d, "company_name"),
+            "symbol": _text_series(d, "symbol"),
+            "meeting_type": purpose.reindex(d.index).fillna("Financial Results"),
+            "source": source,
+        }
+    )
+
+
+def _parse_bse_forthcoming_results(df: pd.DataFrame, source: str) -> pd.DataFrame:
+    d = _clean_dataframe(df)
+    _require_any(d, "bse", ["company_name"], ["result_date"], ["security_name", "symbol"])
+
+    symbol_col = "security_name" if "security_name" in d.columns else "symbol"
+    return pd.DataFrame(
+        {
+            "result_date": _text_series(d, "result_date"),
+            "company_name": _text_series(d, "company_name"),
+            "symbol": _text_series(d, symbol_col),
+            "meeting_type": "Forthcoming Results",
+            "source": source,
+        }
+    )
+
+
+def _clean_dataframe(df: pd.DataFrame) -> pd.DataFrame:
+    d = df.copy()
+    d.columns = _dedupe_columns(_clean_col(col) for col in d.columns)
+    return d
+
+
+def _clean_col(value: object) -> str:
+    cleaned = str(value).replace("\ufeff", "").strip().lower()
+    cleaned = re.sub(r"[^a-z0-9]+", "_", cleaned)
+    return cleaned.strip("_")
+
+
+def _dedupe_columns(columns: Iterable[str]) -> list[str]:
+    seen: dict[str, int] = {}
+    result: list[str] = []
+    for col in columns:
+        base = col or "unnamed"
+        count = seen.get(base, 0)
+        result.append(base if count == 0 else f"{base}_{count}")
+        seen[base] = count + 1
+    return result
+
+
+def _require_any(df: pd.DataFrame, label: str, *groups: list[str]) -> None:
+    missing = ["/".join(group) for group in groups if not any(col in df.columns for col in group)]
+    if missing:
+        raise ValueError(f"{label} raw file missing required columns: {', '.join(missing)}")
+
+
+def _text_series(df: pd.DataFrame, column: str) -> pd.Series:
+    if column not in df.columns:
+        return pd.Series([""] * len(df), index=df.index, dtype="object")
+    return df[column].fillna("").astype(str).str.strip()
+
+
+def _standardize(df: pd.DataFrame) -> pd.DataFrame:
+    d = df.copy()
+    for col in OUTPUT_COLS:
+        if col not in d.columns:
+            d[col] = ""
+
+    d["result_date"] = _parse_dates(d["result_date"])
+    bad_dates = d["result_date"].isna().sum()
+    if bad_dates:
+        logger.warning("Dropping rows with invalid result_date | rows=%d", bad_dates)
+        d = d.dropna(subset=["result_date"])
+
+    d["company_name"] = d["company_name"].fillna("").astype(str).str.strip()
+    d = d[d["company_name"].astype(bool)]
+
+    d["symbol"] = (
+        d["symbol"]
+        .fillna("")
+        .astype(str)
+        .str.upper()
+        .str.replace(r"\s+", "", regex=True)
+        .str.strip()
+    )
+    d["meeting_type"] = d["meeting_type"].fillna("").astype(str).str.strip()
+    d["meeting_type"] = d["meeting_type"].replace("", "Financial Results")
+    d["source"] = d["source"].fillna("official_files").astype(str).str.strip()
+
+    d = d.drop_duplicates(subset=["result_date", "company_name", "symbol"])
+    logger.info("Standardized official file rows | rows=%d", len(d))
+    return d[OUTPUT_COLS].reset_index(drop=True)
 
 
 def _short_error(exc: Exception) -> str:
     return " ".join(str(exc).split())[:500]
 
 
-def _standardize(df: pd.DataFrame, source: str) -> pd.DataFrame:
-    df = df.copy()
-    df.columns = [str(c).strip().lower().replace(" ", "_") for c in df.columns]
-
-    rename = {
-        "board_meeting_date": "result_date",
-        "date": "result_date",
-        "meeting_date": "result_date",
-        "bm_date": "result_date",
-        "company": "company_name",
-        "name": "company_name",
-        "short_name": "company_name",
-        "long_name": "company_name",
-        "scrip_name": "company_name",
-        "purpose": "meeting_type",
-        "agenda": "meeting_type",
-        "scrip_cd": "symbol",
-        "scrip_code": "symbol",
-    }
-    df = df.rename(columns={k: v for k, v in rename.items() if k in df.columns})
-
-    for col in OUTPUT_COLS:
-        if col not in df.columns:
-            df[col] = "" if col != "source" else source
-
-    df["result_date"] = pd.to_datetime(
-        df["result_date"],
-        dayfirst=True,
-        errors="coerce",
-    )
-    df = df.dropna(subset=["result_date"])
-    df["company_name"] = df["company_name"].astype(str).str.strip()
-    df = df[df["company_name"].astype(bool)]
-    df["symbol"] = df["symbol"].astype(str).str.upper().str.strip()
-    df["meeting_type"] = df["meeting_type"].astype(str).str.strip()
-    df["source"] = source
-
-    logger.info("Standardized rows | source=%s rows=%d", source, len(df))
-    return df[OUTPUT_COLS].reset_index(drop=True)
+def _parse_dates(values: pd.Series) -> pd.Series:
+    try:
+        return pd.to_datetime(values, dayfirst=True, errors="coerce", format="mixed")
+    except TypeError:
+        return pd.to_datetime(values, dayfirst=True, errors="coerce")

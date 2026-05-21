@@ -157,6 +157,7 @@ def _sidebar() -> dict:
         st.markdown("## ⚙️ Filters")
         st.markdown("---")
 
+        auto_refresh = st.checkbox("Auto-refresh", value=True)
         fo_only = st.checkbox("F&O stocks only")
         n50_only = st.checkbox("Nifty 50 only")
 
@@ -204,16 +205,50 @@ def _sidebar() -> dict:
     return dict(
         search="", fo_only=fo_only, n50_only=n50_only,
         sector=selected_sector, start=start, end=end,
+        auto_refresh=auto_refresh,
     )
 
 
 # ── Header ────────────────────────────────────────────────────────────────────
+def _run_timestamp(last_run: dict) -> pd.Timestamp | None:
+    if not last_run:
+        return None
+    raw = last_run.get("completed_at") or last_run.get("started_at")
+    if not raw:
+        return None
+    ts = pd.to_datetime(raw, errors="coerce")
+    if pd.isna(ts):
+        return None
+    return ts
+
+
+def _run_age_hours(last_run: dict) -> float | None:
+    ts = _run_timestamp(last_run)
+    if ts is None:
+        return None
+    now = pd.Timestamp.now(tz=ts.tz) if ts.tzinfo else pd.Timestamp.now()
+    return max(0.0, (now - ts).total_seconds() / 3600)
+
+
+def _auto_refresh(seconds: int = 300):
+    st.markdown(
+        f'<meta http-equiv="refresh" content="{seconds}">',
+        unsafe_allow_html=True,
+    )
+
+
 def _header(last_run: dict):
     ts = "—"
-    if last_run and last_run.get("started_at"):
-        ts = pd.to_datetime(last_run["started_at"]).strftime("%d %b %Y, %H:%M IST")
+    run_ts = _run_timestamp(last_run)
+    if run_ts is not None:
+        ts = run_ts.strftime("%d %b %Y, %H:%M IST")
     source = last_run.get("source_used", "—") if last_run else "—"
     rows   = last_run.get("rows_stored", 0) if last_run else 0
+    age_hours = _run_age_hours(last_run)
+    is_stale = age_hours is not None and age_hours > 36
+    freshness = "STALE DATA" if is_stale else "CURRENT DATA"
+    freshness_color = "#FFB347" if is_stale else "#00C896"
+    age_text = "unknown age" if age_hours is None else f"{age_hours:.1f}h old"
 
     st.markdown(
         f"""
@@ -231,11 +266,17 @@ def _header(last_run: dict):
                              color:#00D4FF;padding:2px 10px;
                              border-radius:20px;font-size:.7rem;
                              font-weight:600;letter-spacing:.08em">LIVE DB</span>
+                <span style="display:inline-block;margin-left:6px;
+                             background:rgba(255,179,71,.10);
+                             border:1px solid {freshness_color};
+                             color:{freshness_color};padding:2px 10px;
+                             border-radius:20px;font-size:.7rem;
+                             font-weight:600;letter-spacing:.08em">{freshness}</span>
             </div>
             <div style="font-size:0.75rem;color:#8B8FA8;
                         font-family:'IBM Plex Mono',monospace;text-align:right">
-                Last refresh: {ts}<br>
-                Source: {source} &nbsp;|&nbsp; {rows} rows in DB
+                Last successful update: {ts}<br>
+                Source: {source} &nbsp;|&nbsp; {rows} rows in DB &nbsp;|&nbsp; {age_text}
             </div>
         </div>
         """,
@@ -295,6 +336,7 @@ def _show_empty_db():
         "this dashboard auto-refreshes to pick up the next successful run.",
         icon="📭",
     )
+    st.stop()
 
 
 def _empty_kpis() -> dict:
@@ -330,6 +372,8 @@ def main():
 
     # Sidebar filters
     filters = _sidebar()
+    if filters.get("auto_refresh"):
+        _auto_refresh()
 
     # Header
     _header(last_run)

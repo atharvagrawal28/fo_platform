@@ -1,6 +1,5 @@
 # .github/workflows/pipeline.yml
-# Runs ingestion from GitHub-hosted runners so local residential IP blocking
-# does not affect the production database.
+# Runs official-file ingestion from GitHub-hosted runners.
 
 name: Earnings Pipeline
 
@@ -40,9 +39,6 @@ jobs:
 
       - name: Install Python dependencies
         run: pip install -r requirements.txt
-
-      - name: Install Playwright Chromium
-        run: playwright install chromium --with-deps
 
       - name: Bootstrap database and run ingestion pipeline
         env:
