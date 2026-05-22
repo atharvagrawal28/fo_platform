@@ -174,10 +174,10 @@ def _sidebar(sector_opts: pd.DataFrame, last_run: dict) -> dict:
                 unsafe_allow_html=True,
             )
 
-    return dict(
-        search="", fo_only=fo_only, n50_only=n50_only,
-        sector=selected_sector, start=start, end=end,
-    )
+    return {
+        "search": "", "fo_only": fo_only, "n50_only": n50_only,
+        "sector": selected_sector, "start": start, "end": end,
+    }
 
 
 # ── Header ────────────────────────────────────────────────────────────────────
