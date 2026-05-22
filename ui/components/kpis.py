@@ -1,16 +1,67 @@
-"""ui/components/kpis.py — KPI card rendering."""
+"""ui/components/kpis.py — KPI card rendering.
+
+Five distinct, non-overlapping cards. The previous version showed
+"Total" and "This Week" with the same SQL filter, so both cards always
+held the same number — making the row useless. Each card below has a
+strict definition and a date-range subtitle so the meaning is obvious.
+"""
+
+from datetime import datetime, timedelta
 
 import streamlit as st
 
 
 def render_kpi_row(kpis: dict):
+    today = datetime.today().date()
+    week_end = today + timedelta(days=6)
+    next_week_start = today + timedelta(days=7)
+    next_week_end = today + timedelta(days=13)
+    lookahead = int(kpis.get("lookahead_days", 7))
+
+    fmt = "%d %b"
+
     c1, c2, c3, c4, c5 = st.columns(5)
-    _card(c1, "Total Results",    kpis["total"],         "📋", "#00D4FF")
-    _card(c2, "F&O Companies",    kpis["fo_count"],      "🎯", "#00C896",
-          sub=f"{kpis['fo_pct']}% of total")
-    _card(c3, "Nifty 50",         kpis["nifty50_count"], "🏆", "#FFB347")
-    _card(c4, "Due Today",        kpis["today_count"],   "🔴", "#FF6B6B")
-    _card(c5, "This Week",        kpis["week_count"],    "📅", "#A78BFA")
+
+    _card(
+        c1,
+        label="Due Today",
+        value=kpis.get("today_count", 0),
+        icon="🔴",
+        color="#FF6B6B",
+        sub=today.strftime(fmt),
+    )
+    _card(
+        c2,
+        label="Tomorrow",
+        value=kpis.get("tomorrow_count", 0),
+        icon="🟡",
+        color="#FFB347",
+        sub=(today + timedelta(days=1)).strftime(fmt),
+    )
+    _card(
+        c3,
+        label="This Week",
+        value=kpis.get("week_count", 0),
+        icon="📅",
+        color="#00D4FF",
+        sub=f"{today.strftime(fmt)} → {week_end.strftime(fmt)}",
+    )
+    _card(
+        c4,
+        label="F&O Coverage",
+        value=kpis.get("fo_count", 0),
+        icon="🎯",
+        color="#00C896",
+        sub=f"{kpis.get('fo_pct', 0)}% of {kpis.get('total', 0)} in {lookahead}d",
+    )
+    _card(
+        c5,
+        label="Nifty 50",
+        value=kpis.get("nifty50_count", 0),
+        icon="🏆",
+        color="#A78BFA",
+        sub=f"Bank Nifty: {kpis.get('banknifty_count', 0)}",
+    )
 
 
 def _card(col, label: str, value, icon: str, color: str, sub: str = ""):
@@ -32,7 +83,7 @@ def _card(col, label: str, value, icon: str, color: str, sub: str = ""):
                 <div style="font-size:0.72rem;color:#8B8FA8;
                             text-transform:uppercase;letter-spacing:.07em;
                             margin-top:5px">{label}</div>
-                {"<div style='font-size:0.72rem;color:" + color + ";margin-top:3px'>" + sub + "</div>" if sub else ""}
+                {"<div style='font-size:0.7rem;color:" + color + ";margin-top:3px;font-family:IBM Plex Mono,monospace'>" + sub + "</div>" if sub else ""}
             </div>
             """,
             unsafe_allow_html=True,

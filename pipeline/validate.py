@@ -10,6 +10,7 @@ Philosophy:
 """
 
 import logging
+import re
 from datetime import datetime, timedelta
 
 import pandas as pd
@@ -17,6 +18,28 @@ import pandas as pd
 from configs.settings import MAX_DUPLICATE_PCT, MAX_FUTURE_DAYS, MIN_ROWS
 
 logger = logging.getLogger(__name__)
+
+
+# ── Canonical company-name normalization ──────────────────────────────────────
+# Used to dedup the same company across NSE and BSE feeds — NSE returns
+# "Reliance Industries Limited" while BSE returns "Reliance Industries Ltd."
+_CORP_SUFFIXES = re.compile(
+    r"\b(LIMITED|LTD|PRIVATE|PVT|CORPORATION|CORP|COMPANY|CO|INC|PLC|"
+    r"AG|SE|SA|NV|GMBH)\b\.?",
+    re.IGNORECASE,
+)
+_PUNCT = re.compile(r"[.,&/()'\"\-]")
+_WS = re.compile(r"\s+")
+
+
+def canonical_name(name: str) -> str:
+    """Return an uppercase, suffix-stripped, whitespace-collapsed form."""
+    if name is None:
+        return ""
+    text = _PUNCT.sub(" ", str(name).upper())
+    text = _CORP_SUFFIXES.sub(" ", text)
+    text = _WS.sub(" ", text).strip()
+    return text
 
 
 def validate(df: pd.DataFrame) -> tuple[bool, str, pd.DataFrame]:
@@ -67,9 +90,24 @@ def validate(df: pd.DataFrame) -> tuple[bool, str, pd.DataFrame]:
         logger.warning("Dropping %d rows with dates beyond %d days", future_rows, MAX_FUTURE_DAYS)
         df = df[df["result_date"] <= future_cutoff]
 
-    # ── Rule 5: Duplicate check ───────────────────────────────────────────────
+    # ── Rule 5: Canonical name + cross-source dedup ───────────────────────────
+    # The DB enforces UNIQUE (result_date, name_norm) via migration 002, so
+    # this column is required downstream. Compute it once here, then collapse
+    # NSE/BSE duplicates that the raw company_name string would otherwise miss.
     before_dedup = len(df)
-    df = df.drop_duplicates(subset=["result_date", "company_name"])
+    df["name_norm"] = df["company_name"].map(canonical_name)
+
+    # Sort so the row we keep is the most useful one: prefer rows with a real
+    # exchange symbol, prefer NSE over BSE (NSE codes are more canonical for
+    # the F&O universe).
+    df["_has_symbol"] = df["symbol"].astype(str).str.strip().ne("") & \
+                       ~df["symbol"].astype(str).str.upper().isin(["NAN", "NONE", "NULL"])
+    df["_source_rank"] = df["source"].astype(str).str.contains("nse", case=False, na=False).map({True: 0, False: 1})
+    df = (
+        df.sort_values(["_has_symbol", "_source_rank"], ascending=[False, True])
+          .drop_duplicates(subset=["result_date", "name_norm"], keep="first")
+          .drop(columns=["_has_symbol", "_source_rank"])
+    )
     dropped = before_dedup - len(df)
     dup_pct = dropped / original_count if original_count else 0
 
@@ -82,13 +120,22 @@ def validate(df: pd.DataFrame) -> tuple[bool, str, pd.DataFrame]:
         return False, reason, df
 
     if dropped > 0:
-        logger.info("Removed %d duplicate rows (%.0f%%)", dropped, dup_pct * 100)
+        logger.info(
+            "Cross-source dedup | removed %d rows (%.0f%%) — same company from NSE+BSE",
+            dropped, dup_pct * 100,
+        )
 
     # ── Rule 6: company_name must not be empty ────────────────────────────────
     empty_names = df["company_name"].str.strip().eq("").sum()
     if empty_names > 0:
         logger.warning("Dropping %d rows with empty company_name", empty_names)
         df = df[df["company_name"].str.strip().astype(bool)]
+
+    # ── Rule 7: name_norm must not be empty (DB constraint requires NOT NULL) ─
+    empty_norms = df["name_norm"].astype(str).str.strip().eq("").sum()
+    if empty_norms > 0:
+        logger.warning("Dropping %d rows with empty name_norm", empty_norms)
+        df = df[df["name_norm"].astype(str).str.strip().astype(bool)]
 
     # ── Final check ───────────────────────────────────────────────────────────
     if len(df) < MIN_ROWS:

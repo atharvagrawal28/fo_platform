@@ -16,6 +16,7 @@ import pandas as pd
 import psycopg2.extras
 
 from database.connection import pipeline_cursor
+from pipeline.validate import canonical_name
 
 logger = logging.getLogger(__name__)
 
@@ -43,12 +44,13 @@ def store_results(
 def _upsert_earnings_calendar(df: pd.DataFrame, database_url: str) -> int:
     sql = """
         INSERT INTO earnings_calendar (
-            result_date, company_name, symbol, meeting_type, source,
+            result_date, company_name, name_norm, symbol, meeting_type, source,
             sector, is_fo, is_nifty50, is_nifty_next50, is_banknifty,
             market_cap_tier, importance_score, fetched_at, updated_at
         ) VALUES %s
-        ON CONFLICT (result_date, company_name)
+        ON CONFLICT (result_date, name_norm)
         DO UPDATE SET
+            company_name     = EXCLUDED.company_name,
             symbol           = EXCLUDED.symbol,
             meeting_type     = EXCLUDED.meeting_type,
             source           = EXCLUDED.source,
@@ -63,10 +65,17 @@ def _upsert_earnings_calendar(df: pd.DataFrame, database_url: str) -> int:
     """
     now = datetime.now(timezone.utc)              # Fix: was datetime.utcnow()
 
-    rows = [
-        (
+    rows = []
+    for _, row in df.iterrows():
+        company_name = str(row.get("company_name", ""))[:500]
+        # validate.py adds name_norm; recompute defensively if missing.
+        name_norm = (row.get("name_norm") or canonical_name(company_name))[:500]
+        if not name_norm:
+            continue
+        rows.append((
             _to_date(row.get("result_date")),
-            str(row.get("company_name", ""))[:500],
+            company_name,
+            name_norm,
             str(row.get("symbol", ""))[:50] or None,
             str(row.get("meeting_type", "Quarterly Results"))[:200],
             str(row.get("source", ""))[:50],
@@ -78,9 +87,7 @@ def _upsert_earnings_calendar(df: pd.DataFrame, database_url: str) -> int:
             str(row.get("market_cap_tier", ""))[:20] if row.get("market_cap_tier") else None,
             int(row.get("importance_score", 0)),
             now, now,
-        )
-        for _, row in df.iterrows()
-    ]
+        ))
 
     with pipeline_cursor(database_url) as cur:
         psycopg2.extras.execute_values(cur, sql, rows, page_size=100)
@@ -91,24 +98,26 @@ def _upsert_earnings_calendar(df: pd.DataFrame, database_url: str) -> int:
 def _insert_historical_snapshot(df: pd.DataFrame, run_id: str, database_url: str) -> int:
     sql = """
         INSERT INTO historical_snapshots (
-            pipeline_run_id, result_date, company_name, symbol,
+            pipeline_run_id, result_date, company_name, name_norm, symbol,
             meeting_type, source, sector, is_fo, importance_score
         ) VALUES %s
     """
-    rows = [
-        (
+    rows = []
+    for _, row in df.iterrows():
+        company_name = str(row.get("company_name", ""))[:500]
+        name_norm = (row.get("name_norm") or canonical_name(company_name))[:500]
+        rows.append((
             run_id,
             _to_date(row.get("result_date")),
-            str(row.get("company_name", ""))[:500],
+            company_name,
+            name_norm,
             str(row.get("symbol", ""))[:50] or None,
             str(row.get("meeting_type", ""))[:200],
             str(row.get("source", ""))[:50],
             str(row.get("sector", ""))[:100] if row.get("sector") else None,
             bool(row.get("is_fo", False)),
             int(row.get("importance_score", 0)),
-        )
-        for _, row in df.iterrows()
-    ]
+        ))
 
     with pipeline_cursor(database_url) as cur:
         psycopg2.extras.execute_values(cur, sql, rows, page_size=100)

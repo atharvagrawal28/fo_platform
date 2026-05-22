@@ -23,8 +23,13 @@ logger = logging.getLogger(__name__)
 # ── Core results query ────────────────────────────────────────────────────────
 def get_upcoming_results(conn, days: int = 7) -> pd.DataFrame:
     """
-    Fetch all results scheduled within the next `days` calendar days.
-    Includes all enrichment columns for filtering and display.
+    Fetch all results scheduled between today and today + `days`.
+
+    Returns one row per (date, canonical company). The DB now enforces this
+    via UNIQUE (result_date, name_norm); see migration 002.
+
+    `days` defaults to 7 but the dashboard passes settings.LOOKAHEAD_DAYS so
+    the window is configurable in one place.
     """
     sql = """
         SELECT
@@ -43,8 +48,8 @@ def get_upcoming_results(conn, days: int = 7) -> pd.DataFrame:
             updated_at
         FROM earnings_calendar
         WHERE result_date BETWEEN CURRENT_DATE AND CURRENT_DATE + INTERVAL '%s days'
-        ORDER BY importance_score DESC, result_date ASC, company_name ASC
-    """ % days  # Safe: days is always an int from settings
+        ORDER BY result_date ASC, importance_score DESC, company_name ASC
+    """ % int(days)
 
     df = run_query_df(conn, sql)
 
@@ -62,26 +67,50 @@ def get_upcoming_results(conn, days: int = 7) -> pd.DataFrame:
 # ── KPI numbers ───────────────────────────────────────────────────────────────
 def get_kpis(conn, days: int = 7) -> dict:
     """
-    Return the 4 headline KPI numbers.
-    Computed directly from DB — these are fast counts on a small table.
+    Return distinct, meaningful KPI buckets.
+
+    - today_count    : results due today
+    - tomorrow_count : results due exactly tomorrow
+    - week_count     : results between today and today + 6 days (rolling 7-day)
+    - next_week_count: results between today+7 and today+13 (rolling next 7)
+    - total          : results across the dashboard's full lookahead window
+    - fo_count       : F&O subset of total
+    - nifty50_count  : Nifty 50 subset of total
+    - fo_pct         : F&O share of total
+
+    The previous implementation made `total` and `week_count` identical (both
+    used a 7-day filter), which made the KPI row misleading — e.g. it showed
+    "1,983 Total" and "1,983 This Week" simultaneously. Each bucket below uses
+    a strict, non-overlapping definition tied to its label.
     """
     sql = """
+        WITH window_rows AS (
+            SELECT *
+            FROM earnings_calendar
+            WHERE result_date BETWEEN CURRENT_DATE
+                                 AND  CURRENT_DATE + INTERVAL '%s days'
+        )
         SELECT
-            COUNT(*)                                          AS total,
-            COUNT(*) FILTER (WHERE is_fo = TRUE)             AS fo_count,
-            COUNT(*) FILTER (WHERE result_date = CURRENT_DATE) AS today_count,
+            COUNT(*)                                                          AS total,
+            COUNT(*) FILTER (WHERE is_fo)                                     AS fo_count,
+            COUNT(*) FILTER (WHERE is_nifty50)                                AS nifty50_count,
+            COUNT(*) FILTER (WHERE is_banknifty)                              AS banknifty_count,
+            COUNT(*) FILTER (WHERE result_date = CURRENT_DATE)                AS today_count,
+            COUNT(*) FILTER (WHERE result_date = CURRENT_DATE + INTERVAL '1 day') AS tomorrow_count,
             COUNT(*) FILTER (
                 WHERE result_date BETWEEN CURRENT_DATE
-                      AND CURRENT_DATE + INTERVAL '%s days'
-            )                                                AS week_count,
-            COUNT(*) FILTER (WHERE is_nifty50 = TRUE)        AS nifty50_count,
+                                     AND  CURRENT_DATE + INTERVAL '6 days'
+            )                                                                 AS week_count,
+            COUNT(*) FILTER (
+                WHERE result_date BETWEEN CURRENT_DATE + INTERVAL '7 days'
+                                     AND  CURRENT_DATE + INTERVAL '13 days'
+            )                                                                 AS next_week_count,
             ROUND(
-                100.0 * COUNT(*) FILTER (WHERE is_fo = TRUE)
+                100.0 * COUNT(*) FILTER (WHERE is_fo)
                 / NULLIF(COUNT(*), 0), 1
-            )                                                AS fo_pct
-        FROM earnings_calendar
-        WHERE result_date BETWEEN CURRENT_DATE AND CURRENT_DATE + INTERVAL '%s days'
-    """ % (days, days)
+            )                                                                 AS fo_pct
+        FROM window_rows
+    """ % days
 
     df = run_query_df(conn, sql)
 
@@ -90,12 +119,16 @@ def get_kpis(conn, days: int = 7) -> dict:
 
     row = df.iloc[0]
     return {
-        "total":        int(row.get("total", 0) or 0),
-        "fo_count":     int(row.get("fo_count", 0) or 0),
-        "today_count":  int(row.get("today_count", 0) or 0),
-        "week_count":   int(row.get("week_count", 0) or 0),
-        "nifty50_count":int(row.get("nifty50_count", 0) or 0),
-        "fo_pct":       float(row.get("fo_pct", 0) or 0),
+        "total":            int(row.get("total", 0) or 0),
+        "fo_count":         int(row.get("fo_count", 0) or 0),
+        "nifty50_count":    int(row.get("nifty50_count", 0) or 0),
+        "banknifty_count":  int(row.get("banknifty_count", 0) or 0),
+        "today_count":      int(row.get("today_count", 0) or 0),
+        "tomorrow_count":   int(row.get("tomorrow_count", 0) or 0),
+        "week_count":       int(row.get("week_count", 0) or 0),
+        "next_week_count":  int(row.get("next_week_count", 0) or 0),
+        "fo_pct":           float(row.get("fo_pct", 0) or 0),
+        "lookahead_days":   int(days),
     }
 
 
@@ -244,6 +277,8 @@ def get_cached_analytics(conn, key: str) -> dict:
 # ── Internal ──────────────────────────────────────────────────────────────────
 def _empty_kpis() -> dict:
     return {
-        "total": 0, "fo_count": 0, "today_count": 0,
-        "week_count": 0, "nifty50_count": 0, "fo_pct": 0.0,
+        "total": 0, "fo_count": 0, "nifty50_count": 0, "banknifty_count": 0,
+        "today_count": 0, "tomorrow_count": 0,
+        "week_count": 0, "next_week_count": 0,
+        "fo_pct": 0.0, "lookahead_days": 7,
     }

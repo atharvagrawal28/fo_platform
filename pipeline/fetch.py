@@ -44,14 +44,67 @@ logger = logging.getLogger(__name__)
 
 OUTPUT_COLS = ["result_date", "company_name", "symbol", "meeting_type", "source"]
 
+# Keyword matching uses word boundaries — substring matches like "BUSINESS
+# RESULTS" or "BUYBACK RESULT" were generating large amounts of noise.
+# Each keyword is wrapped as a whole-word regex below.
 RESULT_KEYWORDS = (
-    "RESULT",
-    "FINANCIAL",
+    "QUARTERLY RESULTS",
+    "FINANCIAL RESULTS",
+    "AUDITED RESULTS",
+    "UNAUDITED RESULTS",
+    "STANDALONE RESULTS",
+    "CONSOLIDATED RESULTS",
     "QUARTERLY",
-    "ANNUAL",
-    "AUDITED",
-    "UNAUDITED",
+    "HALF YEARLY",
+    "HALF-YEARLY",
+    "ANNUAL RESULTS",
 )
+
+# Purposes that look superficially like results but are not earnings events.
+# Anything matching one of these in absence of a clear results phrase is dropped.
+NON_EARNINGS_PURPOSES = (
+    "BUYBACK",
+    "BUY BACK",
+    "BUY-BACK",
+    "RIGHTS ISSUE",
+    "BONUS ISSUE",
+    "PREFERENTIAL ISSUE",
+    "DEBENTURES",
+    "DEBENTURE",
+    "FUND RAISING",
+    "FUND-RAISING",
+    "STOCK SPLIT",
+    "SPLIT OF",
+    "ALLOTMENT",
+    # NOTE: "DIVIDEND" intentionally excluded — most "Results and Dividend"
+    # entries are real earnings events. Standalone dividend-only meetings
+    # are rare and tolerable noise.
+    "POSTAL BALLOT",
+    "EGM",
+    "EXTRAORDINARY GENERAL MEETING",
+    "ANNUAL GENERAL MEETING",
+    "AGM",
+    "SCHEME OF",
+    "AMALGAMATION",
+    "MERGER",
+    "DEMERGER",
+    "OFS",
+    "QIP",
+)
+
+# Pre-compiled patterns (word-boundary, case-insensitive).
+_RESULT_PATTERN = re.compile(
+    r"\b(" + "|".join(re.escape(k) for k in RESULT_KEYWORDS) + r")\b",
+    re.IGNORECASE,
+)
+_NON_EARNINGS_PATTERN = re.compile(
+    r"\b(" + "|".join(re.escape(k) for k in NON_EARNINGS_PURPOSES) + r")\b",
+    re.IGNORECASE,
+)
+# Bare "Results" / "Result" — accepted only when no non-earnings phrase is present.
+# Avoids both false negatives ("Results and Dividend") and false positives
+# ("Result of buyback tender").
+_BARE_RESULTS_PATTERN = re.compile(r"\bRESULTS?\b", re.IGNORECASE)
 
 CSV_ACCEPT = (
     "text/csv, application/csv, application/vnd.ms-excel, "
@@ -370,14 +423,30 @@ def _parse_nse_board_meetings(df: pd.DataFrame, source: str) -> pd.DataFrame:
 
     purpose = _text_series(d, "purpose")
     details = _text_series(d, "details")
-    result_text = (purpose + " " + details).str.upper()
-    mask = result_text.apply(lambda value: any(keyword in value for keyword in RESULT_KEYWORDS))
+    combined = (purpose + " " + details)
+
+    is_result = combined.str.contains(_RESULT_PATTERN, regex=True, na=False)
+    is_non_earnings = combined.str.contains(_NON_EARNINGS_PATTERN, regex=True, na=False)
+    is_bare_results = combined.str.contains(_BARE_RESULTS_PATTERN, regex=True, na=False)
+
+    # Keep rows that either (a) match an explicit results phrase, or
+    # (b) mention "Results" without any non-earnings phrase. This admits
+    # entries like "Results and Dividend" while still dropping "Result of
+    # buyback tender" (the buyback keyword excludes it).
+    mask = is_result | (is_bare_results & ~is_non_earnings)
+    dropped_non_earnings = int((~mask & is_non_earnings).sum())
+    if dropped_non_earnings:
+        logger.info(
+            "NSE filter | dropped %d non-earnings board meetings (buyback/rights/etc.)",
+            dropped_non_earnings,
+        )
+
     d = d[mask].copy()
 
     if d.empty:
         raise ValueError("NSE file contained no financial-results board-meeting rows")
 
-    return pd.DataFrame(
+    parsed = pd.DataFrame(
         {
             "result_date": _text_series(d, "meeting_date"),
             "company_name": _text_series(d, "company_name"),
@@ -387,21 +456,64 @@ def _parse_nse_board_meetings(df: pd.DataFrame, source: str) -> pd.DataFrame:
         }
     )
 
+    # NSE sometimes lists the same board meeting twice when the purpose has
+    # multiple agenda items. Collapse here so the rest of the pipeline never
+    # sees the noise.
+    before = len(parsed)
+    parsed = parsed.drop_duplicates(
+        subset=["result_date", "symbol", "company_name"], keep="first"
+    )
+    if before - len(parsed):
+        logger.info("NSE intra-source dedup | dropped %d rows", before - len(parsed))
+
+    return parsed
+
 
 def _parse_bse_forthcoming_results(df: pd.DataFrame, source: str) -> pd.DataFrame:
     d = _clean_dataframe(df)
     _require_any(d, "bse", ["company_name"], ["result_date"], ["security_name", "symbol"])
 
     symbol_col = "security_name" if "security_name" in d.columns else "symbol"
-    return pd.DataFrame(
+
+    # BSE's forthcoming-results endpoint is mostly clean, but a few non-results
+    # board meetings still leak through when the company sets a custom purpose.
+    purpose_col = next(
+        (c for c in ("purpose", "agenda", "remarks", "details") if c in d.columns),
+        None,
+    )
+    if purpose_col:
+        purpose = _text_series(d, purpose_col)
+        is_result = purpose.str.contains(_RESULT_PATTERN, regex=True, na=False)
+        is_non_earnings = purpose.str.contains(_NON_EARNINGS_PATTERN, regex=True, na=False)
+        # If the column exists, prefer rows that mention results OR have an
+        # empty purpose (BSE's default). Drop only rows whose purpose is clearly
+        # non-earnings.
+        mask = (purpose.str.strip() == "") | is_result | ~is_non_earnings
+        dropped = int((~mask).sum())
+        if dropped:
+            logger.info("BSE filter | dropped %d non-earnings rows by purpose", dropped)
+        d = d[mask].copy()
+    else:
+        purpose = pd.Series("Forthcoming Results", index=d.index)
+
+    parsed = pd.DataFrame(
         {
             "result_date": _text_series(d, "result_date"),
             "company_name": _text_series(d, "company_name"),
             "symbol": _text_series(d, symbol_col),
-            "meeting_type": "Forthcoming Results",
+            "meeting_type": purpose.reindex(d.index).fillna("Forthcoming Results"),
             "source": source,
         }
     )
+
+    before = len(parsed)
+    parsed = parsed.drop_duplicates(
+        subset=["result_date", "symbol", "company_name"], keep="first"
+    )
+    if before - len(parsed):
+        logger.info("BSE intra-source dedup | dropped %d rows", before - len(parsed))
+
+    return parsed
 
 
 def _clean_dataframe(df: pd.DataFrame) -> pd.DataFrame:

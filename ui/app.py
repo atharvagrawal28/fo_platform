@@ -343,10 +343,14 @@ def _empty_kpis() -> dict:
     return {
         "total": 0,
         "fo_count": 0,
-        "today_count": 0,
-        "week_count": 0,
         "nifty50_count": 0,
+        "banknifty_count": 0,
+        "today_count": 0,
+        "tomorrow_count": 0,
+        "week_count": 0,
+        "next_week_count": 0,
         "fo_pct": 0.0,
+        "lookahead_days": LOOKAHEAD_DAYS,
     }
 
 
@@ -360,13 +364,14 @@ def main():
     if not conn:
         _show_no_db()
 
-    # Load all data
+    # Load all data — every aggregate uses the same lookahead window so KPI
+    # numbers stay consistent with the charts and tables underneath.
     with st.spinner("Loading from database…"):
-        all_results   = _query_db(get_upcoming_results, pd.DataFrame)
-        kpis          = _query_db(get_kpis, _empty_kpis)
-        daily_dist    = _query_db(get_daily_distribution, pd.DataFrame)
-        sector_conc   = _query_db(get_sector_concentration, pd.DataFrame)
-        top_earnings  = _query_db(get_top_earnings, pd.DataFrame, limit=10)
+        all_results   = _query_db(get_upcoming_results, pd.DataFrame, days=LOOKAHEAD_DAYS)
+        kpis          = _query_db(get_kpis, _empty_kpis, days=LOOKAHEAD_DAYS)
+        daily_dist    = _query_db(get_daily_distribution, pd.DataFrame, days=LOOKAHEAD_DAYS)
+        sector_conc   = _query_db(get_sector_concentration, pd.DataFrame, days=LOOKAHEAD_DAYS)
+        top_earnings  = _query_db(get_top_earnings, pd.DataFrame, days=LOOKAHEAD_DAYS, limit=10)
         pipeline_logs = _query_db(get_pipeline_health, pd.DataFrame, limit=10)
         last_run      = _query_db(get_last_pipeline_run, {})
 
@@ -433,7 +438,10 @@ def main():
         fo_df = all_results[all_results["is_fo"] == True].copy() if not all_results.empty else pd.DataFrame()
         fo_df = _apply_filters(fo_df, {**filters, "fo_only": False})
 
-        st.markdown('<div class="sec-head">F&O Companies — Next 7 Days</div>', unsafe_allow_html=True)
+        st.markdown(
+            f'<div class="sec-head">F&O Companies — Next {LOOKAHEAD_DAYS} Days</div>',
+            unsafe_allow_html=True,
+        )
 
         if fo_df.empty:
             st.info("No F&O companies in the current filter.", icon="ℹ️")
