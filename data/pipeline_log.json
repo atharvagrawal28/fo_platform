@@ -1,0 +1,15 @@
+[
+  {
+    "run_id": "run_20260522_173554_594702",
+    "started_at": "2026-05-22T17:35:56.303543+00:00",
+    "source_used": "nse_official_file",
+    "rows_fetched": 804,
+    "rows_valid": 803,
+    "rows_stored": 803,
+    "validation_passed": true,
+    "fallback_used": false,
+    "duration_seconds": 1.94,
+    "status": "success",
+    "error_message": ""
+  }
+]

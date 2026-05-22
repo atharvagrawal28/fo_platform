@@ -3,27 +3,18 @@ configs/settings.py
 -------------------
 Single source of truth for every configuration value.
 
-Priority order for DATABASE_URL:
-  1. Environment variable (GitHub Actions / Streamlit Cloud / server)
-  2. .env file (local development)
-  3. Raises clear error if neither exists
+This platform is 100% database-free:
+  - GitHub Actions fetches NSE/BSE data and commits CSV files to the repo
+  - Streamlit Cloud reads those CSV files directly
+  - No PostgreSQL, no Neon, no paid services — runs forever for free
 """
 
-import os
 from pathlib import Path
 
-from dotenv import load_dotenv
-
-# Load .env file for local development — no-op in production
-load_dotenv()
-
 # ── Root paths ────────────────────────────────────────────────────────────────
-ROOT     = Path(__file__).parent.parent
-DATA_DIR = ROOT / "data"
+ROOT         = Path(__file__).parent.parent
+DATA_DIR     = ROOT / "data"
 DATA_RAW_DIR = DATA_DIR / "raw"
-
-# ── Database ──────────────────────────────────────────────────────────────────
-DATABASE_URL = os.environ.get("DATABASE_URL", "")
 
 # ── API endpoints ─────────────────────────────────────────────────────────────
 NSE_BOARD_MEETINGS_PAGE_URL = "https://www.nseindia.com/companies-listing/corporate-filings-board-meetings"
@@ -68,10 +59,13 @@ SCORE_LARGE_CAP    = 20
 SCORE_MID_CAP      = 10
 SCORE_SMALL_CAP    =  5
 
-# ── Data file paths ───────────────────────────────────────────────────────────
-FO_UNIVERSE_CSV      = DATA_DIR / "fo_universe.csv"
-SECTOR_MAP_CSV       = DATA_DIR / "sector_map.csv"
-NIFTY50_CSV          = DATA_DIR / "nifty50.csv"
-NIFTY_NEXT50_CSV     = DATA_DIR / "nifty_next50.csv"
-BANKNIFTY_CSV        = DATA_DIR / "banknifty.csv"
-MARKET_CAP_TIERS_CSV = DATA_DIR / "market_cap_tiers.csv"
+# ── Data file paths (reference CSVs — committed to repo, never auto-deleted) ──
+FO_UNIVERSE_CSV  = DATA_DIR / "fo_universe.csv"
+SECTOR_MAP_CSV   = DATA_DIR / "sector_map.csv"
+NIFTY50_CSV      = DATA_DIR / "nifty50.csv"
+NIFTY_NEXT50_CSV = DATA_DIR / "nifty_next50.csv"
+BANKNIFTY_CSV    = DATA_DIR / "banknifty.csv"
+
+# ── Live data files (written by GitHub Actions, read by Streamlit) ────────────
+EARNINGS_CALENDAR_CSV = DATA_DIR / "earnings_calendar.csv"
+PIPELINE_LOG_JSON     = DATA_DIR / "pipeline_log.json"

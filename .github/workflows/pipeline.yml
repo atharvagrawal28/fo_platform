@@ -1,21 +1,23 @@
 # .github/workflows/pipeline.yml
-# Runs official-file ingestion from GitHub-hosted runners.
+# Fetches NSE/BSE earnings data and commits updated CSV files to the repo.
+# Streamlit Cloud reads these files directly — no database needed, zero cost.
 
 name: Earnings Pipeline
 
 on:
   schedule:
-    # 8:00 AM IST every weekday (2:30 AM UTC)
+    # 8:00 AM IST every weekday  (2:30 AM UTC)
     - cron: '30 2 * * 1-5'
-    # 4:30 PM IST every weekday (11:00 AM UTC)
+    # 4:30 PM IST every weekday  (11:00 AM UTC)
     - cron: '0 11 * * 1-5'
     # Weekends: once at 8:00 AM IST
     - cron: '30 2 * * 0,6'
 
   workflow_dispatch:
 
+# Write permission so the workflow can commit updated CSV files
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: earnings-pipeline
@@ -23,7 +25,7 @@ concurrency:
 
 jobs:
   run-pipeline:
-    name: Bootstrap DB and ingest earnings data
+    name: Fetch earnings data and commit CSVs
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
@@ -40,7 +42,16 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r requirements.txt
 
-      - name: Bootstrap database and run ingestion pipeline
-        env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      - name: Run ingestion pipeline
         run: python pipeline/run.py
+
+      - name: Commit updated data files
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/earnings_calendar.csv data/pipeline_log.json
+          git diff --staged --quiet && echo "No changes to commit" || \
+            git commit -m "chore: update earnings data [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+
+      - name: Push changes
+        run: git push

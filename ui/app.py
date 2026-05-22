@@ -2,9 +2,13 @@
 ui/app.py — F&O Earnings Intelligence Platform
 ================================================
 Presentation-only Streamlit dashboard.
-Reads PostgreSQL. Zero scraping. Zero heavy processing.
 
-Run: streamlit run ui/app.py
+Data source: data/earnings_calendar.csv and data/pipeline_log.json
+committed to GitHub by the scheduled GitHub Actions pipeline.
+
+No database. No API keys. Zero cost. Runs forever.
+
+Run locally: streamlit run ui/app.py
 """
 
 import sys
@@ -16,18 +20,14 @@ import streamlit as st
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from configs.settings import (
-    DATABASE_URL,
-    LOOKAHEAD_DAYS,
-)
-from database.connection import ensure_connected, get_streamlit_connection
+from configs.settings import LOOKAHEAD_DAYS
 from database.queries import (
     get_daily_distribution,
     get_kpis,
     get_last_pipeline_run,
     get_pipeline_health,
-    get_sector_options,
     get_sector_concentration,
+    get_sector_options,
     get_top_earnings,
     get_upcoming_results,
 )
@@ -104,55 +104,24 @@ def _css():
     """, unsafe_allow_html=True)
 
 
-# ── DB connection (cached, health-checked before every query) ─────────────────
-@st.cache_resource
-def _connection_holder():
-    if not DATABASE_URL:
-        return {"conn": None}
-    try:
-        return {"conn": get_streamlit_connection(DATABASE_URL)}
-    except Exception:
-        return {"conn": None}
-
-
-def _safe_conn():
-    if not DATABASE_URL:
-        return None
-
-    holder = _connection_holder()
-    try:
-        holder["conn"] = ensure_connected(holder.get("conn"), DATABASE_URL)
-        return holder["conn"]
-    except Exception as e:
-        holder["conn"] = None
-        st.error(f"❌ Database connection failed: {e}")
-        return None
-
-
-def _query_db(query_fn, default, *args, **kwargs):
-    conn = _safe_conn()
-    if not conn:
-        return default() if callable(default) else default
-
-    try:
-        return query_fn(conn, *args, **kwargs)
-    except Exception:
-        holder = _connection_holder()
-        try:
-            if holder.get("conn"):
-                holder["conn"].close()
-        except Exception:
-            pass
-
-        holder["conn"] = None
-        conn = _safe_conn()
-        if not conn:
-            return default() if callable(default) else default
-        return query_fn(conn, *args, **kwargs)
+# ── Data loading (cached per Streamlit session) ───────────────────────────────
+@st.cache_data(ttl=300)  # refresh cache every 5 minutes
+def _load_all_data(days: int):
+    """Load all dashboard data from CSV files. Cached for 5 minutes."""
+    return {
+        "all_results":   get_upcoming_results(days=days),
+        "kpis":          get_kpis(days=days),
+        "daily_dist":    get_daily_distribution(days=days),
+        "sector_conc":   get_sector_concentration(days=days),
+        "top_earnings":  get_top_earnings(days=days, limit=10),
+        "pipeline_logs": get_pipeline_health(limit=10),
+        "last_run":      get_last_pipeline_run(),
+        "sector_opts":   get_sector_options(),
+    }
 
 
 # ── Sidebar ───────────────────────────────────────────────────────────────────
-def _sidebar() -> dict:
+def _sidebar(sector_opts: pd.DataFrame, last_run: dict) -> dict:
     with st.sidebar:
         st.markdown("## ⚙️ Filters")
         st.markdown("---")
@@ -161,12 +130,9 @@ def _sidebar() -> dict:
         n50_only = st.checkbox("Nifty 50 only")
 
         st.markdown("**Sector**")
-        conn = _safe_conn()
         sector_options = ["All"]
-        if conn:
-            sec_df = _query_db(get_sector_options, pd.DataFrame)
-            if not sec_df.empty:
-                sector_options += sorted(sec_df["sector"].dropna().astype(str).unique())
+        if not sector_opts.empty:
+            sector_options += sorted(sector_opts["sector"].dropna().astype(str).unique())
         selected_sector = st.selectbox("Sector", sector_options, label_visibility="collapsed")
 
         st.markdown("**Date Range**")
@@ -176,14 +142,12 @@ def _sidebar() -> dict:
         with c1: start = st.date_input("From", value=today,    min_value=today, max_value=max_date)
         with c2: end   = st.date_input("To",   value=max_date, min_value=today, max_value=max_date)
 
-        # Guard: clamp end to start if user accidentally picks end before start
         if end < start:
             end = start
             st.caption("End date set to match start date.")
 
         st.markdown("---")
         if st.button("🔄 Refresh Data", use_container_width=True):
-            st.cache_resource.clear()
             st.cache_data.clear()
             st.rerun()
 
@@ -194,28 +158,25 @@ def _sidebar() -> dict:
         )
 
         # Pipeline status mini-panel
-        if conn:
-            last = _query_db(get_last_pipeline_run, {})
-            if last:
-                status = last.get("status", "unknown")
-                s_color = "#00C896" if status == "success" else "#FF6B6B"
-                ts = pd.to_datetime(last.get("started_at")).strftime("%d %b %H:%M") if last.get("started_at") else "—"
-                st.markdown(
-                    f"""
-                    <div style="font-size:0.72rem;color:#8B8FA8;line-height:2;margin-top:8px">
-                    🟢 DB: <b style="color:#00C896">Connected</b><br>
-                    ⚙️ Pipeline: <b style="color:{s_color}">{status}</b><br>
-                    🕐 Last run: <b style="color:#E8EAF0">{ts}</b><br>
-                    📡 Source: <b style="color:#E8EAF0">{last.get('source_used','—')}</b>
-                    </div>
-                    """,
-                    unsafe_allow_html=True,
-                )
+        if last_run:
+            status  = last_run.get("status", "unknown")
+            s_color = "#00C896" if status == "success" else "#FF6B6B"
+            ts_raw  = last_run.get("started_at")
+            ts = pd.to_datetime(ts_raw).strftime("%d %b %H:%M") if ts_raw else "—"
+            st.markdown(
+                f"""
+                <div style="font-size:0.72rem;color:#8B8FA8;line-height:2;margin-top:8px">
+                ⚙️ Pipeline: <b style="color:{s_color}">{status}</b><br>
+                🕐 Last run: <b style="color:#E8EAF0">{ts}</b><br>
+                📡 Source: <b style="color:#E8EAF0">{last_run.get('source_used','—')}</b>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
 
     return dict(
         search="", fo_only=fo_only, n50_only=n50_only,
         sector=selected_sector, start=start, end=end,
-        auto_refresh=auto_refresh,
     )
 
 
@@ -223,13 +184,11 @@ def _sidebar() -> dict:
 def _run_timestamp(last_run: dict) -> pd.Timestamp | None:
     if not last_run:
         return None
-    raw = last_run.get("completed_at") or last_run.get("started_at")
+    raw = last_run.get("started_at")
     if not raw:
         return None
     ts = pd.to_datetime(raw, errors="coerce")
-    if pd.isna(ts):
-        return None
-    return ts
+    return None if pd.isna(ts) else ts
 
 
 def _run_age_hours(last_run: dict) -> float | None:
@@ -238,15 +197,6 @@ def _run_age_hours(last_run: dict) -> float | None:
         return None
     now = pd.Timestamp.now(tz=ts.tz) if ts.tzinfo else pd.Timestamp.now()
     return max(0.0, (now - ts).total_seconds() / 3600)
-
-
-def _get_db_row_count(conn) -> int:
-    """Return the actual live row count from earnings_calendar."""
-    from database.connection import run_query_df
-    df = run_query_df(conn, "SELECT COUNT(*) AS n FROM earnings_calendar")
-    if df.empty:
-        return 0
-    return int(df.iloc[0].get("n", 0) or 0)
 
 
 def _header(last_run: dict, db_rows: int = 0):
@@ -260,7 +210,7 @@ def _header(last_run: dict, db_rows: int = 0):
     freshness = "STALE DATA" if is_stale else "CURRENT DATA"
     freshness_color = "#FFB347" if is_stale else "#00C896"
     age_text  = "unknown age" if age_hours is None else f"{age_hours:.1f}h old"
-    rows_text = f"{db_rows:,} companies in DB" if db_rows else "—"
+    rows_text = f"{db_rows:,} companies tracked" if db_rows else "—"
 
     st.markdown(
         f"""
@@ -273,11 +223,11 @@ def _header(last_run: dict, db_rows: int = 0):
                     📈 F&amp;O Earnings Intelligence
                 </span>
                 <span style="display:inline-block;margin-left:10px;
-                             background:rgba(0,212,255,.12);
-                             border:1px solid rgba(0,212,255,.3);
-                             color:#00D4FF;padding:2px 10px;
+                             background:rgba(0,200,150,.12);
+                             border:1px solid rgba(0,200,150,.3);
+                             color:#00C896;padding:2px 10px;
                              border-radius:20px;font-size:.7rem;
-                             font-weight:600;letter-spacing:.08em">LIVE DB</span>
+                             font-weight:600;letter-spacing:.08em">CSV + GitHub</span>
                 <span style="display:inline-block;margin-left:6px;
                              background:rgba(255,179,71,.10);
                              border:1px solid {freshness_color};
@@ -301,51 +251,32 @@ def _apply_filters(df: pd.DataFrame, f: dict) -> pd.DataFrame:
     if df.empty:
         return df
     d = df.copy()
-    if f["search"].strip():
+    if f.get("search", "").strip():
         term = f["search"].strip()
         mask = d["company_name"].str.contains(term, case=False, na=False)
         if "symbol" in d.columns:
             mask = mask | d["symbol"].str.contains(term, case=False, na=False)
         d = d[mask]
-    if f["fo_only"]:
+    if f.get("fo_only"):
         d = d[d["is_fo"].astype(bool)]
-    if f["n50_only"]:
+    if f.get("n50_only"):
         d = d[d["is_nifty50"].astype(bool)]
-    if f["sector"] != "All":
+    if f.get("sector") and f["sector"] != "All":
         d = d[d["sector"] == f["sector"]]
-    if f["start"]:
+    if f.get("start"):
         d = d[d["result_date"] >= pd.Timestamp(f["start"])]
-    if f["end"]:
+    if f.get("end"):
         d = d[d["result_date"] <= pd.Timestamp(f["end"])]
     return d.reset_index(drop=True)
 
 
-# ── No-DB fallback page ───────────────────────────────────────────────────────
-def _show_no_db():
-    st.error(
-        "**Database not connected.**\n\n"
-        "Set `DATABASE_URL` in `.streamlit/secrets.toml` (Streamlit Cloud) "
-        "or in your `.env` file (local), then restart the app.",
-        icon="🔌",
-    )
-    st.code("""
-# .streamlit/secrets.toml (for Streamlit Cloud)
-DATABASE_URL = "postgresql://user:pass@host/db?sslmode=require"
-
-# .env (for local development)
-DATABASE_URL=postgresql://user:pass@host/db?sslmode=require
-    """)
-    st.stop()
-
-
-# ── Empty-DB state ────────────────────────────────────────────────────────────
-def _show_empty_db():
+# ── Empty-data state ──────────────────────────────────────────────────────────
+def _show_empty_data():
     st.warning(
-        "**Database is connected, but the cloud pipeline has not written data yet.**\n\n"
-        "No local scraping is needed. Add `DATABASE_URL` as a GitHub Actions "
-        "secret, then trigger **Actions → Earnings Pipeline → Run workflow** "
-        "once. After that, GitHub Actions keeps Neon updated automatically and "
-        "this dashboard auto-refreshes to pick up the next successful run.",
+        "**No earnings data yet.**\n\n"
+        "The GitHub Actions pipeline hasn't run yet. Go to your GitHub repo → "
+        "**Actions → Earnings Pipeline → Run workflow** to trigger the first run. "
+        "After that, it runs automatically twice a day and commits updated CSV files.",
         icon="📭",
     )
     st.stop()
@@ -353,18 +284,11 @@ def _show_empty_db():
 
 def _empty_kpis() -> dict:
     return {
-        "total": 0,
-        "fo_count": 0,
-        "nifty50_count": 0,
-        "banknifty_count": 0,
-        "today_count": 0,
-        "tomorrow_count": 0,
-        "week_count": 0,
-        "next_week_count": 0,
-        "fo_week_count": 0,
-        "nifty50_week_count": 0,
-        "fo_pct": 0.0,
-        "lookahead_days": LOOKAHEAD_DAYS,
+        "total": 0, "fo_count": 0, "nifty50_count": 0, "banknifty_count": 0,
+        "today_count": 0, "tomorrow_count": 0,
+        "week_count": 0, "next_week_count": 0,
+        "fo_week_count": 0, "nifty50_week_count": 0,
+        "fo_pct": 0.0, "lookahead_days": LOOKAHEAD_DAYS,
     }
 
 
@@ -374,36 +298,31 @@ def _empty_kpis() -> dict:
 def main():
     _css()
 
-    conn = _safe_conn()
-    if not conn:
-        _show_no_db()
+    with st.spinner("Loading data…"):
+        data = _load_all_data(days=LOOKAHEAD_DAYS)
 
-    # Load all data — every aggregate uses the same lookahead window so KPI
-    # numbers stay consistent with the charts and tables underneath.
-    with st.spinner("Loading from database…"):
-        all_results   = _query_db(get_upcoming_results, pd.DataFrame, days=LOOKAHEAD_DAYS)
-        kpis          = _query_db(get_kpis, _empty_kpis, days=LOOKAHEAD_DAYS)
-        daily_dist    = _query_db(get_daily_distribution, pd.DataFrame, days=LOOKAHEAD_DAYS)
-        sector_conc   = _query_db(get_sector_concentration, pd.DataFrame, days=LOOKAHEAD_DAYS)
-        top_earnings  = _query_db(get_top_earnings, pd.DataFrame, days=LOOKAHEAD_DAYS, limit=10)
-        pipeline_logs = _query_db(get_pipeline_health, pd.DataFrame, limit=10)
-        last_run      = _query_db(get_last_pipeline_run, {})
-        # Real live count from earnings_calendar (not rows_stored from pipeline_logs,
-        # which only reflects the last run — misleading after prune)
-        conn = _safe_conn()
-        db_rows = _get_db_row_count(conn) if conn else 0
+    all_results   = data["all_results"]
+    kpis          = data["kpis"]
+    daily_dist    = data["daily_dist"]
+    sector_conc   = data["sector_conc"]
+    top_earnings  = data["top_earnings"]
+    pipeline_logs = data["pipeline_logs"]
+    last_run      = data["last_run"]
+    sector_opts   = data["sector_opts"]
 
-    # Sidebar filters
-    filters = _sidebar()
+    db_rows = len(all_results) if not all_results.empty else 0
+
+    # Sidebar (needs sector list + last run for the status panel)
+    filters = _sidebar(sector_opts, last_run)
 
     # Header
     _header(last_run, db_rows=db_rows)
 
-    # Empty DB state
+    # Empty state
     if all_results.empty and kpis["total"] == 0:
-        _show_empty_db()
+        _show_empty_data()
 
-    # Apply filters
+    # Apply sidebar filters
     filtered = _apply_filters(all_results, filters)
 
     # ── Tabs ──────────────────────────────────────────────────────────────────
@@ -468,10 +387,8 @@ def main():
             m3.metric("Bank Nifty", int(fo_df["is_banknifty"].sum()))
 
             st.markdown("<br>", unsafe_allow_html=True)
-            # Sort by date first so cards always appear in chronological order
             fo_df = fo_df.sort_values("result_date")
             fo_df["date_group"] = pd.to_datetime(fo_df["result_date"]).dt.strftime("%A, %d %b")
-            # Use result_date as sort key (not date_group string — alphabetic order is wrong)
             date_order = fo_df.drop_duplicates("date_group")["date_group"].tolist()
             groups = [(d, fo_df[fo_df["date_group"] == d]) for d in date_order]
             cols   = st.columns(min(len(groups), 4))
@@ -538,8 +455,8 @@ def main():
         '<div style="text-align:center;color:#8B8FA8;font-size:.72rem;'
         'margin-top:40px;padding-top:14px;border-top:1px solid #1E2340">'
         'F&O Earnings Intelligence Platform &nbsp;·&nbsp; '
-        'PostgreSQL + GitHub Actions + Streamlit &nbsp;·&nbsp; '
-        'Not financial advice</div>',
+        'GitHub Actions + CSV + Streamlit &nbsp;·&nbsp; '
+        'Free forever &nbsp;·&nbsp; Not financial advice</div>',
         unsafe_allow_html=True,
     )
 

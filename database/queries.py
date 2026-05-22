@@ -1,297 +1,254 @@
 """
 database/queries.py
 -------------------
-All SELECT queries used by the Streamlit dashboard.
+All data-access functions used by the Streamlit dashboard.
+
+Previously backed by PostgreSQL — now backed by CSV files committed to GitHub.
+All SQL has been replaced with equivalent pandas operations.
 
 Rules:
-  - Every function returns a pandas DataFrame (empty DF on no data, never None)
-  - No heavy computation here — just reads
-  - All expensive analytics come from analytics_cache table
-  - Handle empty tables gracefully (first-run state)
+  - Every function returns a pandas DataFrame or dict (never None)
+  - All functions accept the same signatures as before for zero-change callers
+  - `conn` parameter is accepted but ignored (kept for signature compatibility)
 """
 
 import json
 import logging
+from datetime import date, timedelta
+from pathlib import Path
 
 import pandas as pd
 
-from database.connection import run_query_df
+from configs.settings import DATA_DIR
 
 logger = logging.getLogger(__name__)
 
+CALENDAR_CSV = DATA_DIR / "earnings_calendar.csv"
+PIPELINE_LOG = DATA_DIR / "pipeline_log.json"
+
+
+# ── Internal data loader (cached at module level within a request) ─────────────
+def _load_calendar() -> pd.DataFrame:
+    """Load earnings_calendar.csv. Returns empty DataFrame if missing."""
+    if not CALENDAR_CSV.exists():
+        return pd.DataFrame()
+    try:
+        df = pd.read_csv(CALENDAR_CSV, dtype=str)
+        # Type-cast critical columns
+        df["result_date"] = pd.to_datetime(df["result_date"], errors="coerce")
+        df = df.dropna(subset=["result_date"])
+        df["importance_score"] = pd.to_numeric(
+            df.get("importance_score", 0), errors="coerce"
+        ).fillna(0).astype(int)
+        bool_map = {"True": True, "False": False, "true": True, "false": False}
+        for col in ["is_fo", "is_nifty50", "is_nifty_next50", "is_banknifty"]:
+            if col in df.columns:
+                df[col] = df[col].map(bool_map).fillna(False)
+            else:
+                df[col] = False
+        return df
+    except Exception as e:
+        logger.error("Could not load earnings_calendar.csv: %s", e)
+        return pd.DataFrame()
+
+
+def _load_logs() -> list:
+    """Load pipeline_log.json. Returns empty list if missing."""
+    if not PIPELINE_LOG.exists():
+        return []
+    try:
+        return json.loads(PIPELINE_LOG.read_text(encoding="utf-8"))
+    except Exception as e:
+        logger.error("Could not load pipeline_log.json: %s", e)
+        return []
+
+
+def _window(df: pd.DataFrame, days: int) -> pd.DataFrame:
+    """Return rows where result_date is between today and today + days."""
+    today     = pd.Timestamp(date.today())
+    end_date  = today + pd.Timedelta(days=days)
+    return df[(df["result_date"] >= today) & (df["result_date"] <= end_date)]
+
 
 # ── Core results query ────────────────────────────────────────────────────────
-def get_upcoming_results(conn, days: int = 7) -> pd.DataFrame:
-    """
-    Fetch all results scheduled between today and today + `days`.
-
-    Returns one row per (date, canonical company). The DB now enforces this
-    via UNIQUE (result_date, name_norm); see migration 002.
-
-    `days` defaults to 7 but the dashboard passes settings.LOOKAHEAD_DAYS so
-    the window is configurable in one place.
-    """
-    sql = """
-        SELECT
-            result_date,
-            company_name,
-            symbol,
-            meeting_type,
-            sector,
-            is_fo,
-            is_nifty50,
-            is_nifty_next50,
-            is_banknifty,
-            market_cap_tier,
-            importance_score,
-            source,
-            updated_at
-        FROM earnings_calendar
-        WHERE result_date BETWEEN CURRENT_DATE AND CURRENT_DATE + INTERVAL '%s days'
-        ORDER BY result_date ASC, importance_score DESC, company_name ASC
-    """ % int(days)
-
-    df = run_query_df(conn, sql)
-
+def get_upcoming_results(conn=None, days: int = 7) -> pd.DataFrame:
+    """Fetch all results scheduled between today and today + days."""
+    df = _load_calendar()
     if df.empty:
         return df
 
-    # Compute days_remaining for display
-    df["result_date"] = pd.to_datetime(df["result_date"])
-    today = pd.Timestamp("today").normalize()
+    df = _window(df, days)
+    df = df.sort_values(
+        ["result_date", "importance_score", "company_name"],
+        ascending=[True, False, True],
+    ).reset_index(drop=True)
+
+    today = pd.Timestamp(date.today())
     df["days_remaining"] = (df["result_date"] - today).dt.days
 
     return df
 
 
 # ── KPI numbers ───────────────────────────────────────────────────────────────
-def get_kpis(conn, days: int = 7) -> dict:
-    """
-    Return distinct, meaningful KPI buckets.
-
-    - today_count    : results due today
-    - tomorrow_count : results due exactly tomorrow
-    - week_count     : results between today and today + 6 days (rolling 7-day)
-    - next_week_count: results between today+7 and today+13 (rolling next 7)
-    - total          : results across the dashboard's full lookahead window
-    - fo_count       : F&O subset of total
-    - nifty50_count  : Nifty 50 subset of total
-    - fo_pct         : F&O share of total
-
-    The previous implementation made `total` and `week_count` identical (both
-    used a 7-day filter), which made the KPI row misleading — e.g. it showed
-    "1,983 Total" and "1,983 This Week" simultaneously. Each bucket below uses
-    a strict, non-overlapping definition tied to its label.
-    """
-    sql = """
-        WITH window_rows AS (
-            SELECT *
-            FROM earnings_calendar
-            WHERE result_date BETWEEN CURRENT_DATE
-                                 AND  CURRENT_DATE + INTERVAL '%s days'
-        )
-        SELECT
-            COUNT(*)                                                          AS total,
-            COUNT(*) FILTER (WHERE is_fo)                                     AS fo_count,
-            COUNT(*) FILTER (WHERE is_nifty50)                                AS nifty50_count,
-            COUNT(*) FILTER (WHERE is_banknifty)                              AS banknifty_count,
-            COUNT(*) FILTER (WHERE result_date = CURRENT_DATE)                AS today_count,
-            COUNT(*) FILTER (WHERE result_date = CURRENT_DATE + INTERVAL '1 day') AS tomorrow_count,
-            COUNT(*) FILTER (
-                WHERE result_date BETWEEN CURRENT_DATE
-                                     AND  CURRENT_DATE + INTERVAL '6 days'
-            )                                                                 AS week_count,
-            COUNT(*) FILTER (
-                WHERE result_date BETWEEN CURRENT_DATE + INTERVAL '7 days'
-                                     AND  CURRENT_DATE + INTERVAL '13 days'
-            )                                                                 AS next_week_count,
-            COUNT(*) FILTER (
-                WHERE is_fo
-                  AND result_date BETWEEN CURRENT_DATE
-                                     AND  CURRENT_DATE + INTERVAL '6 days'
-            )                                                                 AS fo_week_count,
-            COUNT(*) FILTER (
-                WHERE is_nifty50
-                  AND result_date BETWEEN CURRENT_DATE
-                                     AND  CURRENT_DATE + INTERVAL '6 days'
-            )                                                                 AS nifty50_week_count,
-            ROUND(
-                100.0 * COUNT(*) FILTER (WHERE is_fo)
-                / NULLIF(COUNT(*), 0), 1
-            )                                                                 AS fo_pct
-        FROM window_rows
-    """ % days
-
-    df = run_query_df(conn, sql)
-
+def get_kpis(conn=None, days: int = 7) -> dict:
+    """Return distinct, meaningful KPI buckets — pure pandas implementation."""
+    df = _load_calendar()
     if df.empty:
-        return _empty_kpis()
+        return _empty_kpis(days)
 
-    row = df.iloc[0]
+    today    = pd.Timestamp(date.today())
+    tomorrow = today + pd.Timedelta(days=1)
+    week_end = today + pd.Timedelta(days=6)
+    next_week_start = today + pd.Timedelta(days=7)
+    next_week_end   = today + pd.Timedelta(days=13)
+
+    window    = _window(df, days)
+    this_week = df[(df["result_date"] >= today) & (df["result_date"] <= week_end)]
+    next_week = df[(df["result_date"] >= next_week_start) & (df["result_date"] <= next_week_end)]
+
+    total          = len(window)
+    fo_count       = int(window["is_fo"].sum())
+    nifty50_count  = int(window["is_nifty50"].sum())
+    banknifty_count = int(window["is_banknifty"].sum())
+    today_count    = int((window["result_date"] == today).sum())
+    tomorrow_count = int((window["result_date"] == tomorrow).sum())
+    week_count     = len(this_week)
+    next_week_count = len(next_week)
+    fo_week_count  = int(this_week["is_fo"].sum())
+    nifty50_week_count = int(this_week["is_nifty50"].sum())
+    fo_pct = round(100.0 * fo_count / total, 1) if total else 0.0
+
     return {
-        "total":            int(row.get("total", 0) or 0),
-        "fo_count":         int(row.get("fo_count", 0) or 0),
-        "nifty50_count":    int(row.get("nifty50_count", 0) or 0),
-        "banknifty_count":  int(row.get("banknifty_count", 0) or 0),
-        "today_count":      int(row.get("today_count", 0) or 0),
-        "tomorrow_count":   int(row.get("tomorrow_count", 0) or 0),
-        "week_count":       int(row.get("week_count", 0) or 0),
-        "next_week_count":   int(row.get("next_week_count", 0) or 0),
-        "fo_week_count":     int(row.get("fo_week_count", 0) or 0),
-        "nifty50_week_count":int(row.get("nifty50_week_count", 0) or 0),
-        "fo_pct":            float(row.get("fo_pct", 0) or 0),
+        "total":             total,
+        "fo_count":          fo_count,
+        "nifty50_count":     nifty50_count,
+        "banknifty_count":   banknifty_count,
+        "today_count":       today_count,
+        "tomorrow_count":    tomorrow_count,
+        "week_count":        week_count,
+        "next_week_count":   next_week_count,
+        "fo_week_count":     fo_week_count,
+        "nifty50_week_count": nifty50_week_count,
+        "fo_pct":            fo_pct,
         "lookahead_days":    int(days),
     }
 
 
 # ── Top earnings this week (by importance score) ──────────────────────────────
-def get_top_earnings(conn, days: int = 7, limit: int = 10) -> pd.DataFrame:
+def get_top_earnings(conn=None, days: int = 7, limit: int = 10) -> pd.DataFrame:
     """High-impact companies reporting in the next N days."""
-    sql = """
-        SELECT
-            company_name,
-            symbol,
-            result_date,
-            sector,
-            importance_score,
-            market_cap_tier,
-            is_nifty50,
-            is_banknifty,
-            is_fo
-        FROM earnings_calendar
-        WHERE result_date BETWEEN CURRENT_DATE AND CURRENT_DATE + INTERVAL '%s days'
-          AND importance_score > 0
-        ORDER BY importance_score DESC, result_date ASC
-        LIMIT %s
-    """ % (days, limit)
+    df = _load_calendar()
+    if df.empty:
+        return df
 
-    df = run_query_df(conn, sql)
-    if not df.empty:
-        df["result_date"] = pd.to_datetime(df["result_date"])
-    return df
+    df = _window(df, days)
+    df = df[df["importance_score"] > 0]
+    df = df.sort_values(["importance_score", "result_date"], ascending=[False, True])
+    return df.head(limit).reset_index(drop=True)
 
 
 # ── Sector concentration ──────────────────────────────────────────────────────
-def get_sector_concentration(conn, days: int = 7) -> pd.DataFrame:
-    """Count upcoming results per sector for concentration chart."""
-    sql = """
-        SELECT
-            COALESCE(sector, 'Unclassified')         AS sector,
-            COUNT(*)                                  AS total_count,
-            COUNT(*) FILTER (WHERE is_fo = TRUE)      AS fo_count,
-            MAX(importance_score)                     AS max_importance
-        FROM earnings_calendar
-        WHERE result_date BETWEEN CURRENT_DATE AND CURRENT_DATE + INTERVAL '%s days'
-          AND sector IS NOT NULL
-        GROUP BY sector
-        ORDER BY total_count DESC
-    """ % days
+def get_sector_concentration(conn=None, days: int = 7) -> pd.DataFrame:
+    """Count upcoming results per sector."""
+    df = _load_calendar()
+    if df.empty:
+        return pd.DataFrame()
 
-    return run_query_df(conn, sql)
+    df = _window(df, days)
+    df = df[df["sector"].notna() & (df["sector"].astype(str).str.strip() != "")]
+
+    if df.empty:
+        return pd.DataFrame()
+
+    grouped = (
+        df.groupby("sector", as_index=False)
+        .agg(
+            total_count=("sector", "count"),
+            fo_count=("is_fo", "sum"),
+            max_importance=("importance_score", "max"),
+        )
+        .sort_values("total_count", ascending=False)
+    )
+    grouped["fo_count"] = grouped["fo_count"].astype(int)
+    grouped["max_importance"] = grouped["max_importance"].astype(int)
+    return grouped.reset_index(drop=True)
 
 
-def get_sector_options(conn) -> pd.DataFrame:
-    """All known sectors for dashboard filtering, independent of current results."""
-    sql = """
-        SELECT DISTINCT sector
-        FROM (
-            SELECT sector FROM sector_map WHERE sector IS NOT NULL
-            UNION
-            SELECT sector FROM fo_universe WHERE sector IS NOT NULL
-            UNION
-            SELECT sector FROM earnings_calendar WHERE sector IS NOT NULL
-        ) s
-        WHERE TRIM(sector) <> ''
-        ORDER BY sector
-    """
-    return run_query_df(conn, sql)
+def get_sector_options(conn=None) -> pd.DataFrame:
+    """All known sectors from the calendar CSV."""
+    df = _load_calendar()
+    if df.empty:
+        return pd.DataFrame(columns=["sector"])
+    sectors = (
+        df["sector"]
+        .dropna()
+        .astype(str)
+        .str.strip()
+        .replace("", pd.NA)
+        .dropna()
+        .unique()
+    )
+    return pd.DataFrame({"sector": sorted(sectors)})
 
 
 # ── Daily distribution ────────────────────────────────────────────────────────
-def get_daily_distribution(conn, days: int = 7) -> pd.DataFrame:
+def get_daily_distribution(conn=None, days: int = 7) -> pd.DataFrame:
     """Results count per day — for bar/timeline charts."""
-    sql = """
-        SELECT
-            result_date,
-            COUNT(*)                              AS total_count,
-            COUNT(*) FILTER (WHERE is_fo = TRUE)  AS fo_count,
-            COUNT(*) FILTER (WHERE is_fo = FALSE) AS non_fo_count
-        FROM earnings_calendar
-        WHERE result_date BETWEEN CURRENT_DATE AND CURRENT_DATE + INTERVAL '%s days'
-        GROUP BY result_date
-        ORDER BY result_date ASC
-    """ % days
+    df = _load_calendar()
+    if df.empty:
+        return pd.DataFrame()
 
-    df = run_query_df(conn, sql)
-    if not df.empty:
-        df["result_date"] = pd.to_datetime(df["result_date"])
-        df["day_label"]   = df["result_date"].dt.strftime("%d %b (%a)")
-    return df
+    df = _window(df, days)
+    if df.empty:
+        return pd.DataFrame()
+
+    grouped = (
+        df.groupby("result_date", as_index=False)
+        .agg(
+            total_count=("result_date", "count"),
+            fo_count=("is_fo", "sum"),
+        )
+    )
+    grouped["non_fo_count"] = grouped["total_count"] - grouped["fo_count"].astype(int)
+    grouped["fo_count"]     = grouped["fo_count"].astype(int)
+    grouped["day_label"]    = grouped["result_date"].dt.strftime("%d %b (%a)")
+    return grouped.sort_values("result_date").reset_index(drop=True)
 
 
 # ── Pipeline health ───────────────────────────────────────────────────────────
-def get_pipeline_health(conn, limit: int = 10) -> pd.DataFrame:
+def get_pipeline_health(conn=None, limit: int = 10) -> pd.DataFrame:
     """Last N pipeline execution logs for the health panel."""
-    sql = """
-        SELECT
-            run_id,
-            started_at,
-            completed_at,
-            source_used,
-            rows_fetched,
-            rows_valid,
-            rows_stored,
-            validation_passed,
-            fallback_used,
-            status,
-            duration_seconds,
-            error_message
-        FROM pipeline_logs
-        ORDER BY started_at DESC
-        LIMIT %s
-    """ % limit
-
-    df = run_query_df(conn, sql)
-    if not df.empty:
-        df["started_at"] = pd.to_datetime(df["started_at"])
+    logs = _load_logs()
+    if not logs:
+        return pd.DataFrame()
+    df = pd.DataFrame(logs[:limit])
+    if "started_at" in df.columns:
+        df["started_at"] = pd.to_datetime(df["started_at"], errors="coerce")
     return df
 
 
-def get_last_pipeline_run(conn) -> dict:
-    """Return the most recent pipeline run summary."""
-    sql = """
-        SELECT *
-        FROM pipeline_logs
-        WHERE status IN ('success', 'partial')
-        ORDER BY started_at DESC
-        LIMIT 1
-    """
-    df = run_query_df(conn, sql)
-    if df.empty:
-        return {}
-    return dict(df.iloc[0])
+def get_last_pipeline_run(conn=None) -> dict:
+    """Return the most recent successful pipeline run summary."""
+    logs = _load_logs()
+    for entry in logs:
+        if entry.get("status") in ("success", "partial"):
+            return entry
+    # If no success, return the most recent run regardless of status
+    return logs[0] if logs else {}
 
 
-# ── Analytics cache ───────────────────────────────────────────────────────────
-def get_cached_analytics(conn, key: str) -> dict:
-    """Retrieve a precomputed analytics value by key."""
-    sql = "SELECT cache_value, computed_at FROM analytics_cache WHERE cache_key = %s"
-    df = run_query_df(conn, sql, (key,))
-    if df.empty:
-        return {}
-    try:
-        val = df.iloc[0]["cache_value"]
-        return val if isinstance(val, dict) else json.loads(val)
-    except Exception:
-        return {}
+# ── Analytics cache (stub — computed inline from CSV) ─────────────────────────
+def get_cached_analytics(conn=None, key: str = "") -> dict:
+    """Placeholder — analytics are computed live from CSV, no cache table needed."""
+    return {}
 
 
 # ── Internal ──────────────────────────────────────────────────────────────────
-def _empty_kpis() -> dict:
+def _empty_kpis(days: int = 7) -> dict:
     return {
         "total": 0, "fo_count": 0, "nifty50_count": 0, "banknifty_count": 0,
         "today_count": 0, "tomorrow_count": 0,
         "week_count": 0, "next_week_count": 0,
         "fo_week_count": 0, "nifty50_week_count": 0,
-        "fo_pct": 0.0, "lookahead_days": 7,
+        "fo_pct": 0.0, "lookahead_days": int(days),
     }

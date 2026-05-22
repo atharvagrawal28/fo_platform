@@ -1,10 +1,14 @@
 """
 pipeline/run.py
 ---------------
-Full pipeline orchestrator: fetch → validate → enrich → store → log
+Full pipeline orchestrator: fetch → validate → enrich → store → log.
 
-Fix: datetime.utcnow() replaced with datetime.now(timezone.utc)
-     throughout — eliminates DeprecationWarning on Python 3.12+.
+No database required. Writes to:
+  data/earnings_calendar.csv   (committed to GitHub by the workflow)
+  data/pipeline_log.json       (committed to GitHub by the workflow)
+
+GitHub Actions runs this twice a day and commits the output files.
+Streamlit Cloud reads the committed files directly — zero external services.
 """
 
 import logging
@@ -14,9 +18,6 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from configs.settings import DATABASE_URL
-from database.bootstrap import bootstrap_database
-from database.connection import get_connection
 from pipeline.enrich import enrich
 from pipeline.fetch import fetch_earnings
 from pipeline.store import (
@@ -36,28 +37,14 @@ logger = logging.getLogger("pipeline.run")
 
 
 def run_pipeline() -> int:
-    if not DATABASE_URL:
-        logger.error("DATABASE_URL is not set.")
-        return 1
-
-    try:
-        logger.info("Bootstrapping database schema and reference data...")
-        bootstrap_database(DATABASE_URL)
-    except Exception as e:
-        logger.error("Database bootstrap failed: %s", e, exc_info=True)
-        return 1
-
     run_id     = generate_run_id()
-    started_at = datetime.now(timezone.utc)          # Fix: was datetime.utcnow()
+    started_at = datetime.now(timezone.utc)
 
     logger.info("=" * 60)
     logger.info("Pipeline starting | run_id=%s", run_id)
     logger.info("=" * 60)
 
-    try:
-        log_pipeline_start(run_id, DATABASE_URL)
-    except Exception as e:
-        logger.error("Could not write pipeline start log: %s", e)
+    log_pipeline_start(run_id)
 
     source        = "none"
     rows_fetched  = 0
@@ -92,7 +79,7 @@ def run_pipeline() -> int:
         if not val_passed:
             error_msg = f"Validation failed: {fail_reason}"
             logger.error(error_msg)
-            logger.warning("Production data NOT updated — last valid snapshot preserved.")
+            logger.warning("Data files NOT updated — previous snapshot preserved.")
             raise RuntimeError(error_msg)
 
         rows_valid = len(df_clean)
@@ -100,11 +87,7 @@ def run_pipeline() -> int:
 
         # ── Step 3: Enrich ────────────────────────────────────────────────────
         logger.info("Step 3/4: Enriching...")
-        conn = get_connection(DATABASE_URL)
-        try:
-            df_enriched = enrich(df_clean, conn)
-        finally:
-            conn.close()
+        df_enriched = enrich(df_clean)
 
         logger.info(
             "Enrichment done | fo=%d nifty50=%d sector_mapped=%d",
@@ -113,11 +96,11 @@ def run_pipeline() -> int:
             int(df_enriched["sector"].notna().sum()),
         )
 
-        # ── Step 4: Store ─────────────────────────────────────────────────────
-        logger.info("Step 4/4: Storing to PostgreSQL...")
-        store_meta  = store_results(df_enriched, run_id, fetch_meta, DATABASE_URL)
+        # ── Step 4: Store to CSV ──────────────────────────────────────────────
+        logger.info("Step 4/4: Writing to CSV...")
+        store_meta  = store_results(df_enriched, run_id, fetch_meta)
         rows_stored = store_meta.get("rows_stored", 0)
-        logger.info("Store done | upserted=%d", rows_stored)
+        logger.info("Store done | written=%d", rows_stored)
 
         exit_code = 0
 
@@ -127,13 +110,12 @@ def run_pipeline() -> int:
         exit_code = 1
 
     finally:
-        duration = (datetime.now(timezone.utc) - started_at).total_seconds()  # Fix
+        duration = (datetime.now(timezone.utc) - started_at).total_seconds()
         status   = "success" if exit_code == 0 else "failed"
 
         try:
             log_pipeline_complete(
                 run_id            = run_id,
-                database_url      = DATABASE_URL,
                 source            = source,
                 rows_fetched      = rows_fetched,
                 rows_valid        = rows_valid,

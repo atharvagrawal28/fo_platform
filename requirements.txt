@@ -1,12 +1,10 @@
-# F&O Earnings Intelligence Platform - Dependencies
-# Install: pip install -r requirements.txt
-# Python: 3.11 or 3.12
+# F&O Earnings Intelligence Platform — Dependencies
+# Install:  pip install -r requirements.txt
+# Python:   3.11 or 3.12
+# No database required — data is stored in CSV files committed to the repo.
 
 # Dashboard
 streamlit>=1.35.0
-
-# Database
-psycopg2-binary>=2.9.9
 
 # Data ingestion and parsing
 pandas>=2.2.0
