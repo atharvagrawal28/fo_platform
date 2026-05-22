@@ -157,8 +157,7 @@ def _sidebar() -> dict:
         st.markdown("## ⚙️ Filters")
         st.markdown("---")
 
-        auto_refresh = st.checkbox("Auto-refresh", value=True)
-        fo_only = st.checkbox("F&O stocks only")
+        fo_only  = st.checkbox("F&O stocks only")
         n50_only = st.checkbox("Nifty 50 only")
 
         st.markdown("**Sector**")
@@ -174,14 +173,25 @@ def _sidebar() -> dict:
         today    = datetime.today().date()
         max_date = today + timedelta(days=LOOKAHEAD_DAYS)
         c1, c2   = st.columns(2)
-        with c1: start = st.date_input("From", value=today, min_value=today, max_value=max_date)
+        with c1: start = st.date_input("From", value=today,    min_value=today, max_value=max_date)
         with c2: end   = st.date_input("To",   value=max_date, min_value=today, max_value=max_date)
 
+        # Guard: clamp end to start if user accidentally picks end before start
+        if end < start:
+            end = start
+            st.caption("End date set to match start date.")
+
         st.markdown("---")
-        if st.button("🔄 Refresh", use_container_width=True):
+        if st.button("🔄 Refresh Data", use_container_width=True):
             st.cache_resource.clear()
             st.cache_data.clear()
             st.rerun()
+
+        st.markdown(
+            '<div style="font-size:0.68rem;color:#8B8FA8;text-align:center;margin-top:4px">'
+            'Pipeline runs 8AM &amp; 4:30PM IST daily</div>',
+            unsafe_allow_html=True,
+        )
 
         # Pipeline status mini-panel
         if conn:
@@ -230,25 +240,27 @@ def _run_age_hours(last_run: dict) -> float | None:
     return max(0.0, (now - ts).total_seconds() / 3600)
 
 
-def _auto_refresh(seconds: int = 300):
-    st.markdown(
-        f'<meta http-equiv="refresh" content="{seconds}">',
-        unsafe_allow_html=True,
-    )
+def _get_db_row_count(conn) -> int:
+    """Return the actual live row count from earnings_calendar."""
+    from database.connection import run_query_df
+    df = run_query_df(conn, "SELECT COUNT(*) AS n FROM earnings_calendar")
+    if df.empty:
+        return 0
+    return int(df.iloc[0].get("n", 0) or 0)
 
 
-def _header(last_run: dict):
+def _header(last_run: dict, db_rows: int = 0):
     ts = "—"
     run_ts = _run_timestamp(last_run)
     if run_ts is not None:
         ts = run_ts.strftime("%d %b %Y, %H:%M IST")
-    source = last_run.get("source_used", "—") if last_run else "—"
-    rows   = last_run.get("rows_stored", 0) if last_run else 0
+    source    = last_run.get("source_used", "—") if last_run else "—"
     age_hours = _run_age_hours(last_run)
-    is_stale = age_hours is not None and age_hours > 36
+    is_stale  = age_hours is not None and age_hours > 36
     freshness = "STALE DATA" if is_stale else "CURRENT DATA"
     freshness_color = "#FFB347" if is_stale else "#00C896"
-    age_text = "unknown age" if age_hours is None else f"{age_hours:.1f}h old"
+    age_text  = "unknown age" if age_hours is None else f"{age_hours:.1f}h old"
+    rows_text = f"{db_rows:,} companies in DB" if db_rows else "—"
 
     st.markdown(
         f"""
@@ -258,7 +270,7 @@ def _header(last_run: dict):
             <div>
                 <span style="font-size:1.8rem;font-weight:700;
                              letter-spacing:-.02em;color:#E8EAF0">
-                    📈 F&O Earnings Intelligence
+                    📈 F&amp;O Earnings Intelligence
                 </span>
                 <span style="display:inline-block;margin-left:10px;
                              background:rgba(0,212,255,.12);
@@ -275,8 +287,8 @@ def _header(last_run: dict):
             </div>
             <div style="font-size:0.75rem;color:#8B8FA8;
                         font-family:'IBM Plex Mono',monospace;text-align:right">
-                Last successful update: {ts}<br>
-                Source: {source} &nbsp;|&nbsp; {rows} rows in DB &nbsp;|&nbsp; {age_text}
+                Last update: {ts}<br>
+                Source: {source} &nbsp;|&nbsp; {rows_text} &nbsp;|&nbsp; {age_text}
             </div>
         </div>
         """,
@@ -296,9 +308,9 @@ def _apply_filters(df: pd.DataFrame, f: dict) -> pd.DataFrame:
             mask = mask | d["symbol"].str.contains(term, case=False, na=False)
         d = d[mask]
     if f["fo_only"]:
-        d = d[d["is_fo"] == True]
+        d = d[d["is_fo"].astype(bool)]
     if f["n50_only"]:
-        d = d[d["is_nifty50"] == True]
+        d = d[d["is_nifty50"].astype(bool)]
     if f["sector"] != "All":
         d = d[d["sector"] == f["sector"]]
     if f["start"]:
@@ -376,14 +388,16 @@ def main():
         top_earnings  = _query_db(get_top_earnings, pd.DataFrame, days=LOOKAHEAD_DAYS, limit=10)
         pipeline_logs = _query_db(get_pipeline_health, pd.DataFrame, limit=10)
         last_run      = _query_db(get_last_pipeline_run, {})
+        # Real live count from earnings_calendar (not rows_stored from pipeline_logs,
+        # which only reflects the last run — misleading after prune)
+        conn = _safe_conn()
+        db_rows = _get_db_row_count(conn) if conn else 0
 
     # Sidebar filters
     filters = _sidebar()
-    if filters.get("auto_refresh"):
-        _auto_refresh()
 
     # Header
-    _header(last_run)
+    _header(last_run, db_rows=db_rows)
 
     # Empty DB state
     if all_results.empty and kpis["total"] == 0:
@@ -437,7 +451,7 @@ def main():
 
     # ── Tab 3: F&O Spotlight ─────────────────────────────────────────────────
     with t3:
-        fo_df = all_results[all_results["is_fo"] == True].copy() if not all_results.empty else pd.DataFrame()
+        fo_df = all_results[all_results["is_fo"].astype(bool)].copy() if not all_results.empty else pd.DataFrame()
         fo_df = _apply_filters(fo_df, {**filters, "fo_only": False})
 
         st.markdown(
@@ -454,8 +468,12 @@ def main():
             m3.metric("Bank Nifty", int(fo_df["is_banknifty"].sum()))
 
             st.markdown("<br>", unsafe_allow_html=True)
+            # Sort by date first so cards always appear in chronological order
+            fo_df = fo_df.sort_values("result_date")
             fo_df["date_group"] = pd.to_datetime(fo_df["result_date"]).dt.strftime("%A, %d %b")
-            groups = list(fo_df.groupby("date_group", sort=False))
+            # Use result_date as sort key (not date_group string — alphabetic order is wrong)
+            date_order = fo_df.drop_duplicates("date_group")["date_group"].tolist()
+            groups = [(d, fo_df[fo_df["date_group"] == d]) for d in date_order]
             cols   = st.columns(min(len(groups), 4))
 
             for i, (date_label, grp) in enumerate(groups):
@@ -482,7 +500,13 @@ def main():
         st.markdown('<div class="sec-head">Sector Concentration</div>', unsafe_allow_html=True)
 
         if sector_conc.empty:
-            st.info("No sector data. Ensure fo_universe is seeded and pipeline has run.", icon="ℹ️")
+            st.info(
+                "No sector data in the current date range. "
+                "Sectors are only shown for F&O / index companies whose symbols "
+                "matched the reference tables. Try widening the date range or "
+                "removing the Sector filter.",
+                icon="ℹ️",
+            )
         else:
             sc1, sc2 = st.columns([2, 1])
             with sc1:

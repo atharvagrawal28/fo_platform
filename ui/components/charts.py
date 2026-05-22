@@ -18,12 +18,16 @@ def chart_daily_bar(df: pd.DataFrame) -> go.Figure:
     fig = px.bar(
         df, x="day_label", y=["fo_count", "non_fo_count"],
         color_discrete_map={"fo_count": C["green"], "non_fo_count": C["red"]},
-        barmode="stack", text_auto=True,
+        barmode="stack",
         title="Daily Results Breakdown",
         labels={"day_label": "", "value": "Results", "variable": ""},
     )
     fig.for_each_trace(lambda t: t.update(
-        name="F&O" if t.name == "fo_count" else "Non-F&O"
+        name="F&O" if t.name == "fo_count" else "Non-F&O",
+        # Show total on the top of each stacked bar only — avoids overlapping
+        # labels on small segments when one category is near zero.
+        texttemplate="%{y}" if t.name == "Non-F&O" else "",
+        textposition="outside",
     ))
     return _theme(fig)
 
@@ -63,13 +67,20 @@ def chart_importance_scatter(df: pd.DataFrame) -> go.Figure:
     if df.empty:
         return _blank("No data")
     d = df.copy()
-    d["result_date_str"] = pd.to_datetime(d["result_date"]).dt.strftime("%d %b")
+    d["result_date"] = pd.to_datetime(d["result_date"])
+    # Only plot companies with importance > 0; others are untracked SME noise.
+    # Also avoids Plotly ValueError when size column is all-zero.
+    d = d[d["importance_score"] > 0]
+    if d.empty:
+        return _blank("No ranked companies in current filter")
     fig = px.scatter(
         d, x="result_date", y="importance_score",
         hover_name="company_name",
+        hover_data={"sector": True, "symbol": True, "result_date": False},
         color="sector",
         size="importance_score",
-        size_max=20,
+        size_max=22,
+        size_min=6,            # prevents invisible zero-sized dots
         title="Earnings Importance by Date",
         labels={"result_date": "Date", "importance_score": "Importance Score"},
     )

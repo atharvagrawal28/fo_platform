@@ -15,7 +15,7 @@ def render_results_table(df: pd.DataFrame):
     display = _format_for_display(df)
 
     n    = len(display)
-    fo_n = int((df["is_fo"] == True).sum()) if "is_fo" in df.columns else 0
+    fo_n = int(df["is_fo"].astype(bool).sum()) if "is_fo" in df.columns else 0
 
     c1, c2 = st.columns([3, 1])
     with c1:
