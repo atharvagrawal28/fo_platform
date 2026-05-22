@@ -129,104 +129,155 @@ class DownloadSpec:
 
 def fetch_earnings() -> tuple[pd.DataFrame, dict]:
     """
-    Download official exchange files, parse them into the existing normalized
-    dataframe contract, and return metadata consumed by pipeline/run.py.
+    True waterfall ingestion: NSE → BSE (fallback only).
+
+    NSE board-meetings data is tried first. NSE results are:
+      - Confirmed board meetings (companies that have ANNOUNCED a date)
+      - Already keyword-filtered to earnings-results meetings only
+      - The authoritative source for all F&O and Nifty index companies
+
+    BSE forthcoming-results data is used ONLY if NSE fails entirely or
+    returns fewer than MIN_ROWS rows. BSE returns thousands of estimated
+    result dates for every listed company (including ~4,800 BSE SME
+    companies), which inflates counts without adding analytical value.
+
+    If both sources fail, the last valid cached file is tried before
+    raising so that the existing DB snapshot is preserved.
     """
-    start = datetime.now()
+    from configs.settings import MIN_ROWS as _MIN_ROWS
+
+    start   = datetime.now()
     raw_dir = _ensure_raw_dir()
-    frames: list[pd.DataFrame] = []
-    raw_files: list[str] = []
-    failures: list[str] = []
+    nse_spec, bse_spec = _nse_spec(), _bse_spec()
 
-    for spec in _download_specs():
-        try:
-            path = _download_with_retry(spec, raw_dir)
-            raw_files.append(str(path))
-            frames.append(_parse_file_for_source(path, spec))
-        except Exception as exc:
-            failures.append(f"{spec.name}: {_short_error(exc)}")
-            logger.warning(
-                "Official download/parser failed | source=%s error=%s",
-                spec.source,
-                _short_error(exc),
-            )
+    # ── 1. Try NSE ────────────────────────────────────────────────────────────
+    nse_frame, nse_file, nse_err = _try_fetch_spec(nse_spec, raw_dir)
 
-            cached = _latest_raw_file(raw_dir, spec.name)
-            if cached:
-                try:
-                    logger.info(
-                        "Fallback transition | source=%s using latest local raw file=%s",
-                        spec.source,
-                        cached.name,
-                    )
-                    raw_files.append(str(cached))
-                    frames.append(_parse_file_for_source(cached, spec))
-                except Exception as cached_exc:
-                    logger.warning(
-                        "Cached raw file failed | source=%s file=%s error=%s",
-                        spec.source,
-                        cached.name,
-                        _short_error(cached_exc),
-                    )
-
-    if not frames:
+    if nse_frame is not None and len(nse_frame) >= _MIN_ROWS:
         duration = (datetime.now() - start).total_seconds()
-        logger.error(
-            "All official file sources failed after %.1fs. Last database snapshot is preserved.",
-            duration,
+        logger.info(
+            "Fetch success | source=nse rows=%d duration_s=%.2f (BSE skipped)",
+            len(nse_frame), duration,
         )
-        raise RuntimeError(
-            "Official file ingestion failed. Last valid data preserved in database. "
-            + " | ".join(failures)
-        )
+        return nse_frame, {
+            "source": "nse_official_file",
+            "fallback_used": False,
+            "rows_fetched": len(nse_frame),
+            "fetch_duration_s": round(duration, 2),
+            "raw_files": [nse_file] if nse_file else [],
+            "source_failures": [],
+        }
 
-    df = _standardize(pd.concat(frames, ignore_index=True))
-    if df.empty:
-        raise RuntimeError("Official files parsed successfully but produced zero dated result rows.")
-
-    duration = (datetime.now() - start).total_seconds()
-    logger.info(
-        "Fetch success | source=official_files rows=%d duration_s=%.2f raw_files=%d",
-        len(df),
-        duration,
-        len(raw_files),
+    logger.warning(
+        "NSE fetch insufficient (rows=%s err=%s) — trying BSE fallback",
+        len(nse_frame) if nse_frame is not None else 0,
+        nse_err or "—",
     )
-    return df, {
-        "source": "official_files",
-        "fallback_used": bool(failures),
-        "rows_fetched": len(df),
-        "fetch_duration_s": round(duration, 2),
-        "raw_files": raw_files,
-        "source_failures": failures,
-    }
+
+    # ── 2. Fallback: BSE ──────────────────────────────────────────────────────
+    bse_frame, bse_file, bse_err = _try_fetch_spec(bse_spec, raw_dir)
+
+    if bse_frame is not None and len(bse_frame) >= _MIN_ROWS:
+        duration = (datetime.now() - start).total_seconds()
+        logger.info(
+            "Fetch success | source=bse_fallback rows=%d duration_s=%.2f",
+            len(bse_frame), duration,
+        )
+        return bse_frame, {
+            "source": "bse_official_file",
+            "fallback_used": True,
+            "rows_fetched": len(bse_frame),
+            "fetch_duration_s": round(duration, 2),
+            "raw_files": [bse_file] if bse_file else [],
+            "source_failures": [f"nse: {nse_err}"] if nse_err else ["nse: insufficient rows"],
+        }
+
+    # ── 3. Last resort: newest cached raw file from either source ─────────────
+    for spec in (nse_spec, bse_spec):
+        cached = _latest_raw_file(raw_dir, spec.name)
+        if cached:
+            try:
+                frame = _parse_file_for_source(cached, spec)
+                if len(frame) >= _MIN_ROWS:
+                    duration = (datetime.now() - start).total_seconds()
+                    logger.warning(
+                        "Fetch success | source=cached_%s rows=%d duration_s=%.2f",
+                        spec.name, len(frame), duration,
+                    )
+                    return frame, {
+                        "source": f"cached_{spec.name}",
+                        "fallback_used": True,
+                        "rows_fetched": len(frame),
+                        "fetch_duration_s": round(duration, 2),
+                        "raw_files": [str(cached)],
+                        "source_failures": [f"nse: {nse_err}", f"bse: {bse_err}"],
+                    }
+            except Exception as exc:
+                logger.warning("Cached file fallback failed | %s | %s", cached.name, exc)
+
+    raise RuntimeError(
+        "All ingestion sources failed. Last valid data preserved in database. "
+        f"NSE: {nse_err or 'insufficient rows'} | BSE: {bse_err or 'insufficient rows'}"
+    )
 
 
-def _download_specs() -> list[DownloadSpec]:
-    today = datetime.today().date()
+def _try_fetch_spec(
+    spec: "DownloadSpec", raw_dir: "Path"
+) -> "tuple[pd.DataFrame | None, str | None, str | None]":
+    """
+    Attempt to download and parse one spec.
+    Returns (dataframe_or_None, file_path_or_None, error_str_or_None).
+    Never raises.
+    """
+    try:
+        path  = _download_with_retry(spec, raw_dir)
+        frame = _parse_file_for_source(path, spec)
+        return frame, str(path), None
+    except Exception as exc:
+        return None, None, _short_error(exc)
+
+
+def _nse_spec() -> DownloadSpec:
+    today   = datetime.today().date()
     to_date = today + timedelta(days=MAX_FUTURE_DAYS)
+    return DownloadSpec(
+        name="nse_board_meetings",
+        source="nse_official_file",
+        url=NSE_BOARD_MEETINGS_CSV_URL,
+        referer=NSE_BOARD_MEETINGS_PAGE_URL,
+        params={
+            "index": "equities",
+            "from_date": today.strftime("%d-%m-%Y"),
+            "to_date":   to_date.strftime("%d-%m-%Y"),
+            "csv": "true",
+        },
+    )
 
-    return [
-        DownloadSpec(
-            name="nse_board_meetings",
-            source="nse_official_file",
-            url=NSE_BOARD_MEETINGS_CSV_URL,
-            referer=NSE_BOARD_MEETINGS_PAGE_URL,
-            params={
-                "index": "equities",
-                "from_date": today.strftime("%d-%m-%Y"),
-                "to_date": to_date.strftime("%d-%m-%Y"),
-                "csv": "true",
-            },
-        ),
-        DownloadSpec(
-            name="bse_forthcoming_results",
-            source="bse_official_file",
-            url=BSE_FORTHCOMING_RESULTS_CSV_URL,
-            referer=BSE_FORTHCOMING_RESULTS_PAGE_URL,
-            params={"fromdate": "", "scripcode": "", "todate": ""},
-            origin="https://www.bseindia.com",
-        ),
-    ]
+
+def _bse_spec() -> DownloadSpec:
+    # BSE forthcoming-results endpoint with explicit date window.
+    # Empty fromdate/todate causes BSE to return ALL listed companies
+    # (~4,800+) with estimated dates, flooding the dashboard with noise.
+    # Passing a bounded window limits the response to confirmed-date rows.
+    today   = datetime.today().date()
+    to_date = today + timedelta(days=MAX_FUTURE_DAYS)
+    return DownloadSpec(
+        name="bse_forthcoming_results",
+        source="bse_official_file",
+        url=BSE_FORTHCOMING_RESULTS_CSV_URL,
+        referer=BSE_FORTHCOMING_RESULTS_PAGE_URL,
+        params={
+            "fromdate": today.strftime("%Y%m%d"),
+            "todate":   to_date.strftime("%Y%m%d"),
+            "scripcode": "",
+        },
+        origin="https://www.bseindia.com",
+    )
+
+
+# Kept for backward compatibility with any external callers.
+def _download_specs() -> list[DownloadSpec]:
+    return [_nse_spec(), _bse_spec()]
 
 
 def _ensure_raw_dir() -> Path:

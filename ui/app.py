@@ -349,6 +349,8 @@ def _empty_kpis() -> dict:
         "tomorrow_count": 0,
         "week_count": 0,
         "next_week_count": 0,
+        "fo_week_count": 0,
+        "nifty50_week_count": 0,
         "fo_pct": 0.0,
         "lookahead_days": LOOKAHEAD_DAYS,
     }

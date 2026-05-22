@@ -105,6 +105,16 @@ def get_kpis(conn, days: int = 7) -> dict:
                 WHERE result_date BETWEEN CURRENT_DATE + INTERVAL '7 days'
                                      AND  CURRENT_DATE + INTERVAL '13 days'
             )                                                                 AS next_week_count,
+            COUNT(*) FILTER (
+                WHERE is_fo
+                  AND result_date BETWEEN CURRENT_DATE
+                                     AND  CURRENT_DATE + INTERVAL '6 days'
+            )                                                                 AS fo_week_count,
+            COUNT(*) FILTER (
+                WHERE is_nifty50
+                  AND result_date BETWEEN CURRENT_DATE
+                                     AND  CURRENT_DATE + INTERVAL '6 days'
+            )                                                                 AS nifty50_week_count,
             ROUND(
                 100.0 * COUNT(*) FILTER (WHERE is_fo)
                 / NULLIF(COUNT(*), 0), 1
@@ -126,9 +136,11 @@ def get_kpis(conn, days: int = 7) -> dict:
         "today_count":      int(row.get("today_count", 0) or 0),
         "tomorrow_count":   int(row.get("tomorrow_count", 0) or 0),
         "week_count":       int(row.get("week_count", 0) or 0),
-        "next_week_count":  int(row.get("next_week_count", 0) or 0),
-        "fo_pct":           float(row.get("fo_pct", 0) or 0),
-        "lookahead_days":   int(days),
+        "next_week_count":   int(row.get("next_week_count", 0) or 0),
+        "fo_week_count":     int(row.get("fo_week_count", 0) or 0),
+        "nifty50_week_count":int(row.get("nifty50_week_count", 0) or 0),
+        "fo_pct":            float(row.get("fo_pct", 0) or 0),
+        "lookahead_days":    int(days),
     }
 
 
@@ -280,5 +292,6 @@ def _empty_kpis() -> dict:
         "total": 0, "fo_count": 0, "nifty50_count": 0, "banknifty_count": 0,
         "today_count": 0, "tomorrow_count": 0,
         "week_count": 0, "next_week_count": 0,
+        "fo_week_count": 0, "nifty50_week_count": 0,
         "fo_pct": 0.0, "lookahead_days": 7,
     }
