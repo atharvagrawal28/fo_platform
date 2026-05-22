@@ -1,12 +1,19 @@
 """
-database/bootstrap.py
----------------------
-Idempotent database bootstrap for cloud pipeline runs.
+database/bootstrap.py — DEPRECATED
+------------------------------------
+No longer used. The platform has been migrated to CSV-based storage.
+Data is now written to data/earnings_calendar.csv and data/pipeline_log.json
+by pipeline/store.py and committed to GitHub by the Actions workflow.
 
-This is safe to run before every ingestion:
-  - SQL migrations use IF NOT EXISTS / ON CONFLICT-safe DDL
-  - seed.py uses upserts for reference CSV data
+This file is kept for historical reference only and is NOT imported
+by any active code path.
 """
+
+# Guard against accidental import — nothing in this file is needed anymore
+raise ImportError(
+    "database.bootstrap is deprecated. "
+    "The platform uses CSV files; no database bootstrap is required."
+)
 
 import logging
 import sys
