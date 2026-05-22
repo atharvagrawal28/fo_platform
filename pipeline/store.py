@@ -32,12 +32,17 @@ def store_results(
         logger.warning("store_results called with empty DataFrame — skipping")
         return {"rows_stored": 0, "snapshot_rows": 0}
 
+    source  = metadata.get("source", "")
     stored  = _upsert_earnings_calendar(df, database_url)
     snapped = _insert_historical_snapshot(df, run_id, database_url)
+    pruned  = _prune_stale_rows(database_url, current_source=source)
     _refresh_analytics_cache(database_url)
 
-    logger.info("Store complete | upserted=%d snapshot=%d", stored, snapped)
-    return {"rows_stored": stored, "snapshot_rows": snapped}
+    logger.info(
+        "Store complete | upserted=%d snapshot=%d pruned=%d",
+        stored, snapped, pruned,
+    )
+    return {"rows_stored": stored, "snapshot_rows": snapped, "pruned": pruned}
 
 
 # ── 1. Upsert earnings_calendar ───────────────────────────────────────────────
@@ -174,6 +179,57 @@ def _upsert_cache(cur, key: str, value, computed_at: str):
         """,
         (key, json.dumps(value), computed_at),
     )
+
+
+# ── 4. Prune stale rows ───────────────────────────────────────────────────────
+def _prune_stale_rows(database_url: str, current_source: str = "") -> int:
+    """
+    Remove rows that are no longer useful so the dashboard counts stay correct.
+
+    Two classes of stale data are removed:
+
+    1. Past-dated rows (result_date < yesterday) — results that have already
+       been announced accumulate indefinitely because the upsert never deletes.
+       We keep yesterday to avoid dropping rows from a late-evening run.
+
+    2. BSE-sourced rows when the current run used NSE — the BSE fallback
+       stores thousands of SME companies that inflate "All Companies This Week"
+       without adding analytical value. When NSE succeeds we don't need them.
+       Historical snapshots are kept (append-only by design); only the live
+       earnings_calendar table is pruned.
+    """
+    total_pruned = 0
+
+    with pipeline_cursor(database_url) as cur:
+        # ── Rule 1: remove results from the past ──────────────────────────────
+        cur.execute(
+            """
+            DELETE FROM earnings_calendar
+            WHERE result_date < CURRENT_DATE - INTERVAL '1 day'
+            """,
+        )
+        past_pruned = cur.rowcount
+        total_pruned += past_pruned
+        if past_pruned:
+            logger.info("Pruned %d past-dated rows from earnings_calendar", past_pruned)
+
+        # ── Rule 2: remove BSE rows when NSE was the authoritative source ─────
+        if "nse" in str(current_source).lower():
+            cur.execute(
+                """
+                DELETE FROM earnings_calendar
+                WHERE source = 'bse_official_file'
+                """,
+            )
+            bse_pruned = cur.rowcount
+            total_pruned += bse_pruned
+            if bse_pruned:
+                logger.info(
+                    "Pruned %d stale BSE rows (NSE is authoritative source this run)",
+                    bse_pruned,
+                )
+
+    return total_pruned
 
 
 # ── Pipeline log writers ──────────────────────────────────────────────────────
