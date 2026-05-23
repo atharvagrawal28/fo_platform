@@ -1,21 +1,31 @@
 # .github/workflows/pipeline.yml
-# Fetches NSE/BSE earnings data and commits updated CSV files to the repo.
-# Streamlit Cloud reads these files directly — no database needed, zero cost.
+# Two-stage daily pipeline:
+#   1. Earnings ingestion (runs 8AM + 4:30PM IST)
+#   2. OI / Derivatives positioning (runs 7PM IST after bhavcopy is published)
+#
+# All output is committed as CSV files — no database required, zero cost.
 
 name: Earnings Pipeline
 
 on:
   schedule:
-    # 8:00 AM IST every weekday  (2:30 AM UTC)
+    # Stage 1 — Earnings: 8:00 AM IST (2:30 AM UTC)  weekdays
     - cron: '30 2 * * 1-5'
-    # 4:30 PM IST every weekday  (11:00 AM UTC)
+    # Stage 1 — Earnings: 4:30 PM IST (11:00 AM UTC) weekdays
     - cron: '0 11 * * 1-5'
-    # Weekends: once at 8:00 AM IST
+    # Stage 1+2 — Weekend morning snapshot: 8:00 AM IST (2:30 AM UTC)
     - cron: '30 2 * * 0,6'
+    # Stage 2 — OI: 7:00 PM IST (1:30 PM UTC) weekdays (after bhavcopy published)
+    - cron: '30 13 * * 1-5'
 
   workflow_dispatch:
+    inputs:
+      run_oi:
+        description: 'Also run OI pipeline'
+        required: false
+        default: 'true'
+        type: boolean
 
-# Write permission so the workflow can commit updated CSV files
 permissions:
   contents: write
 
@@ -25,9 +35,9 @@ concurrency:
 
 jobs:
   run-pipeline:
-    name: Fetch earnings data and commit CSVs
+    name: Fetch earnings + OI data and commit CSVs
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
 
     steps:
       - name: Checkout
@@ -42,16 +52,22 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r requirements.txt
 
-      - name: Run ingestion pipeline
+      - name: Run earnings ingestion pipeline
         run: python pipeline/run.py
+
+      - name: Run OI / derivatives positioning pipeline
+        run: python pipeline/run_oi.py
 
       - name: Commit updated data files
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/earnings_calendar.csv data/pipeline_log.json
-          git diff --staged --quiet && echo "No changes to commit" || \
-            git commit -m "chore: update earnings data [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+          git add data/earnings_calendar.csv \
+                  data/pipeline_log.json \
+                  data/oi_snapshot.csv \
+                  data/oi_history.csv
+          git diff --staged --quiet && echo "No data changes to commit" || \
+            git commit -m "chore: update earnings + OI data [$(date -u '+%Y-%m-%d %H:%M UTC')]"
 
       - name: Push changes
         run: git push

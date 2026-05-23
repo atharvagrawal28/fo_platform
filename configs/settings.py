@@ -69,3 +69,17 @@ BANKNIFTY_CSV    = DATA_DIR / "banknifty.csv"
 # ── Live data files (written by GitHub Actions, read by Streamlit) ────────────
 EARNINGS_CALENDAR_CSV = DATA_DIR / "earnings_calendar.csv"
 PIPELINE_LOG_JSON     = DATA_DIR / "pipeline_log.json"
+OI_SNAPSHOT_CSV       = DATA_DIR / "oi_snapshot.csv"
+OI_HISTORY_CSV        = DATA_DIR / "oi_history.csv"
+
+# ── OI / Derivatives intelligence ─────────────────────────────────────────────
+# Buildup classification thresholds — moves below these are treated as noise
+OI_PRICE_THRESHOLD_PCT  = 0.75   # minimum |price change %| to classify a buildup
+OI_CHANGE_THRESHOLD_PCT = 2.0    # minimum |OI change %| to classify a buildup
+
+# "Strong" signal thresholds (shown prominently in UI)
+OI_STRONG_PRICE_PCT = 2.0        # price change % → "Strong"
+OI_STRONG_OI_PCT    = 10.0       # OI change % → "Strong"
+
+# Rolling history window kept in oi_history.csv
+OI_HISTORY_DAYS = 60             # ~3 months of trading days

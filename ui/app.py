@@ -21,6 +21,12 @@ import streamlit as st
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from configs.settings import LOOKAHEAD_DAYS
+from database.oi_queries import (
+    get_buildup_summary,
+    get_earnings_oi_context,
+    get_sector_buildup,
+    get_strongest_signals,
+)
 from database.queries import (
     get_daily_distribution,
     get_kpis,
@@ -38,6 +44,13 @@ from ui.components.charts import (
     chart_sector_bar,
 )
 from ui.components.kpis import render_kpi_row
+from ui.components.oi_widgets import (
+    chart_oi_quadrant,
+    chart_sector_heatmap,
+    render_buildup_cards,
+    render_earnings_oi_panel,
+    render_strongest_signals,
+)
 from ui.components.tables import (
     render_pipeline_health,
     render_results_table,
@@ -107,7 +120,7 @@ def _css():
 # ── Data loading (cached per Streamlit session) ───────────────────────────────
 @st.cache_data(ttl=300)  # refresh cache every 5 minutes
 def _load_all_data(days: int):
-    """Load all dashboard data from CSV files. Cached for 5 minutes."""
+    """Load all earnings dashboard data from CSV files."""
     return {
         "all_results":   get_upcoming_results(days=days),
         "kpis":          get_kpis(days=days),
@@ -117,6 +130,17 @@ def _load_all_data(days: int):
         "pipeline_logs": get_pipeline_health(limit=10),
         "last_run":      get_last_pipeline_run(),
         "sector_opts":   get_sector_options(),
+    }
+
+
+@st.cache_data(ttl=300)
+def _load_oi_data():
+    """Load OI / derivatives positioning data from CSV files."""
+    return {
+        "summary":         get_buildup_summary(),
+        "sector_buildup":  get_sector_buildup(),
+        "strongest":       get_strongest_signals(n=25),
+        "earnings_ctx":    get_earnings_oi_context(),
     }
 
 
@@ -299,7 +323,8 @@ def main():
     _css()
 
     with st.spinner("Loading data…"):
-        data = _load_all_data(days=LOOKAHEAD_DAYS)
+        data    = _load_all_data(days=LOOKAHEAD_DAYS)
+        oi_data = _load_oi_data()
 
     all_results   = data["all_results"]
     kpis          = data["kpis"]
@@ -325,12 +350,19 @@ def main():
     # Apply sidebar filters
     filtered = _apply_filters(all_results, filters)
 
+    # Unpack OI data
+    oi_summary       = oi_data["summary"]
+    oi_sector        = oi_data["sector_buildup"]
+    oi_strongest     = oi_data["strongest"]
+    oi_earnings_ctx  = oi_data["earnings_ctx"]
+
     # ── Tabs ──────────────────────────────────────────────────────────────────
-    t1, t2, t3, t4, t5 = st.tabs([
+    t1, t2, t3, t4, t5, t6 = st.tabs([
         "📊 Overview",
         "📋 All Results",
         "🎯 F&O Spotlight",
         "🏭 Sectors",
+        "📡 OI Positioning",
         "⚙️ Pipeline Health",
     ])
 
@@ -445,8 +477,84 @@ def main():
                 key="sectors_importance_scatter",
             )
 
-    # ── Tab 5: Pipeline Health ────────────────────────────────────────────────
+    # ── Tab 5: OI Positioning Intelligence ───────────────────────────────────
     with t5:
+        st.markdown(
+            '<div class="sec-head">Derivatives Positioning Intelligence</div>',
+            unsafe_allow_html=True,
+        )
+        st.markdown(
+            '<div style="font-size:0.72rem;color:#8B8FA8;margin-bottom:16px">'
+            'Observational analysis of futures open interest activity. '
+            'Positioning classifications are based on price & OI directional changes. '
+            'Not financial advice.</div>',
+            unsafe_allow_html=True,
+        )
+
+        if oi_summary.get("total", 0) == 0:
+            st.info(
+                "OI data not yet available. The pipeline fetches NSE F&O Bhavcopy "
+                "after market close (~6PM IST). Trigger **Actions → Earnings Pipeline** "
+                "once the market closes to populate this tab.",
+                icon="📡",
+            )
+        else:
+            # Row 1: Summary cards
+            render_buildup_cards(oi_summary)
+
+            st.markdown("---")
+
+            # Row 2: Quadrant scatter + Pre-Earnings context
+            col_q, col_e = st.columns([3, 2])
+            with col_q:
+                st.markdown(
+                    '<div class="sec-head">Positioning Quadrant</div>',
+                    unsafe_allow_html=True,
+                )
+                from database.oi_queries import get_oi_snapshot
+                oi_snap = get_oi_snapshot()
+                st.plotly_chart(
+                    chart_oi_quadrant(oi_snap),
+                    use_container_width=True,
+                    key="oi_quadrant",
+                )
+
+            with col_e:
+                st.markdown(
+                    '<div class="sec-head">Pre-Earnings Positioning</div>',
+                    unsafe_allow_html=True,
+                )
+                st.markdown(
+                    '<div style="font-size:0.68rem;color:#8B8FA8;margin-bottom:10px">'
+                    'F&O stocks reporting results this week + current derivatives activity</div>',
+                    unsafe_allow_html=True,
+                )
+                render_earnings_oi_panel(oi_earnings_ctx)
+
+            st.markdown("---")
+
+            # Row 3: Sector heatmap + Strongest signals
+            col_s, col_t = st.columns([2, 3])
+            with col_s:
+                st.markdown(
+                    '<div class="sec-head">Sector Positioning</div>',
+                    unsafe_allow_html=True,
+                )
+                st.plotly_chart(
+                    chart_sector_heatmap(oi_sector),
+                    use_container_width=True,
+                    key="oi_sector_heatmap",
+                )
+
+            with col_t:
+                st.markdown(
+                    '<div class="sec-head">Strongest Positioning Shifts</div>',
+                    unsafe_allow_html=True,
+                )
+                render_strongest_signals(oi_strongest)
+
+    # ── Tab 6: Pipeline Health ────────────────────────────────────────────────
+    with t6:
         st.markdown('<div class="sec-head">Pipeline Health</div>', unsafe_allow_html=True)
         render_pipeline_health(pipeline_logs, last_run)
 
