@@ -456,7 +456,15 @@ def main():
         'margin-top:40px;padding-top:14px;border-top:1px solid #1E2340">'
         'F&O Earnings Intelligence Platform &nbsp;·&nbsp; '
         'GitHub Actions + CSV + Streamlit &nbsp;·&nbsp; '
-        'Free forever &nbsp;·&nbsp; Not financial advice</div>',
+        'Free forever &nbsp;·&nbsp; Not financial advice'
+        '<br><br>'
+        'Built by&nbsp;'
+        '<a href="https://www.linkedin.com/in/atharv-agrawal-295743233" '
+        'target="_blank" '
+        'style="color:#00D4FF;text-decoration:none;font-weight:600;">'
+        'Atharv Agrawal'
+        '</a>'
+        '</div>',
         unsafe_allow_html=True,
     )
 
