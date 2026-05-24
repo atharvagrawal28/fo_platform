@@ -149,13 +149,18 @@ def get_top_earnings(conn=None, days: int = 7, limit: int = 10) -> pd.DataFrame:
 
 # ── Sector concentration ──────────────────────────────────────────────────────
 def get_sector_concentration(conn=None, days: int = 7) -> pd.DataFrame:
-    """Count upcoming results per sector."""
+    """Count upcoming results per sector — F&O stocks only (non-F&O lack sector mapping)."""
     df = _load_calendar()
     if df.empty:
         return pd.DataFrame()
 
     df = _window(df, days)
-    df = df[df["sector"].notna() & (df["sector"].astype(str).str.strip() != "")]
+    # F&O only + sector must be known
+    df = df[
+        df["is_fo"].astype(bool)
+        & df["sector"].notna()
+        & (df["sector"].astype(str).str.strip() != "")
+    ]
 
     if df.empty:
         return pd.DataFrame()
@@ -175,12 +180,14 @@ def get_sector_concentration(conn=None, days: int = 7) -> pd.DataFrame:
 
 
 def get_sector_options(conn=None) -> pd.DataFrame:
-    """All known sectors from the calendar CSV."""
+    """Sectors that contain at least one F&O stock — for the sidebar filter dropdown."""
     df = _load_calendar()
     if df.empty:
         return pd.DataFrame(columns=["sector"])
+    # Restrict to F&O stocks so the dropdown shows only actionable sectors
+    fo_df = df[df["is_fo"].astype(bool)]
     sectors = (
-        df["sector"]
+        fo_df["sector"]
         .dropna()
         .astype(str)
         .str.strip()
