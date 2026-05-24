@@ -54,6 +54,7 @@ from ui.components.oi_widgets import (
 from ui.components.tables import (
     render_pipeline_health,
     render_results_table,
+    render_today_alert,
     render_top_earnings,
 )
 
@@ -136,17 +137,47 @@ def _load_all_data(days: int):
 @st.cache_data(ttl=300)
 def _load_oi_data():
     """Load OI / derivatives positioning data from CSV files."""
+    from database.oi_queries import get_oi_snapshot
     return {
         "summary":         get_buildup_summary(),
         "sector_buildup":  get_sector_buildup(),
         "strongest":       get_strongest_signals(n=25),
         "earnings_ctx":    get_earnings_oi_context(),
+        "snapshot":        get_oi_snapshot(),    # cached here, reused in F&O Spotlight + OI tab
     }
 
 
 # ── Sidebar ───────────────────────────────────────────────────────────────────
-def _sidebar(sector_opts: pd.DataFrame, last_run: dict) -> dict:
+def _sidebar(sector_opts: pd.DataFrame, last_run: dict, kpis: dict = None) -> dict:
     with st.sidebar:
+        # ── Today's Briefing box ──────────────────────────────────────────────
+        if kpis:
+            today_count   = kpis.get("today_count", 0)
+            fo_week_count = kpis.get("fo_week_count", 0)
+            fo_count      = kpis.get("fo_count", 0)
+            n50_week      = kpis.get("nifty50_week_count", 0)
+            today_str     = datetime.today().strftime("%A, %d %b")
+            today_color   = "#FF6B6B" if today_count > 0 else "#8B8FA8"
+            st.markdown(
+                f"""
+                <div style="background:#0D1524;border:1px solid #00D4FF44;
+                            border-left:3px solid #00D4FF;border-radius:8px;
+                            padding:12px 14px;margin-bottom:14px">
+                    <div style="font-size:0.68rem;color:#8B8FA8;
+                                text-transform:uppercase;letter-spacing:.07em;
+                                margin-bottom:6px">📅 Today's Briefing</div>
+                    <div style="font-size:0.82rem;color:#E8EAF0;
+                                font-weight:600;margin-bottom:8px">{today_str}</div>
+                    <div style="font-size:0.75rem;color:#8B8FA8;line-height:2">
+                        Today: &nbsp;<b style="color:{today_color}">{today_count}</b> results<br>
+                        This week F&amp;O: &nbsp;<b style="color:#00C896">{fo_week_count}</b><br>
+                        Nifty 50 this week: &nbsp;<b style="color:#FFB347">{n50_week}</b>
+                    </div>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+
         st.markdown("## ⚙️ Filters")
         st.markdown("---")
 
@@ -175,16 +206,19 @@ def _sidebar(sector_opts: pd.DataFrame, last_run: dict) -> dict:
             st.cache_data.clear()
             st.rerun()
 
+        _is_weekend = datetime.today().weekday() >= 5
         st.markdown(
             '<div style="font-size:0.68rem;color:#8B8FA8;text-align:center;margin-top:4px">'
-            'Pipeline runs 8AM &amp; 4:30PM IST daily</div>',
+            + ('⏸ Weekend — resumes Monday 8AM IST' if _is_weekend else 'Pipeline runs 8AM &amp; 4:30PM IST weekdays')
+            + '</div>',
             unsafe_allow_html=True,
         )
 
         # Pipeline status mini-panel
         if last_run:
             status  = last_run.get("status", "unknown")
-            s_color = "#00C896" if status == "success" else "#FF6B6B"
+            # On weekends a Friday "success" should still show green
+            s_color = "#00C896" if status == "success" else ("#FFB347" if _is_weekend else "#FF6B6B")
             ts_raw  = last_run.get("started_at")
             ts = pd.to_datetime(ts_raw).strftime("%d %b %H:%M") if ts_raw else "—"
             st.markdown(
@@ -230,16 +264,39 @@ def _header(last_run: dict, db_rows: int = 0):
         ts = run_ts.strftime("%d %b %Y, %H:%M IST")
     source    = last_run.get("source_used", "—") if last_run else "—"
     age_hours = _run_age_hours(last_run)
-    is_stale  = age_hours is not None and age_hours > 36
-    freshness = "STALE DATA" if is_stale else "CURRENT DATA"
-    freshness_color = "#FFB347" if is_stale else "#00C896"
-    age_text  = "unknown age" if age_hours is None else f"{age_hours:.1f}h old"
     rows_text = f"{db_rows:,} companies tracked" if db_rows else "—"
+    age_text  = "unknown age" if age_hours is None else f"{age_hours:.1f}h old"
+
+    # 3-tier freshness: <12h green · 12-24h amber · >24h red+banner
+    # Pipeline only runs Mon–Fri — never flag stale on weekends
+    is_weekend = datetime.today().weekday() >= 5  # Saturday=5, Sunday=6
+
+    if is_weekend:
+        freshness_label = "● Weekend"
+        freshness_color = "#8B8FA8"
+        is_stale = False
+    elif age_hours is None:
+        freshness_label = "UNKNOWN"
+        freshness_color = "#8B8FA8"
+        is_stale = False
+    elif age_hours < 12:
+        freshness_label = "● CURRENT DATA"
+        freshness_color = "#00C896"
+        is_stale = False
+    elif age_hours < 24:
+        freshness_label = f"● {age_hours:.1f}h old"
+        freshness_color = "#FFB347"
+        is_stale = False
+    else:
+        freshness_label = f"⚠ DATA STALE — {age_hours:.0f}h old"
+        freshness_color = "#FF6B6B"
+        is_stale = True
 
     st.markdown(
         f"""
         <div style="padding:16px 0 20px;border-bottom:1px solid #1E2340;
-                    margin-bottom:20px;display:flex;justify-content:space-between;
+                    margin-bottom:{'8px' if is_stale else '20px'};
+                    display:flex;justify-content:space-between;
                     align-items:flex-end;flex-wrap:wrap;gap:8px">
             <div>
                 <span style="font-size:1.8rem;font-weight:700;
@@ -253,11 +310,11 @@ def _header(last_run: dict, db_rows: int = 0):
                              border-radius:20px;font-size:.7rem;
                              font-weight:600;letter-spacing:.08em">CSV + GitHub</span>
                 <span style="display:inline-block;margin-left:6px;
-                             background:rgba(255,179,71,.10);
+                             background:rgba(0,0,0,.2);
                              border:1px solid {freshness_color};
                              color:{freshness_color};padding:2px 10px;
                              border-radius:20px;font-size:.7rem;
-                             font-weight:600;letter-spacing:.08em">{freshness}</span>
+                             font-weight:600;letter-spacing:.06em">{freshness_label}</span>
             </div>
             <div style="font-size:0.75rem;color:#8B8FA8;
                         font-family:'IBM Plex Mono',monospace;text-align:right">
@@ -268,6 +325,21 @@ def _header(last_run: dict, db_rows: int = 0):
         """,
         unsafe_allow_html=True,
     )
+
+    # Stale data warning bar (only when >24h old)
+    if is_stale:
+        st.markdown(
+            f"""
+            <div style="background:#FF6B6B18;border:1px solid #FF6B6B55;
+                        border-radius:8px;padding:10px 16px;margin-bottom:16px;
+                        font-size:0.82rem;color:#FF6B6B">
+                ⚠️ Pipeline last ran <b>{age_hours:.0f}h ago</b>. Data may be outdated.
+                Check <b>GitHub Actions → Earnings Pipeline</b> if this persists.
+                Pipeline should run at 8:00 AM and 4:30 PM IST on weekdays.
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
 
 
 # ── Filter application ────────────────────────────────────────────────────────
@@ -337,8 +409,8 @@ def main():
 
     db_rows = len(all_results) if not all_results.empty else 0
 
-    # Sidebar (needs sector list + last run for the status panel)
-    filters = _sidebar(sector_opts, last_run)
+    # Sidebar (needs sector list, last run, and kpis for the briefing box)
+    filters = _sidebar(sector_opts, last_run, kpis)
 
     # Header
     _header(last_run, db_rows=db_rows)
@@ -350,11 +422,21 @@ def main():
     # Apply sidebar filters
     filtered = _apply_filters(all_results, filters)
 
+    # Today's results (for the alert card and briefing box)
+    from datetime import date as _date
+    today_ts     = pd.Timestamp(_date.today())
+    today_results = (
+        all_results[all_results["result_date"] == today_ts]
+        .sort_values(["importance_score", "is_fo"], ascending=[False, False])
+        .reset_index(drop=True)
+    ) if not all_results.empty else pd.DataFrame()
+
     # Unpack OI data
     oi_summary       = oi_data["summary"]
     oi_sector        = oi_data["sector_buildup"]
     oi_strongest     = oi_data["strongest"]
     oi_earnings_ctx  = oi_data["earnings_ctx"]
+    oi_snap          = oi_data["snapshot"]
 
     # ── Tabs ──────────────────────────────────────────────────────────────────
     t1, t2, t3, t4, t5, t6 = st.tabs([
@@ -368,8 +450,17 @@ def main():
 
     # ── Tab 1: Overview ───────────────────────────────────────────────────────
     with t1:
+        # 1. Today's alert card — only shown when companies report today
+        render_today_alert(today_results)
+
+        # 2. KPI cards
         render_kpi_row(kpis)
 
+        # 3. Top Earnings — moved above charts (highest daily-use value)
+        st.markdown('<div class="sec-head">Top Earnings This Week</div>', unsafe_allow_html=True)
+        render_top_earnings(top_earnings)
+
+        # 4. Charts row
         c1, c2 = st.columns([2, 1])
         with c1:
             st.markdown('<div class="sec-head">Daily Breakdown</div>', unsafe_allow_html=True)
@@ -385,9 +476,6 @@ def main():
                 use_container_width=True,
                 key="overview_fo_split",
             )
-
-        st.markdown('<div class="sec-head">Top Earnings This Week</div>', unsafe_allow_html=True)
-        render_top_earnings(top_earnings)
 
     # ── Tab 2: All Results ────────────────────────────────────────────────────
     with t2:
@@ -411,14 +499,41 @@ def main():
         )
 
         if fo_df.empty:
-            st.info("No F&O companies in the current filter.", icon="ℹ️")
+            st.markdown(
+                '<div style="background:#141727;border:1px solid #1E2340;border-radius:10px;'
+                'padding:40px;text-align:center;color:#8B8FA8;font-size:0.88rem">'
+                'No F&O companies match your current filters.<br>'
+                '<span style="font-size:0.78rem">Try removing the sector or date filter.</span>'
+                '</div>',
+                unsafe_allow_html=True,
+            )
         else:
-            m1, m2, m3, _ = st.columns([1, 1, 1, 3])
-            m1.metric("F&O Results", len(fo_df))
-            m2.metric("Nifty 50", int(fo_df["is_nifty50"].sum()))
-            m3.metric("Bank Nifty", int(fo_df["is_banknifty"].sum()))
+            # Summary row
+            n50_count  = int(fo_df["is_nifty50"].sum())
+            bnf_count  = int(fo_df["is_banknifty"].sum())
+            total_fo   = len(fo_df)
 
-            st.markdown("<br>", unsafe_allow_html=True)
+            # "Next result" — earliest reporting date
+            next_row = fo_df.sort_values("result_date").iloc[0]
+            next_name = next_row.get("symbol") or next_row.get("company_name", "")
+            next_date_ts = pd.to_datetime(next_row["result_date"])
+            if next_date_ts.date() == today_ts.date():
+                next_date_str = "Today"
+            elif next_date_ts.date() == (today_ts + pd.Timedelta(days=1)).date():
+                next_date_str = "Tomorrow"
+            else:
+                next_date_str = next_date_ts.strftime("%d %b")
+
+            st.markdown(
+                f'<div style="font-size:0.78rem;color:#8B8FA8;margin-bottom:14px">'
+                f'🎯 <b style="color:#E8EAF0">{total_fo}</b> F&amp;O companies reporting &nbsp;|&nbsp; '
+                f'🏆 <b style="color:#FFB347">{n50_count}</b> Nifty 50 &nbsp;|&nbsp; '
+                f'🏦 <b style="color:#00C896">{bnf_count}</b> Bank Nifty &nbsp;|&nbsp; '
+                f'📅 Next: <b style="color:#00D4FF">{next_name}</b> on {next_date_str}'
+                f'</div>',
+                unsafe_allow_html=True,
+            )
+
             fo_df = fo_df.sort_values("result_date")
             fo_df["date_group"] = pd.to_datetime(fo_df["result_date"]).dt.strftime("%A, %d %b")
             date_order = fo_df.drop_duplicates("date_group")["date_group"].tolist()
@@ -427,36 +542,112 @@ def main():
 
             for i, (date_label, grp) in enumerate(groups):
                 with cols[i % 4]:
-                    rows_html = "".join(
-                        f'<div style="padding:5px 0;border-bottom:1px solid #1E2340;'
-                        f'font-size:0.82rem;color:#E8EAF0">'
-                        f'{"🏆" if r["is_nifty50"] else "🎯"} {r["company_name"]}'
-                        f'</div>'
-                        for _, r in grp.iterrows()
-                    )
+                    cards_html = ""
+                    for _, r in grp.iterrows():
+                        score   = int(r.get("importance_score", 0) or 0)
+                        sector  = r.get("sector", "") or ""
+                        cap     = r.get("market_cap_tier", "") or ""
+                        symbol  = r.get("symbol", "") or ""
+                        days_r  = int(r.get("days_remaining", 0) or 0)
+                        n50_ico = "🏆" if r.get("is_nifty50") else ""
+                        bnf_ico = "🏦" if r.get("is_banknifty") else ""
+
+                        # Border color: red=today, amber=tomorrow, green=3+ days
+                        if days_r == 0:
+                            border_col = "#FF6B6B"
+                        elif days_r == 1:
+                            border_col = "#FFB347"
+                        else:
+                            border_col = "#00C896"
+
+                        meta_parts = [p for p in [sector, cap] if p]
+                        meta_line  = " · ".join(meta_parts)
+
+                        score_html = (
+                            f'<span style="color:#00D4FF;font-size:0.68rem">'
+                            f'Score: {score}</span>'
+                            if score > 0 else ""
+                        )
+
+                        # OI data if available for this symbol
+                        oi_html = ""
+                        if not oi_snap.empty and symbol:
+                            oi_row = oi_snap[oi_snap["symbol"] == symbol]
+                            if not oi_row.empty:
+                                p_chg  = float(oi_row.iloc[0].get("price_chg_pct", 0) or 0)
+                                oi_chg = float(oi_row.iloc[0].get("oi_chg_pct", 0) or 0)
+                                pc = "#00C896" if p_chg >= 0 else "#FF6B6B"
+                                oc = "#00C896" if oi_chg > 0 else "#FF6B6B"
+                                oi_html = (
+                                    f'<div style="font-size:0.62rem;margin-top:4px;'
+                                    f'border-top:1px solid #1E2340;padding-top:4px">'
+                                    f'<span style="color:{pc}">P {p_chg:+.1f}%</span>'
+                                    f' &nbsp;·&nbsp; '
+                                    f'<span style="color:{oc}">OI {oi_chg:+.1f}%</span>'
+                                    f'</div>'
+                                )
+
+                        cards_html += (
+                            f'<div style="border:1px solid #1E2340;'
+                            f'border-left:3px solid {border_col};'
+                            f'border-radius:6px;padding:8px 10px;margin-bottom:6px;'
+                            f'background:#0D0F1C">'
+                            f'<div style="display:flex;justify-content:space-between;'
+                            f'align-items:flex-start">'
+                            f'<div style="flex:1;min-width:0">'
+                            f'<div style="font-size:0.82rem;font-weight:600;color:#E8EAF0;'
+                            f'white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'
+                            f'{n50_ico}{bnf_ico} {r["company_name"]}</div>'
+                            f'<div style="font-size:0.65rem;color:#8B8FA8;margin-top:1px">'
+                            f'{symbol}</div>'
+                            + (f'<div style="font-size:0.63rem;color:#8B8FA8;margin-top:1px">'
+                               f'{meta_line}</div>' if meta_line else "")
+                            + f'</div>'
+                            f'<div style="padding-left:8px;flex-shrink:0">'
+                            f'{score_html}</div>'
+                            f'</div>'
+                            f'{oi_html}'
+                            f'</div>'
+                        )
+
                     st.markdown(
-                        f"""<div style="background:#141727;border:1px solid #1E2340;
-                                        border-radius:10px;padding:14px;margin-bottom:12px">
-                                <div style="color:#8B8FA8;font-size:.7rem;text-transform:uppercase;
-                                            letter-spacing:.07em;margin-bottom:8px">{date_label}</div>
-                                {rows_html}
-                            </div>""",
+                        f'<div style="background:#141727;border:1px solid #1E2340;'
+                        f'border-radius:10px;padding:14px;margin-bottom:12px">'
+                        f'<div style="color:#8B8FA8;font-size:.7rem;text-transform:uppercase;'
+                        f'letter-spacing:.07em;margin-bottom:8px">{date_label}</div>'
+                        f'{cards_html}</div>',
                         unsafe_allow_html=True,
                     )
 
     # ── Tab 4: Sector Intelligence ────────────────────────────────────────────
     with t4:
-        st.markdown('<div class="sec-head">Sector Concentration</div>', unsafe_allow_html=True)
+        st.markdown(
+            '<div class="sec-head">Sector Concentration — F&O Universe This Week</div>',
+            unsafe_allow_html=True,
+        )
 
         if sector_conc.empty:
-            st.info(
-                "No sector data in the current date range. "
-                "Sectors are only shown for F&O / index companies whose symbols "
-                "matched the reference tables. Try widening the date range or "
-                "removing the Sector filter.",
-                icon="ℹ️",
+            st.markdown(
+                '<div style="background:#141727;border:1px solid #1E2340;border-radius:10px;'
+                'padding:32px;text-align:center;color:#8B8FA8;font-size:0.88rem">'
+                'No F&O sector data in the current date range.<br>'
+                '<span style="font-size:0.78rem">Try widening the date range or removing the Sector filter.</span>'
+                '</div>',
+                unsafe_allow_html=True,
             )
         else:
+            n_stocks  = int(sector_conc["total_count"].sum())
+            n_sectors = len(sector_conc)
+            st.markdown(
+                f'<div style="font-size:0.72rem;color:#8B8FA8;margin-bottom:14px">'
+                f'Showing <b style="color:#E8EAF0">{n_stocks}</b> F&amp;O stocks across '
+                f'<b style="color:#E8EAF0">{n_sectors}</b> sectors &nbsp;·&nbsp; '
+                f'<span style="color:#8B8FA8">Non-F&amp;O companies excluded — '
+                f'not in the tracked F&amp;O universe</span>'
+                f'</div>',
+                unsafe_allow_html=True,
+            )
+
             sc1, sc2 = st.columns([2, 1])
             with sc1:
                 st.plotly_chart(
@@ -467,12 +658,14 @@ def main():
             with sc2:
                 st.markdown("**Sector Summary**")
                 display = sector_conc[["sector", "total_count", "fo_count"]].copy()
-                display.columns = ["Sector", "Total", "F&O"]
+                display.columns = ["Sector", "F&O Count", "F&O ✓"]
                 st.dataframe(display, use_container_width=True, height=380)
 
-            st.markdown('<div class="sec-head">Importance by Date</div>', unsafe_allow_html=True)
+            st.markdown('<div class="sec-head">Importance by Date (F&O)</div>', unsafe_allow_html=True)
+            # Only pass F&O stocks to the scatter chart — consistent with the sector focus
+            fo_filtered = filtered[filtered["is_fo"].astype(bool)] if not filtered.empty else filtered
             st.plotly_chart(
-                chart_importance_scatter(filtered),
+                chart_importance_scatter(fo_filtered),
                 use_container_width=True,
                 key="sectors_importance_scatter",
             )
@@ -511,8 +704,6 @@ def main():
                     '<div class="sec-head">Positioning Quadrant</div>',
                     unsafe_allow_html=True,
                 )
-                from database.oi_queries import get_oi_snapshot
-                oi_snap = get_oi_snapshot()
                 st.plotly_chart(
                     chart_oi_quadrant(oi_snap),
                     use_container_width=True,
