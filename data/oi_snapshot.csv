@@ -99,7 +99,7 @@ NAUKRI,2026-05-26,2026-05-22,964.25,927.85,3.92,4676625,-4894875,22550,-51.14,Sh
 NBCC,2026-05-26,2026-05-22,95.1,93.17,2.07,42867500,-22626500,4544,-34.55,Short Covering,Strong,NBCC,Infrastructure,mid,False,False,False,True,2026-05-25,0.0
 NESTLEIND,2026-05-26,2026-05-22,1429.0,1404.7,1.73,3856500,-3622500,9370,-48.44,Short Covering,Moderate,Nestle India,Consumer Goods,large,True,False,False,False,,
 NHPC,2026-05-26,2026-05-22,78.52,79.0,-0.61,33721600,-38636800,8307,-53.4,Neutral,Weak,NHPC,Power,mid,False,False,False,False,,
-NMDC,2026-05-26,2026-05-22,88.04,88.39,-0.4,113541750,-130126500,20200,-53.4,Neutral,Weak,NMDC,Metals & Mining,mid,False,False,False,False,,
+NMDC,2026-05-26,2026-05-22,88.04,88.39,-0.4,113541750,-130126500,20200,-53.4,Neutral,Weak,NMDC,Metals & Mining,mid,False,False,False,True,2026-05-29,4.0
 NTPC,2026-05-26,2026-05-22,389.6,389.55,0.01,37134000,-21921000,17654,-37.12,Neutral,Weak,NTPC,Power,large,True,False,False,False,,
 NYKAA,2026-05-26,2026-05-22,277.95,274.9,1.11,23662500,-13693750,9704,-36.66,Short Covering,Moderate,FSN E-Commerce,Consumer Goods,mid,False,False,True,False,,
 OBEROIRLTY,2026-05-26,2026-05-22,1667.1,1657.6,0.57,3367700,-1702400,6684,-33.58,Neutral,Weak,Oberoi Realty,Real Estate,mid,False,False,False,False,,
