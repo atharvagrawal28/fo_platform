@@ -1,5 +1,18 @@
 [
   {
+    "run_id": "run_20260526_135219_b9ee62",
+    "started_at": "2026-05-26T13:52:20.361789+00:00",
+    "source_used": "nse_official_file",
+    "rows_fetched": 763,
+    "rows_valid": 762,
+    "rows_stored": 762,
+    "validation_passed": true,
+    "fallback_used": false,
+    "duration_seconds": 0.94,
+    "status": "success",
+    "error_message": ""
+  },
+  {
     "run_id": "run_20260526_063137_e8e2a6",
     "started_at": "2026-05-26T06:31:38.475247+00:00",
     "source_used": "nse_official_file",
