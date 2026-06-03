@@ -1,11 +1,11 @@
 result_date,company_name,name_norm,symbol,meeting_type,source,sector,is_fo,is_nifty50,is_nifty_next50,is_banknifty,market_cap_tier,importance_score,updated_at
 2026-06-02,Amit Spinning Industries Limited,AMIT SPINNING INDUSTRIES,ASIL,Financial Results,nse_official_file,,False,False,False,False,,0,2026-06-02T17:52:00.138338+00:00
 2026-06-02,Libas Consumer Products Limited,LIBAS CONSUMER PRODUCTS,LIBAS,Financial Results/Fund Raising/Other business matters,nse_official_file,,False,False,False,False,,0,2026-06-02T17:52:00.138338+00:00
-2026-06-03,Amit Spinning Industries Limited,AMIT SPINNING INDUSTRIES,ASIL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-06-03T07:23:15.462778+00:00
-2026-06-05,Sarveshwar Foods Limited,SARVESHWAR FOODS,SARVESHWAR,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-06-03T07:23:15.462778+00:00
-2026-06-05,Valecha Engineering Limited,VALECHA ENGINEERING,VALECHAENG,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-06-03T07:23:15.462778+00:00
-2026-06-06,Udayshivakumar Infra Limited,UDAYSHIVAKUMAR INFRA,USK,Financial Results/Fund Raising,nse_official_file,nan,False,False,False,False,nan,0,2026-06-03T07:23:15.462778+00:00
-2026-06-07,Brightcom Group Limited,BRIGHTCOM GROUP,BCG,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-06-03T07:23:15.462778+00:00
-2026-06-15,Shree Ram Proteins Limited,SHREE RAM PROTEINS,SRPL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-06-03T07:23:15.462778+00:00
-2026-07-18,The India Cements Limited,THE INDIA CEMENTS,INDIACEM,Financial Results,nse_official_file,Cement,True,False,False,False,mid,25,2026-06-03T07:23:15.462778+00:00
-2026-07-20,UltraTech Cement Limited,ULTRATECH CEMENT,ULTRACEMCO,Financial Results,nse_official_file,Cement,True,True,False,False,large,75,2026-06-03T07:23:15.462778+00:00
+2026-06-03,Amit Spinning Industries Limited,AMIT SPINNING INDUSTRIES,ASIL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-06-03T15:26:18.741560+00:00
+2026-06-05,Sarveshwar Foods Limited,SARVESHWAR FOODS,SARVESHWAR,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-06-03T15:26:18.741560+00:00
+2026-06-05,Valecha Engineering Limited,VALECHA ENGINEERING,VALECHAENG,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-06-03T15:26:18.741560+00:00
+2026-06-06,Udayshivakumar Infra Limited,UDAYSHIVAKUMAR INFRA,USK,Financial Results/Fund Raising,nse_official_file,nan,False,False,False,False,nan,0,2026-06-03T15:26:18.741560+00:00
+2026-06-07,Brightcom Group Limited,BRIGHTCOM GROUP,BCG,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-06-03T15:26:18.741560+00:00
+2026-06-15,Shree Ram Proteins Limited,SHREE RAM PROTEINS,SRPL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-06-03T15:26:18.741560+00:00
+2026-07-18,The India Cements Limited,THE INDIA CEMENTS,INDIACEM,Financial Results,nse_official_file,Cement,True,False,False,False,mid,25,2026-06-03T15:26:18.741560+00:00
+2026-07-20,UltraTech Cement Limited,ULTRATECH CEMENT,ULTRACEMCO,Financial Results,nse_official_file,Cement,True,True,False,False,large,75,2026-06-03T15:26:18.741560+00:00
