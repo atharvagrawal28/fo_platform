@@ -1,5 +1,18 @@
 [
   {
+    "run_id": "run_20260612_162939_c2e4d1",
+    "started_at": "2026-06-12T16:29:40.378452+00:00",
+    "source_used": "nse_official_file",
+    "rows_fetched": 7,
+    "rows_valid": 7,
+    "rows_stored": 7,
+    "validation_passed": true,
+    "fallback_used": false,
+    "duration_seconds": 0.57,
+    "status": "success",
+    "error_message": ""
+  },
+  {
     "run_id": "run_20260612_140820_a01cad",
     "started_at": "2026-06-12T14:08:21.051435+00:00",
     "source_used": "nse_official_file",
@@ -373,19 +386,6 @@
     "validation_passed": true,
     "fallback_used": false,
     "duration_seconds": 0.67,
-    "status": "success",
-    "error_message": ""
-  },
-  {
-    "run_id": "run_20260601_163548_440e94",
-    "started_at": "2026-06-01T16:35:49.430309+00:00",
-    "source_used": "nse_official_file",
-    "rows_fetched": 9,
-    "rows_valid": 9,
-    "rows_stored": 9,
-    "validation_passed": true,
-    "fallback_used": false,
-    "duration_seconds": 0.58,
     "status": "success",
     "error_message": ""
   }
