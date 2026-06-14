@@ -1,8 +1,7 @@
 result_date,company_name,name_norm,symbol,meeting_type,source,sector,is_fo,is_nifty50,is_nifty_next50,is_banknifty,market_cap_tier,importance_score,updated_at
-2026-06-12,Omkar Speciality Chemicals Limited,OMKAR SPECIALITY CHEMICALS,OMKARCHEM,Financial Results,nse_official_file,,False,False,False,False,,0,2026-06-12T16:29:40.366400+00:00
-2026-06-15,Shree Ram Proteins Limited,SHREE RAM PROTEINS,SRPL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-06-13T06:36:49.189450+00:00
-2026-06-17,Ansal Properties & Infrastructure Limited,ANSAL PROPERTIES INFRASTRUCTURE,ANSALAPI,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-06-13T06:36:49.189450+00:00
-2026-06-18,Anik Industries Limited,ANIK INDUSTRIES,ANIKINDS,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-06-13T06:36:49.189450+00:00
-2026-07-18,The India Cements Limited,THE INDIA CEMENTS,INDIACEM,Financial Results,nse_official_file,Cement,True,False,False,False,mid,25,2026-06-13T06:36:49.189450+00:00
-2026-07-20,UltraTech Cement Limited,ULTRATECH CEMENT,ULTRACEMCO,Financial Results,nse_official_file,Cement,True,True,False,False,large,75,2026-06-13T06:36:49.189450+00:00
-2026-07-27,Coforge Limited,COFORGE,COFORGE,Financial Results,nse_official_file,Information Technology,True,False,False,False,mid,25,2026-06-13T06:36:49.189450+00:00
+2026-06-15,Shree Ram Proteins Limited,SHREE RAM PROTEINS,SRPL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-06-14T07:05:28.222392+00:00
+2026-06-17,Ansal Properties & Infrastructure Limited,ANSAL PROPERTIES INFRASTRUCTURE,ANSALAPI,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-06-14T07:05:28.222392+00:00
+2026-06-18,Anik Industries Limited,ANIK INDUSTRIES,ANIKINDS,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-06-14T07:05:28.222392+00:00
+2026-07-18,The India Cements Limited,THE INDIA CEMENTS,INDIACEM,Financial Results,nse_official_file,Cement,True,False,False,False,mid,25,2026-06-14T07:05:28.222392+00:00
+2026-07-20,UltraTech Cement Limited,ULTRATECH CEMENT,ULTRACEMCO,Financial Results,nse_official_file,Cement,True,True,False,False,large,75,2026-06-14T07:05:28.222392+00:00
+2026-07-27,Coforge Limited,COFORGE,COFORGE,Financial Results,nse_official_file,Information Technology,True,False,False,False,mid,25,2026-06-14T07:05:28.222392+00:00
