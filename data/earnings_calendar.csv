@@ -1,11 +1,11 @@
 result_date,company_name,name_norm,symbol,meeting_type,source,sector,is_fo,is_nifty50,is_nifty_next50,is_banknifty,market_cap_tier,importance_score,updated_at
 2026-06-15,Shree Ram Proteins Limited,SHREE RAM PROTEINS,SRPL,Financial Results,nse_official_file,,False,False,False,False,,0,2026-06-15T18:06:01.346490+00:00
-2026-06-17,Ansal Properties & Infrastructure Limited,ANSAL PROPERTIES INFRASTRUCTURE,ANSALAPI,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-06-16T15:50:52.554188+00:00
-2026-06-18,Anik Industries Limited,ANIK INDUSTRIES,ANIKINDS,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-06-16T15:50:52.554188+00:00
-2026-06-29,Shree Ram Proteins Limited,SHREE RAM PROTEINS,SRPL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-06-16T15:50:52.554188+00:00
-2026-07-13,HCL Technologies Limited,HCL TECHNOLOGIES,HCLTECH,Financial Results/Dividend,nse_official_file,Information Technology,True,True,False,False,large,75,2026-06-16T15:50:52.554188+00:00
-2026-07-17,Globus Spirits Limited,GLOBUS SPIRITS,GLOBUSSPR,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-06-16T15:50:52.554188+00:00
-2026-07-18,The India Cements Limited,THE INDIA CEMENTS,INDIACEM,Financial Results,nse_official_file,Cement,True,False,False,False,mid,25,2026-06-16T15:50:52.554188+00:00
-2026-07-20,UltraTech Cement Limited,ULTRATECH CEMENT,ULTRACEMCO,Financial Results,nse_official_file,Cement,True,True,False,False,large,75,2026-06-16T15:50:52.554188+00:00
-2026-07-23,Infosys Limited,INFOSYS,INFY,Financial Results,nse_official_file,Information Technology,True,True,False,False,large,75,2026-06-16T15:50:52.554188+00:00
-2026-07-27,Coforge Limited,COFORGE,COFORGE,Financial Results,nse_official_file,Information Technology,True,False,False,False,mid,25,2026-06-16T15:50:52.554188+00:00
+2026-06-17,Ansal Properties & Infrastructure Limited,ANSAL PROPERTIES INFRASTRUCTURE,ANSALAPI,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-06-16T18:13:06.617419+00:00
+2026-06-18,Anik Industries Limited,ANIK INDUSTRIES,ANIKINDS,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-06-16T18:13:06.617419+00:00
+2026-06-29,Shree Ram Proteins Limited,SHREE RAM PROTEINS,SRPL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-06-16T18:13:06.617419+00:00
+2026-07-13,HCL Technologies Limited,HCL TECHNOLOGIES,HCLTECH,Financial Results/Dividend,nse_official_file,Information Technology,True,True,False,False,large,75,2026-06-16T18:13:06.617419+00:00
+2026-07-17,Globus Spirits Limited,GLOBUS SPIRITS,GLOBUSSPR,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-06-16T18:13:06.617419+00:00
+2026-07-18,The India Cements Limited,THE INDIA CEMENTS,INDIACEM,Financial Results,nse_official_file,Cement,True,False,False,False,mid,25,2026-06-16T18:13:06.617419+00:00
+2026-07-20,UltraTech Cement Limited,ULTRATECH CEMENT,ULTRACEMCO,Financial Results,nse_official_file,Cement,True,True,False,False,large,75,2026-06-16T18:13:06.617419+00:00
+2026-07-23,Infosys Limited,INFOSYS,INFY,Financial Results,nse_official_file,Information Technology,True,True,False,False,large,75,2026-06-16T18:13:06.617419+00:00
+2026-07-27,Coforge Limited,COFORGE,COFORGE,Financial Results,nse_official_file,Information Technology,True,False,False,False,mid,25,2026-06-16T18:13:06.617419+00:00
