@@ -1,15 +1,14 @@
 result_date,company_name,name_norm,symbol,meeting_type,source,sector,is_fo,is_nifty50,is_nifty_next50,is_banknifty,market_cap_tier,importance_score,updated_at
-2026-06-18,Anik Industries Limited,ANIK INDUSTRIES,ANIKINDS,Financial Results/Other business matters,nse_official_file,,False,False,False,False,,0,2026-06-18T16:44:17.352872+00:00
-2026-06-24,Vikas Lifecare Limited,VIKAS LIFECARE,VIKASLIFE,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-06-19T16:16:23.652887+00:00
-2026-06-29,Shree Ram Proteins Limited,SHREE RAM PROTEINS,SRPL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-06-19T16:16:23.652887+00:00
-2026-07-13,HCL Technologies Limited,HCL TECHNOLOGIES,HCLTECH,Financial Results/Dividend,nse_official_file,Information Technology,True,True,False,False,large,75,2026-06-19T16:16:23.652887+00:00
-2026-07-15,Angel One Limited,ANGEL ONE,ANGELONE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-06-19T16:16:23.652887+00:00
-2026-07-17,Globus Spirits Limited,GLOBUS SPIRITS,GLOBUSSPR,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-06-19T16:16:23.652887+00:00
-2026-07-18,Axis Bank Limited,AXIS BANK,AXISBANK,Financial Results,nse_official_file,Banking,True,True,False,True,large,95,2026-06-19T16:16:23.652887+00:00
-2026-07-18,The India Cements Limited,THE INDIA CEMENTS,INDIACEM,Financial Results,nse_official_file,Cement,True,False,False,False,mid,25,2026-06-19T16:16:23.652887+00:00
-2026-07-20,UltraTech Cement Limited,ULTRATECH CEMENT,ULTRACEMCO,Financial Results,nse_official_file,Cement,True,True,False,False,large,75,2026-06-19T16:16:23.652887+00:00
-2026-07-22,Nestle India Limited,NESTLE INDIA,NESTLEIND,Financial Results,nse_official_file,Consumer Goods,True,True,False,False,large,75,2026-06-19T16:16:23.652887+00:00
-2026-07-23,Infosys Limited,INFOSYS,INFY,Financial Results,nse_official_file,Information Technology,True,True,False,False,large,75,2026-06-19T16:16:23.652887+00:00
-2026-07-27,Coforge Limited,COFORGE,COFORGE,Financial Results,nse_official_file,Information Technology,True,False,False,False,mid,25,2026-06-19T16:16:23.652887+00:00
-2026-07-28,TTK Prestige Limited,TTK PRESTIGE,TTKPRESTIG,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-06-19T16:16:23.652887+00:00
-2026-07-30,Exide Industries Limited,EXIDE INDUSTRIES,EXIDEIND,Financial Results,nse_official_file,Automobile,True,False,False,False,mid,25,2026-06-19T16:16:23.652887+00:00
+2026-06-24,Vikas Lifecare Limited,VIKAS LIFECARE,VIKASLIFE,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-06-20T06:45:18.725157+00:00
+2026-06-29,Shree Ram Proteins Limited,SHREE RAM PROTEINS,SRPL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-06-20T06:45:18.725157+00:00
+2026-07-13,HCL Technologies Limited,HCL TECHNOLOGIES,HCLTECH,Financial Results/Dividend,nse_official_file,Information Technology,True,True,False,False,large,75,2026-06-20T06:45:18.725157+00:00
+2026-07-15,Angel One Limited,ANGEL ONE,ANGELONE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-06-20T06:45:18.725157+00:00
+2026-07-17,Globus Spirits Limited,GLOBUS SPIRITS,GLOBUSSPR,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-06-20T06:45:18.725157+00:00
+2026-07-18,Axis Bank Limited,AXIS BANK,AXISBANK,Financial Results,nse_official_file,Banking,True,True,False,True,large,95,2026-06-20T06:45:18.725157+00:00
+2026-07-18,The India Cements Limited,THE INDIA CEMENTS,INDIACEM,Financial Results,nse_official_file,Cement,True,False,False,False,mid,25,2026-06-20T06:45:18.725157+00:00
+2026-07-20,UltraTech Cement Limited,ULTRATECH CEMENT,ULTRACEMCO,Financial Results,nse_official_file,Cement,True,True,False,False,large,75,2026-06-20T06:45:18.725157+00:00
+2026-07-22,Nestle India Limited,NESTLE INDIA,NESTLEIND,Financial Results,nse_official_file,Consumer Goods,True,True,False,False,large,75,2026-06-20T06:45:18.725157+00:00
+2026-07-23,Infosys Limited,INFOSYS,INFY,Financial Results,nse_official_file,Information Technology,True,True,False,False,large,75,2026-06-20T06:45:18.725157+00:00
+2026-07-27,Coforge Limited,COFORGE,COFORGE,Financial Results,nse_official_file,Information Technology,True,False,False,False,mid,25,2026-06-20T06:45:18.725157+00:00
+2026-07-28,TTK Prestige Limited,TTK PRESTIGE,TTKPRESTIG,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-06-20T06:45:18.725157+00:00
+2026-07-30,Exide Industries Limited,EXIDE INDUSTRIES,EXIDEIND,Financial Results,nse_official_file,Automobile,True,False,False,False,mid,25,2026-06-20T06:45:18.725157+00:00
