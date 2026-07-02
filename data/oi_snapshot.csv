@@ -131,7 +131,7 @@ SUNPHARMA,2026-07-28,2026-07-01,1871.6,1870.8,0.04,19978350,11900,3829,0.06,Neut
 TATACONSUM,2026-07-28,2026-07-01,1095.4,1080.5,1.38,16470850,295900,3658,1.83,Neutral,Weak,Tata Consumer Products,Consumer Goods,large,True,False,True,False,,
 TATAELXSI,2026-07-28,2026-07-01,3536.7,3822.0,-7.46,2950125,604375,14100,25.76,Short Buildup,Strong,Tata Elxsi,Information Technology,mid,False,False,True,False,,
 TATASTEEL,2026-07-28,2026-07-01,185.87,189.19,-1.75,206574500,1424500,5965,0.69,Neutral,Weak,Tata Steel,Metals & Mining,large,True,False,False,False,,
-TCS,2026-07-28,2026-07-01,1980.1,2023.2,-2.13,49046400,1168200,21145,2.44,Short Buildup,Moderate,Tata Consultancy Services,Information Technology,large,True,False,False,False,,
+TCS,2026-07-28,2026-07-01,1980.1,2023.2,-2.13,49046400,1168200,21145,2.44,Short Buildup,Moderate,Tata Consultancy Services,Information Technology,large,True,False,False,True,2026-07-09,7.0
 TECHM,2026-07-28,2026-07-01,1353.8,1398.0,-3.16,22183800,286200,5196,1.31,Neutral,Weak,Tech Mahindra,Information Technology,large,True,False,False,False,,
 TIINDIA,2026-07-28,2026-07-01,3114.3,3049.4,2.13,1958200,4800,1383,0.25,Neutral,Weak,Tube Investments,Automobile,mid,False,False,False,False,,
 TITAN,2026-07-28,2026-07-01,4410.5,4421.6,-0.25,8120700,64050,6717,0.79,Neutral,Weak,Titan Company,Consumer Goods,large,True,False,False,False,,
