@@ -50,7 +50,7 @@ GODREJPROP,2026-07-28,2026-07-03,1994.4,1966.0,1.44,8341125,-158275,-1.86,2850,N
 GRASIM,2026-07-28,2026-07-03,3196.9,3176.4,0.65,12859750,60000,0.47,1991,Neutral,Weak,Grasim Industries,Diversified,large,True,False,False,False,,
 HAL,2026-07-28,2026-07-03,4442.4,4453.9,-0.26,5332650,-46650,-0.87,3569,Neutral,Weak,Hindustan Aeronautics,Defence,large,False,False,False,False,,
 HAVELLS,2026-07-28,2026-07-03,1184.1,1190.1,-0.5,10201000,-64000,-0.62,1226,Neutral,Weak,Havells India,Consumer Goods,large,False,False,True,False,,
-HCLTECH,2026-07-28,2026-07-03,1131.4,1068.5,5.89,37948000,-4586000,-10.78,33492,Short Covering,Strong,HCL Technologies,Information Technology,large,True,False,False,False,,
+HCLTECH,2026-07-28,2026-07-03,1131.4,1068.5,5.89,37948000,-4586000,-10.78,33492,Short Covering,Strong,HCL Technologies,Information Technology,large,True,False,False,True,2026-07-13,7.0
 HDFCAMC,2026-07-28,2026-07-03,2812.1,2772.1,1.44,5360400,-102900,-1.88,2227,Neutral,Weak,HDFC AMC,Financial Services,large,False,False,True,False,,
 HDFCBANK,2026-07-28,2026-07-03,805.2,800.25,0.62,326141400,-2604550,-0.79,20830,Neutral,Weak,HDFC Bank,Banking,large,True,True,False,False,,
 HDFCLIFE,2026-07-28,2026-07-03,568.7,574.45,-1.0,37433000,-242000,-0.64,3546,Neutral,Weak,HDFC Life,Financial Services,large,True,False,False,False,,
@@ -131,7 +131,7 @@ SUNPHARMA,2026-07-28,2026-07-03,1910.3,1875.2,1.87,20167000,214900,1.08,5559,Neu
 TATACONSUM,2026-07-28,2026-07-03,1119.4,1111.4,0.72,16705700,135300,0.82,2929,Neutral,Weak,Tata Consumer Products,Consumer Goods,large,True,False,True,False,,
 TATAELXSI,2026-07-28,2026-07-03,3628.7,3635.4,-0.18,2852375,12000,0.42,2045,Neutral,Weak,Tata Elxsi,Information Technology,mid,False,False,True,False,,
 TATASTEEL,2026-07-28,2026-07-03,190.81,188.1,1.44,209770000,4691500,2.29,10466,Long Buildup,Moderate,Tata Steel,Metals & Mining,large,True,False,False,False,,
-TCS,2026-07-28,2026-07-03,2079.2,2066.7,0.6,46468575,-1160550,-2.44,21208,Neutral,Weak,Tata Consultancy Services,Information Technology,large,True,False,False,True,2026-07-09,4.0
+TCS,2026-07-28,2026-07-03,2079.2,2066.7,0.6,46468575,-1160550,-2.44,21208,Neutral,Weak,Tata Consultancy Services,Information Technology,large,True,False,False,True,2026-07-09,3.0
 TECHM,2026-07-28,2026-07-03,1406.6,1414.6,-0.57,22246800,21600,0.1,4796,Neutral,Weak,Tech Mahindra,Information Technology,large,True,False,False,False,,
 TIINDIA,2026-07-28,2026-07-03,2978.2,3099.4,-3.91,1835200,-106400,-5.48,3224,Long Unwinding,Moderate,Tube Investments,Automobile,mid,False,False,False,False,,
 TITAN,2026-07-28,2026-07-03,4471.6,4491.6,-0.45,8223950,-30275,-0.37,3298,Neutral,Weak,Titan Company,Consumer Goods,large,True,False,False,False,,
