@@ -50,7 +50,7 @@ GODREJPROP,2026-07-28,2026-07-06,2041.0,1994.4,2.34,8120775,-220350,-2.64,3467,S
 GRASIM,2026-07-28,2026-07-06,3220.4,3196.9,0.74,12873000,13250,0.1,1340,Neutral,Weak,Grasim Industries,Diversified,large,True,False,False,False,,
 HAL,2026-07-28,2026-07-06,4464.0,4442.4,0.49,5388000,55350,1.04,2682,Neutral,Weak,Hindustan Aeronautics,Defence,large,False,False,False,False,,
 HAVELLS,2026-07-28,2026-07-06,1184.4,1184.1,0.03,10154500,-46500,-0.46,1068,Neutral,Weak,Havells India,Consumer Goods,large,False,False,True,False,,
-HCLTECH,2026-07-28,2026-07-06,1120.8,1131.4,-0.94,38209200,261200,0.69,7895,Neutral,Weak,HCL Technologies,Information Technology,large,True,False,False,True,2026-07-13,7.0
+HCLTECH,2026-07-28,2026-07-06,1120.8,1131.4,-0.94,38209200,261200,0.69,7895,Neutral,Weak,HCL Technologies,Information Technology,large,True,False,False,True,2026-07-13,6.0
 HDFCAMC,2026-07-28,2026-07-06,2780.2,2812.1,-1.13,5343000,-17400,-0.32,1995,Neutral,Weak,HDFC AMC,Financial Services,large,False,False,True,False,,
 HDFCBANK,2026-07-28,2026-07-06,831.65,805.2,3.28,320654750,-5486650,-1.68,63431,Neutral,Weak,HDFC Bank,Banking,large,True,True,False,False,,
 HDFCLIFE,2026-07-28,2026-07-06,567.05,568.7,-0.29,38113900,680900,1.82,3372,Neutral,Weak,HDFC Life,Financial Services,large,True,False,False,False,,
@@ -63,7 +63,7 @@ ICICIPRULI,2026-07-28,2026-07-06,486.75,487.45,-0.14,18821900,789025,4.38,3680,N
 IDFCFIRSTB,2026-07-28,2026-07-06,81.45,80.86,0.73,381601325,-2439325,-0.64,4740,Neutral,Weak,IDFC First Bank,Banking,mid,False,True,False,False,,
 IEX,2026-07-28,2026-07-06,124.11,124.28,-0.14,81192750,0,0.0,443,Neutral,Weak,Indian Energy Exchange,Financial Services,mid,False,False,True,False,,
 INDHOTEL,2026-07-28,2026-07-06,739.75,730.5,1.27,25255000,-310000,-1.21,2520,Neutral,Weak,Indian Hotels,Consumer Goods,mid,False,False,True,False,,
-INDIANB,2026-07-28,2026-07-06,791.05,803.3,-1.52,16989000,301000,1.8,2045,Neutral,Weak,Indian Bank,Banking,mid,False,False,False,True,2026-07-10,4.0
+INDIANB,2026-07-28,2026-07-06,791.05,803.3,-1.52,16989000,301000,1.8,2045,Neutral,Weak,Indian Bank,Banking,mid,False,False,False,True,2026-07-10,3.0
 INDIGO,2026-07-28,2026-07-06,5433.0,5447.5,-0.27,7366650,-8700,-0.12,2096,Neutral,Weak,IndiGo,Consumer Goods,large,True,False,False,False,,
 INDUSINDBK,2026-07-28,2026-07-06,1012.0,979.7,3.3,40009900,-1804600,-4.32,13906,Short Covering,Moderate,IndusInd Bank,Banking,large,False,True,False,False,,
 INDUSTOWER,2026-07-28,2026-07-06,388.4,385.55,0.74,99805300,3792700,3.95,6731,Neutral,Weak,Indus Towers,Telecom,large,False,False,True,False,,
@@ -129,9 +129,9 @@ SONACOMS,2026-07-28,2026-07-06,668.25,663.15,0.77,14896000,-625975,-4.03,1690,Sh
 SRF,2026-07-28,2026-07-06,2843.8,2805.5,1.37,3806200,265600,7.5,5209,Long Buildup,Moderate,SRF,Chemicals,mid,False,False,False,False,,
 SUNPHARMA,2026-07-28,2026-07-06,1918.0,1910.3,0.4,20442450,275450,1.37,3251,Neutral,Weak,Sun Pharmaceutical,Pharmaceuticals,large,True,False,False,False,,
 TATACONSUM,2026-07-28,2026-07-06,1122.7,1119.4,0.29,16763450,57750,0.35,1542,Neutral,Weak,Tata Consumer Products,Consumer Goods,large,True,False,True,False,,
-TATAELXSI,2026-07-28,2026-07-06,3633.7,3628.7,0.14,2849500,-2875,-0.1,1081,Neutral,Weak,Tata Elxsi,Information Technology,mid,False,False,True,False,,
+TATAELXSI,2026-07-28,2026-07-06,3633.7,3628.7,0.14,2849500,-2875,-0.1,1081,Neutral,Weak,Tata Elxsi,Information Technology,mid,False,False,True,True,2026-07-14,7.0
 TATASTEEL,2026-07-28,2026-07-06,191.53,190.81,0.38,209079750,-690250,-0.33,3768,Neutral,Weak,Tata Steel,Metals & Mining,large,True,False,False,False,,
-TCS,2026-07-28,2026-07-06,2054.1,2079.2,-1.21,46085850,-382725,-0.82,12386,Neutral,Weak,Tata Consultancy Services,Information Technology,large,True,False,False,True,2026-07-09,3.0
+TCS,2026-07-28,2026-07-06,2054.1,2079.2,-1.21,46085850,-382725,-0.82,12386,Neutral,Weak,Tata Consultancy Services,Information Technology,large,True,False,False,True,2026-07-09,2.0
 TECHM,2026-07-28,2026-07-06,1405.7,1406.6,-0.06,21996000,-250800,-1.13,2390,Neutral,Weak,Tech Mahindra,Information Technology,large,True,False,False,False,,
 TIINDIA,2026-07-28,2026-07-06,3020.1,2978.2,1.41,1870200,35000,1.91,1148,Neutral,Weak,Tube Investments,Automobile,mid,False,False,False,False,,
 TITAN,2026-07-28,2026-07-06,4484.2,4471.6,0.28,8281525,57575,0.7,2490,Neutral,Weak,Titan Company,Consumer Goods,large,True,False,False,False,,
