@@ -112,7 +112,7 @@ PETRONET,2026-07-28,2026-07-13,279.5,279.45,0.02,32419700,-490200,1089,-1.49,Neu
 PFC,2026-07-28,2026-07-13,407.05,407.85,-0.2,52984100,417300,2762,0.79,Neutral,Weak,Power Finance Corporation,Financial Services,large,False,False,True,False,,
 PIDILITIND,2026-07-28,2026-07-13,1576.5,1589.6,-0.82,6911000,57000,728,0.83,Neutral,Weak,Pidilite Industries,Chemicals,large,False,False,True,False,,
 PIIND,2026-07-28,2026-07-13,2561.9,2615.4,-2.05,2964325,26425,1396,0.9,Neutral,Weak,PI Industries,Chemicals,mid,False,False,False,False,,
-PNB,2026-07-28,2026-07-13,106.78,105.87,0.86,323032000,-2080000,3281,-0.64,Neutral,Weak,Punjab National Bank,Banking,mid,False,True,True,False,,
+PNB,2026-07-28,2026-07-13,106.78,105.87,0.86,323032000,-2080000,3281,-0.64,Neutral,Weak,Punjab National Bank,Banking,mid,False,True,True,True,2026-07-18,4.0
 POLYCAB,2026-07-28,2026-07-13,9333.0,9253.5,0.86,2010250,19875,5046,1.0,Neutral,Weak,Polycab India,Consumer Goods,large,False,False,False,True,2026-07-16,2.0
 POWERGRID,2026-07-28,2026-07-13,286.35,284.1,0.79,71080900,-558600,1716,-0.78,Neutral,Weak,Power Grid,Power,large,True,False,False,False,,
 RBLBANK,2026-07-28,2026-07-13,379.95,380.1,-0.04,41154350,-1031875,1984,-2.45,Neutral,Weak,RBL Bank,Banking,mid,False,True,False,True,2026-07-17,3.0
