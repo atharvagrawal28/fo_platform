@@ -12,349 +12,365 @@ result_date,company_name,name_norm,symbol,meeting_type,source,sector,is_fo,is_ni
 2026-07-14,Madhya Bharat Agro Products Limited,MADHYA BHARAT AGRO PRODUCTS,MBAPL,Financial Results/Other business matters,nse_official_file,,False,False,False,False,,0,2026-07-14T15:06:06.035191+00:00
 2026-07-14,SG Finserve Limited,SG FINSERVE,SGFIN,Financial Results/Other business matters,nse_official_file,,False,False,False,False,,0,2026-07-14T15:06:06.035191+00:00
 2026-07-14,Viji Finance Limited,VIJI FINANCE,VIJIFIN,Financial Results/Other business matters,nse_official_file,,False,False,False,False,,0,2026-07-14T15:06:06.035191+00:00
-2026-07-15,HDFC Life Insurance Company Limited,HDFC LIFE INSURANCE,HDFCLIFE,Financial Results,nse_official_file,Financial Services,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-07-15,HDFC Asset Management Company Limited,HDFC ASSET MANAGEMENT,HDFCAMC,Financial Results,nse_official_file,Financial Services,True,False,True,False,large,60,2026-07-15T12:11:36.255449+00:00
-2026-07-15,ICICI Lombard General Insurance Company Limited,ICICI LOMBARD GENERAL INSURANCE,ICICIGI,Financial Results,nse_official_file,Financial Services,True,False,True,False,large,60,2026-07-15T12:11:36.255449+00:00
-2026-07-15,Union Bank of India,UNION BANK OF INDIA,UNIONBANK,Financial Results,nse_official_file,Banking,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-15,Agri-Tech (India) Limited,AGRI TECH INDIA,AGRITECH,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-15,Angel One Limited,ANGEL ONE,ANGELONE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-15,Emmvee Photovoltaic Power Limited,EMMVEE PHOTOVOLTAIC POWER,EMMVEE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-15,Fedbank Financial Services Limited,FEDBANK FINANCIAL SERVICES,FEDFINA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-15,Goa Carbon Limited,GOA CARBON,GOACARBON,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-15,Billionbrains Garage Ventures Limited,BILLIONBRAINS GARAGE VENTURES,GROWW,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-15,GTPL Hathway Limited,GTPL HATHWAY,GTPL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-15,HDB Financial Services Limited,HDB FINANCIAL SERVICES,HDBFS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-15,Himadri Speciality Chemical Limited,HIMADRI SPECIALITY CHEMICAL,HSCL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-15,Jana Small Finance Bank Limited,JANA SMALL FINANCE BANK,JSFB,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-15,Sai Silks (Kalamandir) Limited,SAI SILKS KALAMANDIR,KALAMANDIR,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-15,Ksolves India Limited,KSOLVES INDIA,KSOLVES,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-15,Mangalore Refinery and Petrochemicals Limited,MANGALORE REFINERY AND PETROCHEMICALS,MRPL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-15,Network18 Media & Investments Limited,NETWORK18 MEDIA INVESTMENTS,NETWORK18,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-15,Oriental Hotels Limited,ORIENTAL HOTELS,ORIENTHOT,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-15,Reliance Industrial Infrastructure Limited,RELIANCE INDUSTRIAL INFRASTRUCTURE,RIIL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-15,Raghav Productivity Enhancers Limited,RAGHAV PRODUCTIVITY ENHANCERS,RPEL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-15,SONAM LIMITED,SONAM,SONAMLTD,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-15,Steel Strips Wheels Limited,STEEL STRIPS WHEELS,SSWL,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-16,Jio Financial Services Limited,JIO FINANCIAL SERVICES,JIOFIN,Financial Results,nse_official_file,Financial Services,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-07-16,Tech Mahindra Limited,TECH MAHINDRA,TECHM,Financial Results/Other business matters,nse_official_file,Information Technology,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-07-16,Wipro Limited,WIPRO,WIPRO,Financial Results/Dividend,nse_official_file,Information Technology,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-07-16,Bharat Heavy Electricals Limited,BHARAT HEAVY ELECTRICALS,BHEL,Financial Results,nse_official_file,Infrastructure,True,False,True,False,mid,50,2026-07-15T12:11:36.255449+00:00
-2026-07-16,Polycab India Limited,POLYCAB INDIA,POLYCAB,Financial Results,nse_official_file,Consumer Goods,True,False,False,False,large,35,2026-07-15T12:11:36.255449+00:00
-2026-07-16,CEAT Limited,CEAT,CEATLTD,Financial Results,nse_official_file,Automobile,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-16,360 ONE WAM LIMITED,360 ONE WAM,360ONE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-16,5Paisa Capital Limited,5PAISA CAPITAL,5PAISA,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-16,Alok Industries Limited,ALOK INDUSTRIES,ALOKINDS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-16,BOROSIL RENEWABLES LIMITED,BOROSIL RENEWABLES,BORORENEW,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-16,Chembond Chemicals Limited,CHEMBOND CHEMICALS,CHEMBONDCH,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-16,D.B.Corp Limited,D B,DBCORP,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-16,GNA Axles Limited,GNA AXLES,GNA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-16,Hathway Cable & Datacom Limited,HATHWAY CABLE DATACOM,HATHWAY,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-16,Heritage Foods Limited,HERITAGE FOODS,HERITGFOOD,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-16,ITC Hotels Limited,ITC HOTELS,ITCHOTELS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-16,Mahindra EPC Irrigation Limited,MAHINDRA EPC IRRIGATION,MAHEPC,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-16,Menon Bearings Limited,MENON BEARINGS,MENONBE,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-16,Muthoot Capital Services Limited,MUTHOOT CAPITAL SERVICES,MUTHOOTCAP,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-16,NELCO Limited,NELCO,NELCO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-16,Newgen Software Technologies Limited,NEWGEN SOFTWARE TECHNOLOGIES,NEWGEN,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-16,Onward Technologies Limited,ONWARD TECHNOLOGIES,ONWARDTEC,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-16,Piramal Finance Limited,PIRAMAL FINANCE,PIRAMALFIN,Financial Results/Fund Raising,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-16,PNB Gilts Limited,PNB GILTS,PNBGILTS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-16,The South Indian Bank Limited,THE SOUTH INDIAN BANK,SOUTHBANK,Financial Results/Fund Raising/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-16,Sterling and Wilson Renewable Energy Limited,STERLING AND WILSON RENEWABLE ENERGY,SWSOLAR,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-16,TRF Limited,TRF,TRF,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-16,WeWork India Management Limited,WEWORK INDIA MANAGEMENT,WEWORK,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-17,JSW Steel Limited,JSW STEEL,JSWSTEEL,Financial Results,nse_official_file,Metals & Mining,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-07-17,Reliance Industries Limited,RELIANCE INDUSTRIES,RELIANCE,Financial Results,nse_official_file,Oil & Gas,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-07-17,Havells India Limited,HAVELLS INDIA,HAVELLS,Financial Results,nse_official_file,Consumer Goods,True,False,True,False,large,60,2026-07-15T12:11:36.255449+00:00
-2026-07-17,ICICI Lombard General Insurance Company Limited,ICICI LOMBARD GENERAL INSURANCE,ICICIGI,Financial Results,nse_official_file,Financial Services,True,False,True,False,large,60,2026-07-15T12:11:36.255449+00:00
-2026-07-17,The Federal Bank  Limited,THE FEDERAL BANK,FEDERALBNK,Financial Results/Fund Raising,nse_official_file,Banking,True,False,False,True,mid,45,2026-07-15T12:11:36.255449+00:00
-2026-07-17,RBL Bank Limited,RBL BANK,RBLBANK,Financial Results/Fund Raising,nse_official_file,Banking,True,False,False,True,mid,45,2026-07-15T12:11:36.255449+00:00
-2026-07-17,Central Bank of India,CENTRAL BANK OF INDIA,CENTRALBK,Financial Results,nse_official_file,Banking,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-17,Oberoi Realty Limited,OBEROI REALTY,OBEROIRLTY,Financial Results/Dividend,nse_official_file,Real Estate,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-17,Poonawalla Fincorp Limited,POONAWALLA FINCORP,POONAWALLA,Financial Results,nse_official_file,Financial Services,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-17,Tata Technologies Limited,TATA TECHNOLOGIES,TATATECH,Financial Results,nse_official_file,Information Technology,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-17,Chembond Material Technologies Limited,CHEMBOND MATERIAL TECHNOLOGIES,CHEMBOND,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-17,Globus Spirits Limited,GLOBUS SPIRITS,GLOBUSSPR,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-17,Jayaswal Neco Industries Limited,JAYASWAL NECO INDUSTRIES,JAYNECOIND,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-17,Navkar Corporation Limited,NAVKAR,NAVKARCORP,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-17,PIL ITALICA LIFESTYLE LIMITED,PIL ITALICA LIFESTYLE,PILITA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-17,Tatva Chintan Pharma Chem Limited,TATVA CHINTAN PHARMA CHEM,TATVA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-17,Turtlemint Fintech Solutions Limited,TURTLEMINT FINTECH SOLUTIONS,TURTLEMINT,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-17,Vivimed Labs Limited,VIVIMED LABS,VIVIMEDLAB,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-18,Axis Bank Limited,AXIS BANK,AXISBANK,Financial Results,nse_official_file,Banking,True,True,False,True,large,95,2026-07-15T12:11:36.255449+00:00
-2026-07-18,HDFC Bank Limited,HDFC BANK,HDFCBANK,Financial Results,nse_official_file,Banking,True,True,False,True,large,95,2026-07-15T12:11:36.255449+00:00
-2026-07-18,ICICI Bank Limited,ICICI BANK,ICICIBANK,Financial Results,nse_official_file,Banking,True,True,False,True,large,95,2026-07-15T12:11:36.255449+00:00
-2026-07-18,Kotak Mahindra Bank Limited,KOTAK MAHINDRA BANK,KOTAKBANK,Financial Results,nse_official_file,Banking,True,True,False,True,large,95,2026-07-15T12:11:36.255449+00:00
-2026-07-18,Punjab National Bank,PUNJAB NATIONAL BANK,PNB,Financial Results,nse_official_file,Banking,True,False,True,True,mid,70,2026-07-15T12:11:36.255449+00:00
-2026-07-18,Can Fin Homes Limited,CAN FIN HOMES,CANFINHOME,Financial Results,nse_official_file,Financial Services,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-18,The India Cements Limited,THE INDIA CEMENTS,INDIACEM,Financial Results,nse_official_file,Cement,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-18,JK Cement Limited,JK CEMENT,JKCEMENT,Financial Results/Other business matters,nse_official_file,Cement,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-18,Yes Bank Limited,YES BANK,YESBANK,Financial Results,nse_official_file,Banking,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-18,Ashima Limited,ASHIMA,ASHIMASYN,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-18,Bhansali Engineering Polymers Limited,BHANSALI ENGINEERING POLYMERS,BEPL,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-18,Ganga Forging Limited,GANGA FORGING,GANGAFORGE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-18,IDBI Bank Limited,IDBI BANK,IDBI,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-18,Premier Polyfilm Limited,PREMIER POLYFILM,PREMIERPOL,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-18,Rossari Biotech Limited,ROSSARI BIOTECH,ROSSARI,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-18,Sangam (India) Limited,SANGAM INDIA,SANGAMIND,Financial Results/Fund Raising,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,UltraTech Cement Limited,ULTRATECH CEMENT,ULTRACEMCO,Financial Results,nse_official_file,Cement,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-07-20,Action Construction Equipment Limited,ACTION CONSTRUCTION EQUIPMENT,ACE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,Authum Investment & Infrastructure Limited,AUTHUM INVESTMENT INFRASTRUCTURE,AIIL,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,Alkali Metals Limited,ALKALI METALS,ALKALI,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,Bajaj Healthcare Limited,BAJAJ HEALTHCARE,BAJAJHCARE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,BlueStone Jewellery and Lifestyle Limited,BLUESTONE JEWELLERY AND LIFESTYLE,BLUESTONE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,California Software Company Limited,CALIFORNIA SOFTWARE,CALSOFT,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,Canara HSBC Life Insurance Company Limited,CANARA HSBC LIFE INSURANCE,CANHLIFE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,Central Mine Planning & Design Institute Limited,CENTRAL MINE PLANNING DESIGN INSTITUTE,CMPDI,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,CSM Technologies Limited,CSM TECHNOLOGIES,CSM,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,D. P. Abhushan Limited,D P ABHUSHAN,DPABHUSHAN,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,Dynamic Cables Limited,DYNAMIC CABLES,DYCL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,Indo Thai Securities Limited,INDO THAI SECURITIES,INDOTHAI,Financial Results/Fund Raising/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,Indian Overseas Bank,INDIAN OVERSEAS BANK,IOB,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,Jaiprakash Power Ventures Limited,JAIPRAKASH POWER VENTURES,JPPOWER,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,Karur Vysya Bank Limited,KARUR VYSYA BANK,KARURVYSYA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,Mahindra Logistics Limited,MAHINDRA LOGISTICS,MAHLOG,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,Rajoo Engineers Limited,RAJOO ENGINEERS,RAJOOENG,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,Rajshree Sugars & Chemicals Limited,RAJSHREE SUGARS CHEMICALS,RAJSREESUG,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,Rallis India Limited,RALLIS INDIA,RALLIS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,SG Mart Limited,SG MART,SGMART,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,Shyam Metalics and Energy Limited,SHYAM METALICS AND ENERGY,SHYAMMETL,Financial Results/Dividend/Fund Raising,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,SML Mahindra Limited,SML MAHINDRA,SMLMAH,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,Sobha Limited,SOBHA,SOBHA,Financial Results/Fund Raising,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,South West Pinnacle Exploration Limited,SOUTH WEST PINNACLE EXPLORATION,SOUTHWEST,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,STEEL EXCHANGE INDIA LIMITED,STEEL EXCHANGE INDIA,STEELXIND,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,Swaraj Engines Limited,SWARAJ ENGINES,SWARAJENG,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,Transformers And Rectifiers (India) Limited,TRANSFORMERS AND RECTIFIERS INDIA,TARIL,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,Tourism Finance Corporation of India Limited,TOURISM FINANCE OF INDIA,TFCILTD,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,Tinna Rubber and Infrastructure Limited,TINNA RUBBER AND INFRASTRUCTURE,TINNARUBR,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,Venus Remedies Limited,VENUS REMEDIES,VENUSREM,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-20,Vimta Labs Limited,VIMTA LABS,VIMTALABS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-21,Bajaj Auto Limited,BAJAJ AUTO,BAJAJ-AUTO,Financial Results,nse_official_file,Automobile,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-07-21,TVS Motor Company Limited,TVS MOTOR,TVSMOTOR,Financial Results/Fund Raising,nse_official_file,Automobile,True,False,True,False,large,60,2026-07-15T12:11:36.255449+00:00
-2026-07-21,The Indian Hotels Company Limited,THE INDIAN HOTELS,INDHOTEL,Financial Results,nse_official_file,Consumer Goods,True,False,True,False,mid,50,2026-07-15T12:11:36.255449+00:00
-2026-07-21,Adani Total Gas Limited,ADANI TOTAL GAS,ATGL,Financial Results,nse_official_file,nan,False,False,True,False,nan,25,2026-07-15T12:11:36.255449+00:00
-2026-07-21,Granules India Limited,GRANULES INDIA,GRANULES,Financial Results,nse_official_file,Pharmaceuticals,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-21,Indiamart Intermesh Limited,INDIAMART INTERMESH,INDIAMART,Financial Results,nse_official_file,Information Technology,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-21,Mahindra & Mahindra Financial Services Limited,MAHINDRA MAHINDRA FINANCIAL SERVICES,M&MFIN,Financial Results,nse_official_file,Financial Services,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-21,Aavas Financiers Limited,AAVAS FINANCIERS,AAVAS,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-21,Aditya Birla Sun Life AMC Limited,ADITYA BIRLA SUN LIFE AMC,ABSLAMC,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-21,Adani Energy Solutions Limited,ADANI ENERGY SOLUTIONS,ADANIENSOL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-21,Ador Welding Limited,ADOR WELDING,ADOR,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-21,Anthem Biosciences Limited,ANTHEM BIOSCIENCES,ANTHEM,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-21,Canara Robeco Asset Management Company Limited,CANARA ROBECO ASSET MANAGEMENT,CRAMC,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-21,Crisil Limited,CRISIL,CRISIL,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-21,Cyient DLM Limited,CYIENT DLM,CYIENTDLM,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-21,Hatsun Agro Product Limited,HATSUN AGRO PRODUCT,HATSUN,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-21,Huhtamaki India Limited,HUHTAMAKI INDIA,HUHTAMAKI,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-21,JSW Infrastructure Limited,JSW INFRASTRUCTURE,JSWINFRA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-21,Kirloskar Pneumatic Company Limited,KIRLOSKAR PNEUMATIC,KIRLPNU,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-21,Mastek Limited,MASTEK,MASTEK,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-21,Medplus Health Services Limited,MEDPLUS HEALTH SERVICES,MEDPLUS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-21,MPS Limited,MPS,MPSLTD,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-21,New Delhi Television Limited,NEW DELHI TELEVISION,NDTV,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-21,NIIT Limited,NIIT,NIITLTD,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-21,Nureca Limited,NURECA,NURECA,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-21,SAGILITY LIMITED,SAGILITY,SAGILITY,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-21,Servotech Renewable Power System Limited,SERVOTECH RENEWABLE POWER SYSTEM,SERVOTECH,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-21,Sunteck Realty Limited,SUNTECK REALTY,SUNTECK,Financial Results/Fund Raising/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-21,Trident Limited,TRIDENT,TRIDENT,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-21,TVS Holdings Limited,TVS HOLDINGS,TVSHLTD,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-22,Dr. Reddy's Laboratories Limited,DR REDDY S LABORATORIES,DRREDDY,Financial Results,nse_official_file,Pharmaceuticals,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-07-22,ETERNAL LIMITED,ETERNAL,ETERNAL,Financial Results,nse_official_file,Consumer Services,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-07-22,Nestle India Limited,NESTLE INDIA,NESTLEIND,Financial Results,nse_official_file,Consumer Goods,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-07-22,Oracle Financial Services Software Limited,ORACLE FINANCIAL SERVICES SOFTWARE,OFSS,Financial Results,nse_official_file,Information Technology,True,False,True,False,large,60,2026-07-15T12:11:36.255449+00:00
-2026-07-22,IndusInd Bank Limited,INDUSIND BANK,INDUSINDBK,Financial Results/Fund Raising/Other business matters,nse_official_file,Banking,True,False,False,True,large,55,2026-07-15T12:11:36.255449+00:00
-2026-07-22,Tata Communications Limited,TATA COMMUNICATIONS,TATACOMM,Financial Results,nse_official_file,Telecom,True,False,True,False,mid,50,2026-07-15T12:11:36.255449+00:00
-2026-07-22,Bharat Petroleum Corporation Limited,BHARAT PETROLEUM,BPCL,Financial Results,nse_official_file,Oil & Gas,True,False,False,False,large,35,2026-07-15T12:11:36.255449+00:00
-2026-07-22,Adani Green Energy Limited,ADANI GREEN ENERGY,ADANIGREEN,Financial Results,nse_official_file,nan,False,False,True,False,nan,25,2026-07-15T12:11:36.255449+00:00
-2026-07-22,Schaeffler India Limited,SCHAEFFLER INDIA,SCHAEFFLER,Financial Results,nse_official_file,Automobile,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-22,Tanla Platforms Limited,TANLA PLATFORMS,TANLA,Financial Results,nse_official_file,Information Technology,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-22,Adani Power Limited,ADANI POWER,ADANIPOWER,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-22,Aye Finance Limited,AYE FINANCE,AYE,Financial Results/Fund Raising,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-22,CIE Automotive India Limited,CIE AUTOMOTIVE INDIA,CIEINDIA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-22,CSB Bank Limited,CSB BANK,CSBBANK,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-22,Emami Paper Mills Limited,EMAMI PAPER MILLS,EMAMIPAP,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-22,Geojit Financial Services Limited,GEOJIT FINANCIAL SERVICES,GEOJITFSL,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-22,HEG Limited,HEG,HEG,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-22,Hindustan Petroleum Corporation Limited,HINDUSTAN PETROLEUM,HINDPETRO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-22,Jubilant Ingrevia Limited,JUBILANT INGREVIA,JUBLINGREA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-22,Mahindra Holidays & Resorts India Limited,MAHINDRA HOLIDAYS RESORTS INDIA,MHRIL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-22,Orient Electric Limited,ORIENT ELECTRIC,ORIENTELEC,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-22,Music Broadcast Limited,MUSIC BROADCAST,RADIOCITY,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-22,R. S. Software (India) Limited,R S SOFTWARE INDIA,RSSOFTWARE,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-22,Shoppers Stop Limited,SHOPPERS STOP,SHOPERSTOP,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-22,Smartworks Coworking Spaces Limited,SMARTWORKS COWORKING SPACES,SMARTWORKS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-22,United Spirits Limited,UNITED SPIRITS,UNITDSPR,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-22,UTI Asset Management Company Limited,UTI ASSET MANAGEMENT,UTIAMC,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-22,Vardhman Special Steels Limited,VARDHMAN SPECIAL STEELS,VSSL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-23,Cipla Limited,CIPLA,CIPLA,Financial Results,nse_official_file,Pharmaceuticals,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-07-23,Infosys Limited,INFOSYS,INFY,Financial Results,nse_official_file,Information Technology,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-07-23,Indian Energy Exchange Limited,INDIAN ENERGY EXCHANGE,IEX,Financial Results,nse_official_file,Financial Services,True,False,True,False,mid,50,2026-07-15T12:11:36.255449+00:00
-2026-07-23,MphasiS Limited,MPHASIS,MPHASIS,Financial Results,nse_official_file,Information Technology,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-23,Sona BLW Precision Forgings Limited,SONA BLW PRECISION FORGINGS,SONACOMS,Financial Results,nse_official_file,Automobile,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-23,3i Infotech Limited,3I INFOTECH,3IINFOLTD,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-23,Banaras Beads Limited,BANARAS BEADS,BANARBEADS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-23,Capital Small Finance Bank Limited,CAPITAL SMALL FINANCE BANK,CAPITALSFB,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-23,Chennai Petroleum Corporation Limited,CHENNAI PETROLEUM,CHENNPETRO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-23,Crown Lifters Limited,CROWN LIFTERS,CROWN,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-23,Cybertech Systems And Software Limited,CYBERTECH SYSTEMS AND SOFTWARE,CYBERTECH,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-23,Cyient Limited,CYIENT,CYIENT,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-23,Fractal Analytics Limited,FRACTAL ANALYTICS,FRACTAL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-23,Gujarat Alkalies and Chemicals Limited,GUJARAT ALKALIES AND CHEMICALS,GUJALKALI,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-23,Hindustan Composites Limited,HINDUSTAN COMPOSITES,HINDCOMPOS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-23,International Gemological Institute Limited,INTERNATIONAL GEMOLOGICAL INSTITUTE,IGIL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-23,Mahindra Lifespace Developers Limited,MAHINDRA LIFESPACE DEVELOPERS,MAHLIFE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-23,NIIT Learning Systems Limited,NIIT LEARNING SYSTEMS,NIITMTS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-23,Orient Cement Limited,ORIENT CEMENT,ORIENTCEM,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-23,Prime Securities Limited,PRIME SECURITIES,PRIMESECU,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-23,Suraj Limited,SURAJ,SURAJLTD,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-23,Suryoday Small Finance Bank Limited,SURYODAY SMALL FINANCE BANK,SURYODAY,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-23,Ujjivan Small Finance Bank Limited,UJJIVAN SMALL FINANCE BANK,UJJIVANSFB,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-24,SBI Life Insurance Company Limited,SBI LIFE INSURANCE,SBILIFE,Financial Results,nse_official_file,Financial Services,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-07-24,Shriram Finance Limited,SHRIRAM FINANCE,SHRIRAMFIN,Financial Results/Fund Raising/Other business matters,nse_official_file,Financial Services,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-07-24,Bank of Baroda,BANK OF BARODA,BANKBARODA,Financial Results,nse_official_file,Banking,True,False,True,False,mid,50,2026-07-15T12:11:36.255449+00:00
-2026-07-24,ACC Limited,ACC,ACC,Financial Results,nse_official_file,Cement,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-24,Atul Limited,ATUL,ATUL,Financial Results,nse_official_file,Chemicals,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-24,Container Corporation of India Limited,CONTAINER OF INDIA,CONCOR,Financial Results/Dividend/Other business matters,nse_official_file,Infrastructure,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-24,Grindwell Norton Limited,GRINDWELL NORTON,GRINDWELL,Financial Results,nse_official_file,Chemicals,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-24,JINDAL STEEL LIMITED,JINDAL STEEL,JINDALSTEL,Financial Results,nse_official_file,Metals & Mining,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-24,Laurus Labs Limited,LAURUS LABS,LAURUSLABS,Financial Results,nse_official_file,Pharmaceuticals,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-24,Apar Industries Limited,APAR INDUSTRIES,APARINDS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-24,CG Power and Industrial Solutions Limited,CG POWER AND INDUSTRIAL SOLUTIONS,CGPOWER,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-24,GANESH HOUSING LIMITED,GANESH HOUSING,GANESHHOU,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-24,Gangotri Textiles Limited,GANGOTRI TEXTILES,GANGOTRI,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-24,Kfin Technologies Limited,KFIN TECHNOLOGIES,KFINTECH,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-24,Dr. Lal Path Labs Ltd.,DR LAL PATH LABS,LALPATHLAB,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-24,LMW Limited,LMW,LMW,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-24,Ponni Sugars (Erode) Limited,PONNI SUGARS ERODE,PONNIERODE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-24,Shree Digvijay Cement Co.Ltd,SHREE DIGVIJAY CEMENT,SHREDIGCEM,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-24,V-Mart Retail Limited,V MART RETAIL,VMART,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-25,AU Small Finance Bank Limited,AU SMALL FINANCE BANK,AUBANK,Financial Results,nse_official_file,Banking,True,False,False,True,mid,45,2026-07-15T12:11:36.255449+00:00
-2026-07-25,IDFC First Bank Limited,IDFC FIRST BANK,IDFCFIRSTB,Financial Results,nse_official_file,Banking,True,False,False,True,mid,45,2026-07-15T12:11:36.255449+00:00
-2026-07-25,Dodla Dairy Limited,DODLA DAIRY,DODLA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-25,Five-Star Business Finance Limited,FIVE STAR BUSINESS FINANCE,FIVESTAR,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-25,SBFC Finance Limited,SBFC FINANCE,SBFC,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-25,Seshasayee Paper and Boards Limited,SESHASAYEE PAPER AND BOARDS,SESHAPAPER,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-27,Bharat Electronics Limited,BHARAT ELECTRONICS,BEL,Financial Results,nse_official_file,Capital Goods,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-07-27,Coal India Limited,COAL INDIA,COALINDIA,Financial Results/Dividend,nse_official_file,Metals & Mining,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-07-27,Coforge Limited,COFORGE,COFORGE,Financial Results,nse_official_file,Information Technology,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-27,Aurionpro Solutions Limited,AURIONPRO SOLUTIONS,AURIONPRO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-27,Fairchem Organics Limited,FAIRCHEM ORGANICS,FAIRCHEMOR,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-27,IFB Agro Industries Limited,IFB AGRO INDUSTRIES,IFBAGRO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-27,Kanpur Plastipack Limited,KANPUR PLASTIPACK,KANPRPLA,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-27,Manba Finance Limited,MANBA FINANCE,MANBA,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-27,Nelcast Limited,NELCAST,NELCAST,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-27,Nesco Limited,NESCO,NESCO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-27,Sumitomo Chemical India Limited,SUMITOMO CHEMICAL INDIA,SUMICHEM,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-27,Tamilnad Mercantile Bank Limited,TAMILNAD MERCANTILE BANK,TMB,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-28,Hindustan Unilever Limited,HINDUSTAN UNILEVER,HINDUNILVR,Financial Results,nse_official_file,Consumer Goods,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-07-28,Larsen & Toubro Limited,LARSEN TOUBRO,LT,Financial Results,nse_official_file,Infrastructure,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-07-28,Ambuja Cements Limited,AMBUJA CEMENTS,AMBUJACEM,Financial Results,nse_official_file,Cement,True,False,True,False,mid,50,2026-07-15T12:11:36.255449+00:00
-2026-07-28,Cholamandalam Investment and Finance Company Limited,CHOLAMANDALAM INVESTMENT AND FINANCE,CHOLAFIN,Financial Results,nse_official_file,Financial Services,True,False,True,False,mid,50,2026-07-15T12:11:36.255449+00:00
-2026-07-28,Cemindia Projects Limited,CEMINDIA PROJECTS,CEMPRO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-28,Ginni Filaments Limited,GINNI FILAMENTS,GINNIFILA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-28,IFB Industries Limited,IFB INDUSTRIES,IFBIND,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-28,Indoco Remedies Limited,INDOCO REMEDIES,INDOCO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-28,S H Kelkar and Company Limited,S H KELKAR AND,SHK,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-28,Tata Capital Limited,TATA CAPITAL,TATACAP,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-28,TTK Prestige Limited,TTK PRESTIGE,TTKPRESTIG,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-29,Adani Ports and Special Economic Zone Limited,ADANI PORTS AND SPECIAL ECONOMIC ZONE,ADANIPORTS,Financial Results,nse_official_file,Infrastructure,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-07-29,Asian Paints Limited,ASIAN PAINTS,ASIANPAINT,Financial Results,nse_official_file,Consumer Goods,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-07-29,Colgate Palmolive (India) Limited,COLGATE PALMOLIVE INDIA,COLPAL,Financial Results,nse_official_file,Consumer Goods,True,False,True,False,mid,50,2026-07-15T12:11:36.255449+00:00
-2026-07-29,Dabur India Limited,DABUR INDIA,DABUR,Financial Results,nse_official_file,Consumer Goods,True,False,True,False,mid,50,2026-07-15T12:11:36.255449+00:00
-2026-07-29,Syngene International Limited,SYNGENE INTERNATIONAL,SYNGENE,Financial Results,nse_official_file,Pharmaceuticals,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-29,Accelya Solutions India Limited,ACCELYA SOLUTIONS INDIA,ACCELYA,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-29,Bajaj Housing Finance Limited,BAJAJ HOUSING FINANCE,BAJAJHFL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-29,Craftsman Automation Limited,CRAFTSMAN AUTOMATION,CRAFTSMAN,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-29,Dhanlaxmi Bank Limited,DHANLAXMI BANK,DHANBANK,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-29,eMudhra Limited,EMUDHRA,EMUDHRA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-29,Gokul Agro Resources Limited,GOKUL AGRO RESOURCES,GOKULAGRO,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-29,Honeywell Automation India Limited,HONEYWELL AUTOMATION INDIA,HONAUT,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-29,Maharashtra Scooters Limited,MAHARASHTRA SCOOTERS,MAHSCOOTER,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-29,Procter & Gamble Hygiene and Health Care Limited,PROCTER GAMBLE HYGIENE AND HEALTH CARE,PGHH,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-29,SKM Egg Products Export (India) Limited,SKM EGG PRODUCTS EXPORT INDIA,SKMEGGPROD,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-29,Star Health and Allied Insurance Company Limited,STAR HEALTH AND ALLIED INSURANCE,STARHEALTH,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-29,Teamlease Services Limited,TEAMLEASE SERVICES,TEAMLEASE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-30,Bajaj Finance Limited,BAJAJ FINANCE,BAJFINANCE,Financial Results,nse_official_file,Financial Services,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-07-30,Mahindra & Mahindra Limited,MAHINDRA MAHINDRA,M&M,Financial Results/Other business matters,nse_official_file,Automobile,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-07-30,Exide Industries Limited,EXIDE INDUSTRIES,EXIDEIND,Financial Results,nse_official_file,Automobile,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-30,Thermax Limited,THERMAX,THERMAX,Financial Results,nse_official_file,Infrastructure,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-30,Gillette India Limited,GILLETTE INDIA,GILLETTE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-30,ICRA Limited,ICRA,ICRA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-30,Indegene Limited,INDEGENE,INDGN,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-30,Pricol Limited,PRICOL,PRICOLLTD,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-30,PSP Projects Limited,PSP PROJECTS,PSPPROJECT,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-30,Transport Corporation of India Limited,TRANSPORT OF INDIA,TCI,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-30,Vinyl Chemicals (India) Limited,VINYL CHEMICALS INDIA,VINYLINDIA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-30,WESTLIFE FOODWORLD LIMITED,WESTLIFE FOODWORLD,WESTLIFE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-31,Bajaj Finserv Limited,BAJAJ FINSERV,BAJAJFINSV,Financial Results,nse_official_file,Financial Services,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-07-31,Sun Pharmaceutical Industries Limited,SUN PHARMACEUTICAL INDUSTRIES,SUNPHARMA,Financial Results,nse_official_file,Pharmaceuticals,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-07-31,SHREE CEMENT LIMITED,SHREE CEMENT,SHREECEM,Financial Results,nse_official_file,Cement,True,False,False,False,large,35,2026-07-15T12:11:36.255449+00:00
-2026-07-31,Aditya Birla Capital Limited,ADITYA BIRLA CAPITAL,ABCAPITAL,Financial Results,nse_official_file,Financial Services,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-07-31,Bajaj Holdings & Investment Limited,BAJAJ HOLDINGS INVESTMENT,BAJAJHLDNG,Financial Results,nse_official_file,nan,False,False,True,False,nan,25,2026-07-15T12:11:36.255449+00:00
-2026-07-31,ABB India Limited,ABB INDIA,ABB,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-31,Aptus Value Housing Finance India Limited,APTUS VALUE HOUSING FINANCE INDIA,APTUS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-31,Glenmark Pharmaceuticals Limited,GLENMARK PHARMACEUTICALS,GLENMARK,Financial Results,nse_official_file,Pharmaceuticals,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-31,IL&FS Engineering and Construction Company Limited,IL FS ENGINEERING AND CONSTRUCTION,IL&FSENGG,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-31,Punjab Chemicals & Crop Protection Limited,PUNJAB CHEMICALS CROP PROTECTION,PUNJABCHEM,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-07-31,Shree Ram Proteins Limited,SHREE RAM PROTEINS,SRPL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-01,Central Depository Services (India) Limited,CENTRAL DEPOSITORY SERVICES INDIA,CDSL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-01,D-Link (India) Limited,D LINK INDIA,DLINKINDIA,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-01,Sarda Energy & Minerals Limited,SARDA ENERGY MINERALS,SARDAEN,Financial Results/Fund Raising,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-01,Sportking India Limited,SPORTKING INDIA,SPORTKING,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-03,Computer Age Management Services Limited,COMPUTER AGE MANAGEMENT SERVICES,CAMS,Financial Results/Dividend,nse_official_file,Financial Services,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-08-03,Escorts Kubota Limited,ESCORTS KUBOTA,ESCORTS,Financial Results,nse_official_file,Automobile,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-08-03,JM Financial Limited,JM FINANCIAL,JMFINANCIL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-03,Kansai Nerolac Paints Limited,KANSAI NEROLAC PAINTS,KANSAINER,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-03,KCP Limited,KCP,KCP,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-03,NOCIL Limited,NOCIL,NOCIL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-03,Stove Kraft Limited,STOVE KRAFT,STOVEKRAFT,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-03,Thomas Cook  (India)  Limited,THOMAS COOK INDIA,THOMASCOOK,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-04,Marico Limited,MARICO,MARICO,Financial Results,nse_official_file,Consumer Goods,True,False,True,False,large,60,2026-07-15T12:11:36.255449+00:00
-2026-08-04,Pidilite Industries Limited,PIDILITE INDUSTRIES,PIDILITIND,Financial Results,nse_official_file,Chemicals,True,False,True,False,large,60,2026-07-15T12:11:36.255449+00:00
-2026-08-04,Castrol India Limited,CASTROL INDIA,CASTROLIND,Financial Results/Dividend,nse_official_file,Oil & Gas,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-08-04,Godrej Properties Limited,GODREJ PROPERTIES,GODREJPROP,Financial Results,nse_official_file,Real Estate,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-08-04,United Breweries Limited,UNITED BREWERIES,UBL,Financial Results,nse_official_file,Consumer Goods,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-08-04,BASF India Limited,BASF INDIA,BASF,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-04,Bharat Bijlee Limited,BHARAT BIJLEE,BBL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-04,BSE Limited,BSE,BSE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-04,Emami Limited,EMAMI,EMAMILTD,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-04,Timken India Limited,TIMKEN INDIA,TIMKEN,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-04,TREJHARA SOLUTIONS LIMITED,TREJHARA SOLUTIONS,TREJHARA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-04,Wonderla Holidays Limited,WONDERLA HOLIDAYS,WONDERLA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-05,Berger Paints (I) Limited,BERGER PAINTS I,BERGEPAINT,Financial Results,nse_official_file,Consumer Goods,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-08-05,Cummins India Limited,CUMMINS INDIA,CUMMINSIND,Financial Results,nse_official_file,Infrastructure,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-08-05,Bikaji Foods International Limited,BIKAJI FOODS INTERNATIONAL,BIKAJI,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-05,Navin Fluorine International Limited,NAVIN FLUORINE INTERNATIONAL,NAVINFLUOR,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-05,Paisalo Digital Limited,PAISALO DIGITAL,PAISALO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-05,Shree Renuka Sugars Limited,SHREE RENUKA SUGARS,RENUKA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-05,Rane (Madras) Limited,RANE MADRAS,RML,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-05,Subex Limited,SUBEX,SUBEXLTD,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-05,TV Today Network Limited,TV TODAY NETWORK,TVTODAY,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-06,Trent Limited,TRENT,TRENT,Financial Results,nse_official_file,Consumer Services,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-08-06,Blue Star Limited,BLUE STAR,BLUESTARCO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-06,BOSCH HOME COMFORT INDIA LIMITED,BOSCH HOME COMFORT INDIA,BOSCH-HCIL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-06,Coffee Day Enterprises Limited,COFFEE DAY ENTERPRISES,COFFEEDAY,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-06,JSW Holdings Limited,JSW HOLDINGS,JSWHL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-06,Procter & Gamble Health Limited,PROCTER GAMBLE HEALTH,PGHL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-06,Rain Industries Limited,RAIN INDUSTRIES,RAIN,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-06,Sai Life Sciences Limited,SAI LIFE SCIENCES,SAILIFE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-06,TCI Express Limited,TCI EXPRESS,TCIEXP,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-07,Hindalco Industries Limited,HINDALCO INDUSTRIES,HINDALCO,Financial Results,nse_official_file,Metals & Mining,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-08-07,Titan Company Limited,TITAN,TITAN,Financial Results,nse_official_file,Consumer Goods,True,True,False,False,large,75,2026-07-15T12:11:36.255449+00:00
-2026-08-07,Godrej Consumer Products Limited,GODREJ CONSUMER PRODUCTS,GODREJCP,Financial Results/Dividend,nse_official_file,Consumer Goods,True,False,True,False,mid,50,2026-07-15T12:11:36.255449+00:00
-2026-08-08,Anant Raj Limited,ANANT RAJ,ANANTRAJ,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-08,Atul Auto Limited,ATUL AUTO,ATULAUTO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-10,Bosch Limited,BOSCH,BOSCHLTD,Financial Results,nse_official_file,Automobile,True,False,True,False,mid,50,2026-07-15T12:11:36.255449+00:00
-2026-08-10,Amara Raja Energy & Mobility Limited,AMARA RAJA ENERGY MOBILITY,ARE&M,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-11,Esab India Limited,ESAB INDIA,ESABINDIA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-11,Foseco India Limited,FOSECO INDIA,FOSECOIND,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-12,Centrum Capital Limited,CENTRUM CAPITAL,CENTRUM,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-12,Mindteck (India) Limited,MINDTECK INDIA,MINDTECK,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-12,Mahanagar Telephone Nigam Limited,MAHANAGAR TELEPHONE NIGAM,MTNL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-12,Mukand Limited,MUKAND,MUKANDLTD,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-13,Page Industries Limited,PAGE INDUSTRIES,PAGEIND,Financial Results/Dividend,nse_official_file,Consumer Goods,True,False,True,False,mid,50,2026-07-15T12:11:36.255449+00:00
-2026-08-13,Max Financial Services Limited,MAX FINANCIAL SERVICES,MFSL,Financial Results,nse_official_file,Financial Services,True,False,False,False,mid,25,2026-07-15T12:11:36.255449+00:00
-2026-08-13,Endurance Technologies Limited,ENDURANCE TECHNOLOGIES,ENDURANCE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-13,Rane Holdings Limited,RANE HOLDINGS,RANEHOLDIN,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
-2026-08-14,Cholamandalam Financial Holdings Limited,CHOLAMANDALAM FINANCIAL HOLDINGS,CHOLAHLDNG,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T12:11:36.255449+00:00
+2026-07-15,HDFC Life Insurance Company Limited,HDFC LIFE INSURANCE,HDFCLIFE,Financial Results,nse_official_file,Financial Services,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-07-15,HDFC Asset Management Company Limited,HDFC ASSET MANAGEMENT,HDFCAMC,Financial Results,nse_official_file,Financial Services,True,False,True,False,large,60,2026-07-15T15:04:50.298474+00:00
+2026-07-15,ICICI Lombard General Insurance Company Limited,ICICI LOMBARD GENERAL INSURANCE,ICICIGI,Financial Results,nse_official_file,Financial Services,True,False,True,False,large,60,2026-07-15T15:04:50.298474+00:00
+2026-07-15,Union Bank of India,UNION BANK OF INDIA,UNIONBANK,Financial Results,nse_official_file,Banking,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-15,Agri-Tech (India) Limited,AGRI TECH INDIA,AGRITECH,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-15,Angel One Limited,ANGEL ONE,ANGELONE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-15,Emmvee Photovoltaic Power Limited,EMMVEE PHOTOVOLTAIC POWER,EMMVEE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-15,Fedbank Financial Services Limited,FEDBANK FINANCIAL SERVICES,FEDFINA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-15,Goa Carbon Limited,GOA CARBON,GOACARBON,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-15,Billionbrains Garage Ventures Limited,BILLIONBRAINS GARAGE VENTURES,GROWW,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-15,GTPL Hathway Limited,GTPL HATHWAY,GTPL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-15,HDB Financial Services Limited,HDB FINANCIAL SERVICES,HDBFS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-15,Himadri Speciality Chemical Limited,HIMADRI SPECIALITY CHEMICAL,HSCL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-15,Jana Small Finance Bank Limited,JANA SMALL FINANCE BANK,JSFB,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-15,Sai Silks (Kalamandir) Limited,SAI SILKS KALAMANDIR,KALAMANDIR,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-15,Ksolves India Limited,KSOLVES INDIA,KSOLVES,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-15,Mangalore Refinery and Petrochemicals Limited,MANGALORE REFINERY AND PETROCHEMICALS,MRPL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-15,Network18 Media & Investments Limited,NETWORK18 MEDIA INVESTMENTS,NETWORK18,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-15,Oriental Hotels Limited,ORIENTAL HOTELS,ORIENTHOT,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-15,Reliance Industrial Infrastructure Limited,RELIANCE INDUSTRIAL INFRASTRUCTURE,RIIL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-15,Raghav Productivity Enhancers Limited,RAGHAV PRODUCTIVITY ENHANCERS,RPEL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-15,SONAM LIMITED,SONAM,SONAMLTD,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-15,Steel Strips Wheels Limited,STEEL STRIPS WHEELS,SSWL,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-16,Jio Financial Services Limited,JIO FINANCIAL SERVICES,JIOFIN,Financial Results,nse_official_file,Financial Services,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-07-16,Tech Mahindra Limited,TECH MAHINDRA,TECHM,Financial Results/Other business matters,nse_official_file,Information Technology,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-07-16,Wipro Limited,WIPRO,WIPRO,Financial Results/Dividend,nse_official_file,Information Technology,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-07-16,Bharat Heavy Electricals Limited,BHARAT HEAVY ELECTRICALS,BHEL,Financial Results,nse_official_file,Infrastructure,True,False,True,False,mid,50,2026-07-15T15:04:50.298474+00:00
+2026-07-16,Polycab India Limited,POLYCAB INDIA,POLYCAB,Financial Results,nse_official_file,Consumer Goods,True,False,False,False,large,35,2026-07-15T15:04:50.298474+00:00
+2026-07-16,CEAT Limited,CEAT,CEATLTD,Financial Results,nse_official_file,Automobile,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-16,360 ONE WAM LIMITED,360 ONE WAM,360ONE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-16,5Paisa Capital Limited,5PAISA CAPITAL,5PAISA,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-16,Alok Industries Limited,ALOK INDUSTRIES,ALOKINDS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-16,BOROSIL RENEWABLES LIMITED,BOROSIL RENEWABLES,BORORENEW,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-16,Chembond Chemicals Limited,CHEMBOND CHEMICALS,CHEMBONDCH,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-16,D.B.Corp Limited,D B,DBCORP,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-16,GNA Axles Limited,GNA AXLES,GNA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-16,Hathway Cable & Datacom Limited,HATHWAY CABLE DATACOM,HATHWAY,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-16,Heritage Foods Limited,HERITAGE FOODS,HERITGFOOD,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-16,ITC Hotels Limited,ITC HOTELS,ITCHOTELS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-16,Mahindra EPC Irrigation Limited,MAHINDRA EPC IRRIGATION,MAHEPC,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-16,Menon Bearings Limited,MENON BEARINGS,MENONBE,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-16,Muthoot Capital Services Limited,MUTHOOT CAPITAL SERVICES,MUTHOOTCAP,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-16,NELCO Limited,NELCO,NELCO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-16,Newgen Software Technologies Limited,NEWGEN SOFTWARE TECHNOLOGIES,NEWGEN,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-16,Onward Technologies Limited,ONWARD TECHNOLOGIES,ONWARDTEC,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-16,Piramal Finance Limited,PIRAMAL FINANCE,PIRAMALFIN,Financial Results/Fund Raising,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-16,PNB Gilts Limited,PNB GILTS,PNBGILTS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-16,The South Indian Bank Limited,THE SOUTH INDIAN BANK,SOUTHBANK,Financial Results/Fund Raising/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-16,Sterling and Wilson Renewable Energy Limited,STERLING AND WILSON RENEWABLE ENERGY,SWSOLAR,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-16,TRF Limited,TRF,TRF,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-16,WeWork India Management Limited,WEWORK INDIA MANAGEMENT,WEWORK,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-17,JSW Steel Limited,JSW STEEL,JSWSTEEL,Financial Results,nse_official_file,Metals & Mining,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-07-17,Reliance Industries Limited,RELIANCE INDUSTRIES,RELIANCE,Financial Results,nse_official_file,Oil & Gas,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-07-17,Havells India Limited,HAVELLS INDIA,HAVELLS,Financial Results,nse_official_file,Consumer Goods,True,False,True,False,large,60,2026-07-15T15:04:50.298474+00:00
+2026-07-17,ICICI Lombard General Insurance Company Limited,ICICI LOMBARD GENERAL INSURANCE,ICICIGI,Financial Results,nse_official_file,Financial Services,True,False,True,False,large,60,2026-07-15T15:04:50.298474+00:00
+2026-07-17,The Federal Bank  Limited,THE FEDERAL BANK,FEDERALBNK,Financial Results/Fund Raising,nse_official_file,Banking,True,False,False,True,mid,45,2026-07-15T15:04:50.298474+00:00
+2026-07-17,RBL Bank Limited,RBL BANK,RBLBANK,Financial Results/Fund Raising,nse_official_file,Banking,True,False,False,True,mid,45,2026-07-15T15:04:50.298474+00:00
+2026-07-17,Central Bank of India,CENTRAL BANK OF INDIA,CENTRALBK,Financial Results,nse_official_file,Banking,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-17,Oberoi Realty Limited,OBEROI REALTY,OBEROIRLTY,Financial Results/Dividend,nse_official_file,Real Estate,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-17,Poonawalla Fincorp Limited,POONAWALLA FINCORP,POONAWALLA,Financial Results,nse_official_file,Financial Services,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-17,Tata Technologies Limited,TATA TECHNOLOGIES,TATATECH,Financial Results,nse_official_file,Information Technology,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-17,Chembond Material Technologies Limited,CHEMBOND MATERIAL TECHNOLOGIES,CHEMBOND,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-17,Globus Spirits Limited,GLOBUS SPIRITS,GLOBUSSPR,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-17,Jayaswal Neco Industries Limited,JAYASWAL NECO INDUSTRIES,JAYNECOIND,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-17,Navkar Corporation Limited,NAVKAR,NAVKARCORP,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-17,PIL ITALICA LIFESTYLE LIMITED,PIL ITALICA LIFESTYLE,PILITA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-17,Tatva Chintan Pharma Chem Limited,TATVA CHINTAN PHARMA CHEM,TATVA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-17,Turtlemint Fintech Solutions Limited,TURTLEMINT FINTECH SOLUTIONS,TURTLEMINT,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-17,Vivimed Labs Limited,VIVIMED LABS,VIVIMEDLAB,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-18,Axis Bank Limited,AXIS BANK,AXISBANK,Financial Results,nse_official_file,Banking,True,True,False,True,large,95,2026-07-15T15:04:50.298474+00:00
+2026-07-18,HDFC Bank Limited,HDFC BANK,HDFCBANK,Financial Results,nse_official_file,Banking,True,True,False,True,large,95,2026-07-15T15:04:50.298474+00:00
+2026-07-18,ICICI Bank Limited,ICICI BANK,ICICIBANK,Financial Results,nse_official_file,Banking,True,True,False,True,large,95,2026-07-15T15:04:50.298474+00:00
+2026-07-18,Kotak Mahindra Bank Limited,KOTAK MAHINDRA BANK,KOTAKBANK,Financial Results,nse_official_file,Banking,True,True,False,True,large,95,2026-07-15T15:04:50.298474+00:00
+2026-07-18,Punjab National Bank,PUNJAB NATIONAL BANK,PNB,Financial Results,nse_official_file,Banking,True,False,True,True,mid,70,2026-07-15T15:04:50.298474+00:00
+2026-07-18,Can Fin Homes Limited,CAN FIN HOMES,CANFINHOME,Financial Results,nse_official_file,Financial Services,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-18,The India Cements Limited,THE INDIA CEMENTS,INDIACEM,Financial Results,nse_official_file,Cement,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-18,JK Cement Limited,JK CEMENT,JKCEMENT,Financial Results/Other business matters,nse_official_file,Cement,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-18,Yes Bank Limited,YES BANK,YESBANK,Financial Results,nse_official_file,Banking,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-18,Ashima Limited,ASHIMA,ASHIMASYN,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-18,Bhansali Engineering Polymers Limited,BHANSALI ENGINEERING POLYMERS,BEPL,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-18,Ganga Forging Limited,GANGA FORGING,GANGAFORGE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-18,IDBI Bank Limited,IDBI BANK,IDBI,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-18,Premier Polyfilm Limited,PREMIER POLYFILM,PREMIERPOL,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-18,Punjab & Sind Bank,PUNJAB SIND BANK,PSB,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-18,Rossari Biotech Limited,ROSSARI BIOTECH,ROSSARI,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-18,Sangam (India) Limited,SANGAM INDIA,SANGAMIND,Financial Results/Fund Raising,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,UltraTech Cement Limited,ULTRATECH CEMENT,ULTRACEMCO,Financial Results,nse_official_file,Cement,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-07-20,Action Construction Equipment Limited,ACTION CONSTRUCTION EQUIPMENT,ACE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,Authum Investment & Infrastructure Limited,AUTHUM INVESTMENT INFRASTRUCTURE,AIIL,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,Alkali Metals Limited,ALKALI METALS,ALKALI,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,Aurum PropTech Limited,AURUM PROPTECH,AURUM,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,Bajaj Healthcare Limited,BAJAJ HEALTHCARE,BAJAJHCARE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,BlueStone Jewellery and Lifestyle Limited,BLUESTONE JEWELLERY AND LIFESTYLE,BLUESTONE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,California Software Company Limited,CALIFORNIA SOFTWARE,CALSOFT,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,Canara HSBC Life Insurance Company Limited,CANARA HSBC LIFE INSURANCE,CANHLIFE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,Central Mine Planning & Design Institute Limited,CENTRAL MINE PLANNING DESIGN INSTITUTE,CMPDI,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,CSM Technologies Limited,CSM TECHNOLOGIES,CSM,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,D. P. Abhushan Limited,D P ABHUSHAN,DPABHUSHAN,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,Dynamic Cables Limited,DYNAMIC CABLES,DYCL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,Grand Foundry Limited,GRAND FOUNDRY,GFSTEELS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,Indo Thai Securities Limited,INDO THAI SECURITIES,INDOTHAI,Financial Results/Fund Raising/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,Indian Overseas Bank,INDIAN OVERSEAS BANK,IOB,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,Jaiprakash Power Ventures Limited,JAIPRAKASH POWER VENTURES,JPPOWER,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,Karur Vysya Bank Limited,KARUR VYSYA BANK,KARURVYSYA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,Mahindra Logistics Limited,MAHINDRA LOGISTICS,MAHLOG,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,Rajoo Engineers Limited,RAJOO ENGINEERS,RAJOOENG,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,Rajshree Sugars & Chemicals Limited,RAJSHREE SUGARS CHEMICALS,RAJSREESUG,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,Rallis India Limited,RALLIS INDIA,RALLIS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,Advit Jewels Limited,ADVIT JEWELS,RAMBHAJO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,SG Mart Limited,SG MART,SGMART,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,Shyam Metalics and Energy Limited,SHYAM METALICS AND ENERGY,SHYAMMETL,Financial Results/Dividend/Fund Raising,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,SML Mahindra Limited,SML MAHINDRA,SMLMAH,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,Sobha Limited,SOBHA,SOBHA,Financial Results/Fund Raising,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,South West Pinnacle Exploration Limited,SOUTH WEST PINNACLE EXPLORATION,SOUTHWEST,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,STEEL EXCHANGE INDIA LIMITED,STEEL EXCHANGE INDIA,STEELXIND,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,Swaraj Engines Limited,SWARAJ ENGINES,SWARAJENG,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,Transformers And Rectifiers (India) Limited,TRANSFORMERS AND RECTIFIERS INDIA,TARIL,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,Tourism Finance Corporation of India Limited,TOURISM FINANCE OF INDIA,TFCILTD,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,Tinna Rubber and Infrastructure Limited,TINNA RUBBER AND INFRASTRUCTURE,TINNARUBR,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,Venus Remedies Limited,VENUS REMEDIES,VENUSREM,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-20,Vimta Labs Limited,VIMTA LABS,VIMTALABS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-21,Bajaj Auto Limited,BAJAJ AUTO,BAJAJ-AUTO,Financial Results,nse_official_file,Automobile,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-07-21,TVS Motor Company Limited,TVS MOTOR,TVSMOTOR,Financial Results/Fund Raising,nse_official_file,Automobile,True,False,True,False,large,60,2026-07-15T15:04:50.298474+00:00
+2026-07-21,The Indian Hotels Company Limited,THE INDIAN HOTELS,INDHOTEL,Financial Results,nse_official_file,Consumer Goods,True,False,True,False,mid,50,2026-07-15T15:04:50.298474+00:00
+2026-07-21,Bandhan Bank Limited,BANDHAN BANK,BANDHANBNK,Financial Results,nse_official_file,Banking,True,False,False,True,mid,45,2026-07-15T15:04:50.298474+00:00
+2026-07-21,Adani Total Gas Limited,ADANI TOTAL GAS,ATGL,Financial Results,nse_official_file,nan,False,False,True,False,nan,25,2026-07-15T15:04:50.298474+00:00
+2026-07-21,Granules India Limited,GRANULES INDIA,GRANULES,Financial Results,nse_official_file,Pharmaceuticals,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-21,Indiamart Intermesh Limited,INDIAMART INTERMESH,INDIAMART,Financial Results,nse_official_file,Information Technology,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-21,Mahindra & Mahindra Financial Services Limited,MAHINDRA MAHINDRA FINANCIAL SERVICES,M&MFIN,Financial Results,nse_official_file,Financial Services,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-21,Aavas Financiers Limited,AAVAS FINANCIERS,AAVAS,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-21,Aditya Birla Sun Life AMC Limited,ADITYA BIRLA SUN LIFE AMC,ABSLAMC,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-21,Adani Energy Solutions Limited,ADANI ENERGY SOLUTIONS,ADANIENSOL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-21,Ador Welding Limited,ADOR WELDING,ADOR,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-21,Anthem Biosciences Limited,ANTHEM BIOSCIENCES,ANTHEM,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-21,Bharat Coking Coal Limited,BHARAT COKING COAL,BHARATCOAL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-21,Canara Robeco Asset Management Company Limited,CANARA ROBECO ASSET MANAGEMENT,CRAMC,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-21,Crisil Limited,CRISIL,CRISIL,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-21,Cyient DLM Limited,CYIENT DLM,CYIENTDLM,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-21,Hatsun Agro Product Limited,HATSUN AGRO PRODUCT,HATSUN,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-21,Huhtamaki India Limited,HUHTAMAKI INDIA,HUHTAMAKI,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-21,JSW Infrastructure Limited,JSW INFRASTRUCTURE,JSWINFRA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-21,Kirloskar Pneumatic Company Limited,KIRLOSKAR PNEUMATIC,KIRLPNU,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-21,Mastek Limited,MASTEK,MASTEK,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-21,Medplus Health Services Limited,MEDPLUS HEALTH SERVICES,MEDPLUS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-21,MPS Limited,MPS,MPSLTD,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-21,New Delhi Television Limited,NEW DELHI TELEVISION,NDTV,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-21,NIIT Limited,NIIT,NIITLTD,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-21,Nureca Limited,NURECA,NURECA,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-21,SAGILITY LIMITED,SAGILITY,SAGILITY,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-21,Servotech Renewable Power System Limited,SERVOTECH RENEWABLE POWER SYSTEM,SERVOTECH,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-21,Sunteck Realty Limited,SUNTECK REALTY,SUNTECK,Financial Results/Fund Raising/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-21,Trident Limited,TRIDENT,TRIDENT,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-21,TVS Holdings Limited,TVS HOLDINGS,TVSHLTD,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-22,Dr. Reddy's Laboratories Limited,DR REDDY S LABORATORIES,DRREDDY,Financial Results,nse_official_file,Pharmaceuticals,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-07-22,ETERNAL LIMITED,ETERNAL,ETERNAL,Financial Results,nse_official_file,Consumer Services,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-07-22,Nestle India Limited,NESTLE INDIA,NESTLEIND,Financial Results,nse_official_file,Consumer Goods,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-07-22,Oracle Financial Services Software Limited,ORACLE FINANCIAL SERVICES SOFTWARE,OFSS,Financial Results,nse_official_file,Information Technology,True,False,True,False,large,60,2026-07-15T15:04:50.298474+00:00
+2026-07-22,IndusInd Bank Limited,INDUSIND BANK,INDUSINDBK,Financial Results/Fund Raising/Other business matters,nse_official_file,Banking,True,False,False,True,large,55,2026-07-15T15:04:50.298474+00:00
+2026-07-22,Tata Communications Limited,TATA COMMUNICATIONS,TATACOMM,Financial Results,nse_official_file,Telecom,True,False,True,False,mid,50,2026-07-15T15:04:50.298474+00:00
+2026-07-22,Bharat Petroleum Corporation Limited,BHARAT PETROLEUM,BPCL,Financial Results,nse_official_file,Oil & Gas,True,False,False,False,large,35,2026-07-15T15:04:50.298474+00:00
+2026-07-22,Adani Green Energy Limited,ADANI GREEN ENERGY,ADANIGREEN,Financial Results,nse_official_file,nan,False,False,True,False,nan,25,2026-07-15T15:04:50.298474+00:00
+2026-07-22,Schaeffler India Limited,SCHAEFFLER INDIA,SCHAEFFLER,Financial Results,nse_official_file,Automobile,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-22,Tanla Platforms Limited,TANLA PLATFORMS,TANLA,Financial Results,nse_official_file,Information Technology,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-22,Adani Power Limited,ADANI POWER,ADANIPOWER,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-22,Aye Finance Limited,AYE FINANCE,AYE,Financial Results/Fund Raising,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-22,CIE Automotive India Limited,CIE AUTOMOTIVE INDIA,CIEINDIA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-22,CSB Bank Limited,CSB BANK,CSBBANK,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-22,Emami Paper Mills Limited,EMAMI PAPER MILLS,EMAMIPAP,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-22,Gandhar Oil Refinery (India) Limited,GANDHAR OIL REFINERY INDIA,GANDHAR,Financial Results/Dividend/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-22,Geojit Financial Services Limited,GEOJIT FINANCIAL SERVICES,GEOJITFSL,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-22,HEG Limited,HEG,HEG,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-22,Hindustan Petroleum Corporation Limited,HINDUSTAN PETROLEUM,HINDPETRO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-22,Jubilant Ingrevia Limited,JUBILANT INGREVIA,JUBLINGREA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-22,Mahindra Holidays & Resorts India Limited,MAHINDRA HOLIDAYS RESORTS INDIA,MHRIL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-22,NACL Industries Limited,NACL INDUSTRIES,NACLIND,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-22,Orient Electric Limited,ORIENT ELECTRIC,ORIENTELEC,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-22,Music Broadcast Limited,MUSIC BROADCAST,RADIOCITY,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-22,R. S. Software (India) Limited,R S SOFTWARE INDIA,RSSOFTWARE,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-22,Shoppers Stop Limited,SHOPPERS STOP,SHOPERSTOP,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-22,Smartworks Coworking Spaces Limited,SMARTWORKS COWORKING SPACES,SMARTWORKS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-22,United Spirits Limited,UNITED SPIRITS,UNITDSPR,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-22,UTI Asset Management Company Limited,UTI ASSET MANAGEMENT,UTIAMC,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-22,Vardhman Special Steels Limited,VARDHMAN SPECIAL STEELS,VSSL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-23,Cipla Limited,CIPLA,CIPLA,Financial Results,nse_official_file,Pharmaceuticals,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-07-23,Infosys Limited,INFOSYS,INFY,Financial Results,nse_official_file,Information Technology,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-07-23,Indian Energy Exchange Limited,INDIAN ENERGY EXCHANGE,IEX,Financial Results,nse_official_file,Financial Services,True,False,True,False,mid,50,2026-07-15T15:04:50.298474+00:00
+2026-07-23,MphasiS Limited,MPHASIS,MPHASIS,Financial Results,nse_official_file,Information Technology,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-23,ROUTE MOBILE LIMITED,ROUTE MOBILE,ROUTE,Financial Results/Dividend/Other business matters,nse_official_file,Information Technology,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-23,Sona BLW Precision Forgings Limited,SONA BLW PRECISION FORGINGS,SONACOMS,Financial Results,nse_official_file,Automobile,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-23,3i Infotech Limited,3I INFOTECH,3IINFOLTD,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-23,Banaras Beads Limited,BANARAS BEADS,BANARBEADS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-23,Capital Small Finance Bank Limited,CAPITAL SMALL FINANCE BANK,CAPITALSFB,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-23,Chennai Petroleum Corporation Limited,CHENNAI PETROLEUM,CHENNPETRO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-23,Crown Lifters Limited,CROWN LIFTERS,CROWN,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-23,Cybertech Systems And Software Limited,CYBERTECH SYSTEMS AND SOFTWARE,CYBERTECH,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-23,Cyient Limited,CYIENT,CYIENT,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-23,Fractal Analytics Limited,FRACTAL ANALYTICS,FRACTAL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-23,Go Digit General Insurance Limited,GO DIGIT GENERAL INSURANCE,GODIGIT,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-23,Gujarat Alkalies and Chemicals Limited,GUJARAT ALKALIES AND CHEMICALS,GUJALKALI,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-23,Hindustan Composites Limited,HINDUSTAN COMPOSITES,HINDCOMPOS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-23,International Gemological Institute Limited,INTERNATIONAL GEMOLOGICAL INSTITUTE,IGIL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-23,Mahindra Lifespace Developers Limited,MAHINDRA LIFESPACE DEVELOPERS,MAHLIFE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-23,NIIT Learning Systems Limited,NIIT LEARNING SYSTEMS,NIITMTS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-23,Orient Cement Limited,ORIENT CEMENT,ORIENTCEM,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-23,Prime Securities Limited,PRIME SECURITIES,PRIMESECU,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-23,Shemaroo Entertainment Limited,SHEMAROO ENTERTAINMENT,SHEMAROO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-23,Suraj Limited,SURAJ,SURAJLTD,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-23,Suryoday Small Finance Bank Limited,SURYODAY SMALL FINANCE BANK,SURYODAY,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-23,Ujjivan Small Finance Bank Limited,UJJIVAN SMALL FINANCE BANK,UJJIVANSFB,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-24,SBI Life Insurance Company Limited,SBI LIFE INSURANCE,SBILIFE,Financial Results,nse_official_file,Financial Services,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-07-24,Shriram Finance Limited,SHRIRAM FINANCE,SHRIRAMFIN,Financial Results/Fund Raising/Other business matters,nse_official_file,Financial Services,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-07-24,Bank of Baroda,BANK OF BARODA,BANKBARODA,Financial Results,nse_official_file,Banking,True,False,True,False,mid,50,2026-07-15T15:04:50.298474+00:00
+2026-07-24,ACC Limited,ACC,ACC,Financial Results,nse_official_file,Cement,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-24,Atul Limited,ATUL,ATUL,Financial Results,nse_official_file,Chemicals,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-24,Container Corporation of India Limited,CONTAINER OF INDIA,CONCOR,Financial Results/Dividend/Other business matters,nse_official_file,Infrastructure,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-24,Grindwell Norton Limited,GRINDWELL NORTON,GRINDWELL,Financial Results,nse_official_file,Chemicals,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-24,JINDAL STEEL LIMITED,JINDAL STEEL,JINDALSTEL,Financial Results,nse_official_file,Metals & Mining,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-24,Laurus Labs Limited,LAURUS LABS,LAURUSLABS,Financial Results,nse_official_file,Pharmaceuticals,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-24,Apar Industries Limited,APAR INDUSTRIES,APARINDS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-24,CG Power and Industrial Solutions Limited,CG POWER AND INDUSTRIAL SOLUTIONS,CGPOWER,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-24,GANESH HOUSING LIMITED,GANESH HOUSING,GANESHHOU,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-24,Gangotri Textiles Limited,GANGOTRI TEXTILES,GANGOTRI,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-24,Kfin Technologies Limited,KFIN TECHNOLOGIES,KFINTECH,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-24,Dr. Lal Path Labs Ltd.,DR LAL PATH LABS,LALPATHLAB,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-24,LMW Limited,LMW,LMW,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-24,Ponni Sugars (Erode) Limited,PONNI SUGARS ERODE,PONNIERODE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-24,Shree Digvijay Cement Co.Ltd,SHREE DIGVIJAY CEMENT,SHREDIGCEM,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-24,V-Mart Retail Limited,V MART RETAIL,VMART,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-24,ZF Commercial Vehicle Control Systems India Limited,ZF COMMERCIAL VEHICLE CONTROL SYSTEMS INDIA,ZFCVINDIA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-25,AU Small Finance Bank Limited,AU SMALL FINANCE BANK,AUBANK,Financial Results,nse_official_file,Banking,True,False,False,True,mid,45,2026-07-15T15:04:50.298474+00:00
+2026-07-25,IDFC First Bank Limited,IDFC FIRST BANK,IDFCFIRSTB,Financial Results,nse_official_file,Banking,True,False,False,True,mid,45,2026-07-15T15:04:50.298474+00:00
+2026-07-25,Dodla Dairy Limited,DODLA DAIRY,DODLA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-25,Five-Star Business Finance Limited,FIVE STAR BUSINESS FINANCE,FIVESTAR,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-25,SBFC Finance Limited,SBFC FINANCE,SBFC,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-25,Seshasayee Paper and Boards Limited,SESHASAYEE PAPER AND BOARDS,SESHAPAPER,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-27,Bharat Electronics Limited,BHARAT ELECTRONICS,BEL,Financial Results,nse_official_file,Capital Goods,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-07-27,Coal India Limited,COAL INDIA,COALINDIA,Financial Results/Dividend,nse_official_file,Metals & Mining,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-07-27,Coforge Limited,COFORGE,COFORGE,Financial Results,nse_official_file,Information Technology,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-27,Aurionpro Solutions Limited,AURIONPRO SOLUTIONS,AURIONPRO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-27,Fairchem Organics Limited,FAIRCHEM ORGANICS,FAIRCHEMOR,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-27,IFB Agro Industries Limited,IFB AGRO INDUSTRIES,IFBAGRO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-27,Kanpur Plastipack Limited,KANPUR PLASTIPACK,KANPRPLA,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-27,Manba Finance Limited,MANBA FINANCE,MANBA,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-27,Nelcast Limited,NELCAST,NELCAST,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-27,Nesco Limited,NESCO,NESCO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-27,Sumitomo Chemical India Limited,SUMITOMO CHEMICAL INDIA,SUMICHEM,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-27,Tamilnad Mercantile Bank Limited,TAMILNAD MERCANTILE BANK,TMB,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-28,Hindustan Unilever Limited,HINDUSTAN UNILEVER,HINDUNILVR,Financial Results,nse_official_file,Consumer Goods,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-07-28,Larsen & Toubro Limited,LARSEN TOUBRO,LT,Financial Results,nse_official_file,Infrastructure,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-07-28,Ambuja Cements Limited,AMBUJA CEMENTS,AMBUJACEM,Financial Results,nse_official_file,Cement,True,False,True,False,mid,50,2026-07-15T15:04:50.298474+00:00
+2026-07-28,Cholamandalam Investment and Finance Company Limited,CHOLAMANDALAM INVESTMENT AND FINANCE,CHOLAFIN,Financial Results,nse_official_file,Financial Services,True,False,True,False,mid,50,2026-07-15T15:04:50.298474+00:00
+2026-07-28,Cemindia Projects Limited,CEMINDIA PROJECTS,CEMPRO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-28,Ginni Filaments Limited,GINNI FILAMENTS,GINNIFILA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-28,IFB Industries Limited,IFB INDUSTRIES,IFBIND,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-28,Indoco Remedies Limited,INDOCO REMEDIES,INDOCO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-28,S H Kelkar and Company Limited,S H KELKAR AND,SHK,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-28,Tata Capital Limited,TATA CAPITAL,TATACAP,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-28,TTK Prestige Limited,TTK PRESTIGE,TTKPRESTIG,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-29,Adani Ports and Special Economic Zone Limited,ADANI PORTS AND SPECIAL ECONOMIC ZONE,ADANIPORTS,Financial Results,nse_official_file,Infrastructure,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-07-29,Asian Paints Limited,ASIAN PAINTS,ASIANPAINT,Financial Results,nse_official_file,Consumer Goods,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-07-29,Colgate Palmolive (India) Limited,COLGATE PALMOLIVE INDIA,COLPAL,Financial Results,nse_official_file,Consumer Goods,True,False,True,False,mid,50,2026-07-15T15:04:50.298474+00:00
+2026-07-29,Dabur India Limited,DABUR INDIA,DABUR,Financial Results,nse_official_file,Consumer Goods,True,False,True,False,mid,50,2026-07-15T15:04:50.298474+00:00
+2026-07-29,Syngene International Limited,SYNGENE INTERNATIONAL,SYNGENE,Financial Results,nse_official_file,Pharmaceuticals,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-29,Accelya Solutions India Limited,ACCELYA SOLUTIONS INDIA,ACCELYA,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-29,Bajaj Housing Finance Limited,BAJAJ HOUSING FINANCE,BAJAJHFL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-29,Craftsman Automation Limited,CRAFTSMAN AUTOMATION,CRAFTSMAN,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-29,Dhanlaxmi Bank Limited,DHANLAXMI BANK,DHANBANK,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-29,eMudhra Limited,EMUDHRA,EMUDHRA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-29,Gokul Agro Resources Limited,GOKUL AGRO RESOURCES,GOKULAGRO,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-29,Honeywell Automation India Limited,HONEYWELL AUTOMATION INDIA,HONAUT,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-29,Maharashtra Scooters Limited,MAHARASHTRA SCOOTERS,MAHSCOOTER,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-29,Procter & Gamble Hygiene and Health Care Limited,PROCTER GAMBLE HYGIENE AND HEALTH CARE,PGHH,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-29,SKM Egg Products Export (India) Limited,SKM EGG PRODUCTS EXPORT INDIA,SKMEGGPROD,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-29,Star Health and Allied Insurance Company Limited,STAR HEALTH AND ALLIED INSURANCE,STARHEALTH,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-29,Teamlease Services Limited,TEAMLEASE SERVICES,TEAMLEASE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-30,Bajaj Finance Limited,BAJAJ FINANCE,BAJFINANCE,Financial Results,nse_official_file,Financial Services,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-07-30,Mahindra & Mahindra Limited,MAHINDRA MAHINDRA,M&M,Financial Results/Other business matters,nse_official_file,Automobile,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-07-30,Exide Industries Limited,EXIDE INDUSTRIES,EXIDEIND,Financial Results,nse_official_file,Automobile,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-30,Thermax Limited,THERMAX,THERMAX,Financial Results,nse_official_file,Infrastructure,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-30,Gillette India Limited,GILLETTE INDIA,GILLETTE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-30,ICRA Limited,ICRA,ICRA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-30,Indegene Limited,INDEGENE,INDGN,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-30,Pricol Limited,PRICOL,PRICOLLTD,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-30,PSP Projects Limited,PSP PROJECTS,PSPPROJECT,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-30,Transport Corporation of India Limited,TRANSPORT OF INDIA,TCI,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-30,Vinyl Chemicals (India) Limited,VINYL CHEMICALS INDIA,VINYLINDIA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-30,WESTLIFE FOODWORLD LIMITED,WESTLIFE FOODWORLD,WESTLIFE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-31,Bajaj Finserv Limited,BAJAJ FINSERV,BAJAJFINSV,Financial Results,nse_official_file,Financial Services,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-07-31,Maruti Suzuki India Limited,MARUTI SUZUKI INDIA,MARUTI,Financial Results,nse_official_file,Automobile,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-07-31,Sun Pharmaceutical Industries Limited,SUN PHARMACEUTICAL INDUSTRIES,SUNPHARMA,Financial Results,nse_official_file,Pharmaceuticals,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-07-31,SHREE CEMENT LIMITED,SHREE CEMENT,SHREECEM,Financial Results,nse_official_file,Cement,True,False,False,False,large,35,2026-07-15T15:04:50.298474+00:00
+2026-07-31,Aditya Birla Capital Limited,ADITYA BIRLA CAPITAL,ABCAPITAL,Financial Results,nse_official_file,Financial Services,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-07-31,Bajaj Holdings & Investment Limited,BAJAJ HOLDINGS INVESTMENT,BAJAJHLDNG,Financial Results,nse_official_file,nan,False,False,True,False,nan,25,2026-07-15T15:04:50.298474+00:00
+2026-07-31,ABB India Limited,ABB INDIA,ABB,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-31,Aptus Value Housing Finance India Limited,APTUS VALUE HOUSING FINANCE INDIA,APTUS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-31,Glenmark Pharmaceuticals Limited,GLENMARK PHARMACEUTICALS,GLENMARK,Financial Results,nse_official_file,Pharmaceuticals,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-31,IL&FS Engineering and Construction Company Limited,IL FS ENGINEERING AND CONSTRUCTION,IL&FSENGG,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-31,Punjab Chemicals & Crop Protection Limited,PUNJAB CHEMICALS CROP PROTECTION,PUNJABCHEM,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-07-31,Shree Ram Proteins Limited,SHREE RAM PROTEINS,SRPL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-01,Central Depository Services (India) Limited,CENTRAL DEPOSITORY SERVICES INDIA,CDSL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-01,D-Link (India) Limited,D LINK INDIA,DLINKINDIA,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-01,Sarda Energy & Minerals Limited,SARDA ENERGY MINERALS,SARDAEN,Financial Results/Fund Raising,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-01,Sportking India Limited,SPORTKING INDIA,SPORTKING,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-03,Computer Age Management Services Limited,COMPUTER AGE MANAGEMENT SERVICES,CAMS,Financial Results/Dividend,nse_official_file,Financial Services,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-08-03,Escorts Kubota Limited,ESCORTS KUBOTA,ESCORTS,Financial Results,nse_official_file,Automobile,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-08-03,Bharat Gears Limited,BHARAT GEARS,BHARATGEAR,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-03,JM Financial Limited,JM FINANCIAL,JMFINANCIL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-03,Kansai Nerolac Paints Limited,KANSAI NEROLAC PAINTS,KANSAINER,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-03,KCP Limited,KCP,KCP,Financial Results/Dividend,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-03,NOCIL Limited,NOCIL,NOCIL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-03,Stove Kraft Limited,STOVE KRAFT,STOVEKRAFT,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-03,Thomas Cook  (India)  Limited,THOMAS COOK INDIA,THOMASCOOK,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-04,Marico Limited,MARICO,MARICO,Financial Results,nse_official_file,Consumer Goods,True,False,True,False,large,60,2026-07-15T15:04:50.298474+00:00
+2026-08-04,Pidilite Industries Limited,PIDILITE INDUSTRIES,PIDILITIND,Financial Results,nse_official_file,Chemicals,True,False,True,False,large,60,2026-07-15T15:04:50.298474+00:00
+2026-08-04,Castrol India Limited,CASTROL INDIA,CASTROLIND,Financial Results/Dividend,nse_official_file,Oil & Gas,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-08-04,Godrej Properties Limited,GODREJ PROPERTIES,GODREJPROP,Financial Results,nse_official_file,Real Estate,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-08-04,United Breweries Limited,UNITED BREWERIES,UBL,Financial Results,nse_official_file,Consumer Goods,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-08-04,BASF India Limited,BASF INDIA,BASF,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-04,Bharat Bijlee Limited,BHARAT BIJLEE,BBL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-04,BSE Limited,BSE,BSE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-04,Emami Limited,EMAMI,EMAMILTD,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-04,Timken India Limited,TIMKEN INDIA,TIMKEN,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-04,TREJHARA SOLUTIONS LIMITED,TREJHARA SOLUTIONS,TREJHARA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-04,Wonderla Holidays Limited,WONDERLA HOLIDAYS,WONDERLA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-05,Berger Paints (I) Limited,BERGER PAINTS I,BERGEPAINT,Financial Results,nse_official_file,Consumer Goods,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-08-05,Cummins India Limited,CUMMINS INDIA,CUMMINSIND,Financial Results,nse_official_file,Infrastructure,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-08-05,Bikaji Foods International Limited,BIKAJI FOODS INTERNATIONAL,BIKAJI,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-05,Navin Fluorine International Limited,NAVIN FLUORINE INTERNATIONAL,NAVINFLUOR,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-05,Paisalo Digital Limited,PAISALO DIGITAL,PAISALO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-05,Shree Renuka Sugars Limited,SHREE RENUKA SUGARS,RENUKA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-05,Rane (Madras) Limited,RANE MADRAS,RML,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-05,Shalby Limited,SHALBY,SHALBY,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-05,Subex Limited,SUBEX,SUBEXLTD,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-05,TV Today Network Limited,TV TODAY NETWORK,TVTODAY,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-06,Trent Limited,TRENT,TRENT,Financial Results,nse_official_file,Consumer Services,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-08-06,Blue Star Limited,BLUE STAR,BLUESTARCO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-06,BOSCH HOME COMFORT INDIA LIMITED,BOSCH HOME COMFORT INDIA,BOSCH-HCIL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-06,Coffee Day Enterprises Limited,COFFEE DAY ENTERPRISES,COFFEEDAY,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-06,Emcure Pharmaceuticals Limited,EMCURE PHARMACEUTICALS,EMCURE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-06,JSW Holdings Limited,JSW HOLDINGS,JSWHL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-06,Procter & Gamble Health Limited,PROCTER GAMBLE HEALTH,PGHL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-06,Rain Industries Limited,RAIN INDUSTRIES,RAIN,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-06,Sai Life Sciences Limited,SAI LIFE SCIENCES,SAILIFE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-06,TCI Express Limited,TCI EXPRESS,TCIEXP,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-07,Hindalco Industries Limited,HINDALCO INDUSTRIES,HINDALCO,Financial Results,nse_official_file,Metals & Mining,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-08-07,Titan Company Limited,TITAN,TITAN,Financial Results,nse_official_file,Consumer Goods,True,True,False,False,large,75,2026-07-15T15:04:50.298474+00:00
+2026-08-07,Godrej Consumer Products Limited,GODREJ CONSUMER PRODUCTS,GODREJCP,Financial Results/Dividend,nse_official_file,Consumer Goods,True,False,True,False,mid,50,2026-07-15T15:04:50.298474+00:00
+2026-08-08,Anant Raj Limited,ANANT RAJ,ANANTRAJ,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-08,Atul Auto Limited,ATUL AUTO,ATULAUTO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-10,Bosch Limited,BOSCH,BOSCHLTD,Financial Results,nse_official_file,Automobile,True,False,True,False,mid,50,2026-07-15T15:04:50.298474+00:00
+2026-08-10,Amara Raja Energy & Mobility Limited,AMARA RAJA ENERGY MOBILITY,ARE&M,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-11,Esab India Limited,ESAB INDIA,ESABINDIA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-11,Foseco India Limited,FOSECO INDIA,FOSECOIND,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-12,Centrum Capital Limited,CENTRUM CAPITAL,CENTRUM,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-12,Mindteck (India) Limited,MINDTECK INDIA,MINDTECK,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-12,Mahanagar Telephone Nigam Limited,MAHANAGAR TELEPHONE NIGAM,MTNL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-12,Mukand Limited,MUKAND,MUKANDLTD,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-13,Page Industries Limited,PAGE INDUSTRIES,PAGEIND,Financial Results/Dividend,nse_official_file,Consumer Goods,True,False,True,False,mid,50,2026-07-15T15:04:50.298474+00:00
+2026-08-13,Max Financial Services Limited,MAX FINANCIAL SERVICES,MFSL,Financial Results,nse_official_file,Financial Services,True,False,False,False,mid,25,2026-07-15T15:04:50.298474+00:00
+2026-08-13,Endurance Technologies Limited,ENDURANCE TECHNOLOGIES,ENDURANCE,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-13,Rane Holdings Limited,RANE HOLDINGS,RANEHOLDIN,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
+2026-08-14,Cholamandalam Financial Holdings Limited,CHOLAMANDALAM FINANCIAL HOLDINGS,CHOLAHLDNG,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-07-15T15:04:50.298474+00:00
