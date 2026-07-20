@@ -1,554 +1,530 @@
 result_date,company_name,name_norm,symbol,meeting_type,source,sector,is_fo,is_nifty50,is_nifty_next50,is_banknifty,market_cap_tier,importance_score,updated_at
-2026-07-18,AXIS Bank Ltd,AXIS BANK,AXISBANK,Forthcoming Results,bse_official_file,Banking,True,True,False,True,large,95,2026-07-18T05:09:04.462218+00:00
-2026-07-18,HDFC Bank Ltd,HDFC BANK,HDFCBANK,Forthcoming Results,bse_official_file,Banking,True,True,False,True,large,95,2026-07-18T05:09:04.462218+00:00
-2026-07-18,ICICI Bank Ltd,ICICI BANK,ICICIBANK,Forthcoming Results,bse_official_file,Banking,True,True,False,True,large,95,2026-07-18T05:09:04.462218+00:00
-2026-07-18,Kotak Mahindra Bank Ltd,KOTAK MAHINDRA BANK,KOTAKBANK,Forthcoming Results,bse_official_file,Banking,True,True,False,True,large,95,2026-07-18T05:09:04.462218+00:00
-2026-07-18,Punjab National Bank,PUNJAB NATIONAL BANK,PNB,Forthcoming Results,bse_official_file,Banking,True,False,True,True,mid,70,2026-07-18T05:09:04.462218+00:00
-2026-07-18,Can Fin Homes Ltd,CAN FIN HOMES,CANFINHOME,Forthcoming Results,bse_official_file,Financial Services,True,False,False,False,mid,25,2026-07-18T05:09:04.462218+00:00
-2026-07-18,India Cements Ltd,INDIA CEMENTS,INDIACEM,Forthcoming Results,bse_official_file,Cement,True,False,False,False,mid,25,2026-07-18T05:09:04.462218+00:00
-2026-07-18,JK Cement Ltd,JK CEMENT,JKCEMENT,Forthcoming Results,bse_official_file,Cement,True,False,False,False,mid,25,2026-07-18T05:09:04.462218+00:00
-2026-07-18,Yes Bank Ltd,YES BANK,YESBANK,Forthcoming Results,bse_official_file,Banking,True,False,False,False,mid,25,2026-07-18T05:09:04.462218+00:00
-2026-07-18,The India Cements Limited,THE INDIA CEMENTS,INDIACEM,Financial Results,nse_official_file,Cement,True,False,False,False,mid,25,2026-07-17T14:55:04.550989+00:00
-2026-07-18,Ashima Ltd,ASHIMA,ASHIMASYN,Forthcoming Results,bse_official_file,,False,False,False,False,,0,2026-07-18T05:09:04.462218+00:00
-2026-07-18,Bhansali Engineering Polymers Ltd-$,BHANSALI ENGINEERING POLYMERS $,BEPL,Forthcoming Results,bse_official_file,,False,False,False,False,,0,2026-07-18T05:09:04.462218+00:00
-2026-07-18,East India Drums and Barrels Manufacturing Ltd,EAST INDIA DRUMS AND BARRELS MANUFACTURING,EASTINDIA,Forthcoming Results,bse_official_file,,False,False,False,False,,0,2026-07-18T05:09:04.462218+00:00
-2026-07-18,F Mec International Financial Services Ltd,F MEC INTERNATIONAL FINANCIAL SERVICES,FMEC,Forthcoming Results,bse_official_file,,False,False,False,False,,0,2026-07-18T05:09:04.462218+00:00
-2026-07-18,Indo Cotspin Ltd,INDO COTSPIN,ICL,Forthcoming Results,bse_official_file,,False,False,False,False,,0,2026-07-18T05:09:04.462218+00:00
-2026-07-18,IDBI Bank Ltd,IDBI BANK,IDBI,Forthcoming Results,bse_official_file,,False,False,False,False,,0,2026-07-18T05:09:04.462218+00:00
-2026-07-18,Premier Polyfilm Ltd,PREMIER POLYFILM,PREMIERPOL,Forthcoming Results,bse_official_file,,False,False,False,False,,0,2026-07-18T05:09:04.462218+00:00
-2026-07-18,Punjab & Sind Bank,PUNJAB SIND BANK,PSB,Forthcoming Results,bse_official_file,,False,False,False,False,,0,2026-07-18T05:09:04.462218+00:00
-2026-07-18,Rama Paper Mills Ltd,RAMA PAPER MILLS,RAMAPPR-B,Forthcoming Results,bse_official_file,,False,False,False,False,,0,2026-07-18T05:09:04.462218+00:00
-2026-07-18,Rossari Biotech Ltd,ROSSARI BIOTECH,ROSSARI,Forthcoming Results,bse_official_file,,False,False,False,False,,0,2026-07-18T05:09:04.462218+00:00
-2026-07-18,Sangam India Ltd,SANGAM INDIA,SANGAMIND,Forthcoming Results,bse_official_file,,False,False,False,False,,0,2026-07-18T05:09:04.462218+00:00
-2026-07-18,Wisec Global Ltd,WISEC GLOBAL,WISEC,Forthcoming Results,bse_official_file,,False,False,False,False,,0,2026-07-18T05:09:04.462218+00:00
-2026-07-18,Bhansali Engineering Polymers Limited,BHANSALI ENGINEERING POLYMERS,BEPL,Financial Results/Dividend,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
-2026-07-18,Ganga Forging Limited,GANGA FORGING,GANGAFORGE,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
-2026-07-20,UltraTech Cement Ltd,ULTRATECH CEMENT,ULTRACEMCO,Forthcoming Results,bse_official_file,Cement,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-07-20,One 97 Communications Ltd,ONE 97 COMMUNICATIONS,PAYTM,Forthcoming Results,bse_official_file,Financial Services,True,False,True,False,mid,50,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Action Construction Equipment Ltd,ACTION CONSTRUCTION EQUIPMENT,ACE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Authum Investment & Infrastructure Ltd,AUTHUM INVESTMENT INFRASTRUCTURE,AIIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Alkali Metals Ltd,ALKALI METALS,ALKALI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Anubhav Plast Ltd,ANUBHAV PLAST,ANUBHAV,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Aurum PropTech Ltd,AURUM PROPTECH,AURUM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Bajaj Healthcare Ltd,BAJAJ HEALTHCARE,BAJAJHCARE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,BlueStone Jewellery and Lifestyle Ltd,BLUESTONE JEWELLERY AND LIFESTYLE,BLUESTONE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,California Software Company Ltd,CALIFORNIA SOFTWARE,CALSOFT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Canara HSBC Life Insurance Company Ltd,CANARA HSBC LIFE INSURANCE,CANHLIFE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Central Mine Planning & Design Institute Ltd,CENTRAL MINE PLANNING DESIGN INSTITUTE,CMPDI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,CSM Technologies Ltd,CSM TECHNOLOGIES,CSM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Decorous Investment & Trading Co Ltd,DECOROUS INVESTMENT TRADING,DITCO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,D.P. Abhushan Ltd,D P ABHUSHAN,DPABHUSHAN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Dynamic Cables Ltd,DYNAMIC CABLES,DYCL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Grand Foundry Ltd,GRAND FOUNDRY,GFSTEELS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Golden Legand Leasing & finance Ltd,GOLDEN LEGAND LEASING FINANCE,GOLDLEG,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Hawa Engineers Ltd,HAWA ENGINEERS,HAWAENG,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Indo Thai Securities Ltd,INDO THAI SECURITIES,INDOTHAI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Indian Overseas Bank,INDIAN OVERSEAS BANK,IOB,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Ishwarshakti Holdings & Traders Ltd,ISHWARSHAKTI HOLDINGS TRADERS,ISHWATR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Jaiprakash Power Ventures Ltd,JAIPRAKASH POWER VENTURES,JPPOWER,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Mahindra Logistics Ltd,MAHINDRA LOGISTICS,MAHLOG,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,National Standard (India) Ltd,NATIONAL STANDARD INDIA,NATIONSTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Premier Capital Services Ltd,PREMIER CAPITAL SERVICES,PREMCAP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Rajoo Engineers Ltd-$,RAJOO ENGINEERS $,RAJOOENG,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Rajshree Sugars & Chemicals Ltd,RAJSHREE SUGARS CHEMICALS,RAJSREESUG,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Rallis India Ltd,RALLIS INDIA,RALLIS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Advit Jewels Ltd,ADVIT JEWELS,RAMBHAJO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Regency Fincorp Ltd,REGENCY FINCORP,REGENCY,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,SG Mart Ltd,SG MART,SGMART,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Shyam Metalics and Energy Ltd,SHYAM METALICS AND ENERGY,SHYAMMETL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,SML Mahindra Ltd,SML MAHINDRA,SMLMAH,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Sobha Ltd,SOBHA,SOBHA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,South West Pinnacle Exploration Ltd,SOUTH WEST PINNACLE EXPLORATION,SOUTHWEST,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Steel Exchange India Ltd,STEEL EXCHANGE INDIA,STEELXIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Sunrise Industrial Traders Ltd,SUNRISE INDUSTRIAL TRADERS,SUNRINV,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Super Sales India Ltd-$,SUPER SALES INDIA $,SUPER,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Swaraj Engines Ltd,SWARAJ ENGINES,SWARAJENG,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Swastika Investmart Ltd,SWASTIKA INVESTMART,SWASTIKA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Swarna Securities Ltd,SWARNA SECURITIES,SWRNASE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Transformers and Rectifiers (India) Ltd,TRANSFORMERS AND RECTIFIERS INDIA,TARIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Tourism Finance Corporation of India Ltd,TOURISM FINANCE OF INDIA,TFCILTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Tinna Rubber and Infrastructure Ltd,TINNA RUBBER AND INFRASTRUCTURE,TINNARUBR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Venus Remedies Ltd,VENUS REMEDIES,VENUSREM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-20,Vimta Labs Ltd-$,VIMTA LABS $,VIMTALABS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
+2026-07-20,UltraTech Cement Ltd,ULTRATECH CEMENT,ULTRACEMCO,Forthcoming Results,bse_official_file,Cement,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-07-20,One 97 Communications Ltd,ONE 97 COMMUNICATIONS,PAYTM,Forthcoming Results,bse_official_file,Financial Services,True,False,True,False,mid,50,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Action Construction Equipment Ltd,ACTION CONSTRUCTION EQUIPMENT,ACE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Authum Investment & Infrastructure Ltd,AUTHUM INVESTMENT INFRASTRUCTURE,AIIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Alkali Metals Ltd,ALKALI METALS,ALKALI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Anubhav Plast Ltd,ANUBHAV PLAST,ANUBHAV,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Aurum PropTech Ltd,AURUM PROPTECH,AURUM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Bajaj Healthcare Ltd,BAJAJ HEALTHCARE,BAJAJHCARE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,BlueStone Jewellery and Lifestyle Ltd,BLUESTONE JEWELLERY AND LIFESTYLE,BLUESTONE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,California Software Company Ltd,CALIFORNIA SOFTWARE,CALSOFT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Canara HSBC Life Insurance Company Ltd,CANARA HSBC LIFE INSURANCE,CANHLIFE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Central Mine Planning & Design Institute Ltd,CENTRAL MINE PLANNING DESIGN INSTITUTE,CMPDI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,CSM Technologies Ltd,CSM TECHNOLOGIES,CSM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Decorous Investment & Trading Co Ltd,DECOROUS INVESTMENT TRADING,DITCO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,D.P. Abhushan Ltd,D P ABHUSHAN,DPABHUSHAN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Dynamic Cables Ltd,DYNAMIC CABLES,DYCL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Grand Foundry Ltd,GRAND FOUNDRY,GFSTEELS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Golden Legand Leasing & finance Ltd,GOLDEN LEGAND LEASING FINANCE,GOLDLEG,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Hawa Engineers Ltd,HAWA ENGINEERS,HAWAENG,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Indo Thai Securities Ltd,INDO THAI SECURITIES,INDOTHAI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Indian Overseas Bank,INDIAN OVERSEAS BANK,IOB,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Ishwarshakti Holdings & Traders Ltd,ISHWARSHAKTI HOLDINGS TRADERS,ISHWATR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Jaiprakash Power Ventures Ltd,JAIPRAKASH POWER VENTURES,JPPOWER,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Mahindra Logistics Ltd,MAHINDRA LOGISTICS,MAHLOG,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,National Standard (India) Ltd,NATIONAL STANDARD INDIA,NATIONSTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Premier Capital Services Ltd,PREMIER CAPITAL SERVICES,PREMCAP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Rajoo Engineers Ltd-$,RAJOO ENGINEERS $,RAJOOENG,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Rajshree Sugars & Chemicals Ltd,RAJSHREE SUGARS CHEMICALS,RAJSREESUG,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Rallis India Ltd,RALLIS INDIA,RALLIS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Advit Jewels Ltd,ADVIT JEWELS,RAMBHAJO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Regency Fincorp Ltd,REGENCY FINCORP,REGENCY,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,SG Mart Ltd,SG MART,SGMART,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Shyam Metalics and Energy Ltd,SHYAM METALICS AND ENERGY,SHYAMMETL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,SML Mahindra Ltd,SML MAHINDRA,SMLMAH,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Sobha Ltd,SOBHA,SOBHA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,South West Pinnacle Exploration Ltd,SOUTH WEST PINNACLE EXPLORATION,SOUTHWEST,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Steel Exchange India Ltd,STEEL EXCHANGE INDIA,STEELXIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Sunrise Industrial Traders Ltd,SUNRISE INDUSTRIAL TRADERS,SUNRINV,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Super Sales India Ltd-$,SUPER SALES INDIA $,SUPER,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Swaraj Engines Ltd,SWARAJ ENGINES,SWARAJENG,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Swastika Investmart Ltd,SWASTIKA INVESTMART,SWASTIKA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Swarna Securities Ltd,SWARNA SECURITIES,SWRNASE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Transformers and Rectifiers (India) Ltd,TRANSFORMERS AND RECTIFIERS INDIA,TARIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Tourism Finance Corporation of India Ltd,TOURISM FINANCE OF INDIA,TFCILTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Tinna Rubber and Infrastructure Ltd,TINNA RUBBER AND INFRASTRUCTURE,TINNARUBR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Venus Remedies Ltd,VENUS REMEDIES,VENUSREM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-20,Vimta Labs Ltd-$,VIMTA LABS $,VIMTALABS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
 2026-07-20,Beta Drugs Limited,BETA DRUGS,BETA,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
 2026-07-20,Karur Vysya Bank Limited,KARUR VYSYA BANK,KARURVYSYA,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
 2026-07-20,Rajoo Engineers Limited,RAJOO ENGINEERS,RAJOOENG,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
 2026-07-20,Vimta Labs Limited,VIMTA LABS,VIMTALABS,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
-2026-07-21,Bajaj Auto Ltd,BAJAJ AUTO,BAJAJ-AUTO,Forthcoming Results,bse_official_file,Automobile,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-07-21,TVS Motor Company Ltd,TVS MOTOR,TVSMOTOR,Forthcoming Results,bse_official_file,Automobile,True,False,True,False,large,60,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Indian Hotels Company Ltd,INDIAN HOTELS,INDHOTEL,Forthcoming Results,bse_official_file,Consumer Goods,True,False,True,False,mid,50,2026-07-19T05:36:49.751715+00:00
+2026-07-21,Bajaj Auto Ltd,BAJAJ AUTO,BAJAJ-AUTO,Forthcoming Results,bse_official_file,Automobile,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-07-21,TVS Motor Company Ltd,TVS MOTOR,TVSMOTOR,Forthcoming Results,bse_official_file,Automobile,True,False,True,False,large,60,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Indian Hotels Company Ltd,INDIAN HOTELS,INDHOTEL,Forthcoming Results,bse_official_file,Consumer Goods,True,False,True,False,mid,50,2026-07-20T05:54:38.734396+00:00
 2026-07-21,The Indian Hotels Company Limited,THE INDIAN HOTELS,INDHOTEL,Financial Results,nse_official_file,Consumer Goods,True,False,True,False,mid,50,2026-07-17T14:55:04.550989+00:00
-2026-07-21,Bandhan Bank Ltd,BANDHAN BANK,BANDHANBNK,Forthcoming Results,bse_official_file,Banking,True,False,False,True,mid,45,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Adani Total Gas Ltd,ADANI TOTAL GAS,ATGL,Forthcoming Results,bse_official_file,nan,False,False,True,False,nan,25,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Granules India Ltd-$,GRANULES INDIA $,GRANULES,Forthcoming Results,bse_official_file,Pharmaceuticals,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-07-21,IndiaMART InterMESH Ltd,INDIAMART INTERMESH,INDIAMART,Forthcoming Results,bse_official_file,Information Technology,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Mahindra & Mahindra Financial Services Ltd,MAHINDRA MAHINDRA FINANCIAL SERVICES,M&MFIN,Forthcoming Results,bse_official_file,Financial Services,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
+2026-07-21,Bandhan Bank Ltd,BANDHAN BANK,BANDHANBNK,Forthcoming Results,bse_official_file,Banking,True,False,False,True,mid,45,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Adani Total Gas Ltd,ADANI TOTAL GAS,ATGL,Forthcoming Results,bse_official_file,nan,False,False,True,False,nan,25,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Granules India Ltd-$,GRANULES INDIA $,GRANULES,Forthcoming Results,bse_official_file,Pharmaceuticals,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-07-21,IndiaMART InterMESH Ltd,INDIAMART INTERMESH,INDIAMART,Forthcoming Results,bse_official_file,Information Technology,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Mahindra & Mahindra Financial Services Ltd,MAHINDRA MAHINDRA FINANCIAL SERVICES,M&MFIN,Forthcoming Results,bse_official_file,Financial Services,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
 2026-07-21,Granules India Limited,GRANULES INDIA,GRANULES,Financial Results,nse_official_file,Pharmaceuticals,True,False,False,False,mid,25,2026-07-17T14:55:04.550989+00:00
-2026-07-21,AAVAS Financiers Ltd,AAVAS FINANCIERS,AAVAS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Aditya Birla Sun Life AMC Ltd,ADITYA BIRLA SUN LIFE AMC,ABSLAMC,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Adani Energy Solutions Ltd,ADANI ENERGY SOLUTIONS,ADANIENSOL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Ador Welding Ltd,ADOR WELDING,ADOR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Anthem Biosciences Ltd,ANTHEM BIOSCIENCES,ANTHEM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Arvind Fashions Ltd,ARVIND FASHIONS,ARVINDFASN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Asutosh Enterprise Ltd,ASUTOSH ENTERPRISE,ASUTENT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Atlanta Electricals Ltd,ATLANTA ELECTRICALS,ATLANTAELE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Bengal Steel Industries Ltd,BENGAL STEEL INDUSTRIES,BENGALS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Bharat Coking Coal Ltd,BHARAT COKING COAL,BHARATCOAL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Canara Robeco Asset Management Company Ltd,CANARA ROBECO ASSET MANAGEMENT,CRAMC,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Crisil Ltd,CRISIL,CRISIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Cyient DLM Ltd,CYIENT DLM,CYIENTDLM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,E2E Networks Ltd,E2E NETWORKS,E2E,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Gabriel India Ltd-$,GABRIEL INDIA $,GABRIEL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Gamco Ltd,GAMCO,GAMCO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Gujarat Cotex Ltd,GUJARAT COTEX,GUJCOTEX,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Hatsun Agro Product Ltd,HATSUN AGRO PRODUCT,HATSUN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Hindusthan Insulators & Industries Ltd,HINDUSTHAN INSULATORS INDUSTRIES,HIIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Huhtamaki India Ltd,HUHTAMAKI INDIA,HUHTAMAKI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Infobeans Technologies Ltd,INFOBEANS TECHNOLOGIES,INFOBEAN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,JSW Infrastructure Ltd,JSW INFRASTRUCTURE,JSWINFRA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Kirloskar Pneumatic Company Ltd,KIRLOSKAR PNEUMATIC,KIRLPNU,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Mastek Ltd,MASTEK,MASTEK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Medplus Health Services Ltd,MEDPLUS HEALTH SERVICES,MEDPLUS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Morarka Finance Ltd,MORARKA FINANCE,MORARKFI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,MPS Ltd,MPS,MPSLTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,New Delhi Television Ltd,NEW DELHI TELEVISION,NDTV,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,NIIT Ltd,NIIT,NIITLTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Nureca Ltd,NURECA,NURECA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Purple Finance Ltd,PURPLE FINANCE,PURPLEFIN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Riyaasat Lifestyle Ltd,RIYAASAT LIFESTYLE,RIYAASAT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Sagility Ltd,SAGILITY,SAGILITY,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Sunteck Realty Ltd,SUNTECK REALTY,SUNTECK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Trident Ltd,TRIDENT,TRIDENT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,TVS Holdings Ltd,TVS HOLDINGS,TVSHLTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-21,Welspun Specialty Solutions Ltd,WELSPUN SPECIALTY SOLUTIONS,WELSPLSOL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
+2026-07-21,AAVAS Financiers Ltd,AAVAS FINANCIERS,AAVAS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Aditya Birla Sun Life AMC Ltd,ADITYA BIRLA SUN LIFE AMC,ABSLAMC,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Adani Energy Solutions Ltd,ADANI ENERGY SOLUTIONS,ADANIENSOL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Ador Welding Ltd,ADOR WELDING,ADOR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Anthem Biosciences Ltd,ANTHEM BIOSCIENCES,ANTHEM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Arvind Fashions Ltd,ARVIND FASHIONS,ARVINDFASN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Asutosh Enterprise Ltd,ASUTOSH ENTERPRISE,ASUTENT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Atlanta Electricals Ltd,ATLANTA ELECTRICALS,ATLANTAELE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Bengal Steel Industries Ltd,BENGAL STEEL INDUSTRIES,BENGALS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Bharat Coking Coal Ltd,BHARAT COKING COAL,BHARATCOAL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Canara Robeco Asset Management Company Ltd,CANARA ROBECO ASSET MANAGEMENT,CRAMC,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Crisil Ltd,CRISIL,CRISIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Cyient DLM Ltd,CYIENT DLM,CYIENTDLM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,E2E Networks Ltd,E2E NETWORKS,E2E,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Gabriel India Ltd-$,GABRIEL INDIA $,GABRIEL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Gamco Ltd,GAMCO,GAMCO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Gujarat Cotex Ltd,GUJARAT COTEX,GUJCOTEX,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Hatsun Agro Product Ltd,HATSUN AGRO PRODUCT,HATSUN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Hindusthan Insulators & Industries Ltd,HINDUSTHAN INSULATORS INDUSTRIES,HIIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Huhtamaki India Ltd,HUHTAMAKI INDIA,HUHTAMAKI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Infobeans Technologies Ltd,INFOBEANS TECHNOLOGIES,INFOBEAN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,JSW Infrastructure Ltd,JSW INFRASTRUCTURE,JSWINFRA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Kirloskar Pneumatic Company Ltd,KIRLOSKAR PNEUMATIC,KIRLPNU,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Mastek Ltd,MASTEK,MASTEK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Medplus Health Services Ltd,MEDPLUS HEALTH SERVICES,MEDPLUS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Morarka Finance Ltd,MORARKA FINANCE,MORARKFI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,MPS Ltd,MPS,MPSLTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,New Delhi Television Ltd,NEW DELHI TELEVISION,NDTV,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,NIIT Ltd,NIIT,NIITLTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Nureca Ltd,NURECA,NURECA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Purple Finance Ltd,PURPLE FINANCE,PURPLEFIN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Riyaasat Lifestyle Ltd,RIYAASAT LIFESTYLE,RIYAASAT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Sagility Ltd,SAGILITY,SAGILITY,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Sunteck Realty Ltd,SUNTECK REALTY,SUNTECK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Trident Ltd,TRIDENT,TRIDENT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,TVS Holdings Ltd,TVS HOLDINGS,TVSHLTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-21,Welspun Specialty Solutions Ltd,WELSPUN SPECIALTY SOLUTIONS,WELSPLSOL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
 2026-07-21,Gabriel India Limited,GABRIEL INDIA,GABRIEL,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
 2026-07-21,Servotech Renewable Power System Limited,SERVOTECH RENEWABLE POWER SYSTEM,SERVOTECH,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
-2026-07-22,Dr Reddys Laboratories Ltd,DR REDDYS LABORATORIES,DRREDDY,Forthcoming Results,bse_official_file,Pharmaceuticals,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Eternal Ltd,ETERNAL,ETERNAL,Forthcoming Results,bse_official_file,Consumer Services,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Nestle India Ltd,NESTLE INDIA,NESTLEIND,Forthcoming Results,bse_official_file,Consumer Goods,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
+2026-07-22,Dr Reddys Laboratories Ltd,DR REDDYS LABORATORIES,DRREDDY,Forthcoming Results,bse_official_file,Pharmaceuticals,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Eternal Ltd,ETERNAL,ETERNAL,Forthcoming Results,bse_official_file,Consumer Services,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Nestle India Ltd,NESTLE INDIA,NESTLEIND,Forthcoming Results,bse_official_file,Consumer Goods,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
 2026-07-22,Dr. Reddy's Laboratories Limited,DR REDDY S LABORATORIES,DRREDDY,Financial Results,nse_official_file,Pharmaceuticals,True,True,False,False,large,75,2026-07-17T14:55:04.550989+00:00
-2026-07-22,Oracle Financial Services Software Ltd,ORACLE FINANCIAL SERVICES SOFTWARE,OFSS,Forthcoming Results,bse_official_file,Information Technology,True,False,True,False,large,60,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Indusind Bank Ltd,INDUSIND BANK,INDUSINDBK,Forthcoming Results,bse_official_file,Banking,True,False,False,True,large,55,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Tata Communications Ltd,TATA COMMUNICATIONS,TATACOMM,Forthcoming Results,bse_official_file,Telecom,True,False,True,False,mid,50,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Bharat Petroleum Corporation Ltd,BHARAT PETROLEUM,BPCL,Forthcoming Results,bse_official_file,Oil & Gas,True,False,False,False,large,35,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Adani Green Energy Ltd,ADANI GREEN ENERGY,ADANIGREEN,Forthcoming Results,bse_official_file,nan,False,False,True,False,nan,25,2026-07-19T05:36:49.751715+00:00
-2026-07-22,JSW Energy Ltd,JSW ENERGY,JSWENERGY,Forthcoming Results,bse_official_file,Power,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Schaeffler India Ltd,SCHAEFFLER INDIA,SCHAEFFLER,Forthcoming Results,bse_official_file,Automobile,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-07-22,SRF Ltd,SRF,SRF,Forthcoming Results,bse_official_file,Chemicals,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Tanla Platforms Ltd,TANLA PLATFORMS,TANLA,Forthcoming Results,bse_official_file,Information Technology,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Adani Power Ltd,ADANI POWER,ADANIPOWER,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Amco India Ltd-$,AMCO INDIA $,AMCOIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Atharv Enterprises Ltd,ATHARV ENTERPRISES,ATHARVENT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Aye Finance Ltd,AYE FINANCE,AYE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Bhagwati Autocast Ltd,BHAGWATI AUTOCAST,BGWTATO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Bhageria Industries Ltd,BHAGERIA INDUSTRIES,BHAGERIA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,CIE Automotive India Ltd,CIE AUTOMOTIVE INDIA,CIEINDIA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Citizen Solar Ltd,CITIZEN SOLAR,CITIZEN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Waterways Leisure Tourism Ltd,WATERWAYS LEISURE TOURISM,CORDELIA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,CSB Bank Ltd,CSB BANK,CSBBANK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Emami Paper Mills Ltd,EMAMI PAPER MILLS,EMAMIPAP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Emerald Finance Ltd,EMERALD FINANCE,EMERALD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Gandhar Oil Refinery (India) Ltd,GANDHAR OIL REFINERY INDIA,GANDHAR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Geojit Financial Services Ltd,GEOJIT FINANCIAL SERVICES,GEOJITFSL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Gala Global Products Ltd,GALA GLOBAL PRODUCTS,GGPL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Orient Green Power Company Ltd,ORIENT GREEN POWER,GREENPOWER,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,HEG Ltd,HEG,HEG,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,HFCL Ltd,HFCL,HFCL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Hindustan Petroleum Corporation Ltd,HINDUSTAN PETROLEUM,HINDPETRO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,IIFL Finance Ltd,IIFL FINANCE,IIFL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Integra Switchgear Ltd,INTEGRA SWITCHGEAR,INTEGSW,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Jiya Eco-Products Ltd,JIYA ECO PRODUCTS,JIYAECO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Jubilant Ingrevia Ltd,JUBILANT INGREVIA,JUBLINGREA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,KDJ Holidayscapes and Resorts Ltd,KDJ HOLIDAYSCAPES AND RESORTS,KDJHRL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Ladam Affordable Housing Ltd,LADAM AFFORDABLE HOUSING,LAHL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Lords Ishwar Hotels Ltd,LORDS ISHWAR HOTELS,LORDSHOTL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Mahindra Holidays & Resorts India Ltd,MAHINDRA HOLIDAYS RESORTS INDIA,MHRIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,NACL Industries Ltd,NACL INDUSTRIES,NACLIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Nippon Life India Asset Management Ltd,NIPPON LIFE INDIA ASSET MANAGEMENT,NAM-INDIA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Nikki Global Finance Ltd,NIKKI GLOBAL FINANCE,NIKKIGL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,NTPC Green Energy Ltd,NTPC GREEN ENERGY,NTPCGREEN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Orient Electric Ltd,ORIENT ELECTRIC,ORIENTELEC,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Padmanabh Industries Ltd,PADMANABH INDUSTRIES,PADMAIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Pratiksha Chemicals Ltd,PRATIKSHA CHEMICALS,PRATIKSH,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Music Broadcast Ltd,MUSIC BROADCAST,RADIOCITY,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,R.S. Software (India) Ltd,R S SOFTWARE INDIA,RSSOFTWARE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Shoppers Stop Ltd,SHOPPERS STOP,SHOPERSTOP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Smartworks Coworking Spaces Ltd,SMARTWORKS COWORKING SPACES,SMARTWORKS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Stylam Industries Ltd,STYLAM INDUSTRIES,STYLAMIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Tips Music Ltd,TIPS MUSIC,TIPSMUSIC,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Tokyo Finance Ltd,TOKYO FINANCE,TOKYOFIN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Trishakti Industries Ltd,TRISHAKTI INDUSTRIES,TRISHAKT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,UCO Bank,UCO BANK,UCOBANK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,United Spirits Ltd,UNITED SPIRITS,UNITDSPR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,UTI Asset Management Company Ltd,UTI ASSET MANAGEMENT,UTIAMC,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-22,Vardhman Special Steels Ltd,VARDHMAN SPECIAL STEELS,VSSL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Cipla Ltd,CIPLA,CIPLA,Forthcoming Results,bse_official_file,Pharmaceuticals,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-07-23,InterGlobe Aviation Ltd,INTERGLOBE AVIATION,INDIGO,Forthcoming Results,bse_official_file,Consumer Goods,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Infosys Ltd,INFOSYS,INFY,Forthcoming Results,bse_official_file,Information Technology,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Indian Energy Exchange Ltd,INDIAN ENERGY EXCHANGE,IEX,Forthcoming Results,bse_official_file,Financial Services,True,False,True,False,mid,50,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Coromandel International Ltd,COROMANDEL INTERNATIONAL,COROMANDEL,Forthcoming Results,bse_official_file,Chemicals,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Mphasis Ltd,MPHASIS,MPHASIS,Forthcoming Results,bse_official_file,Information Technology,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-07-23,PVR Inox Ltd,PVR INOX,PVRINOX,Forthcoming Results,bse_official_file,Consumer Goods,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Route Mobile Ltd,ROUTE MOBILE,ROUTE,Forthcoming Results,bse_official_file,Information Technology,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Sona BLW Precision Forgings Ltd,SONA BLW PRECISION FORGINGS,SONACOMS,Forthcoming Results,bse_official_file,Automobile,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-07-23,3i Infotech Ltd,3I INFOTECH,3IINFOLTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Allied Blenders and Distillers Ltd,ALLIED BLENDERS AND DISTILLERS,ABDL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Banaras Beads Ltd,BANARAS BEADS,BANARBEADS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Bharat Bhushan Finance & Commodity Brokers Ltd,BHARAT BHUSHAN FINANCE COMMODITY BROKERS,BHARAT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Capital Small Finance Bank Ltd,CAPITAL SMALL FINANCE BANK,CAPITALSFB,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Chennai Petroleum Corporation Ltd,CHENNAI PETROLEUM,CHENNPETRO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Control Print Ltd-$,CONTROL PRINT $,CONTROLPR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,CyberTech Systems and Software Ltd,CYBERTECH SYSTEMS AND SOFTWARE,CYBERTECH,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Cyient Ltd,CYIENT,CYIENT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Fineotex Chemical Ltd,FINEOTEX CHEMICAL,FCL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Fervent Synergies Ltd,FERVENT SYNERGIES,FERVENTSYN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Fractal Analytics Ltd,FRACTAL ANALYTICS,FRACTAL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Go Digit General Insurance Ltd,GO DIGIT GENERAL INSURANCE,GODIGIT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,GRP Ltd,GRP,GRPLTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Gujarat Alkalies and Chemicals Ltd,GUJARAT ALKALIES AND CHEMICALS,GUJALKALI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Hindustan Composites Ltd,HINDUSTAN COMPOSITES,HINDCOMPOS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,HOMRE Ltd,HOMRE,HOM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,IEC Education Ltd,IEC EDUCATION,IECEDU,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,International Gemological Institute Ltd,INTERNATIONAL GEMOLOGICAL INSTITUTE,IGIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Jamshri Realty Ltd-$,JAMSHRI REALTY $,JAMSHRI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Mahindra Lifespace Developers Ltd,MAHINDRA LIFESPACE DEVELOPERS,MAHLIFE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Malu Paper Mills Ltd,MALU PAPER MILLS,MALUPAPER,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,MBL Infrastructure Ltd,MBL INFRASTRUCTURE,MBLINFRA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Meesho Ltd,MEESHO,MEESHO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Motilal Oswal Financial Services Ltd,MOTILAL OSWAL FINANCIAL SERVICES,MOTILALOFS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,NIIT Learning Systems Ltd,NIIT LEARNING SYSTEMS,NIITMTS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Novartis India Ltd,NOVARTIS INDIA,NOVARTIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Orient Cement Ltd,ORIENT CEMENT,ORIENTCEM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Prime Securities Ltd,PRIME SECURITIES,PRIMESECU,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Ramco Systems Ltd,RAMCO SYSTEMS,RAMCOSYS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Rich Universe Network Ltd,RICH UNIVERSE NETWORK,RICHUNV,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Shemaroo Entertainment Ltd,SHEMAROO ENTERTAINMENT,SHEMAROO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Solara Active Pharma Sciences Ltd,SOLARA ACTIVE PHARMA SCIENCES,SOLARA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Spandana Sphoorty Financial Ltd,SPANDANA SPHOORTY FINANCIAL,SPANDANA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Sungold Capital Ltd,SUNGOLD CAPITAL,SUNGOLD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Suraj Ltd-$,SURAJ $,SURAJLTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Suryoday Small Finance Bank Ltd,SURYODAY SMALL FINANCE BANK,SURYODAY,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Thyrocare Technologies Ltd,THYROCARE TECHNOLOGIES,THYROCARE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Ujjivan Small Finance Bank Ltd,UJJIVAN SMALL FINANCE BANK,UJJIVANSFB,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-23,Vishal Mega Mart Ltd,VISHAL MEGA MART,VMM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
+2026-07-22,Oracle Financial Services Software Ltd,ORACLE FINANCIAL SERVICES SOFTWARE,OFSS,Forthcoming Results,bse_official_file,Information Technology,True,False,True,False,large,60,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Indusind Bank Ltd,INDUSIND BANK,INDUSINDBK,Forthcoming Results,bse_official_file,Banking,True,False,False,True,large,55,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Tata Communications Ltd,TATA COMMUNICATIONS,TATACOMM,Forthcoming Results,bse_official_file,Telecom,True,False,True,False,mid,50,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Bharat Petroleum Corporation Ltd,BHARAT PETROLEUM,BPCL,Forthcoming Results,bse_official_file,Oil & Gas,True,False,False,False,large,35,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Adani Green Energy Ltd,ADANI GREEN ENERGY,ADANIGREEN,Forthcoming Results,bse_official_file,nan,False,False,True,False,nan,25,2026-07-20T05:54:38.734396+00:00
+2026-07-22,JSW Energy Ltd,JSW ENERGY,JSWENERGY,Forthcoming Results,bse_official_file,Power,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Schaeffler India Ltd,SCHAEFFLER INDIA,SCHAEFFLER,Forthcoming Results,bse_official_file,Automobile,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-07-22,SRF Ltd,SRF,SRF,Forthcoming Results,bse_official_file,Chemicals,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Tanla Platforms Ltd,TANLA PLATFORMS,TANLA,Forthcoming Results,bse_official_file,Information Technology,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Adani Power Ltd,ADANI POWER,ADANIPOWER,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Amco India Ltd-$,AMCO INDIA $,AMCOIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Atharv Enterprises Ltd,ATHARV ENTERPRISES,ATHARVENT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Aye Finance Ltd,AYE FINANCE,AYE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Bhagwati Autocast Ltd,BHAGWATI AUTOCAST,BGWTATO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Bhageria Industries Ltd,BHAGERIA INDUSTRIES,BHAGERIA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,CIE Automotive India Ltd,CIE AUTOMOTIVE INDIA,CIEINDIA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Citizen Solar Ltd,CITIZEN SOLAR,CITIZEN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Waterways Leisure Tourism Ltd,WATERWAYS LEISURE TOURISM,CORDELIA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,CSB Bank Ltd,CSB BANK,CSBBANK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Emami Paper Mills Ltd,EMAMI PAPER MILLS,EMAMIPAP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Emerald Finance Ltd,EMERALD FINANCE,EMERALD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Gandhar Oil Refinery (India) Ltd,GANDHAR OIL REFINERY INDIA,GANDHAR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Geojit Financial Services Ltd,GEOJIT FINANCIAL SERVICES,GEOJITFSL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Gala Global Products Ltd,GALA GLOBAL PRODUCTS,GGPL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Orient Green Power Company Ltd,ORIENT GREEN POWER,GREENPOWER,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,HEG Ltd,HEG,HEG,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,HFCL Ltd,HFCL,HFCL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Hindustan Petroleum Corporation Ltd,HINDUSTAN PETROLEUM,HINDPETRO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,IIFL Finance Ltd,IIFL FINANCE,IIFL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Integra Switchgear Ltd,INTEGRA SWITCHGEAR,INTEGSW,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Jiya Eco-Products Ltd,JIYA ECO PRODUCTS,JIYAECO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Jubilant Ingrevia Ltd,JUBILANT INGREVIA,JUBLINGREA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,KDJ Holidayscapes and Resorts Ltd,KDJ HOLIDAYSCAPES AND RESORTS,KDJHRL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Ladam Affordable Housing Ltd,LADAM AFFORDABLE HOUSING,LAHL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Lords Ishwar Hotels Ltd,LORDS ISHWAR HOTELS,LORDSHOTL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Mahindra Holidays & Resorts India Ltd,MAHINDRA HOLIDAYS RESORTS INDIA,MHRIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,NACL Industries Ltd,NACL INDUSTRIES,NACLIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Nippon Life India Asset Management Ltd,NIPPON LIFE INDIA ASSET MANAGEMENT,NAM-INDIA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Nikki Global Finance Ltd,NIKKI GLOBAL FINANCE,NIKKIGL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,NTPC Green Energy Ltd,NTPC GREEN ENERGY,NTPCGREEN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Orient Electric Ltd,ORIENT ELECTRIC,ORIENTELEC,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Padmanabh Industries Ltd,PADMANABH INDUSTRIES,PADMAIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Pratiksha Chemicals Ltd,PRATIKSHA CHEMICALS,PRATIKSH,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Music Broadcast Ltd,MUSIC BROADCAST,RADIOCITY,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,R.S. Software (India) Ltd,R S SOFTWARE INDIA,RSSOFTWARE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Shoppers Stop Ltd,SHOPPERS STOP,SHOPERSTOP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Smartworks Coworking Spaces Ltd,SMARTWORKS COWORKING SPACES,SMARTWORKS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Stylam Industries Ltd,STYLAM INDUSTRIES,STYLAMIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Tips Music Ltd,TIPS MUSIC,TIPSMUSIC,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Tokyo Finance Ltd,TOKYO FINANCE,TOKYOFIN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Trishakti Industries Ltd,TRISHAKTI INDUSTRIES,TRISHAKT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,UCO Bank,UCO BANK,UCOBANK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,United Spirits Ltd,UNITED SPIRITS,UNITDSPR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,UTI Asset Management Company Ltd,UTI ASSET MANAGEMENT,UTIAMC,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-22,Vardhman Special Steels Ltd,VARDHMAN SPECIAL STEELS,VSSL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Cipla Ltd,CIPLA,CIPLA,Forthcoming Results,bse_official_file,Pharmaceuticals,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-07-23,InterGlobe Aviation Ltd,INTERGLOBE AVIATION,INDIGO,Forthcoming Results,bse_official_file,Consumer Goods,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Infosys Ltd,INFOSYS,INFY,Forthcoming Results,bse_official_file,Information Technology,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Indian Energy Exchange Ltd,INDIAN ENERGY EXCHANGE,IEX,Forthcoming Results,bse_official_file,Financial Services,True,False,True,False,mid,50,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Coromandel International Ltd,COROMANDEL INTERNATIONAL,COROMANDEL,Forthcoming Results,bse_official_file,Chemicals,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Mphasis Ltd,MPHASIS,MPHASIS,Forthcoming Results,bse_official_file,Information Technology,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-07-23,PVR Inox Ltd,PVR INOX,PVRINOX,Forthcoming Results,bse_official_file,Consumer Goods,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Route Mobile Ltd,ROUTE MOBILE,ROUTE,Forthcoming Results,bse_official_file,Information Technology,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Sona BLW Precision Forgings Ltd,SONA BLW PRECISION FORGINGS,SONACOMS,Forthcoming Results,bse_official_file,Automobile,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-07-23,3i Infotech Ltd,3I INFOTECH,3IINFOLTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Allied Blenders and Distillers Ltd,ALLIED BLENDERS AND DISTILLERS,ABDL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Banaras Beads Ltd,BANARAS BEADS,BANARBEADS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Bharat Bhushan Finance & Commodity Brokers Ltd,BHARAT BHUSHAN FINANCE COMMODITY BROKERS,BHARAT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Capital Small Finance Bank Ltd,CAPITAL SMALL FINANCE BANK,CAPITALSFB,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Chennai Petroleum Corporation Ltd,CHENNAI PETROLEUM,CHENNPETRO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Control Print Ltd-$,CONTROL PRINT $,CONTROLPR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,CyberTech Systems and Software Ltd,CYBERTECH SYSTEMS AND SOFTWARE,CYBERTECH,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Cyient Ltd,CYIENT,CYIENT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Fineotex Chemical Ltd,FINEOTEX CHEMICAL,FCL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Fervent Synergies Ltd,FERVENT SYNERGIES,FERVENTSYN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Fractal Analytics Ltd,FRACTAL ANALYTICS,FRACTAL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Go Digit General Insurance Ltd,GO DIGIT GENERAL INSURANCE,GODIGIT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,GRP Ltd,GRP,GRPLTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Gujarat Alkalies and Chemicals Ltd,GUJARAT ALKALIES AND CHEMICALS,GUJALKALI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Hindustan Composites Ltd,HINDUSTAN COMPOSITES,HINDCOMPOS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,HOMRE Ltd,HOMRE,HOM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,IEC Education Ltd,IEC EDUCATION,IECEDU,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,International Gemological Institute Ltd,INTERNATIONAL GEMOLOGICAL INSTITUTE,IGIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Jamshri Realty Ltd-$,JAMSHRI REALTY $,JAMSHRI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Mahindra Lifespace Developers Ltd,MAHINDRA LIFESPACE DEVELOPERS,MAHLIFE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Malu Paper Mills Ltd,MALU PAPER MILLS,MALUPAPER,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,MBL Infrastructure Ltd,MBL INFRASTRUCTURE,MBLINFRA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Meesho Ltd,MEESHO,MEESHO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Motilal Oswal Financial Services Ltd,MOTILAL OSWAL FINANCIAL SERVICES,MOTILALOFS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,NIIT Learning Systems Ltd,NIIT LEARNING SYSTEMS,NIITMTS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Novartis India Ltd,NOVARTIS INDIA,NOVARTIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Orient Cement Ltd,ORIENT CEMENT,ORIENTCEM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Prime Securities Ltd,PRIME SECURITIES,PRIMESECU,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Ramco Systems Ltd,RAMCO SYSTEMS,RAMCOSYS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Rich Universe Network Ltd,RICH UNIVERSE NETWORK,RICHUNV,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Shemaroo Entertainment Ltd,SHEMAROO ENTERTAINMENT,SHEMAROO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Solara Active Pharma Sciences Ltd,SOLARA ACTIVE PHARMA SCIENCES,SOLARA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Spandana Sphoorty Financial Ltd,SPANDANA SPHOORTY FINANCIAL,SPANDANA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Sungold Capital Ltd,SUNGOLD CAPITAL,SUNGOLD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Suraj Ltd-$,SURAJ $,SURAJLTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Suryoday Small Finance Bank Ltd,SURYODAY SMALL FINANCE BANK,SURYODAY,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Thyrocare Technologies Ltd,THYROCARE TECHNOLOGIES,THYROCARE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Ujjivan Small Finance Bank Ltd,UJJIVAN SMALL FINANCE BANK,UJJIVANSFB,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-23,Vishal Mega Mart Ltd,VISHAL MEGA MART,VMM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
 2026-07-23,Control Print Limited,CONTROL PRINT,CONTROLPR,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
 2026-07-23,Crown Lifters Limited,CROWN LIFTERS,CROWN,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
 2026-07-23,Suraj Limited,SURAJ,SURAJLTD,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
-2026-07-24,Tata Consumer Products Ltd,TATA CONSUMER PRODUCTS,TATACONSUM,Forthcoming Results,bse_official_file,Consumer Goods,True,True,True,False,large,100,2026-07-19T05:36:49.751715+00:00
-2026-07-24,NTPC Ltd,NTPC,NTPC,Forthcoming Results,bse_official_file,Power,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-07-24,SBI Life Insurance Company Ltd,SBI LIFE INSURANCE,SBILIFE,Forthcoming Results,bse_official_file,Financial Services,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Shriram Finance Ltd,SHRIRAM FINANCE,SHRIRAMFIN,Forthcoming Results,bse_official_file,Financial Services,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Bank of Baroda,BANK OF BARODA,BANKBARODA,Forthcoming Results,bse_official_file,Banking,True,False,True,False,mid,50,2026-07-19T05:36:49.751715+00:00
-2026-07-24,SBI Cards and Payment Services Ltd,SBI CARDS AND PAYMENT SERVICES,SBICARD,Forthcoming Results,bse_official_file,Financial Services,True,False,False,False,large,35,2026-07-19T05:36:49.751715+00:00
-2026-07-24,ACC Ltd,ACC,ACC,Forthcoming Results,bse_official_file,Cement,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Atul Ltd,ATUL,ATUL,Forthcoming Results,bse_official_file,Chemicals,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Container Corporation of India Ltd,CONTAINER OF INDIA,CONCOR,Forthcoming Results,bse_official_file,Infrastructure,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Dalmia Bharat Ltd,DALMIA BHARAT,DALBHARAT,Forthcoming Results,bse_official_file,Cement,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Grindwell Norton Ltd-$,GRINDWELL NORTON $,GRINDWELL,Forthcoming Results,bse_official_file,Chemicals,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Jindal Steel Ltd,JINDAL STEEL,JINDALSTEL,Forthcoming Results,bse_official_file,Metals & Mining,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Laurus Labs Ltd,LAURUS LABS,LAURUSLABS,Forthcoming Results,bse_official_file,Pharmaceuticals,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Welspun Corp Ltd,WELSPUN,WELCORP,Forthcoming Results,bse_official_file,Infrastructure,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
+2026-07-24,Tata Consumer Products Ltd,TATA CONSUMER PRODUCTS,TATACONSUM,Forthcoming Results,bse_official_file,Consumer Goods,True,True,True,False,large,100,2026-07-20T05:54:38.734396+00:00
+2026-07-24,NTPC Ltd,NTPC,NTPC,Forthcoming Results,bse_official_file,Power,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-07-24,SBI Life Insurance Company Ltd,SBI LIFE INSURANCE,SBILIFE,Forthcoming Results,bse_official_file,Financial Services,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Shriram Finance Ltd,SHRIRAM FINANCE,SHRIRAMFIN,Forthcoming Results,bse_official_file,Financial Services,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Bank of Baroda,BANK OF BARODA,BANKBARODA,Forthcoming Results,bse_official_file,Banking,True,False,True,False,mid,50,2026-07-20T05:54:38.734396+00:00
+2026-07-24,SBI Cards and Payment Services Ltd,SBI CARDS AND PAYMENT SERVICES,SBICARD,Forthcoming Results,bse_official_file,Financial Services,True,False,False,False,large,35,2026-07-20T05:54:38.734396+00:00
+2026-07-24,ACC Ltd,ACC,ACC,Forthcoming Results,bse_official_file,Cement,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Atul Ltd,ATUL,ATUL,Forthcoming Results,bse_official_file,Chemicals,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Container Corporation of India Ltd,CONTAINER OF INDIA,CONCOR,Forthcoming Results,bse_official_file,Infrastructure,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Dalmia Bharat Ltd,DALMIA BHARAT,DALBHARAT,Forthcoming Results,bse_official_file,Cement,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Grindwell Norton Ltd-$,GRINDWELL NORTON $,GRINDWELL,Forthcoming Results,bse_official_file,Chemicals,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Jindal Steel Ltd,JINDAL STEEL,JINDALSTEL,Forthcoming Results,bse_official_file,Metals & Mining,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Laurus Labs Ltd,LAURUS LABS,LAURUSLABS,Forthcoming Results,bse_official_file,Pharmaceuticals,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Welspun Corp Ltd,WELSPUN,WELCORP,Forthcoming Results,bse_official_file,Infrastructure,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
 2026-07-24,Grindwell Norton Limited,GRINDWELL NORTON,GRINDWELL,Financial Results,nse_official_file,Chemicals,True,False,False,False,mid,25,2026-07-17T14:55:04.550989+00:00
-2026-07-24,Alldigi Tech Ltd,ALLDIGI TECH,ALLDIGI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Antariksh Industries Ltd,ANTARIKSH INDUSTRIES,ANTARIKSH,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Apar Industries Ltd,APAR INDUSTRIES,APARINDS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Arihant Capital Markets Ltd,ARIHANT CAPITAL MARKETS,ARIHANTCAP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Automotive Stampings and Assemblies Ltd,AUTOMOTIVE STAMPINGS AND ASSEMBLIES,ASAL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Associated Alcohols & Breweries Ltd,ASSOCIATED ALCOHOLS BREWERIES,ASALCBR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Bhilwara Spinners Ltd,BHILWARA SPINNERS,BHILSPIN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,CG Power and Industrial Solutions Ltd,CG POWER AND INDUSTRIAL SOLUTIONS,CGPOWER,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,CreditAccess Grameen Ltd,CREDITACCESS GRAMEEN,CREDITACC,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,DCB Bank Ltd,DCB BANK,DCBBANK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Dolphin Offshore Enterprises (India) Ltd-$,DOLPHIN OFFSHORE ENTERPRISES INDIA $,DOLPHIN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Ganesh Housing Ltd-$,GANESH HOUSING $,GANESHHOU,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Gangotri Textiles Ltd,GANGOTRI TEXTILES,GANGOTRI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Greenply Industries Ltd,GREENPLY INDUSTRIES,GREENPLY,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,GP Petroleums Ltd,GP PETROLEUMS,GULFPETRO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Insilco Ltd,INSILCO,INSILCO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Jindal Hotels Ltd,JINDAL HOTELS,JINDHOT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,KFin Technologies Ltd,KFIN TECHNOLOGIES,KFINTECH,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Kross Ltd,KROSS,KROSS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Dr. Lal PathLabs Ltd,DR LAL PATHLABS,LALPATHLAB,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,LMW Ltd,LMW,LMW,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Moschip Technologies Ltd,MOSCHIP TECHNOLOGIES,MOSCHIP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,The New India Assurance Company Ltd,THE NEW INDIA ASSURANCE,NIACL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Omax Autos Ltd,OMAX AUTOS,OMAXAUTO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Ponni Sugars (Erode) Ltd,PONNI SUGARS ERODE,PONNIERODE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Poona Dal & Oil Industries Ltd,POONA DAL OIL INDUSTRIES,POONADAL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Radix Industries (India) Ltd,RADIX INDUSTRIES INDIA,RADIXIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Rajratan Global Wire Ltd,RAJRATAN GLOBAL WIRE,RAJRATAN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Rama Phosphates Ltd,RAMA PHOSPHATES,RAMAPHO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Restile Ceramics Ltd,RESTILE CERAMICS,RESTILE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Ramkrishna Forgings Ltd,RAMKRISHNA FORGINGS,RKFORGE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Rolcon Engineering Company Ltd,ROLCON ENGINEERING,ROLCOEN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Sapphire Foods India Ltd,SAPPHIRE FOODS INDIA,SAPPHIRE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Satchmo Holdings Ltd,SATCHMO HOLDINGS,SATCH,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Shakti Pumps India Ltd-$,SHAKTI PUMPS INDIA $,SHAKTIPUMP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Share India Securities Ltd,SHARE INDIA SECURITIES,SHAREINDIA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Shree Digvijay Cement Company Ltd-$,SHREE DIGVIJAY CEMENT $,SHREDIGCEM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Smiths & Founders (India) Ltd,SMITHS FOUNDERS INDIA,SMFIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Sterlite Technologies Ltd,STERLITE TECHNOLOGIES,STLTECH,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,TANFAC Industries Ltd-$,TANFAC INDUSTRIES $,TANFACIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,V-Mart Retail Ltd,V MART RETAIL,VMART,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,Wendt (India) Ltd,WENDT INDIA,WENDT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-24,ZF Commercial Vehicle Control Systems India Ltd,ZF COMMERCIAL VEHICLE CONTROL SYSTEMS INDIA,ZFCVINDIA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
+2026-07-24,Alldigi Tech Ltd,ALLDIGI TECH,ALLDIGI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Antariksh Industries Ltd,ANTARIKSH INDUSTRIES,ANTARIKSH,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Apar Industries Ltd,APAR INDUSTRIES,APARINDS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Arihant Capital Markets Ltd,ARIHANT CAPITAL MARKETS,ARIHANTCAP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Automotive Stampings and Assemblies Ltd,AUTOMOTIVE STAMPINGS AND ASSEMBLIES,ASAL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Associated Alcohols & Breweries Ltd,ASSOCIATED ALCOHOLS BREWERIES,ASALCBR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Bhilwara Spinners Ltd,BHILWARA SPINNERS,BHILSPIN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,CG Power and Industrial Solutions Ltd,CG POWER AND INDUSTRIAL SOLUTIONS,CGPOWER,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,CreditAccess Grameen Ltd,CREDITACCESS GRAMEEN,CREDITACC,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,DCB Bank Ltd,DCB BANK,DCBBANK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Dolphin Offshore Enterprises (India) Ltd-$,DOLPHIN OFFSHORE ENTERPRISES INDIA $,DOLPHIN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Ganesh Housing Ltd-$,GANESH HOUSING $,GANESHHOU,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Gangotri Textiles Ltd,GANGOTRI TEXTILES,GANGOTRI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Greenply Industries Ltd,GREENPLY INDUSTRIES,GREENPLY,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,GP Petroleums Ltd,GP PETROLEUMS,GULFPETRO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Insilco Ltd,INSILCO,INSILCO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Jindal Hotels Ltd,JINDAL HOTELS,JINDHOT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,KFin Technologies Ltd,KFIN TECHNOLOGIES,KFINTECH,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Kross Ltd,KROSS,KROSS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Dr. Lal PathLabs Ltd,DR LAL PATHLABS,LALPATHLAB,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,LMW Ltd,LMW,LMW,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Moschip Technologies Ltd,MOSCHIP TECHNOLOGIES,MOSCHIP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,The New India Assurance Company Ltd,THE NEW INDIA ASSURANCE,NIACL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Omax Autos Ltd,OMAX AUTOS,OMAXAUTO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Ponni Sugars (Erode) Ltd,PONNI SUGARS ERODE,PONNIERODE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Poona Dal & Oil Industries Ltd,POONA DAL OIL INDUSTRIES,POONADAL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Radix Industries (India) Ltd,RADIX INDUSTRIES INDIA,RADIXIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Rajratan Global Wire Ltd,RAJRATAN GLOBAL WIRE,RAJRATAN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Rama Phosphates Ltd,RAMA PHOSPHATES,RAMAPHO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Restile Ceramics Ltd,RESTILE CERAMICS,RESTILE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Ramkrishna Forgings Ltd,RAMKRISHNA FORGINGS,RKFORGE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Rolcon Engineering Company Ltd,ROLCON ENGINEERING,ROLCOEN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Sapphire Foods India Ltd,SAPPHIRE FOODS INDIA,SAPPHIRE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Satchmo Holdings Ltd,SATCHMO HOLDINGS,SATCH,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Shakti Pumps India Ltd-$,SHAKTI PUMPS INDIA $,SHAKTIPUMP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Share India Securities Ltd,SHARE INDIA SECURITIES,SHAREINDIA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Shree Digvijay Cement Company Ltd-$,SHREE DIGVIJAY CEMENT $,SHREDIGCEM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Smiths & Founders (India) Ltd,SMITHS FOUNDERS INDIA,SMFIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Sterlite Technologies Ltd,STERLITE TECHNOLOGIES,STLTECH,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,TANFAC Industries Ltd-$,TANFAC INDUSTRIES $,TANFACIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,V-Mart Retail Ltd,V MART RETAIL,VMART,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,Wendt (India) Ltd,WENDT INDIA,WENDT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-24,ZF Commercial Vehicle Control Systems India Ltd,ZF COMMERCIAL VEHICLE CONTROL SYSTEMS INDIA,ZFCVINDIA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
 2026-07-24,Dolphin Offshore Enterprises (India) Limited,DOLPHIN OFFSHORE ENTERPRISES INDIA,DOLPHIN,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
 2026-07-24,GANESH HOUSING LIMITED,GANESH HOUSING,GANESHHOU,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
 2026-07-24,Dr. Lal Path Labs Ltd.,DR LAL PATH LABS,LALPATHLAB,Financial Results/Other business matters,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
 2026-07-24,Shakti Pumps (India) Limited,SHAKTI PUMPS INDIA,SHAKTIPUMP,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
 2026-07-24,Shree Digvijay Cement Co.Ltd,SHREE DIGVIJAY CEMENT,SHREDIGCEM,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
-2026-07-25,AU Small Finance Bank Ltd,AU SMALL FINANCE BANK,AUBANK,Forthcoming Results,bse_official_file,Banking,True,False,False,True,mid,45,2026-07-19T05:36:49.751715+00:00
-2026-07-25,IDFC First Bank Ltd,IDFC FIRST BANK,IDFCFIRSTB,Forthcoming Results,bse_official_file,Banking,True,False,False,True,mid,45,2026-07-19T05:36:49.751715+00:00
-2026-07-25,3P Land Holdings Ltd,3P LAND HOLDINGS,3PLAND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-25,Birla Corporation Ltd,BIRLA,BIRLACORPN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-25,Dodla Dairy Ltd,DODLA DAIRY,DODLA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-25,Disha Resources Ltd,DISHA RESOURCES,DRL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-25,Five-Star Business Finance Ltd,FIVE STAR BUSINESS FINANCE,FIVESTAR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-25,High Energy Batteries India Ltd,HIGH ENERGY BATTERIES INDIA,HIGHENE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-25,Mercury Laboratories Ltd,MERCURY LABORATORIES,MERCURYLAB,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-25,SBFC Finance Ltd,SBFC FINANCE,SBFC,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-25,Seshasayee Paper and Boards Ltd,SESHASAYEE PAPER AND BOARDS,SESHAPAPER,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-25,SKP Securities Ltd,SKP SECURITIES,SKPSEC,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-25,Suryalata Spinning Mills Ltd-$,SURYALATA SPINNING MILLS $,SURYALA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-25,ZEN Technologies Ltd,ZEN TECHNOLOGIES,ZENTEC,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-27,Bharat Electronics Ltd,BHARAT ELECTRONICS,BEL,Forthcoming Results,bse_official_file,Capital Goods,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-07-27,Coal India Ltd,COAL INDIA,COALINDIA,Forthcoming Results,bse_official_file,Metals & Mining,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-07-27,Indus Towers Ltd,INDUS TOWERS,INDUSTOWER,Forthcoming Results,bse_official_file,Telecom,True,False,True,False,large,60,2026-07-19T05:36:49.751715+00:00
-2026-07-27,Canara Bank,CANARA BANK,CANBK,Forthcoming Results,bse_official_file,Banking,True,False,True,False,mid,50,2026-07-19T05:36:49.751715+00:00
-2026-07-27,Coforge Ltd,COFORGE,COFORGE,Forthcoming Results,bse_official_file,Information Technology,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-07-27,Andhra Cements Ltd,ANDHRA CEMENTS,ACL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-27,Apt Packaging Ltd,APT PACKAGING,APTPACK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-27,ASI Industries Ltd,ASI INDUSTRIES,ASIIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-27,Aurionpro Solutions Ltd,AURIONPRO SOLUTIONS,AURIONPRO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-27,Balaji Amines Ltd-$,BALAJI AMINES $,BALAMINES,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-27,CCL Products (India) Ltd,CCL PRODUCTS INDIA,CCL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-27,Everest Industries Ltd,EVEREST INDUSTRIES,EVERESTIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-27,Fairchem Organics Ltd,FAIRCHEM ORGANICS,FAIRCHEMOR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-27,Happiest Minds Technologies Ltd,HAPPIEST MINDS TECHNOLOGIES,HAPPSTMNDS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-27,IFB Agro Industries Ltd,IFB AGRO INDUSTRIES,IFBAGRO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-27,Kanpur Plastipack Ltd,KANPUR PLASTIPACK,KANPRPLA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-27,Manba Finance Ltd,MANBA FINANCE,MANBA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-27,Nelcast Ltd,NELCAST,NELCAST,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-27,NESCO Ltd,NESCO,NESCO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-27,Sagar Cements Ltd-$,SAGAR CEMENTS $,SAGCEM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-27,Sumitomo Chemical India Ltd,SUMITOMO CHEMICAL INDIA,SUMICHEM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-27,Tata Power Company Ltd,TATA POWER,TATAPOWER,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-27,Tamilnad Mercantile Bank Ltd,TAMILNAD MERCANTILE BANK,TMB,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
+2026-07-25,AU Small Finance Bank Ltd,AU SMALL FINANCE BANK,AUBANK,Forthcoming Results,bse_official_file,Banking,True,False,False,True,mid,45,2026-07-20T05:54:38.734396+00:00
+2026-07-25,IDFC First Bank Ltd,IDFC FIRST BANK,IDFCFIRSTB,Forthcoming Results,bse_official_file,Banking,True,False,False,True,mid,45,2026-07-20T05:54:38.734396+00:00
+2026-07-25,3P Land Holdings Ltd,3P LAND HOLDINGS,3PLAND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-25,Birla Corporation Ltd,BIRLA,BIRLACORPN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-25,Dodla Dairy Ltd,DODLA DAIRY,DODLA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-25,Disha Resources Ltd,DISHA RESOURCES,DRL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-25,Five-Star Business Finance Ltd,FIVE STAR BUSINESS FINANCE,FIVESTAR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-25,High Energy Batteries India Ltd,HIGH ENERGY BATTERIES INDIA,HIGHENE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-25,Mercury Laboratories Ltd,MERCURY LABORATORIES,MERCURYLAB,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-25,SBFC Finance Ltd,SBFC FINANCE,SBFC,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-25,Seshasayee Paper and Boards Ltd,SESHASAYEE PAPER AND BOARDS,SESHAPAPER,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-25,SKP Securities Ltd,SKP SECURITIES,SKPSEC,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-25,Suryalata Spinning Mills Ltd-$,SURYALATA SPINNING MILLS $,SURYALA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-25,ZEN Technologies Ltd,ZEN TECHNOLOGIES,ZENTEC,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-27,Bharat Electronics Ltd,BHARAT ELECTRONICS,BEL,Forthcoming Results,bse_official_file,Capital Goods,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-07-27,Coal India Ltd,COAL INDIA,COALINDIA,Forthcoming Results,bse_official_file,Metals & Mining,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-07-27,Indus Towers Ltd,INDUS TOWERS,INDUSTOWER,Forthcoming Results,bse_official_file,Telecom,True,False,True,False,large,60,2026-07-20T05:54:38.734396+00:00
+2026-07-27,Canara Bank,CANARA BANK,CANBK,Forthcoming Results,bse_official_file,Banking,True,False,True,False,mid,50,2026-07-20T05:54:38.734396+00:00
+2026-07-27,Coforge Ltd,COFORGE,COFORGE,Forthcoming Results,bse_official_file,Information Technology,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-07-27,Andhra Cements Ltd,ANDHRA CEMENTS,ACL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-27,Apt Packaging Ltd,APT PACKAGING,APTPACK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-27,ASI Industries Ltd,ASI INDUSTRIES,ASIIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-27,Aurionpro Solutions Ltd,AURIONPRO SOLUTIONS,AURIONPRO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-27,Balaji Amines Ltd-$,BALAJI AMINES $,BALAMINES,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-27,CCL Products (India) Ltd,CCL PRODUCTS INDIA,CCL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-27,Everest Industries Ltd,EVEREST INDUSTRIES,EVERESTIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-27,Fairchem Organics Ltd,FAIRCHEM ORGANICS,FAIRCHEMOR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-27,Happiest Minds Technologies Ltd,HAPPIEST MINDS TECHNOLOGIES,HAPPSTMNDS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-27,IFB Agro Industries Ltd,IFB AGRO INDUSTRIES,IFBAGRO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-27,Kanpur Plastipack Ltd,KANPUR PLASTIPACK,KANPRPLA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-27,Manba Finance Ltd,MANBA FINANCE,MANBA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-27,Nelcast Ltd,NELCAST,NELCAST,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-27,NESCO Ltd,NESCO,NESCO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-27,Sagar Cements Ltd-$,SAGAR CEMENTS $,SAGCEM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-27,Sumitomo Chemical India Ltd,SUMITOMO CHEMICAL INDIA,SUMICHEM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-27,Tata Power Company Ltd,TATA POWER,TATAPOWER,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-27,Tamilnad Mercantile Bank Ltd,TAMILNAD MERCANTILE BANK,TMB,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
 2026-07-27,Balaji Amines Limited,BALAJI AMINES,BALAMINES,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
 2026-07-27,Sagar Cements Limited,SAGAR CEMENTS,SAGCEM,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
-2026-07-28,Hindustan Unilever Ltd,HINDUSTAN UNILEVER,HINDUNILVR,Forthcoming Results,bse_official_file,Consumer Goods,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-07-28,Larsen & Toubro Ltd,LARSEN TOUBRO,LT,Forthcoming Results,bse_official_file,Infrastructure,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-07-28,Ambuja Cements Ltd,AMBUJA CEMENTS,AMBUJACEM,Forthcoming Results,bse_official_file,Cement,True,False,True,False,mid,50,2026-07-19T05:36:49.751715+00:00
-2026-07-28,Cholamandalam Investment and Finance Company Ltd,CHOLAMANDALAM INVESTMENT AND FINANCE,CHOLAFIN,Forthcoming Results,bse_official_file,Financial Services,True,False,True,False,mid,50,2026-07-19T05:36:49.751715+00:00
-2026-07-28,City Union Bank Ltd,CITY UNION BANK,CUB,Forthcoming Results,bse_official_file,Banking,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-07-28,Baba Arts Ltd-$,BABA ARTS $,BABA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-28,Cemindia Projects Ltd,CEMINDIA PROJECTS,CEMPRO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-28,Equitas Small Finance Bank Ltd,EQUITAS SMALL FINANCE BANK,EQUITASBNK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-28,Ginni Filaments Ltd,GINNI FILAMENTS,GINNIFILA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-28,IFB Industries Ltd,IFB INDUSTRIES,IFBIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-28,Indoco Remedies Ltd,INDOCO REMEDIES,INDOCO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-28,Invigorated Business Consulting Ltd,INVIGORATED BUSINESS CONSULTING,INVIGO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-28,Modern Shares & Stockbrokers Ltd,MODERN SHARES STOCKBROKERS,MODRNSH,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-28,Navneet Education Ltd,NAVNEET EDUCATION,NAVNETEDUL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-28,Oswal Yarns Ltd,OSWAL YARNS,OSWAYRN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-28,Radico Khaitan Ltd,RADICO KHAITAN,RADICO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-28,S H Kelkar and Company Ltd,S H KELKAR AND,SHK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-28,Sundaram-Clayton Ltd,SUNDARAM CLAYTON,SUNCLAY,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-28,Tata Capital Ltd,TATA CAPITAL,TATACAP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-28,TTK Prestige Ltd,TTK PRESTIGE,TTKPRESTIG,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-28,Zenotech Laboratories Ltd,ZENOTECH LABORATORIES,ZENOTECH,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-29,Adani Ports and Special Economic Zone Ltd,ADANI PORTS AND SPECIAL ECONOMIC ZONE,ADANIPORTS,Forthcoming Results,bse_official_file,Infrastructure,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-07-29,Asian Paints Ltd,ASIAN PAINTS,ASIANPAINT,Forthcoming Results,bse_official_file,Consumer Goods,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-07-29,Colgate Palmolive (India) Ltd,COLGATE PALMOLIVE INDIA,COLPAL,Forthcoming Results,bse_official_file,Consumer Goods,True,False,True,False,mid,50,2026-07-19T05:36:49.751715+00:00
-2026-07-29,Dabur India Ltd,DABUR INDIA,DABUR,Forthcoming Results,bse_official_file,Consumer Goods,True,False,True,False,mid,50,2026-07-19T05:36:49.751715+00:00
-2026-07-29,KPIT Technologies Ltd,KPIT TECHNOLOGIES,KPITTECH,Forthcoming Results,bse_official_file,Information Technology,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-07-29,Syngene International Ltd,SYNGENE INTERNATIONAL,SYNGENE,Forthcoming Results,bse_official_file,Pharmaceuticals,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-07-29,Accelya Solutions India Ltd,ACCELYA SOLUTIONS INDIA,ACCELYA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-29,ACME Solar Holdings Ltd,ACME SOLAR HOLDINGS,ACMESOLAR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-29,Arex Industries Ltd,AREX INDUSTRIES,AREXMIS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-29,Bajaj Housing Finance Ltd,BAJAJ HOUSING FINANCE,BAJAJHFL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-29,Craftsman Automation Ltd,CRAFTSMAN AUTOMATION,CRAFTSMAN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-29,Dhanlaxmi Bank Ltd,DHANLAXMI BANK,DHANBANK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-29,eMudhra Ltd,EMUDHRA,EMUDHRA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-29,Gokul Agro Resources Ltd,GOKUL AGRO RESOURCES,GOKULAGRO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-29,Garden Reach Shipbuilders & Engineers Ltd,GARDEN REACH SHIPBUILDERS ENGINEERS,GRSE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-29,Hawkins Cookers Ltd-$,HAWKINS COOKERS $,HAWKINCOOK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-29,Honeywell Automation India Ltd,HONEYWELL AUTOMATION INDIA,HONAUT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-29,Laxmi Organic Industries Ltd,LAXMI ORGANIC INDUSTRIES,LXCHEM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-29,Maharashtra Scooters Ltd,MAHARASHTRA SCOOTERS,MAHSCOOTER,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-29,Procter & Gamble Hygiene and Health Care Ltd,PROCTER GAMBLE HYGIENE AND HEALTH CARE,PGHH,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-29,Quess Corp Ltd,QUESS,QUESS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-29,Shanthi Gears Ltd,SHANTHI GEARS,SHANTIGEAR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-29,SKM Egg Products Export (India) Ltd,SKM EGG PRODUCTS EXPORT INDIA,SKMEGGPROD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-29,Star Health and Allied Insurance Company Ltd,STAR HEALTH AND ALLIED INSURANCE,STARHEALTH,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-29,TeamLease Services Ltd,TEAMLEASE SERVICES,TEAMLEASE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-29,Timex Group India Ltd-$,TIMEX GROUP INDIA $,TIMEX,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-29,V B Desai Financial Services Ltd,V B DESAI FINANCIAL SERVICES,VBDESAI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-29,V-Guard Industries Ltd,V GUARD INDUSTRIES,VGUARD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-30,Bajaj Finance Ltd,BAJAJ FINANCE,BAJFINANCE,Forthcoming Results,bse_official_file,Financial Services,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-07-30,Mahindra & Mahindra Ltd,MAHINDRA MAHINDRA,M&M,Forthcoming Results,bse_official_file,Automobile,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-07-30,Tata Steel Ltd,TATA STEEL,TATASTEEL,Forthcoming Results,bse_official_file,Metals & Mining,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-07-30,Exide Industries Ltd,EXIDE INDUSTRIES,EXIDEIND,Forthcoming Results,bse_official_file,Automobile,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-07-30,Thermax Ltd,THERMAX,THERMAX,Forthcoming Results,bse_official_file,Infrastructure,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-07-30,Torrent Pharmaceuticals Ltd,TORRENT PHARMACEUTICALS,TORNTPHARM,Forthcoming Results,bse_official_file,Pharmaceuticals,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-07-30,AWL Agri Business Ltd,AWL AGRI BUSINESS,AWL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-30,Basant Agro Tech India Ltd-$,BASANT AGRO TECH INDIA $,BASANTGL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-30,Deepak Fertilisers & Petrochemicals Corporation Ltd,DEEPAK FERTILISERS PETROCHEMICALS,DEEPAKFERT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-30,Gillette India Ltd,GILLETTE INDIA,GILLETTE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-30,ICRA Ltd,ICRA,ICRA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-30,Indegene Ltd,INDEGENE,INDGN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-30,Mankind Pharma Ltd,MANKIND PHARMA,MANKIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-30,National Securities Depository Ltd,NATIONAL SECURITIES DEPOSITORY,NSDL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-30,Nucleus Software Exports Ltd,NUCLEUS SOFTWARE EXPORTS,NUCLEUS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-30,Pricol Ltd,PRICOL,PRICOLLTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-30,PSP Projects Ltd,PSP PROJECTS,PSPPROJECT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-30,Saint Gobain Sekurit India Ltd,SAINT GOBAIN SEKURIT INDIA,SEKURITIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-30,South India Paper Mills Ltd,SOUTH INDIA PAPER MILLS,STHINPA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-30,Transport Corporation of India Ltd,TRANSPORT OF INDIA,TCI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-30,Vinyl Chemicals (India) Ltd,VINYL CHEMICALS INDIA,VINYLINDIA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-30,Westlife Foodworld Ltd,WESTLIFE FOODWORLD,WESTLIFE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
+2026-07-28,Hindustan Unilever Ltd,HINDUSTAN UNILEVER,HINDUNILVR,Forthcoming Results,bse_official_file,Consumer Goods,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-07-28,Larsen & Toubro Ltd,LARSEN TOUBRO,LT,Forthcoming Results,bse_official_file,Infrastructure,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-07-28,Ambuja Cements Ltd,AMBUJA CEMENTS,AMBUJACEM,Forthcoming Results,bse_official_file,Cement,True,False,True,False,mid,50,2026-07-20T05:54:38.734396+00:00
+2026-07-28,Cholamandalam Investment and Finance Company Ltd,CHOLAMANDALAM INVESTMENT AND FINANCE,CHOLAFIN,Forthcoming Results,bse_official_file,Financial Services,True,False,True,False,mid,50,2026-07-20T05:54:38.734396+00:00
+2026-07-28,City Union Bank Ltd,CITY UNION BANK,CUB,Forthcoming Results,bse_official_file,Banking,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-07-28,Baba Arts Ltd-$,BABA ARTS $,BABA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-28,Cemindia Projects Ltd,CEMINDIA PROJECTS,CEMPRO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-28,Equitas Small Finance Bank Ltd,EQUITAS SMALL FINANCE BANK,EQUITASBNK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-28,Ginni Filaments Ltd,GINNI FILAMENTS,GINNIFILA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-28,IFB Industries Ltd,IFB INDUSTRIES,IFBIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-28,Indoco Remedies Ltd,INDOCO REMEDIES,INDOCO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-28,Invigorated Business Consulting Ltd,INVIGORATED BUSINESS CONSULTING,INVIGO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-28,Modern Shares & Stockbrokers Ltd,MODERN SHARES STOCKBROKERS,MODRNSH,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-28,Navneet Education Ltd,NAVNEET EDUCATION,NAVNETEDUL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-28,Oswal Yarns Ltd,OSWAL YARNS,OSWAYRN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-28,Radico Khaitan Ltd,RADICO KHAITAN,RADICO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-28,S H Kelkar and Company Ltd,S H KELKAR AND,SHK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-28,Sundaram-Clayton Ltd,SUNDARAM CLAYTON,SUNCLAY,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-28,Tata Capital Ltd,TATA CAPITAL,TATACAP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-28,TTK Prestige Ltd,TTK PRESTIGE,TTKPRESTIG,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-28,Zenotech Laboratories Ltd,ZENOTECH LABORATORIES,ZENOTECH,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-29,Adani Ports and Special Economic Zone Ltd,ADANI PORTS AND SPECIAL ECONOMIC ZONE,ADANIPORTS,Forthcoming Results,bse_official_file,Infrastructure,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-07-29,Asian Paints Ltd,ASIAN PAINTS,ASIANPAINT,Forthcoming Results,bse_official_file,Consumer Goods,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-07-29,Colgate Palmolive (India) Ltd,COLGATE PALMOLIVE INDIA,COLPAL,Forthcoming Results,bse_official_file,Consumer Goods,True,False,True,False,mid,50,2026-07-20T05:54:38.734396+00:00
+2026-07-29,Dabur India Ltd,DABUR INDIA,DABUR,Forthcoming Results,bse_official_file,Consumer Goods,True,False,True,False,mid,50,2026-07-20T05:54:38.734396+00:00
+2026-07-29,KPIT Technologies Ltd,KPIT TECHNOLOGIES,KPITTECH,Forthcoming Results,bse_official_file,Information Technology,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-07-29,Syngene International Ltd,SYNGENE INTERNATIONAL,SYNGENE,Forthcoming Results,bse_official_file,Pharmaceuticals,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-07-29,Accelya Solutions India Ltd,ACCELYA SOLUTIONS INDIA,ACCELYA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-29,ACME Solar Holdings Ltd,ACME SOLAR HOLDINGS,ACMESOLAR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-29,Arex Industries Ltd,AREX INDUSTRIES,AREXMIS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-29,Bajaj Housing Finance Ltd,BAJAJ HOUSING FINANCE,BAJAJHFL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-29,Craftsman Automation Ltd,CRAFTSMAN AUTOMATION,CRAFTSMAN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-29,Dhanlaxmi Bank Ltd,DHANLAXMI BANK,DHANBANK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-29,eMudhra Ltd,EMUDHRA,EMUDHRA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-29,Gokul Agro Resources Ltd,GOKUL AGRO RESOURCES,GOKULAGRO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-29,Garden Reach Shipbuilders & Engineers Ltd,GARDEN REACH SHIPBUILDERS ENGINEERS,GRSE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-29,Hawkins Cookers Ltd-$,HAWKINS COOKERS $,HAWKINCOOK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-29,Honeywell Automation India Ltd,HONEYWELL AUTOMATION INDIA,HONAUT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-29,Laxmi Organic Industries Ltd,LAXMI ORGANIC INDUSTRIES,LXCHEM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-29,Maharashtra Scooters Ltd,MAHARASHTRA SCOOTERS,MAHSCOOTER,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-29,Procter & Gamble Hygiene and Health Care Ltd,PROCTER GAMBLE HYGIENE AND HEALTH CARE,PGHH,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-29,Quess Corp Ltd,QUESS,QUESS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-29,Shanthi Gears Ltd,SHANTHI GEARS,SHANTIGEAR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-29,SKM Egg Products Export (India) Ltd,SKM EGG PRODUCTS EXPORT INDIA,SKMEGGPROD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-29,Star Health and Allied Insurance Company Ltd,STAR HEALTH AND ALLIED INSURANCE,STARHEALTH,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-29,TeamLease Services Ltd,TEAMLEASE SERVICES,TEAMLEASE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-29,Timex Group India Ltd-$,TIMEX GROUP INDIA $,TIMEX,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-29,V B Desai Financial Services Ltd,V B DESAI FINANCIAL SERVICES,VBDESAI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-29,V-Guard Industries Ltd,V GUARD INDUSTRIES,VGUARD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-30,Bajaj Finance Ltd,BAJAJ FINANCE,BAJFINANCE,Forthcoming Results,bse_official_file,Financial Services,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-07-30,Mahindra & Mahindra Ltd,MAHINDRA MAHINDRA,M&M,Forthcoming Results,bse_official_file,Automobile,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-07-30,Tata Steel Ltd,TATA STEEL,TATASTEEL,Forthcoming Results,bse_official_file,Metals & Mining,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-07-30,Exide Industries Ltd,EXIDE INDUSTRIES,EXIDEIND,Forthcoming Results,bse_official_file,Automobile,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-07-30,Thermax Ltd,THERMAX,THERMAX,Forthcoming Results,bse_official_file,Infrastructure,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-07-30,Torrent Pharmaceuticals Ltd,TORRENT PHARMACEUTICALS,TORNTPHARM,Forthcoming Results,bse_official_file,Pharmaceuticals,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-07-30,AWL Agri Business Ltd,AWL AGRI BUSINESS,AWL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-30,Basant Agro Tech India Ltd-$,BASANT AGRO TECH INDIA $,BASANTGL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-30,Deepak Fertilisers & Petrochemicals Corporation Ltd,DEEPAK FERTILISERS PETROCHEMICALS,DEEPAKFERT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-30,Gillette India Ltd,GILLETTE INDIA,GILLETTE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-30,ICRA Ltd,ICRA,ICRA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-30,Indegene Ltd,INDEGENE,INDGN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-30,Mankind Pharma Ltd,MANKIND PHARMA,MANKIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-30,National Securities Depository Ltd,NATIONAL SECURITIES DEPOSITORY,NSDL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-30,Nucleus Software Exports Ltd,NUCLEUS SOFTWARE EXPORTS,NUCLEUS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-30,Pricol Ltd,PRICOL,PRICOLLTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-30,PSP Projects Ltd,PSP PROJECTS,PSPPROJECT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-30,Saint Gobain Sekurit India Ltd,SAINT GOBAIN SEKURIT INDIA,SEKURITIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-30,South India Paper Mills Ltd,SOUTH INDIA PAPER MILLS,STHINPA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-30,Transport Corporation of India Ltd,TRANSPORT OF INDIA,TCI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-30,Vinyl Chemicals (India) Ltd,VINYL CHEMICALS INDIA,VINYLINDIA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-30,Westlife Foodworld Ltd,WESTLIFE FOODWORLD,WESTLIFE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
 2026-07-30,Deepak Fertilizers and Petrochemicals Corporation Limited,DEEPAK FERTILIZERS AND PETROCHEMICALS,DEEPAKFERT,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
-2026-07-31,Bajaj Finserv Ltd,BAJAJ FINSERV,BAJAJFINSV,Forthcoming Results,bse_official_file,Financial Services,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-07-31,ITC Ltd,ITC,ITC,Forthcoming Results,bse_official_file,Consumer Goods,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-07-31,Maruti Suzuki India Ltd,MARUTI SUZUKI INDIA,MARUTI,Forthcoming Results,bse_official_file,Automobile,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-07-31,Sun Pharmaceutical Industries Ltd,SUN PHARMACEUTICAL INDUSTRIES,SUNPHARMA,Forthcoming Results,bse_official_file,Pharmaceuticals,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-07-31,Indian Oil Corporation Ltd,INDIAN OIL,IOC,Forthcoming Results,bse_official_file,Oil & Gas,True,False,True,False,large,60,2026-07-19T05:36:49.751715+00:00
-2026-07-31,Shree Cement Ltd,SHREE CEMENT,SHREECEM,Forthcoming Results,bse_official_file,Cement,True,False,False,False,large,35,2026-07-19T05:36:49.751715+00:00
-2026-07-31,Aditya Birla Capital Ltd,ADITYA BIRLA CAPITAL,ABCAPITAL,Forthcoming Results,bse_official_file,Financial Services,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-07-31,Bajaj Holdings & Investment Ltd,BAJAJ HOLDINGS INVESTMENT,BAJAJHLDNG,Forthcoming Results,bse_official_file,nan,False,False,True,False,nan,25,2026-07-19T05:36:49.751715+00:00
-2026-07-31,ABB India Ltd,ABB INDIA,ABB,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-31,Aptus Value Housing Finance India Ltd,APTUS VALUE HOUSING FINANCE INDIA,APTUS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-31,Binny Ltd,BINNY,BINNY,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-31,Blue Dart Express Ltd,BLUE DART EXPRESS,BLUEDART,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-31,Corona Remedies Ltd,CORONA REMEDIES,CORONA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-31,Glenmark Pharmaceuticals Ltd,GLENMARK PHARMACEUTICALS,GLENMARK,Forthcoming Results,bse_official_file,Pharmaceuticals,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-31,Hybrid Financial Services Ltd,HYBRID FINANCIAL SERVICES,HYBRIDFIN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-31,IL&FS Engineering and Construction Company Ltd,IL FS ENGINEERING AND CONSTRUCTION,IL&FSENGG,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-31,Intellect Design Arena Ltd,INTELLECT DESIGN ARENA,INTELLECT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-31,Punjab Chemicals & Crop Protection Ltd-$,PUNJAB CHEMICALS CROP PROTECTION $,PUNJABCHEM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-31,Smartlink Holdings Ltd,SMARTLINK HOLDINGS,SMARTLINK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-31,Tamboli Industries Ltd,TAMBOLI INDUSTRIES,TAMBOLIIN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-31,Teesta Agro Industries Ltd,TEESTA AGRO INDUSTRIES,TEEAI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-31,Transcorp International Ltd,TRANSCORP INTERNATIONAL,TRANSCOR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-07-31,Uniroyal Industries Ltd,UNIROYAL INDUSTRIES,UNIROYAL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
+2026-07-31,Bajaj Finserv Ltd,BAJAJ FINSERV,BAJAJFINSV,Forthcoming Results,bse_official_file,Financial Services,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-07-31,ITC Ltd,ITC,ITC,Forthcoming Results,bse_official_file,Consumer Goods,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-07-31,Maruti Suzuki India Ltd,MARUTI SUZUKI INDIA,MARUTI,Forthcoming Results,bse_official_file,Automobile,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-07-31,Sun Pharmaceutical Industries Ltd,SUN PHARMACEUTICAL INDUSTRIES,SUNPHARMA,Forthcoming Results,bse_official_file,Pharmaceuticals,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-07-31,Indian Oil Corporation Ltd,INDIAN OIL,IOC,Forthcoming Results,bse_official_file,Oil & Gas,True,False,True,False,large,60,2026-07-20T05:54:38.734396+00:00
+2026-07-31,Shree Cement Ltd,SHREE CEMENT,SHREECEM,Forthcoming Results,bse_official_file,Cement,True,False,False,False,large,35,2026-07-20T05:54:38.734396+00:00
+2026-07-31,Aditya Birla Capital Ltd,ADITYA BIRLA CAPITAL,ABCAPITAL,Forthcoming Results,bse_official_file,Financial Services,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-07-31,Bajaj Holdings & Investment Ltd,BAJAJ HOLDINGS INVESTMENT,BAJAJHLDNG,Forthcoming Results,bse_official_file,nan,False,False,True,False,nan,25,2026-07-20T05:54:38.734396+00:00
+2026-07-31,ABB India Ltd,ABB INDIA,ABB,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-31,Aptus Value Housing Finance India Ltd,APTUS VALUE HOUSING FINANCE INDIA,APTUS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-31,Binny Ltd,BINNY,BINNY,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-31,Blue Dart Express Ltd,BLUE DART EXPRESS,BLUEDART,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-31,Corona Remedies Ltd,CORONA REMEDIES,CORONA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-31,Glenmark Pharmaceuticals Ltd,GLENMARK PHARMACEUTICALS,GLENMARK,Forthcoming Results,bse_official_file,Pharmaceuticals,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-31,Hybrid Financial Services Ltd,HYBRID FINANCIAL SERVICES,HYBRIDFIN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-31,IL&FS Engineering and Construction Company Ltd,IL FS ENGINEERING AND CONSTRUCTION,IL&FSENGG,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-31,Intellect Design Arena Ltd,INTELLECT DESIGN ARENA,INTELLECT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-31,Punjab Chemicals & Crop Protection Ltd-$,PUNJAB CHEMICALS CROP PROTECTION $,PUNJABCHEM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-31,Smartlink Holdings Ltd,SMARTLINK HOLDINGS,SMARTLINK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-31,Tamboli Industries Ltd,TAMBOLI INDUSTRIES,TAMBOLIIN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-31,Teesta Agro Industries Ltd,TEESTA AGRO INDUSTRIES,TEEAI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-31,Transcorp International Ltd,TRANSCORP INTERNATIONAL,TRANSCOR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-07-31,Uniroyal Industries Ltd,UNIROYAL INDUSTRIES,UNIROYAL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
 2026-07-31,Punjab Chemicals & Crop Protection Limited,PUNJAB CHEMICALS CROP PROTECTION,PUNJABCHEM,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
 2026-07-31,Shree Ram Proteins Limited,SHREE RAM PROTEINS,SRPL,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
-2026-08-01,Balmer Lawrie & Company Ltd,BALMER LAWRIE,BALMLAWRIE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-01,Clean Science and Technology Ltd,CLEAN SCIENCE AND TECHNOLOGY,CLEAN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-01,D-Link (India) Ltd,D LINK INDIA,DLINKINDIA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-01,Incap Ltd,INCAP,INCAP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-01,Sarda Energy & Minerals Ltd-$,SARDA ENERGY MINERALS $,SARDAEN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-01,Sportking India Ltd,SPORTKING INDIA,SPORTKING,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
+2026-08-01,Balmer Lawrie & Company Ltd,BALMER LAWRIE,BALMLAWRIE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-01,Clean Science and Technology Ltd,CLEAN SCIENCE AND TECHNOLOGY,CLEAN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-01,D-Link (India) Ltd,D LINK INDIA,DLINKINDIA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-01,Incap Ltd,INCAP,INCAP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-01,Sarda Energy & Minerals Ltd-$,SARDA ENERGY MINERALS $,SARDAEN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-01,Sportking India Ltd,SPORTKING INDIA,SPORTKING,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
 2026-08-01,Central Depository Services (India) Limited,CENTRAL DEPOSITORY SERVICES INDIA,CDSL,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
 2026-08-01,Sarda Energy & Minerals Limited,SARDA ENERGY MINERALS,SARDAEN,Financial Results/Fund Raising,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
-2026-08-02,Persistent Systems Ltd,PERSISTENT SYSTEMS,PERSISTENT,Forthcoming Results,bse_official_file,Information Technology,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-08-03,Computer Age Management Services Ltd,COMPUTER AGE MANAGEMENT SERVICES,CAMS,Forthcoming Results,bse_official_file,Financial Services,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-08-03,Escorts Kubota Ltd,ESCORTS KUBOTA,ESCORTS,Forthcoming Results,bse_official_file,Automobile,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-08-03,Bharat Gears Ltd,BHARAT GEARS,BHARATGEAR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-03,JM Financial Ltd-$,JM FINANCIAL $,JMFINANCIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-03,Kansai Nerolac Paints Ltd,KANSAI NEROLAC PAINTS,KANSAINER,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-03,KCP Ltd,KCP,KCP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-03,NOCIL Ltd,NOCIL,NOCIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-03,Panchmahal Steel Ltd,PANCHMAHAL STEEL,PANCHMAHQ,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-03,Patel Integrated Logistics Ltd-$,PATEL INTEGRATED LOGISTICS $,PATINTLOG,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-03,Stove Kraft Ltd,STOVE KRAFT,STOVEKRAFT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-03,Thomas Cook (India) Ltd,THOMAS COOK INDIA,THOMASCOOK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-03,Unjha Formulations Ltd,UNJHA FORMULATIONS,UNJHAFOR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
+2026-08-02,Persistent Systems Ltd,PERSISTENT SYSTEMS,PERSISTENT,Forthcoming Results,bse_official_file,Information Technology,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-08-03,Computer Age Management Services Ltd,COMPUTER AGE MANAGEMENT SERVICES,CAMS,Forthcoming Results,bse_official_file,Financial Services,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-08-03,Escorts Kubota Ltd,ESCORTS KUBOTA,ESCORTS,Forthcoming Results,bse_official_file,Automobile,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-08-03,Bharat Gears Ltd,BHARAT GEARS,BHARATGEAR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-03,JM Financial Ltd-$,JM FINANCIAL $,JMFINANCIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-03,Kansai Nerolac Paints Ltd,KANSAI NEROLAC PAINTS,KANSAINER,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-03,KCP Ltd,KCP,KCP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-03,NOCIL Ltd,NOCIL,NOCIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-03,Panchmahal Steel Ltd,PANCHMAHAL STEEL,PANCHMAHQ,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-03,Patel Integrated Logistics Ltd-$,PATEL INTEGRATED LOGISTICS $,PATINTLOG,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-03,Stove Kraft Ltd,STOVE KRAFT,STOVEKRAFT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-03,Thomas Cook (India) Ltd,THOMAS COOK INDIA,THOMASCOOK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-03,Unjha Formulations Ltd,UNJHA FORMULATIONS,UNJHAFOR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
 2026-08-03,JM Financial Limited,JM FINANCIAL,JMFINANCIL,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
 2026-08-03,Patel Integrated Logistics Limited,PATEL INTEGRATED LOGISTICS,PATINTLOG,Financial Results/Other business matters,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
-2026-08-04,Marico Ltd,MARICO,MARICO,Forthcoming Results,bse_official_file,Consumer Goods,True,False,True,False,large,60,2026-07-19T05:36:49.751715+00:00
-2026-08-04,Pidilite Industries Ltd,PIDILITE INDUSTRIES,PIDILITIND,Forthcoming Results,bse_official_file,Chemicals,True,False,True,False,large,60,2026-07-19T05:36:49.751715+00:00
-2026-08-04,Castrol India Ltd,CASTROL INDIA,CASTROLIND,Forthcoming Results,bse_official_file,Oil & Gas,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-08-04,Godrej Properties Ltd,GODREJ PROPERTIES,GODREJPROP,Forthcoming Results,bse_official_file,Real Estate,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-08-04,United Breweries Ltd-$,UNITED BREWERIES $,UBL,Forthcoming Results,bse_official_file,Consumer Goods,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
+2026-08-04,Marico Ltd,MARICO,MARICO,Forthcoming Results,bse_official_file,Consumer Goods,True,False,True,False,large,60,2026-07-20T05:54:38.734396+00:00
+2026-08-04,Pidilite Industries Ltd,PIDILITE INDUSTRIES,PIDILITIND,Forthcoming Results,bse_official_file,Chemicals,True,False,True,False,large,60,2026-07-20T05:54:38.734396+00:00
+2026-08-04,Castrol India Ltd,CASTROL INDIA,CASTROLIND,Forthcoming Results,bse_official_file,Oil & Gas,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-08-04,Godrej Properties Ltd,GODREJ PROPERTIES,GODREJPROP,Forthcoming Results,bse_official_file,Real Estate,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-08-04,United Breweries Ltd-$,UNITED BREWERIES $,UBL,Forthcoming Results,bse_official_file,Consumer Goods,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
 2026-08-04,United Breweries Limited,UNITED BREWERIES,UBL,Financial Results,nse_official_file,Consumer Goods,True,False,False,False,mid,25,2026-07-17T14:55:04.550989+00:00
-2026-08-04,Alkyl Amines Chemicals Ltd-$,ALKYL AMINES CHEMICALS $,ALKYLAMINE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-04,BASF India Ltd,BASF INDIA,BASF,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-04,Bharat Bijlee Ltd-$,BHARAT BIJLEE $,BBL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-04,Emami Ltd-$,EMAMI $,EMAMILTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-04,Kalyan Jewellers India Ltd,KALYAN JEWELLERS INDIA,KALYANKJIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-04,Keystone Realtors Ltd,KEYSTONE REALTORS,RUSTOMJEE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-04,SPR Auto Technologies Ltd,SPR AUTO TECHNOLOGIES,SHRIPISTON,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-04,Timken India Ltd,TIMKEN INDIA,TIMKEN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-04,Trejhara Solutions Ltd,TREJHARA SOLUTIONS,TREJHARA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-04,Ugro Capital Ltd,UGRO CAPITAL,UGROCAP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-04,Wonderla Holidays Ltd,WONDERLA HOLIDAYS,WONDERLA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-04,Zydus Wellness Ltd-$,ZYDUS WELLNESS $,ZYDUSWELL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
+2026-08-04,Alkyl Amines Chemicals Ltd-$,ALKYL AMINES CHEMICALS $,ALKYLAMINE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-04,BASF India Ltd,BASF INDIA,BASF,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-04,Bharat Bijlee Ltd-$,BHARAT BIJLEE $,BBL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-04,Emami Ltd-$,EMAMI $,EMAMILTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-04,Kalyan Jewellers India Ltd,KALYAN JEWELLERS INDIA,KALYANKJIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-04,Keystone Realtors Ltd,KEYSTONE REALTORS,RUSTOMJEE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-04,SPR Auto Technologies Ltd,SPR AUTO TECHNOLOGIES,SHRIPISTON,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-04,Timken India Ltd,TIMKEN INDIA,TIMKEN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-04,Trejhara Solutions Ltd,TREJHARA SOLUTIONS,TREJHARA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-04,Ugro Capital Ltd,UGRO CAPITAL,UGROCAP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-04,Wonderla Holidays Ltd,WONDERLA HOLIDAYS,WONDERLA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-04,Zydus Wellness Ltd-$,ZYDUS WELLNESS $,ZYDUSWELL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
 2026-08-04,Alkyl Amines Chemicals Limited,ALKYL AMINES CHEMICALS,ALKYLAMINE,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
 2026-08-04,Bharat Bijlee Limited,BHARAT BIJLEE,BBL,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
 2026-08-04,BSE Limited,BSE,BSE,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
 2026-08-04,Emami Limited,EMAMI,EMAMILTD,Financial Results/Other business matters,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
 2026-08-04,Zydus Wellness Limited,ZYDUS WELLNESS,ZYDUSWELL,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
-2026-08-05,Berger Paints India Ltd,BERGER PAINTS INDIA,BERGEPAINT,Forthcoming Results,bse_official_file,Consumer Goods,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-08-05,Cummins India Ltd,CUMMINS INDIA,CUMMINSIND,Forthcoming Results,bse_official_file,Infrastructure,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
+2026-08-05,Berger Paints India Ltd,BERGER PAINTS INDIA,BERGEPAINT,Forthcoming Results,bse_official_file,Consumer Goods,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-08-05,Cummins India Ltd,CUMMINS INDIA,CUMMINSIND,Forthcoming Results,bse_official_file,Infrastructure,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
 2026-08-05,Berger Paints (I) Limited,BERGER PAINTS I,BERGEPAINT,Financial Results,nse_official_file,Consumer Goods,True,False,False,False,mid,25,2026-07-17T14:55:04.550989+00:00
-2026-08-05,Bayer CropScience Ltd,BAYER CROPSCIENCE,BAYERCROP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-05,Bikaji Foods International Ltd,BIKAJI FOODS INTERNATIONAL,BIKAJI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-05,Godrej Agrovet Ltd,GODREJ AGROVET,GODREJAGRO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-05,Kaycee Industries Ltd,KAYCEE INDUSTRIES,KAYCEEI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-05,Navin Fluorine International Ltd-$,NAVIN FLUORINE INTERNATIONAL $,NAVINFLUOR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-05,Paisalo Digital Ltd,PAISALO DIGITAL,PAISALO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-05,Shree Renuka Sugars Ltd,SHREE RENUKA SUGARS,RENUKA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-05,Rane (Madras) Ltd,RANE MADRAS,RML,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-05,Sagar Systech Ltd,SAGAR SYSTECH,SAGARSYST,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-05,Square Four Projects India Ltd,SQUARE FOUR PROJECTS INDIA,SFPIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-05,Shalby Ltd,SHALBY,SHALBY,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-05,Subex Ltd,SUBEX,SUBEXLTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-05,TV Today Network Ltd,TV TODAY NETWORK,TVTODAY,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
+2026-08-05,Bayer CropScience Ltd,BAYER CROPSCIENCE,BAYERCROP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-05,Bikaji Foods International Ltd,BIKAJI FOODS INTERNATIONAL,BIKAJI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-05,Godrej Agrovet Ltd,GODREJ AGROVET,GODREJAGRO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-05,Kaycee Industries Ltd,KAYCEE INDUSTRIES,KAYCEEI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-05,Navin Fluorine International Ltd-$,NAVIN FLUORINE INTERNATIONAL $,NAVINFLUOR,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-05,Paisalo Digital Ltd,PAISALO DIGITAL,PAISALO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-05,Shree Renuka Sugars Ltd,SHREE RENUKA SUGARS,RENUKA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-05,Rane (Madras) Ltd,RANE MADRAS,RML,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-05,Sagar Systech Ltd,SAGAR SYSTECH,SAGARSYST,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-05,Square Four Projects India Ltd,SQUARE FOUR PROJECTS INDIA,SFPIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-05,Shalby Ltd,SHALBY,SHALBY,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-05,Subex Ltd,SUBEX,SUBEXLTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-05,TV Today Network Ltd,TV TODAY NETWORK,TVTODAY,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
 2026-08-05,Navin Fluorine International Limited,NAVIN FLUORINE INTERNATIONAL,NAVINFLUOR,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
-2026-08-06,Trent Ltd,TRENT,TRENT,Forthcoming Results,bse_official_file,Consumer Services,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-08-06,Crompton Greaves Consumer Electricals Ltd,CROMPTON GREAVES CONSUMER ELECTRICALS,CROMPTON,Forthcoming Results,bse_official_file,Consumer Goods,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-08-06,Blue Star Ltd,BLUE STAR,BLUESTARCO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-06,Bosch Home Comfort India Ltd,BOSCH HOME COMFORT INDIA,BOSCH-HCIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-06,Coffee Day Enterprises Ltd,COFFEE DAY ENTERPRISES,COFFEEDAY,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-06,Deepak Spinners Ltd-$,DEEPAK SPINNERS $,DEEPAKSP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-06,Emcure Pharmaceuticals Ltd,EMCURE PHARMACEUTICALS,EMCURE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-06,Enterprise International Ltd,ENTERPRISE INTERNATIONAL,ENTRINT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-06,JSW Holdings Ltd,JSW HOLDINGS,JSWHL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-06,Procter & Gamble Health Ltd,PROCTER GAMBLE HEALTH,PGHL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-06,Rain Industries Ltd,RAIN INDUSTRIES,RAIN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-06,Sai Life Sciences Ltd,SAI LIFE SCIENCES,SAILIFE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-06,TCI Express Ltd,TCI EXPRESS,TCIEXP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-07,Hindalco Industries Ltd,HINDALCO INDUSTRIES,HINDALCO,Forthcoming Results,bse_official_file,Metals & Mining,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-08-07,Titan Company Ltd,TITAN,TITAN,Forthcoming Results,bse_official_file,Consumer Goods,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-08-07,Godrej Consumer Products Ltd,GODREJ CONSUMER PRODUCTS,GODREJCP,Forthcoming Results,bse_official_file,Consumer Goods,True,False,True,False,mid,50,2026-07-19T05:36:49.751715+00:00
-2026-08-07,Kovai Medical Center & Hospital Ltd,KOVAI MEDICAL CENTER HOSPITAL,KOVAI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-07,Mafatlal Industries Ltd-$,MAFATLAL INDUSTRIES $,MAFATIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-07,Maris Spinners Ltd-$,MARIS SPINNERS $,MARIS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-07,Tulasee Bio Ethanol Ltd,TULASEE BIO ETHANOL,TULASEEBIOE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-08,Anant Raj Ltd-$,ANANT RAJ $,ANANTRAJ,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-08,Atul Auto Ltd-$,ATUL AUTO $,ATULAUTO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
+2026-08-06,Trent Ltd,TRENT,TRENT,Forthcoming Results,bse_official_file,Consumer Services,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-08-06,Crompton Greaves Consumer Electricals Ltd,CROMPTON GREAVES CONSUMER ELECTRICALS,CROMPTON,Forthcoming Results,bse_official_file,Consumer Goods,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-08-06,Blue Star Ltd,BLUE STAR,BLUESTARCO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-06,Bosch Home Comfort India Ltd,BOSCH HOME COMFORT INDIA,BOSCH-HCIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-06,Coffee Day Enterprises Ltd,COFFEE DAY ENTERPRISES,COFFEEDAY,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-06,Deepak Spinners Ltd-$,DEEPAK SPINNERS $,DEEPAKSP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-06,Emcure Pharmaceuticals Ltd,EMCURE PHARMACEUTICALS,EMCURE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-06,Enterprise International Ltd,ENTERPRISE INTERNATIONAL,ENTRINT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-06,JSW Holdings Ltd,JSW HOLDINGS,JSWHL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-06,Procter & Gamble Health Ltd,PROCTER GAMBLE HEALTH,PGHL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-06,Rain Industries Ltd,RAIN INDUSTRIES,RAIN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-06,Sai Life Sciences Ltd,SAI LIFE SCIENCES,SAILIFE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-06,TCI Express Ltd,TCI EXPRESS,TCIEXP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-07,Hindalco Industries Ltd,HINDALCO INDUSTRIES,HINDALCO,Forthcoming Results,bse_official_file,Metals & Mining,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-08-07,Titan Company Ltd,TITAN,TITAN,Forthcoming Results,bse_official_file,Consumer Goods,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-08-07,Godrej Consumer Products Ltd,GODREJ CONSUMER PRODUCTS,GODREJCP,Forthcoming Results,bse_official_file,Consumer Goods,True,False,True,False,mid,50,2026-07-20T05:54:38.734396+00:00
+2026-08-07,Kovai Medical Center & Hospital Ltd,KOVAI MEDICAL CENTER HOSPITAL,KOVAI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-07,Mafatlal Industries Ltd-$,MAFATLAL INDUSTRIES $,MAFATIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-07,Maris Spinners Ltd-$,MARIS SPINNERS $,MARIS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-07,Tulasee Bio Ethanol Ltd,TULASEE BIO ETHANOL,TULASEEBIOE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-08,Anant Raj Ltd-$,ANANT RAJ $,ANANTRAJ,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-08,Atul Auto Ltd-$,ATUL AUTO $,ATULAUTO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
 2026-08-08,Anant Raj Limited,ANANT RAJ,ANANTRAJ,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
 2026-08-08,Atul Auto Limited,ATUL AUTO,ATULAUTO,Financial Results,nse_official_file,,False,False,False,False,,0,2026-07-17T14:55:04.550989+00:00
-2026-08-10,Bosch Ltd,BOSCH,BOSCHLTD,Forthcoming Results,bse_official_file,Automobile,True,False,True,False,mid,50,2026-07-19T05:36:49.751715+00:00
-2026-08-10,Amara Raja Energy & Mobility Ltd,AMARA RAJA ENERGY MOBILITY,ARE&M,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-10,GTN Textiles Ltd,GTN TEXTILES,GTNTEX,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-10,Nirlon Ltd,NIRLON,NIRLON,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-10,Patspin India Ltd,PATSPIN INDIA,PATSPINLTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-11,Esab India Ltd,ESAB INDIA,ESABINDIA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-11,Foseco India Ltd,FOSECO INDIA,FOSECOIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-11,IFCI Ltd,IFCI,IFCI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-12,Apollo Hospitals Enterprise Ltd,APOLLO HOSPITALS ENTERPRISE,APOLLOHOSP,Forthcoming Results,bse_official_file,Healthcare,True,True,False,False,large,75,2026-07-19T05:36:49.751715+00:00
-2026-08-12,ADC India Communications Ltd-$,ADC INDIA COMMUNICATIONS $,ADCINDIA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-12,Ansal Buildwell Ltd-$,ANSAL BUILDWELL $,ANSALBU,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-12,Centrum Capital Ltd,CENTRUM CAPITAL,CENTRUM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-12,DHP India Ltd,DHP INDIA,DHPIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-12,Mindteck (India) Ltd,MINDTECK INDIA,MINDTECK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-12,Mahanagar Telephone Nigam Ltd,MAHANAGAR TELEPHONE NIGAM,MTNL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-12,Mukand Ltd,MUKAND,MUKANDLTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-12,Sonal Adhesives Ltd,SONAL ADHESIVES,SONALAD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-13,Page Industries Ltd,PAGE INDUSTRIES,PAGEIND,Forthcoming Results,bse_official_file,Consumer Goods,True,False,True,False,mid,50,2026-07-19T05:36:49.751715+00:00
-2026-08-13,Elgi Equipments Ltd,ELGI EQUIPMENTS,ELGIEQUIP,Forthcoming Results,bse_official_file,Infrastructure,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-08-13,Max Financial Services Ltd,MAX FINANCIAL SERVICES,MFSL,Forthcoming Results,bse_official_file,Financial Services,True,False,False,False,mid,25,2026-07-19T05:36:49.751715+00:00
-2026-08-13,Daulat Securities Ltd,DAULAT SECURITIES,DAULAT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-13,Endurance Technologies Ltd,ENDURANCE TECHNOLOGIES,ENDURANCE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-13,Indigo Paints Ltd,INDIGO PAINTS,INDIGOPNTS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-13,IP Rings Ltd-$,IP RINGS $,IPRINGLTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-13,Pushpsons Industries Ltd,PUSHPSONS INDUSTRIES,PUSHPIN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-13,Rajapalayam Mills Ltd-$,RAJAPALAYAM MILLS $,RAJPALAYAM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-13,Rane Holdings Ltd,RANE HOLDINGS,RANEHOLDIN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-13,Shree Karthik Papers Ltd,SHREE KARTHIK PAPERS,SHKARTP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-14,3M India Ltd,3M INDIA,3MINDIA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-14,Cholamandalam Financial Holdings Ltd,CHOLAMANDALAM FINANCIAL HOLDINGS,CHOLAHLDNG,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-14,Lakshmi Mills Company Ltd-$,LAKSHMI MILLS $,LAKSHMIMIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
-2026-08-14,Samrat Pharmachem Ltd-$,SAMRAT PHARMACHEM $,SAMRATPH,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-19T05:36:49.751715+00:00
+2026-08-10,Bosch Ltd,BOSCH,BOSCHLTD,Forthcoming Results,bse_official_file,Automobile,True,False,True,False,mid,50,2026-07-20T05:54:38.734396+00:00
+2026-08-10,Amara Raja Energy & Mobility Ltd,AMARA RAJA ENERGY MOBILITY,ARE&M,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-10,GTN Textiles Ltd,GTN TEXTILES,GTNTEX,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-10,Nirlon Ltd,NIRLON,NIRLON,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-10,Patspin India Ltd,PATSPIN INDIA,PATSPINLTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-11,Esab India Ltd,ESAB INDIA,ESABINDIA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-11,Foseco India Ltd,FOSECO INDIA,FOSECOIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-11,IFCI Ltd,IFCI,IFCI,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-12,Apollo Hospitals Enterprise Ltd,APOLLO HOSPITALS ENTERPRISE,APOLLOHOSP,Forthcoming Results,bse_official_file,Healthcare,True,True,False,False,large,75,2026-07-20T05:54:38.734396+00:00
+2026-08-12,ADC India Communications Ltd-$,ADC INDIA COMMUNICATIONS $,ADCINDIA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-12,Ansal Buildwell Ltd-$,ANSAL BUILDWELL $,ANSALBU,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-12,Centrum Capital Ltd,CENTRUM CAPITAL,CENTRUM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-12,DHP India Ltd,DHP INDIA,DHPIND,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-12,Mindteck (India) Ltd,MINDTECK INDIA,MINDTECK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-12,Mahanagar Telephone Nigam Ltd,MAHANAGAR TELEPHONE NIGAM,MTNL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-12,Mukand Ltd,MUKAND,MUKANDLTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-12,Sonal Adhesives Ltd,SONAL ADHESIVES,SONALAD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-13,Page Industries Ltd,PAGE INDUSTRIES,PAGEIND,Forthcoming Results,bse_official_file,Consumer Goods,True,False,True,False,mid,50,2026-07-20T05:54:38.734396+00:00
+2026-08-13,Elgi Equipments Ltd,ELGI EQUIPMENTS,ELGIEQUIP,Forthcoming Results,bse_official_file,Infrastructure,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-08-13,Max Financial Services Ltd,MAX FINANCIAL SERVICES,MFSL,Forthcoming Results,bse_official_file,Financial Services,True,False,False,False,mid,25,2026-07-20T05:54:38.734396+00:00
+2026-08-13,Daulat Securities Ltd,DAULAT SECURITIES,DAULAT,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-13,Endurance Technologies Ltd,ENDURANCE TECHNOLOGIES,ENDURANCE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-13,Indigo Paints Ltd,INDIGO PAINTS,INDIGOPNTS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-13,IP Rings Ltd-$,IP RINGS $,IPRINGLTD,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-13,Pushpsons Industries Ltd,PUSHPSONS INDUSTRIES,PUSHPIN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-13,Rajapalayam Mills Ltd-$,RAJAPALAYAM MILLS $,RAJPALAYAM,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-13,Rane Holdings Ltd,RANE HOLDINGS,RANEHOLDIN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-13,Shree Karthik Papers Ltd,SHREE KARTHIK PAPERS,SHKARTP,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-14,3M India Ltd,3M INDIA,3MINDIA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-14,Cholamandalam Financial Holdings Ltd,CHOLAMANDALAM FINANCIAL HOLDINGS,CHOLAHLDNG,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-14,Lakshmi Mills Company Ltd-$,LAKSHMI MILLS $,LAKSHMIMIL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
+2026-08-14,Samrat Pharmachem Ltd-$,SAMRAT PHARMACHEM $,SAMRATPH,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-07-20T05:54:38.734396+00:00
