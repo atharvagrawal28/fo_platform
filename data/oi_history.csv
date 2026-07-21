@@ -143,7 +143,7 @@ ULTRACEMCO,2026-07-28,2026-07-20,11901.0,11730.0,1.46,2030200,-128400,-5.95,1350
 UNIONBANK,2026-07-28,2026-07-20,176.66,168.64,4.76,126081525,-9566850,-7.05,10794,Short Covering,Moderate,Union Bank of India,Banking,mid,False,False,False,False,,
 UNOMINDA,2026-07-28,2026-07-20,1154.4,1156.4,-0.17,4660150,-83050,-1.75,764,Neutral,Weak,Uno Minda,Automobile,mid,False,False,False,False,,
 UPL,2026-07-28,2026-07-20,608.35,616.9,-1.39,28341180,168020,0.6,1317,Neutral,Weak,UPL,Chemicals,large,False,False,True,False,,
-VBL,2026-07-28,2026-07-20,468.4,463.3,1.1,50617500,31875,0.06,2616,Neutral,Weak,Varun Beverages,Consumer Goods,large,False,False,True,False,,
+VBL,2026-07-28,2026-07-20,468.4,463.3,1.1,50617500,31875,0.06,2616,Neutral,Weak,Varun Beverages,Consumer Goods,large,False,False,True,True,2026-07-28,7.0
 VEDL,2026-07-28,2026-07-20,261.9,253.0,3.52,61787200,-2155100,-3.37,5462,Short Covering,Moderate,Vedanta,Metals & Mining,large,False,False,True,False,,
 VOLTAS,2026-07-28,2026-07-20,1362.1,1345.5,1.23,7932750,-60000,-0.75,1757,Neutral,Weak,Voltas,Consumer Goods,mid,False,False,False,False,,
 WIPRO,2026-07-28,2026-07-20,174.63,173.98,0.37,303924000,-3642000,-1.18,6798,Neutral,Weak,Wipro,Information Technology,large,True,False,False,False,,
