@@ -1,47 +1,47 @@
 symbol,expiry_date,snapshot_date,futures_price,prev_price,price_chg_pct,open_interest,oi_change,volume_contracts,oi_chg_pct,buildup_type,buildup_strength,company_name,sector,market_cap_tier,is_nifty50,is_banknifty,is_nifty_next50,has_earnings_this_week,earnings_date,days_to_earnings
 ABCAPITAL,2026-07-28,2026-07-22,400.8,409.05,-2.02,34010100,-2213400,1942,-6.11,Long Unwinding,Moderate,Aditya Birla Capital,Financial Services,mid,False,False,False,False,,
-ADANIENT,2026-07-28,2026-07-22,3143.3,3189.3,-1.44,15404268,-735729,5382,-4.56,Long Unwinding,Moderate,Adani Enterprises,Diversified,large,True,False,False,True,2026-07-29,7.0
-ADANIPORTS,2026-07-28,2026-07-22,1820.0,1847.0,-1.46,16611225,-435100,3390,-2.55,Long Unwinding,Moderate,Adani Ports,Infrastructure,large,True,False,False,True,2026-07-29,7.0
+ADANIENT,2026-07-28,2026-07-22,3143.3,3189.3,-1.44,15404268,-735729,5382,-4.56,Long Unwinding,Moderate,Adani Enterprises,Diversified,large,True,False,False,True,2026-07-29,6.0
+ADANIPORTS,2026-07-28,2026-07-22,1820.0,1847.0,-1.46,16611225,-435100,3390,-2.55,Long Unwinding,Moderate,Adani Ports,Infrastructure,large,True,False,False,True,2026-07-29,6.0
 ALKEM,2026-07-28,2026-07-22,5587.0,5688.5,-1.78,1500375,-58375,1604,-3.74,Long Unwinding,Moderate,Alkem Laboratories,Pharmaceuticals,mid,False,False,False,False,,
-AMBUJACEM,2026-07-28,2026-07-22,430.4,441.05,-2.41,71700000,-2895600,4540,-3.88,Long Unwinding,Moderate,Ambuja Cements,Cement,mid,False,False,True,True,2026-07-28,6.0
+AMBUJACEM,2026-07-28,2026-07-22,430.4,441.05,-2.41,71700000,-2895600,4540,-3.88,Long Unwinding,Moderate,Ambuja Cements,Cement,mid,False,False,True,True,2026-07-28,5.0
 APOLLOHOSP,2026-07-28,2026-07-22,8929.5,8950.5,-0.23,1897500,-97375,1585,-4.88,Neutral,Weak,Apollo Hospitals,Healthcare,large,True,False,False,False,,
 ASHOKLEY,2026-07-28,2026-07-22,152.35,153.92,-1.02,141050000,-4965000,3439,-3.4,Long Unwinding,Moderate,Ashok Leyland,Automobile,mid,False,False,False,False,,
-ASIANPAINT,2026-07-28,2026-07-22,2691.6,2692.8,-0.04,6750750,-281000,2293,-4.0,Neutral,Weak,Asian Paints,Consumer Goods,large,True,False,False,True,2026-07-29,7.0
+ASIANPAINT,2026-07-28,2026-07-22,2691.6,2692.8,-0.04,6750750,-281000,2293,-4.0,Neutral,Weak,Asian Paints,Consumer Goods,large,True,False,False,True,2026-07-29,6.0
 ASTRAL,2026-07-28,2026-07-22,1410.3,1397.9,0.89,7898625,131325,2985,1.69,Neutral,Weak,Astral,Infrastructure,mid,False,False,False,False,,
-AUBANK,2026-07-28,2026-07-22,981.8,1005.2,-2.33,19185000,-1143000,3164,-5.62,Long Unwinding,Moderate,AU Small Finance Bank,Banking,mid,False,True,False,True,2026-07-25,3.0
+AUBANK,2026-07-28,2026-07-22,981.8,1005.2,-2.33,19185000,-1143000,3164,-5.62,Long Unwinding,Moderate,AU Small Finance Bank,Banking,mid,False,True,False,True,2026-07-25,2.0
 AUROPHARMA,2026-07-28,2026-07-22,1531.6,1579.1,-3.01,8361100,-817300,5104,-8.9,Long Unwinding,Moderate,Aurobindo Pharma,Pharmaceuticals,mid,False,False,False,False,,
 AXISBANK,2026-07-28,2026-07-22,1240.6,1261.6,-1.66,63241875,-1950000,8279,-2.99,Long Unwinding,Moderate,Axis Bank,Banking,large,True,True,False,False,,
 BAJAJ-AUTO,2026-07-28,2026-07-22,11010.0,10447.5,5.38,2363775,-152400,21149,-6.06,Short Covering,Moderate,Bajaj Auto,Automobile,large,True,False,False,False,,
 BAJAJFINSV,2026-07-28,2026-07-22,1876.4,1899.3,-1.21,9125400,-386400,2631,-4.06,Long Unwinding,Moderate,Bajaj Finserv,Financial Services,large,True,False,False,False,,
-BAJFINANCE,2026-07-28,2026-07-22,1059.0,1069.4,-0.97,60430500,-4106250,9255,-6.36,Long Unwinding,Moderate,Bajaj Finance,Financial Services,large,True,False,False,False,,
+BAJFINANCE,2026-07-28,2026-07-22,1059.0,1069.4,-0.97,60430500,-4106250,9255,-6.36,Long Unwinding,Moderate,Bajaj Finance,Financial Services,large,True,False,False,True,2026-07-30,7.0
 BANDHANBNK,2026-07-28,2026-07-22,173.3,207.96,-16.67,66686400,-7815600,29756,-10.49,Long Unwinding,Strong,Bandhan Bank,Banking,mid,False,True,False,False,,
-BANKBARODA,2026-07-28,2026-07-22,245.45,247.85,-0.97,105928875,-3170700,4074,-2.91,Long Unwinding,Moderate,Bank of Baroda,Banking,mid,False,False,True,True,2026-07-24,2.0
-BEL,2026-07-28,2026-07-22,407.4,410.15,-0.67,85009800,-4852125,5246,-5.4,Neutral,Weak,Bharat Electronics,Capital Goods,large,True,False,False,True,2026-07-27,5.0
+BANKBARODA,2026-07-28,2026-07-22,245.45,247.85,-0.97,105928875,-3170700,4074,-2.91,Long Unwinding,Moderate,Bank of Baroda,Banking,mid,False,False,True,True,2026-07-24,1.0
+BEL,2026-07-28,2026-07-22,407.4,410.15,-0.67,85009800,-4852125,5246,-5.4,Neutral,Weak,Bharat Electronics,Capital Goods,large,True,False,False,True,2026-07-27,4.0
 BHARTIARTL,2026-07-28,2026-07-22,1929.8,1927.0,0.15,31008000,-1120050,5251,-3.49,Neutral,Weak,Bharti Airtel,Telecom,large,True,False,False,False,,
 BHEL,2026-07-28,2026-07-22,416.1,413.65,0.59,72486750,-3782625,4561,-4.96,Neutral,Weak,BHEL,Infrastructure,mid,False,False,True,False,,
 BIOCON,2026-07-28,2026-07-22,437.5,440.8,-0.75,44152500,-3652500,4470,-7.64,Long Unwinding,Moderate,Biocon,Pharmaceuticals,mid,False,False,False,False,,
 BOSCHLTD,2026-07-28,2026-07-22,41605.0,40870.0,1.8,202650,-11600,1390,-5.41,Short Covering,Moderate,Bosch,Automobile,mid,False,False,True,False,,
-BPCL,2026-07-28,2026-07-22,313.25,319.6,-1.99,41769275,630025,7379,1.53,Neutral,Weak,BPCL,Oil & Gas,large,False,False,False,True,2026-07-22,0.0
+BPCL,2026-07-28,2026-07-22,313.25,319.6,-1.99,41769275,630025,7379,1.53,Neutral,Weak,BPCL,Oil & Gas,large,False,False,False,False,,
 BRITANNIA,2026-07-28,2026-07-22,5498.0,5479.0,0.35,2048250,-103125,1875,-4.79,Neutral,Weak,Britannia Industries,Consumer Goods,large,False,False,False,False,,
 CAMS,2026-07-28,2026-07-22,772.5,766.9,0.73,6583500,-363825,973,-5.24,Neutral,Weak,CAMS,Financial Services,mid,False,False,False,False,,
-CANBK,2026-07-28,2026-07-22,126.75,127.74,-0.78,316480500,-7701750,3819,-2.38,Long Unwinding,Moderate,Canara Bank,Banking,mid,False,False,True,True,2026-07-27,5.0
-CHOLAFIN,2026-07-28,2026-07-22,1727.9,1763.2,-2.0,12873750,-801250,3645,-5.86,Long Unwinding,Moderate,Cholamandalam Finance,Financial Services,mid,False,False,True,True,2026-07-28,6.0
-CIPLA,2026-07-28,2026-07-22,1413.6,1431.8,-1.27,11868125,-1023825,4314,-7.94,Long Unwinding,Moderate,Cipla,Pharmaceuticals,large,True,False,False,True,2026-07-23,1.0
-COALINDIA,2026-07-28,2026-07-22,429.6,432.05,-0.57,59726700,-3734100,14161,-5.88,Neutral,Weak,Coal India,Metals & Mining,large,True,False,False,True,2026-07-27,5.0
-COFORGE,2026-07-28,2026-07-22,1471.9,1496.4,-1.64,17627725,-306375,3131,-1.71,Neutral,Weak,Coforge,Information Technology,mid,False,False,False,True,2026-07-27,5.0
-COLPAL,2026-07-28,2026-07-22,2116.1,2098.7,0.83,4488275,-18975,1468,-0.42,Neutral,Weak,Colgate Palmolive,Consumer Goods,mid,False,False,True,True,2026-07-29,7.0
-CONCOR,2026-07-28,2026-07-22,480.85,491.7,-2.21,16307500,-1647500,2172,-9.18,Long Unwinding,Moderate,Container Corporation,Infrastructure,mid,False,False,False,True,2026-07-24,2.0
+CANBK,2026-07-28,2026-07-22,126.75,127.74,-0.78,316480500,-7701750,3819,-2.38,Long Unwinding,Moderate,Canara Bank,Banking,mid,False,False,True,True,2026-07-27,4.0
+CHOLAFIN,2026-07-28,2026-07-22,1727.9,1763.2,-2.0,12873750,-801250,3645,-5.86,Long Unwinding,Moderate,Cholamandalam Finance,Financial Services,mid,False,False,True,True,2026-07-28,5.0
+CIPLA,2026-07-28,2026-07-22,1413.6,1431.8,-1.27,11868125,-1023825,4314,-7.94,Long Unwinding,Moderate,Cipla,Pharmaceuticals,large,True,False,False,True,2026-07-23,0.0
+COALINDIA,2026-07-28,2026-07-22,429.6,432.05,-0.57,59726700,-3734100,14161,-5.88,Neutral,Weak,Coal India,Metals & Mining,large,True,False,False,True,2026-07-27,4.0
+COFORGE,2026-07-28,2026-07-22,1471.9,1496.4,-1.64,17627725,-306375,3131,-1.71,Neutral,Weak,Coforge,Information Technology,mid,False,False,False,True,2026-07-27,4.0
+COLPAL,2026-07-28,2026-07-22,2116.1,2098.7,0.83,4488275,-18975,1468,-0.42,Neutral,Weak,Colgate Palmolive,Consumer Goods,mid,False,False,True,True,2026-07-29,6.0
+CONCOR,2026-07-28,2026-07-22,480.85,491.7,-2.21,16307500,-1647500,2172,-9.18,Long Unwinding,Moderate,Container Corporation,Infrastructure,mid,False,False,False,True,2026-07-24,1.0
 CROMPTON,2026-07-28,2026-07-22,253.4,255.7,-0.9,52100950,-1924250,2791,-3.56,Long Unwinding,Moderate,Crompton Greaves Consumer,Consumer Goods,mid,False,False,False,False,,
 CUMMINSIND,2026-07-28,2026-07-22,5598.5,5588.5,0.18,4186000,-390000,3613,-8.52,Neutral,Weak,Cummins India,Infrastructure,mid,False,False,False,False,,
-DABUR,2026-07-28,2026-07-22,426.35,426.0,0.08,28235000,-1031250,1796,-3.52,Neutral,Weak,Dabur India,Consumer Goods,mid,False,False,True,True,2026-07-29,7.0
-DALBHARAT,2026-07-28,2026-07-22,1864.0,1867.1,-0.17,4717700,65650,2492,1.41,Neutral,Weak,Dalmia Bharat,Cement,mid,False,False,False,True,2026-07-24,2.0
+DABUR,2026-07-28,2026-07-22,426.35,426.0,0.08,28235000,-1031250,1796,-3.52,Neutral,Weak,Dabur India,Consumer Goods,mid,False,False,True,True,2026-07-29,6.0
+DALBHARAT,2026-07-28,2026-07-22,1864.0,1867.1,-0.17,4717700,65650,2492,1.41,Neutral,Weak,Dalmia Bharat,Cement,mid,False,False,False,True,2026-07-24,1.0
 DELHIVERY,2026-07-28,2026-07-22,467.15,486.1,-3.9,21681675,-3100050,4962,-12.51,Long Unwinding,Strong,Delhivery,Infrastructure,mid,False,False,False,False,,
 DIVISLAB,2026-07-28,2026-07-22,7350.5,7315.0,0.49,3557300,-178200,4341,-4.77,Neutral,Weak,Divis Laboratories,Pharmaceuticals,large,False,False,False,False,,
 DLF,2026-07-28,2026-07-22,644.85,665.85,-3.15,38518700,-843600,4922,-2.14,Long Unwinding,Moderate,DLF,Real Estate,large,False,False,False,False,,
-DRREDDY,2026-07-28,2026-07-22,1182.9,1210.2,-2.26,13340625,-1215000,8048,-8.35,Long Unwinding,Moderate,Dr Reddys Laboratories,Pharmaceuticals,large,True,False,False,True,2026-07-22,0.0
-EICHERMOT,2026-07-28,2026-07-22,7635.0,7692.0,-0.74,3573000,-82600,3672,-2.26,Neutral,Weak,Eicher Motors,Automobile,large,True,False,False,True,2026-07-29,7.0
-ETERNAL,2026-07-28,2026-07-22,284.35,287.4,-1.06,131158550,-5497475,31735,-4.02,Long Unwinding,Moderate,Eternal,Consumer Services,large,True,False,False,True,2026-07-22,0.0
-EXIDEIND,2026-07-28,2026-07-22,447.55,443.55,0.9,19290600,-1373400,2744,-6.65,Short Covering,Moderate,Exide Industries,Automobile,mid,False,False,False,False,,
+DRREDDY,2026-07-28,2026-07-22,1182.9,1210.2,-2.26,13340625,-1215000,8048,-8.35,Long Unwinding,Moderate,Dr Reddys Laboratories,Pharmaceuticals,large,True,False,False,False,,
+EICHERMOT,2026-07-28,2026-07-22,7635.0,7692.0,-0.74,3573000,-82600,3672,-2.26,Neutral,Weak,Eicher Motors,Automobile,large,True,False,False,True,2026-07-29,6.0
+ETERNAL,2026-07-28,2026-07-22,284.35,287.4,-1.06,131158550,-5497475,31735,-4.02,Long Unwinding,Moderate,Eternal,Consumer Services,large,True,False,False,False,,
+EXIDEIND,2026-07-28,2026-07-22,447.55,443.55,0.9,19290600,-1373400,2744,-6.65,Short Covering,Moderate,Exide Industries,Automobile,mid,False,False,False,True,2026-07-30,7.0
 FEDERALBNK,2026-07-28,2026-07-22,353.4,356.55,-0.88,80157500,-2182500,3679,-2.65,Long Unwinding,Moderate,Federal Bank,Banking,mid,False,True,False,False,,
 FORTIS,2026-07-28,2026-07-22,947.3,968.2,-2.16,10034700,-1157850,2153,-10.34,Long Unwinding,Strong,Fortis Healthcare,Healthcare,mid,False,False,False,False,,
 GAIL,2026-07-28,2026-07-22,172.92,173.81,-0.51,71134900,-1288650,1460,-1.78,Neutral,Weak,GAIL,Oil & Gas,large,False,False,True,False,,
@@ -56,35 +56,35 @@ HDFCBANK,2026-07-28,2026-07-22,754.25,762.95,-1.14,198641950,-40869400,78241,-17
 HDFCLIFE,2026-07-28,2026-07-22,552.5,560.75,-1.47,39029100,-1593900,2920,-3.92,Long Unwinding,Moderate,HDFC Life,Financial Services,large,True,False,False,False,,
 HEROMOTOCO,2026-07-28,2026-07-22,4913.9,4967.0,-1.07,4983750,-214350,6367,-4.12,Long Unwinding,Moderate,Hero MotoCorp,Automobile,large,False,False,False,False,,
 HINDALCO,2026-07-28,2026-07-22,951.7,953.8,-0.22,45210900,-5277300,10693,-10.45,Neutral,Weak,Hindalco Industries,Metals & Mining,large,True,False,False,False,,
-HINDUNILVR,2026-07-28,2026-07-22,2156.5,2143.3,0.62,17271000,-851400,6112,-4.7,Neutral,Weak,Hindustan Unilever,Consumer Goods,large,True,False,False,True,2026-07-28,6.0
+HINDUNILVR,2026-07-28,2026-07-22,2156.5,2143.3,0.62,17271000,-851400,6112,-4.7,Neutral,Weak,Hindustan Unilever,Consumer Goods,large,True,False,False,True,2026-07-28,5.0
 ICICIBANK,2026-07-28,2026-07-22,1442.4,1463.7,-1.46,90129900,-4986800,14066,-5.24,Long Unwinding,Moderate,ICICI Bank,Banking,large,True,True,False,False,,
 ICICIGI,2026-07-28,2026-07-22,1586.6,1622.2,-2.19,6275100,-72800,1270,-1.15,Neutral,Weak,ICICI Lombard,Financial Services,large,False,False,True,False,,
 ICICIPRULI,2026-07-28,2026-07-22,499.05,500.5,-0.29,17767400,-1393975,3232,-7.27,Neutral,Weak,ICICI Prudential Life,Financial Services,large,False,False,False,False,,
-IDFCFIRSTB,2026-07-28,2026-07-22,80.84,81.72,-1.08,312085200,-25534075,4580,-7.56,Long Unwinding,Moderate,IDFC First Bank,Banking,mid,False,True,False,True,2026-07-25,3.0
-IEX,2026-07-28,2026-07-22,123.57,124.7,-0.91,72236100,-2727450,1310,-3.64,Long Unwinding,Moderate,Indian Energy Exchange,Financial Services,mid,False,False,True,True,2026-07-23,1.0
+IDFCFIRSTB,2026-07-28,2026-07-22,80.84,81.72,-1.08,312085200,-25534075,4580,-7.56,Long Unwinding,Moderate,IDFC First Bank,Banking,mid,False,True,False,True,2026-07-25,2.0
+IEX,2026-07-28,2026-07-22,123.57,124.7,-0.91,72236100,-2727450,1310,-3.64,Long Unwinding,Moderate,Indian Energy Exchange,Financial Services,mid,False,False,True,True,2026-07-23,0.0
 INDHOTEL,2026-07-28,2026-07-22,723.95,732.2,-1.13,24094000,-2034000,7097,-7.78,Long Unwinding,Moderate,Indian Hotels,Consumer Goods,mid,False,False,True,False,,
 INDIANB,2026-07-28,2026-07-22,828.1,854.95,-3.14,15908000,-24000,2350,-0.15,Neutral,Weak,Indian Bank,Banking,mid,False,False,False,False,,
-INDIGO,2026-07-28,2026-07-22,5110.0,5295.5,-3.5,5420400,-243000,9311,-4.29,Long Unwinding,Moderate,IndiGo,Consumer Goods,large,True,False,False,True,2026-07-23,1.0
-INDUSINDBK,2026-07-28,2026-07-22,1068.7,1064.85,0.36,32197200,-973700,12975,-2.94,Neutral,Weak,IndusInd Bank,Banking,large,False,True,False,True,2026-07-22,0.0
-INDUSTOWER,2026-07-28,2026-07-22,396.5,404.95,-2.09,82616600,-960500,4092,-1.15,Neutral,Weak,Indus Towers,Telecom,large,False,False,True,True,2026-07-27,5.0
-INFY,2026-07-28,2026-07-22,1054.4,1074.7,-1.89,97326400,-4681600,42820,-4.59,Long Unwinding,Moderate,Infosys,Information Technology,large,True,False,False,True,2026-07-23,1.0
+INDIGO,2026-07-28,2026-07-22,5110.0,5295.5,-3.5,5420400,-243000,9311,-4.29,Long Unwinding,Moderate,IndiGo,Consumer Goods,large,True,False,False,True,2026-07-23,0.0
+INDUSINDBK,2026-07-28,2026-07-22,1068.7,1064.85,0.36,32197200,-973700,12975,-2.94,Neutral,Weak,IndusInd Bank,Banking,large,False,True,False,False,,
+INDUSTOWER,2026-07-28,2026-07-22,396.5,404.95,-2.09,82616600,-960500,4092,-1.15,Neutral,Weak,Indus Towers,Telecom,large,False,False,True,True,2026-07-27,4.0
+INFY,2026-07-28,2026-07-22,1054.4,1074.7,-1.89,97326400,-4681600,42820,-4.59,Long Unwinding,Moderate,Infosys,Information Technology,large,True,False,False,True,2026-07-23,0.0
 IOC,2026-07-28,2026-07-22,142.09,143.27,-0.82,132931500,-9433125,3082,-6.63,Long Unwinding,Moderate,Indian Oil Corporation,Oil & Gas,large,False,False,True,False,,
 IREDA,2026-07-28,2026-07-22,119.2,120.53,-1.1,64028750,-552050,1727,-0.85,Neutral,Weak,IREDA,Financial Services,mid,False,False,False,False,,
-IRFC,2026-07-28,2026-07-22,87.07,88.16,-1.24,90158075,873425,1790,0.98,Neutral,Weak,IRFC,Financial Services,large,False,False,True,False,,
+IRFC,2026-07-28,2026-07-22,87.07,88.16,-1.24,90158075,873425,1790,0.98,Neutral,Weak,IRFC,Financial Services,large,False,False,True,True,2026-07-30,7.0
 ITC,2026-07-28,2026-07-22,281.1,281.1,0.0,123396150,-7805625,7244,-5.95,Neutral,Weak,ITC,Consumer Goods,large,True,False,False,False,,
-JINDALSTEL,2026-07-28,2026-07-22,1045.2,1044.9,0.03,11568125,-874375,2907,-7.03,Neutral,Weak,Jindal Steel & Power,Metals & Mining,mid,False,False,False,True,2026-07-24,2.0
+JINDALSTEL,2026-07-28,2026-07-22,1045.2,1044.9,0.03,11568125,-874375,2907,-7.03,Neutral,Weak,Jindal Steel & Power,Metals & Mining,mid,False,False,False,True,2026-07-24,1.0
 JIOFIN,2026-07-28,2026-07-22,234.43,240.19,-2.4,122872100,-14130550,11850,-10.31,Long Unwinding,Strong,Jio Financial Services,Financial Services,large,True,False,False,False,,
-JSWENERGY,2026-07-28,2026-07-22,562.9,567.5,-0.81,23061975,-199950,6411,-0.86,Neutral,Weak,JSW Energy,Power,mid,False,False,False,True,2026-07-22,0.0
+JSWENERGY,2026-07-28,2026-07-22,562.9,567.5,-0.81,23061975,-199950,6411,-0.86,Neutral,Weak,JSW Energy,Power,mid,False,False,False,False,,
 JSWSTEEL,2026-07-28,2026-07-22,1265.9,1267.1,-0.09,30240675,-7348050,12758,-19.55,Neutral,Weak,JSW Steel,Metals & Mining,large,True,False,False,False,,
 JUBLFOOD,2026-07-28,2026-07-22,417.6,425.35,-1.82,18953750,-247500,1275,-1.29,Neutral,Weak,Jubilant Foodworks,Consumer Goods,mid,False,False,False,False,,
 KOTAKBANK,2026-07-28,2026-07-22,381.6,386.45,-1.26,137006000,-9456000,8805,-6.46,Long Unwinding,Moderate,Kotak Mahindra Bank,Banking,large,True,True,False,False,,
-KPITTECH,2026-07-28,2026-07-22,554.6,566.55,-2.11,13776400,-19375,1987,-0.14,Neutral,Weak,KPIT Technologies,Information Technology,mid,False,False,False,True,2026-07-29,7.0
-LAURUSLABS,2026-07-28,2026-07-22,1577.3,1593.0,-0.99,12512850,-2119050,4564,-14.48,Long Unwinding,Moderate,Laurus Labs,Pharmaceuticals,mid,False,False,False,True,2026-07-24,2.0
-LICHSGFIN,2026-07-28,2026-07-22,538.0,548.8,-1.97,16662000,-2503000,3706,-13.06,Long Unwinding,Moderate,LIC Housing Finance,Financial Services,mid,False,False,False,False,,
+KPITTECH,2026-07-28,2026-07-22,554.6,566.55,-2.11,13776400,-19375,1987,-0.14,Neutral,Weak,KPIT Technologies,Information Technology,mid,False,False,False,True,2026-07-29,6.0
+LAURUSLABS,2026-07-28,2026-07-22,1577.3,1593.0,-0.99,12512850,-2119050,4564,-14.48,Long Unwinding,Moderate,Laurus Labs,Pharmaceuticals,mid,False,False,False,True,2026-07-24,1.0
+LICHSGFIN,2026-07-28,2026-07-22,538.0,548.8,-1.97,16662000,-2503000,3706,-13.06,Long Unwinding,Moderate,LIC Housing Finance,Financial Services,mid,False,False,False,True,2026-07-30,7.0
 LICI,2026-07-28,2026-07-22,424.1,430.75,-1.54,20407800,-564200,2033,-2.69,Long Unwinding,Moderate,LIC of India,Financial Services,large,False,False,True,False,,
-LT,2026-07-28,2026-07-22,3817.8,3847.8,-0.78,11782925,-973175,8161,-7.63,Long Unwinding,Moderate,Larsen & Toubro,Infrastructure,large,True,False,False,True,2026-07-28,6.0
+LT,2026-07-28,2026-07-22,3817.8,3847.8,-0.78,11782925,-973175,8161,-7.63,Long Unwinding,Moderate,Larsen & Toubro,Infrastructure,large,True,False,False,True,2026-07-28,5.0
 LUPIN,2026-07-28,2026-07-22,2415.7,2514.2,-3.92,5029450,-7650,2920,-0.15,Neutral,Weak,Lupin,Pharmaceuticals,large,False,False,True,False,,
-M&M,2026-07-28,2026-07-22,3172.7,3210.7,-1.18,14148000,-741800,9694,-4.98,Long Unwinding,Moderate,Mahindra & Mahindra,Automobile,large,True,False,False,False,,
+M&M,2026-07-28,2026-07-22,3172.7,3210.7,-1.18,14148000,-741800,9694,-4.98,Long Unwinding,Moderate,Mahindra & Mahindra,Automobile,large,True,False,False,True,2026-07-30,7.0
 MANAPPURAM,2026-07-28,2026-07-22,350.05,352.05,-0.57,55200000,-1620000,2716,-2.85,Neutral,Weak,Manappuram Finance,Financial Services,mid,False,False,False,False,,
 MARICO,2026-07-28,2026-07-22,861.05,853.4,0.9,11958000,-147600,1601,-1.22,Neutral,Weak,Marico,Consumer Goods,large,False,False,True,False,,
 MARUTI,2026-07-28,2026-07-22,13536.0,13628.0,-0.68,2051200,-92550,6125,-4.32,Neutral,Weak,Maruti Suzuki,Automobile,large,True,False,False,False,,
@@ -92,18 +92,18 @@ MAXHEALTH,2026-07-28,2026-07-22,1079.6,1101.8,-2.01,10078425,-170100,2647,-1.66,
 MCX,2026-07-28,2026-07-22,2812.1,2807.0,0.18,7417575,-172350,4525,-2.27,Neutral,Weak,MCX,Financial Services,mid,False,False,False,False,,
 MFSL,2026-07-28,2026-07-22,1523.8,1543.9,-1.3,8311200,-234000,1217,-2.74,Long Unwinding,Moderate,Max Financial Services,Financial Services,mid,False,False,False,False,,
 MOTHERSON,2026-07-28,2026-07-22,143.69,145.65,-1.35,143344200,-3314850,2677,-2.26,Long Unwinding,Moderate,Samvardhana Motherson,Automobile,mid,False,False,False,False,,
-MPHASIS,2026-07-28,2026-07-22,2271.8,2385.0,-4.75,4458575,-219175,5655,-4.69,Long Unwinding,Moderate,Mphasis,Information Technology,mid,False,False,False,True,2026-07-23,1.0
+MPHASIS,2026-07-28,2026-07-22,2271.8,2385.0,-4.75,4458575,-219175,5655,-4.69,Long Unwinding,Moderate,Mphasis,Information Technology,mid,False,False,False,True,2026-07-23,0.0
 MUTHOOTFIN,2026-07-28,2026-07-22,3045.6,3085.4,-1.29,6224075,-163625,3239,-2.56,Long Unwinding,Moderate,Muthoot Finance,Financial Services,mid,False,False,True,False,,
 NATIONALUM,2026-07-28,2026-07-22,343.25,344.2,-0.28,44988750,-446250,2224,-0.98,Neutral,Weak,National Aluminium,Metals & Mining,mid,False,False,False,False,,
 NAUKRI,2026-07-28,2026-07-22,1186.1,1203.05,-1.41,12658800,-977900,3663,-7.17,Long Unwinding,Moderate,Info Edge,Information Technology,large,False,False,True,False,,
 NBCC,2026-07-28,2026-07-22,94.8,96.82,-2.09,95472000,-8274500,2060,-7.98,Long Unwinding,Moderate,NBCC,Infrastructure,mid,False,False,False,False,,
-NESTLEIND,2026-07-28,2026-07-22,1498.2,1455.2,2.95,10679000,-247500,18684,-2.27,Short Covering,Moderate,Nestle India,Consumer Goods,large,True,False,False,True,2026-07-22,0.0
+NESTLEIND,2026-07-28,2026-07-22,1498.2,1455.2,2.95,10679000,-247500,18684,-2.27,Short Covering,Moderate,Nestle India,Consumer Goods,large,True,False,False,False,,
 NHPC,2026-07-28,2026-07-22,80.03,79.72,0.39,127873050,312750,1600,0.25,Neutral,Weak,NHPC,Power,mid,False,False,False,False,,
 NMDC,2026-07-28,2026-07-22,83.45,84.2,-0.89,351823500,-10455750,3763,-2.89,Long Unwinding,Moderate,NMDC,Metals & Mining,mid,False,False,False,False,,
-NTPC,2026-07-28,2026-07-22,350.1,348.45,0.47,114315000,-7681500,7358,-6.3,Neutral,Weak,NTPC,Power,large,True,False,False,True,2026-07-24,2.0
+NTPC,2026-07-28,2026-07-22,350.1,348.45,0.47,114315000,-7681500,7358,-6.3,Neutral,Weak,NTPC,Power,large,True,False,False,True,2026-07-24,1.0
 NYKAA,2026-07-28,2026-07-22,327.45,327.85,-0.12,43762500,-1203125,1913,-2.68,Neutral,Weak,FSN E-Commerce,Consumer Goods,mid,False,False,True,False,,
 OBEROIRLTY,2026-07-28,2026-07-22,1840.7,1875.9,-1.88,6090700,-23450,1981,-0.38,Neutral,Weak,Oberoi Realty,Real Estate,mid,False,False,False,False,,
-OFSS,2026-07-28,2026-07-22,10871.0,11672.0,-6.86,1598200,-21300,5288,-1.32,Neutral,Weak,Oracle Financial Services,Information Technology,large,False,False,True,True,2026-07-22,0.0
+OFSS,2026-07-28,2026-07-22,10871.0,11672.0,-6.86,1598200,-21300,5288,-1.32,Neutral,Weak,Oracle Financial Services,Information Technology,large,False,False,True,False,,
 ONGC,2026-07-28,2026-07-22,251.69,249.74,0.78,78187500,-2470500,3910,-3.06,Short Covering,Moderate,ONGC,Oil & Gas,large,True,False,False,False,,
 PAGEIND,2026-07-28,2026-07-22,39895.0,40045.0,-0.37,282380,-6300,1345,-2.18,Neutral,Weak,Page Industries,Consumer Goods,mid,False,False,True,False,,
 PAYTM,2026-07-28,2026-07-22,1267.5,1301.2,-2.59,21314275,-1052700,9464,-4.71,Long Unwinding,Moderate,One97 Communications,Financial Services,mid,False,False,True,False,,
@@ -116,34 +116,34 @@ PNB,2026-07-28,2026-07-22,110.69,112.03,-1.2,245952000,-17912000,4151,-6.79,Long
 POLYCAB,2026-07-28,2026-07-22,9124.5,8918.0,2.32,2400875,-266000,8526,-9.97,Short Covering,Moderate,Polycab India,Consumer Goods,large,False,False,False,False,,
 POWERGRID,2026-07-28,2026-07-22,289.05,286.45,0.91,51300000,-6610100,4645,-11.41,Short Covering,Moderate,Power Grid,Power,large,True,False,False,False,,
 RBLBANK,2026-07-28,2026-07-22,355.05,368.85,-3.74,43287950,-3505200,3420,-7.49,Long Unwinding,Moderate,RBL Bank,Banking,mid,False,True,False,False,,
-RECLTD,2026-07-28,2026-07-22,359.85,360.8,-0.26,38951325,-3488625,3032,-8.22,Neutral,Weak,REC,Financial Services,large,False,False,True,True,2026-07-24,2.0
+RECLTD,2026-07-28,2026-07-22,359.85,360.8,-0.26,38951325,-3488625,3032,-8.22,Neutral,Weak,REC,Financial Services,large,False,False,True,True,2026-07-24,1.0
 RELIANCE,2026-07-28,2026-07-22,1290.0,1306.2,-1.24,88461500,-6584000,20451,-6.93,Long Unwinding,Moderate,Reliance Industries,Oil & Gas,large,True,False,False,False,,
-SAIL,2026-07-28,2026-07-22,161.56,164.34,-1.69,181236700,-13282200,4495,-6.83,Long Unwinding,Moderate,Steel Authority of India,Metals & Mining,mid,False,False,True,True,2026-07-24,2.0
-SBICARD,2026-07-28,2026-07-22,625.2,644.4,-2.98,23281600,-1497600,7803,-6.04,Long Unwinding,Moderate,SBI Cards,Financial Services,large,False,False,False,True,2026-07-24,2.0
-SBILIFE,2026-07-28,2026-07-22,1807.0,1826.4,-1.06,6472500,-456375,2082,-6.59,Long Unwinding,Moderate,SBI Life Insurance,Financial Services,large,True,False,False,True,2026-07-24,2.0
+SAIL,2026-07-28,2026-07-22,161.56,164.34,-1.69,181236700,-13282200,4495,-6.83,Long Unwinding,Moderate,Steel Authority of India,Metals & Mining,mid,False,False,True,True,2026-07-24,1.0
+SBICARD,2026-07-28,2026-07-22,625.2,644.4,-2.98,23281600,-1497600,7803,-6.04,Long Unwinding,Moderate,SBI Cards,Financial Services,large,False,False,False,True,2026-07-24,1.0
+SBILIFE,2026-07-28,2026-07-22,1807.0,1826.4,-1.06,6472500,-456375,2082,-6.59,Long Unwinding,Moderate,SBI Life Insurance,Financial Services,large,True,False,False,True,2026-07-24,1.0
 SBIN,2026-07-28,2026-07-22,1024.0,1046.1,-2.11,52560000,-4041750,13444,-7.14,Long Unwinding,Moderate,State Bank of India,Banking,large,True,True,False,False,,
 SHREECEM,2026-07-28,2026-07-22,26655.0,27180.0,-1.93,341525,-325,659,-0.1,Neutral,Weak,Shree Cement,Cement,large,False,False,False,False,,
-SHRIRAMFIN,2026-07-28,2026-07-22,1057.5,1063.3,-0.55,23613975,-2682075,6454,-10.2,Neutral,Weak,Shriram Finance,Financial Services,large,True,False,False,True,2026-07-24,2.0
+SHRIRAMFIN,2026-07-28,2026-07-22,1057.5,1063.3,-0.55,23613975,-2682075,6454,-10.2,Neutral,Weak,Shriram Finance,Financial Services,large,True,False,False,True,2026-07-24,1.0
 SIEMENS,2026-07-28,2026-07-22,3641.8,3674.5,-0.89,3690400,-27475,1801,-0.74,Neutral,Weak,Siemens,Infrastructure,large,False,False,True,False,,
-SONACOMS,2026-07-28,2026-07-22,729.0,734.75,-0.78,14575050,-406700,2474,-2.71,Long Unwinding,Moderate,Sona BLW Precision,Automobile,mid,False,False,False,True,2026-07-23,1.0
-SRF,2026-07-28,2026-07-22,2854.3,2952.4,-3.32,3885200,350000,19687,9.9,Short Buildup,Moderate,SRF,Chemicals,mid,False,False,False,True,2026-07-22,0.0
+SONACOMS,2026-07-28,2026-07-22,729.0,734.75,-0.78,14575050,-406700,2474,-2.71,Long Unwinding,Moderate,Sona BLW Precision,Automobile,mid,False,False,False,True,2026-07-23,0.0
+SRF,2026-07-28,2026-07-22,2854.3,2952.4,-3.32,3885200,350000,19687,9.9,Short Buildup,Moderate,SRF,Chemicals,mid,False,False,False,False,,
 SUNPHARMA,2026-07-28,2026-07-22,1939.1,1960.5,-1.09,12995150,-2090200,8748,-13.86,Long Unwinding,Moderate,Sun Pharmaceutical,Pharmaceuticals,large,True,False,False,False,,
-TATACONSUM,2026-07-28,2026-07-22,1096.1,1083.9,1.13,14729000,-184800,3551,-1.24,Neutral,Weak,Tata Consumer Products,Consumer Goods,large,True,False,True,True,2026-07-24,2.0
+TATACONSUM,2026-07-28,2026-07-22,1096.1,1083.9,1.13,14729000,-184800,3551,-1.24,Neutral,Weak,Tata Consumer Products,Consumer Goods,large,True,False,True,True,2026-07-24,1.0
 TATAELXSI,2026-07-28,2026-07-22,3415.0,3462.5,-1.37,3265250,-59375,2859,-1.79,Neutral,Weak,Tata Elxsi,Information Technology,mid,False,False,True,False,,
-TATASTEEL,2026-07-28,2026-07-22,186.56,187.17,-0.33,150180250,-13120250,8393,-8.03,Neutral,Weak,Tata Steel,Metals & Mining,large,True,False,False,False,,
+TATASTEEL,2026-07-28,2026-07-22,186.56,187.17,-0.33,150180250,-13120250,8393,-8.03,Neutral,Weak,Tata Steel,Metals & Mining,large,True,False,False,True,2026-07-30,7.0
 TCS,2026-07-28,2026-07-22,2212.6,2226.1,-0.61,36159975,-1261125,19383,-3.37,Neutral,Weak,Tata Consultancy Services,Information Technology,large,True,False,False,False,,
 TECHM,2026-07-28,2026-07-22,1560.4,1574.0,-0.86,19480200,-974400,4345,-4.76,Long Unwinding,Moderate,Tech Mahindra,Information Technology,large,True,False,False,False,,
 TIINDIA,2026-07-28,2026-07-22,2904.8,2916.9,-0.41,1910600,-7200,1089,-0.38,Neutral,Weak,Tube Investments,Automobile,mid,False,False,False,False,,
 TITAN,2026-07-28,2026-07-22,4716.3,4684.5,0.68,4942875,-149800,3472,-2.94,Neutral,Weak,Titan Company,Consumer Goods,large,True,False,False,False,,
 TMPV,2026-07-28,2026-07-22,328.05,333.85,-1.74,82142400,-2640000,5734,-3.11,Long Unwinding,Moderate,Tata Motors Passenger Vehicles,Automobile and Auto Components,large,True,False,False,False,,
-TORNTPHARM,2026-07-28,2026-07-22,5029.6,5032.7,-0.06,3586875,-3875,2630,-0.11,Neutral,Weak,Torrent Pharmaceuticals,Pharmaceuticals,mid,False,False,False,False,,
+TORNTPHARM,2026-07-28,2026-07-22,5029.6,5032.7,-0.06,3586875,-3875,2630,-0.11,Neutral,Weak,Torrent Pharmaceuticals,Pharmaceuticals,mid,False,False,False,True,2026-07-30,7.0
 TRENT,2026-07-28,2026-07-22,2885.7,2896.8,-0.38,11693250,-435825,4006,-3.59,Neutral,Weak,Trent,Consumer Services,large,True,False,False,False,,
 TVSMOTOR,2026-07-28,2026-07-22,3907.7,3794.6,2.98,12010950,-420875,14401,-3.39,Short Covering,Moderate,TVS Motor Company,Automobile,large,False,False,True,False,,
 ULTRACEMCO,2026-07-28,2026-07-22,11874.0,12090.0,-1.79,1624350,-212350,6048,-11.56,Long Unwinding,Moderate,UltraTech Cement,Cement,large,True,False,False,False,,
 UNIONBANK,2026-07-28,2026-07-22,170.78,176.14,-3.04,117452775,-3429375,2855,-2.84,Long Unwinding,Moderate,Union Bank of India,Banking,mid,False,False,False,False,,
 UNOMINDA,2026-07-28,2026-07-22,1131.1,1147.6,-1.44,4532550,-159500,1367,-3.4,Long Unwinding,Moderate,Uno Minda,Automobile,mid,False,False,False,False,,
 UPL,2026-07-28,2026-07-22,608.6,618.05,-1.53,24250435,-2658510,2711,-9.88,Long Unwinding,Moderate,UPL,Chemicals,large,False,False,True,False,,
-VBL,2026-07-28,2026-07-22,460.65,463.7,-0.66,47705400,-1898475,6614,-3.83,Neutral,Weak,Varun Beverages,Consumer Goods,large,False,False,True,True,2026-07-28,6.0
+VBL,2026-07-28,2026-07-22,460.65,463.7,-0.66,47705400,-1898475,6614,-3.83,Neutral,Weak,Varun Beverages,Consumer Goods,large,False,False,True,True,2026-07-28,5.0
 VEDL,2026-07-28,2026-07-22,262.9,265.6,-1.02,58664950,-1214400,3778,-2.03,Long Unwinding,Moderate,Vedanta,Metals & Mining,large,False,False,True,False,,
 VOLTAS,2026-07-28,2026-07-22,1309.1,1360.9,-3.81,7828500,-73125,2886,-0.93,Neutral,Weak,Voltas,Consumer Goods,mid,False,False,False,False,,
 WIPRO,2026-07-28,2026-07-22,172.75,173.48,-0.42,278526000,-16434000,9201,-5.57,Neutral,Weak,Wipro,Information Technology,large,True,False,False,False,,
