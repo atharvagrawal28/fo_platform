@@ -144,7 +144,7 @@ UNIONBANK,2026-07-28,2026-07-23,168.43,170.78,-1.38,89004450,-28448325,-24.22,83
 UNOMINDA,2026-07-28,2026-07-23,1130.6,1131.1,-0.04,2895200,-1637350,-36.12,3797,Neutral,Weak,Uno Minda,Automobile,mid,False,False,False,False,,
 UPL,2026-07-28,2026-07-23,606.25,608.6,-0.39,20016060,-4234375,-17.46,4103,Neutral,Weak,UPL,Chemicals,large,False,False,True,False,,
 VBL,2026-07-28,2026-07-23,458.65,460.65,-0.43,36802875,-10902525,-22.85,10624,Neutral,Weak,Varun Beverages,Consumer Goods,large,False,False,True,True,2026-07-28,4.0
-VEDL,2026-07-28,2026-07-23,265.05,262.9,0.82,50813900,-7851050,-13.38,10679,Short Covering,Moderate,Vedanta,Metals & Mining,large,False,False,True,False,,
+VEDL,2026-07-28,2026-07-23,265.05,262.9,0.82,50813900,-7851050,-13.38,10679,Short Covering,Moderate,Vedanta,Metals & Mining,large,False,False,True,True,2026-07-30,6.0
 VOLTAS,2026-07-28,2026-07-23,1312.3,1309.1,0.24,6233625,-1594875,-20.37,6644,Neutral,Weak,Voltas,Consumer Goods,mid,False,False,False,False,,
 WIPRO,2026-07-28,2026-07-23,173.38,172.75,0.36,191877000,-86649000,-31.11,35244,Neutral,Weak,Wipro,Information Technology,large,True,False,False,False,,
 YESBANK,2026-07-28,2026-07-23,22.91,23.21,-1.29,895866600,-157614800,-14.96,6604,Long Unwinding,Moderate,Yes Bank,Banking,mid,False,False,False,False,,
