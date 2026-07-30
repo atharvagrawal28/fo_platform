@@ -42,7 +42,7 @@ DRREDDY,2026-08-25,2026-07-29,1144.7,1140.5,0.37,13909375,303125,4769,2.23,Neutr
 EICHERMOT,2026-08-25,2026-07-29,7745.5,7785.0,-0.51,3948900,4500,5406,0.11,Neutral,Weak,Eicher Motors,Automobile,large,True,False,False,False,,
 ETERNAL,2026-08-25,2026-07-29,311.3,309.25,0.66,151661925,-1661125,16173,-1.08,Neutral,Weak,Eternal,Consumer Services,large,True,False,False,False,,
 FEDERALBNK,2026-08-25,2026-07-29,359.0,357.65,0.38,86850000,-1145000,2144,-1.3,Neutral,Weak,Federal Bank,Banking,mid,False,True,False,False,,
-FORTIS,2026-08-25,2026-07-29,958.1,951.3,0.71,9089975,58125,1023,0.64,Neutral,Weak,Fortis Healthcare,Healthcare,mid,False,False,False,False,,
+FORTIS,2026-08-25,2026-07-29,958.1,951.3,0.71,9089975,58125,1023,0.64,Neutral,Weak,Fortis Healthcare,Healthcare,mid,False,False,False,True,2026-08-06,7.0
 GAIL,2026-08-25,2026-07-29,176.15,176.28,-0.07,78557950,1391600,2557,1.8,Neutral,Weak,GAIL,Oil & Gas,large,False,False,True,True,2026-07-31,1.0
 GODREJCP,2026-08-25,2026-07-29,1074.6,1069.4,0.49,10180500,39500,1597,0.39,Neutral,Weak,Godrej Consumer Products,Consumer Goods,mid,False,False,True,False,,
 GODREJPROP,2026-08-25,2026-07-29,2162.3,2150.2,0.56,7525375,-113750,2382,-1.49,Neutral,Weak,Godrej Properties,Real Estate,mid,False,False,False,True,2026-08-04,5.0
@@ -80,7 +80,7 @@ KOTAKBANK,2026-08-25,2026-07-29,391.45,387.3,1.07,179632000,78000,3852,0.04,Neut
 KPITTECH,2026-08-25,2026-07-29,637.65,602.75,5.79,12305450,679675,34529,5.85,Long Buildup,Moderate,KPIT Technologies,Information Technology,mid,False,False,False,False,,
 LAURUSLABS,2026-08-25,2026-07-29,1785.3,1764.1,1.2,16630250,-498950,4262,-2.91,Short Covering,Moderate,Laurus Labs,Pharmaceuticals,mid,False,False,False,False,,
 LICHSGFIN,2026-08-25,2026-07-29,547.15,538.8,1.55,23564000,305000,2655,1.31,Neutral,Weak,LIC Housing Finance,Financial Services,mid,False,False,False,True,2026-07-30,0.0
-LICI,2026-08-25,2026-07-29,421.8,422.95,-0.27,18233600,105000,832,0.58,Neutral,Weak,LIC of India,Financial Services,large,False,False,True,False,,
+LICI,2026-08-25,2026-07-29,421.8,422.95,-0.27,18233600,105000,832,0.58,Neutral,Weak,LIC of India,Financial Services,large,False,False,True,True,2026-08-06,7.0
 LT,2026-08-25,2026-07-29,3945.1,3851.2,2.44,12023725,-642425,21151,-5.07,Short Covering,Moderate,Larsen & Toubro,Infrastructure,large,True,False,False,False,,
 LUPIN,2026-08-25,2026-07-29,2461.9,2410.4,2.14,5668225,301325,2837,5.61,Long Buildup,Moderate,Lupin,Pharmaceuticals,large,False,False,True,True,2026-08-06,7.0
 M&M,2026-08-25,2026-07-29,3230.1,3286.8,-1.73,14681600,-803200,16265,-5.19,Long Unwinding,Moderate,Mahindra & Mahindra,Automobile,large,True,False,False,True,2026-07-30,0.0
