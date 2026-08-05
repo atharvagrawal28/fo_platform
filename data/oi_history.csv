@@ -84,7 +84,7 @@ LICI,2026-08-25,2026-08-04,390.3,425.5,-8.27,66228400,48123600,265.81,61346,Shor
 LT,2026-08-25,2026-08-04,4021.0,4018.6,0.06,11433450,-60900,-0.53,7424,Neutral,Weak,Larsen & Toubro,Infrastructure,large,True,False,False,False,,
 LUPIN,2026-08-25,2026-08-04,2395.5,2386.2,0.39,6428550,22100,0.34,1283,Neutral,Weak,Lupin,Pharmaceuticals,large,False,False,True,True,2026-08-06,1.0
 M&M,2026-08-25,2026-08-04,3422.7,3405.8,0.5,12172000,-116800,-0.95,6117,Neutral,Weak,Mahindra & Mahindra,Automobile,large,True,False,False,False,,
-MANAPPURAM,2026-08-25,2026-08-04,358.6,364.8,-1.7,63549000,2613000,4.29,3293,Short Buildup,Moderate,Manappuram Finance,Financial Services,mid,False,False,False,False,,
+MANAPPURAM,2026-08-25,2026-08-04,358.6,364.8,-1.7,63549000,2613000,4.29,3293,Short Buildup,Moderate,Manappuram Finance,Financial Services,mid,False,False,False,True,2026-08-11,6.0
 MARICO,2026-08-25,2026-08-04,874.6,880.75,-0.7,15948000,-298800,-1.84,7288,Neutral,Weak,Marico,Consumer Goods,large,False,False,True,False,,
 MARUTI,2026-08-25,2026-08-04,14048.0,14036.0,0.09,2055550,9950,0.49,5852,Neutral,Weak,Maruti Suzuki,Automobile,large,True,False,False,False,,
 MAXHEALTH,2026-08-25,2026-08-04,1073.6,1096.2,-2.06,9866850,180075,1.86,1531,Neutral,Weak,Max Healthcare,Healthcare,mid,True,False,True,False,,
