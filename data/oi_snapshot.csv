@@ -123,7 +123,7 @@ SBILIFE,2026-08-25,2026-08-05,1889.8,1869.2,1.1,5648625,-169875,1649,-2.92,Short
 SBIN,2026-08-25,2026-08-05,1057.0,1040.7,1.57,80733000,-1699500,12979,-2.06,Short Covering,Moderate,State Bank of India,Banking,large,True,True,False,True,2026-08-07,1.0
 SHREECEM,2026-08-25,2026-08-05,26845.0,26810.0,0.13,375875,5450,1801,1.47,Neutral,Weak,Shree Cement,Cement,large,False,False,False,False,,
 SHRIRAMFIN,2026-08-25,2026-08-05,1118.7,1082.1,3.38,26422275,98175,7479,0.37,Neutral,Weak,Shriram Finance,Financial Services,large,True,False,False,False,,
-SIEMENS,2026-08-25,2026-08-05,3990.4,4017.0,-0.66,3392025,-64050,2829,-1.85,Neutral,Weak,Siemens,Infrastructure,large,False,False,True,False,,
+SIEMENS,2026-08-25,2026-08-05,3990.4,4017.0,-0.66,3392025,-64050,2829,-1.85,Neutral,Weak,Siemens,Infrastructure,large,False,False,True,True,2026-08-11,5.0
 SONACOMS,2026-08-25,2026-08-05,819.5,785.45,4.34,12187525,1363425,5435,12.6,Long Buildup,Strong,Sona BLW Precision,Automobile,mid,False,False,False,False,,
 SRF,2026-08-25,2026-08-05,2650.7,2635.3,0.58,4579800,6600,1354,0.14,Neutral,Weak,SRF,Chemicals,mid,False,False,False,False,,
 SUNPHARMA,2026-08-25,2026-08-05,1950.8,1961.7,-0.56,13915650,91000,2841,0.66,Neutral,Weak,Sun Pharmaceutical,Pharmaceuticals,large,True,False,False,False,,
