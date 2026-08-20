@@ -1,10 +1,11 @@
 result_date,company_name,name_norm,symbol,meeting_type,source,sector,is_fo,is_nifty50,is_nifty_next50,is_banknifty,market_cap_tier,importance_score,updated_at
 2026-08-19,Lohia Corp Limited,LOHIA,LCL,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-19T14:02:49.642897+00:00
 2026-08-19,Xtranet Technologies Limited,XTRANET TECHNOLOGIES,XTRANET,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-19T14:02:49.642897+00:00
-2026-08-20,Manipal Health Enterprises Limited,MANIPAL HEALTH ENTERPRISES,MANIPALHOS,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-20T03:24:54.691791+00:00
-2026-08-20,Supreme Engineering Limited,SUPREME ENGINEERING,SUPREMEENG,Financial Results/Fund Raising,nse_official_file,,False,False,False,False,,0,2026-08-20T03:24:54.691791+00:00
-2026-08-21,Flexituff Ventures International Limited,FLEXITUFF VENTURES INTERNATIONAL,FLEXITUFF,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-20T03:24:54.691791+00:00
-2026-08-21,Innova Captab Limited,INNOVA CAPTAB,INNOVACAP,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-20T03:24:54.691791+00:00
-2026-08-22,Heranba Industries Limited,HERANBA INDUSTRIES,HERANBA,Financial Results/Other business matters,nse_official_file,,False,False,False,False,,0,2026-08-20T03:24:54.691791+00:00
-2026-08-25,The State Trading Corporation of India Limited,THE STATE TRADING OF INDIA,STCINDIA,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-20T03:24:54.691791+00:00
-2026-08-26,Juniper Green Energy Limited,JUNIPER GREEN ENERGY,JNPR,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-20T03:24:54.691791+00:00
+2026-08-20,Manipal Health Enterprises Limited,MANIPAL HEALTH ENTERPRISES,MANIPALHOS,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-20T11:21:45.324118+00:00
+2026-08-20,Supreme Engineering Limited,SUPREME ENGINEERING,SUPREMEENG,Financial Results/Fund Raising,nse_official_file,,False,False,False,False,,0,2026-08-20T11:21:45.324118+00:00
+2026-08-21,Flexituff Ventures International Limited,FLEXITUFF VENTURES INTERNATIONAL,FLEXITUFF,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-20T11:21:45.324118+00:00
+2026-08-21,Innova Captab Limited,INNOVA CAPTAB,INNOVACAP,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-20T11:21:45.324118+00:00
+2026-08-22,Heranba Industries Limited,HERANBA INDUSTRIES,HERANBA,Financial Results/Other business matters,nse_official_file,,False,False,False,False,,0,2026-08-20T11:21:45.324118+00:00
+2026-08-25,MV Electrosystems Limited,MV ELECTROSYSTEMS,MVELECTRO,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-20T11:21:45.324118+00:00
+2026-08-25,The State Trading Corporation of India Limited,THE STATE TRADING OF INDIA,STCINDIA,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-20T11:21:45.324118+00:00
+2026-08-26,Juniper Green Energy Limited,JUNIPER GREEN ENERGY,JNPR,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-20T11:21:45.324118+00:00
