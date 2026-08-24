@@ -1,8 +1,8 @@
 result_date,company_name,name_norm,symbol,meeting_type,source,sector,is_fo,is_nifty50,is_nifty_next50,is_banknifty,market_cap_tier,importance_score,updated_at
-2026-08-25,Ardee Industries Limited,ARDEE INDUSTRIES,ARDEE,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-24T03:31:37.766546+00:00
-2026-08-25,MV Electrosystems Limited,MV ELECTROSYSTEMS,MVELECTRO,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-24T03:31:37.766546+00:00
-2026-08-25,The State Trading Corporation of India Limited,THE STATE TRADING OF INDIA,STCINDIA,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-24T03:31:37.766546+00:00
-2026-08-26,Juniper Green Energy Limited,JUNIPER GREEN ENERGY,JNPR,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-24T03:31:37.766546+00:00
-2026-08-26,Simbhaoli Sugars Limited,SIMBHAOLI SUGARS,SIMBHALS,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-24T03:31:37.766546+00:00
-2026-08-26,Vikas EcoTech Limited,VIKAS ECOTECH,VIKASECO,Financial Results/Other business matters,nse_official_file,,False,False,False,False,,0,2026-08-24T03:31:37.766546+00:00
-2026-08-31,Milky Mist Dairy Food Limited,MILKY MIST DAIRY FOOD,MILKYMIST,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-24T03:31:37.766546+00:00
+2026-08-25,Ardee Industries Limited,ARDEE INDUSTRIES,ARDEE,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-24T11:22:42.255960+00:00
+2026-08-25,MV Electrosystems Limited,MV ELECTROSYSTEMS,MVELECTRO,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-24T11:22:42.255960+00:00
+2026-08-25,The State Trading Corporation of India Limited,THE STATE TRADING OF INDIA,STCINDIA,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-24T11:22:42.255960+00:00
+2026-08-26,Juniper Green Energy Limited,JUNIPER GREEN ENERGY,JNPR,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-24T11:22:42.255960+00:00
+2026-08-26,Simbhaoli Sugars Limited,SIMBHAOLI SUGARS,SIMBHALS,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-24T11:22:42.255960+00:00
+2026-08-26,Vikas EcoTech Limited,VIKAS ECOTECH,VIKASECO,Financial Results/Other business matters,nse_official_file,,False,False,False,False,,0,2026-08-24T11:22:42.255960+00:00
+2026-08-31,Milky Mist Dairy Food Limited,MILKY MIST DAIRY FOOD,MILKYMIST,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-24T11:22:42.255960+00:00
