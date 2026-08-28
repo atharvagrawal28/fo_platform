@@ -1,8 +1,8 @@
 result_date,company_name,name_norm,symbol,meeting_type,source,sector,is_fo,is_nifty50,is_nifty_next50,is_banknifty,market_cap_tier,importance_score,updated_at
-2026-08-29,Setco Automotive Limited,SETCO AUTOMOTIVE,SETCO,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-28T21:18:47.896294+00:00
-2026-08-29,Supreme Engineering Limited,SUPREME ENGINEERING,SUPREMEENG,Financial Results/Fund Raising,nse_official_file,,False,False,False,False,,0,2026-08-28T21:18:47.896294+00:00
-2026-08-30,Nagarjuna Fertilizers and Chemicals Limited,NAGARJUNA FERTILIZERS AND CHEMICALS,NAGAFERT,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-28T21:18:47.896294+00:00
-2026-08-31,LEAP India Limited,LEAP INDIA,LEAPIND,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-28T21:18:47.896294+00:00
-2026-08-31,Milky Mist Dairy Food Limited,MILKY MIST DAIRY FOOD,MILKYMIST,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-28T21:18:47.896294+00:00
-2026-08-31,Setco Automotive Limited,SETCO AUTOMOTIVE,SETCO,Financial Results/Other business matters,nse_official_file,,False,False,False,False,,0,2026-08-28T21:18:47.896294+00:00
-2026-09-02,Technocraft Ventures Limited,TECHNOCRAFT VENTURES,TECHNOCRAF,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-28T21:18:47.896294+00:00
+2026-08-29,Setco Automotive Limited,SETCO AUTOMOTIVE,SETCO,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-28T23:05:38.496650+00:00
+2026-08-29,Supreme Engineering Limited,SUPREME ENGINEERING,SUPREMEENG,Financial Results/Fund Raising,nse_official_file,,False,False,False,False,,0,2026-08-28T23:05:38.496650+00:00
+2026-08-30,Nagarjuna Fertilizers and Chemicals Limited,NAGARJUNA FERTILIZERS AND CHEMICALS,NAGAFERT,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-28T23:05:38.496650+00:00
+2026-08-31,LEAP India Limited,LEAP INDIA,LEAPIND,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-28T23:05:38.496650+00:00
+2026-08-31,Milky Mist Dairy Food Limited,MILKY MIST DAIRY FOOD,MILKYMIST,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-28T23:05:38.496650+00:00
+2026-08-31,Setco Automotive Limited,SETCO AUTOMOTIVE,SETCO,Financial Results/Other business matters,nse_official_file,,False,False,False,False,,0,2026-08-28T23:05:38.496650+00:00
+2026-09-02,Technocraft Ventures Limited,TECHNOCRAFT VENTURES,TECHNOCRAF,Financial Results,nse_official_file,,False,False,False,False,,0,2026-08-28T23:05:38.496650+00:00
