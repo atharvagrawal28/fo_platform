@@ -1,9 +1,9 @@
 result_date,company_name,name_norm,symbol,meeting_type,source,sector,is_fo,is_nifty50,is_nifty_next50,is_banknifty,market_cap_tier,importance_score,updated_at
 2026-09-02,Technocraft Ventures Limited,TECHNOCRAFT VENTURES,TECHNOCRAF,Financial Results,nse_official_file,,False,False,False,False,,0,2026-09-02T17:13:03.603362+00:00
-2026-09-04,Dhoot Transmission Limited,DHOOT TRANSMISSION,DHOOTTRANS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-09-03T14:51:33.313735+00:00
-2026-09-05,Molbio Diagnostics Limited,MOLBIO DIAGNOSTICS,MOLBIO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-09-03T14:51:33.313735+00:00
-2026-09-07,Behari Lal Engineering Limited,BEHARI LAL ENGINEERING,BLEL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-09-03T14:51:33.313735+00:00
-2026-09-07,Kotyark Industries Limited,KOTYARK INDUSTRIES,KOTYARK,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-09-03T14:51:33.313735+00:00
-2026-09-07,Shiprocket Limited,SHIPROCKET,SHIPROCKET,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-09-03T14:51:33.313735+00:00
-2026-10-17,The India Cements Limited,THE INDIA CEMENTS,INDIACEM,Financial Results,nse_official_file,Cement,True,False,False,False,mid,25,2026-09-03T14:51:33.313735+00:00
-2026-10-19,UltraTech Cement Limited,ULTRATECH CEMENT,ULTRACEMCO,Financial Results,nse_official_file,Cement,True,True,False,False,large,75,2026-09-03T14:51:33.313735+00:00
+2026-09-04,Dhoot Transmission Limited,DHOOT TRANSMISSION,DHOOTTRANS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-09-03T17:04:44.084377+00:00
+2026-09-05,Molbio Diagnostics Limited,MOLBIO DIAGNOSTICS,MOLBIO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-09-03T17:04:44.084377+00:00
+2026-09-07,Behari Lal Engineering Limited,BEHARI LAL ENGINEERING,BLEL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-09-03T17:04:44.084377+00:00
+2026-09-07,Kotyark Industries Limited,KOTYARK INDUSTRIES,KOTYARK,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-09-03T17:04:44.084377+00:00
+2026-09-07,Shiprocket Limited,SHIPROCKET,SHIPROCKET,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-09-03T17:04:44.084377+00:00
+2026-10-17,The India Cements Limited,THE INDIA CEMENTS,INDIACEM,Financial Results,nse_official_file,Cement,True,False,False,False,mid,25,2026-09-03T17:04:44.084377+00:00
+2026-10-19,UltraTech Cement Limited,ULTRATECH CEMENT,ULTRACEMCO,Financial Results,nse_official_file,Cement,True,True,False,False,large,75,2026-09-03T17:04:44.084377+00:00
