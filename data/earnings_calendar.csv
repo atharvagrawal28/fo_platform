@@ -1,10 +1,17 @@
 result_date,company_name,name_norm,symbol,meeting_type,source,sector,is_fo,is_nifty50,is_nifty_next50,is_banknifty,market_cap_tier,importance_score,updated_at
-2026-09-04,Dhoot Transmission Limited,DHOOT TRANSMISSION,DHOOTTRANS,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-09-04T16:54:00.714486+00:00
-2026-09-05,Molbio Diagnostics Limited,MOLBIO DIAGNOSTICS,MOLBIO,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-09-04T16:54:00.714486+00:00
-2026-09-07,Behari Lal Engineering Limited,BEHARI LAL ENGINEERING,BLEL,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-09-04T16:54:00.714486+00:00
-2026-09-07,Kotyark Industries Limited,KOTYARK INDUSTRIES,KOTYARK,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-09-04T16:54:00.714486+00:00
-2026-09-07,Shiprocket Limited,SHIPROCKET,SHIPROCKET,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-09-04T16:54:00.714486+00:00
-2026-09-10,Gaja Alternative Asset Management Limited,GAJA ALTERNATIVE ASSET MANAGEMENT,GAJA,Financial Results,nse_official_file,nan,False,False,False,False,nan,0,2026-09-04T16:54:00.714486+00:00
-2026-09-11,Lalithaa Jewellery Mart Limited,LALITHAA JEWELLERY MART,LALITHAA,Financial Results/Other business matters,nse_official_file,nan,False,False,False,False,nan,0,2026-09-04T16:54:00.714486+00:00
+2026-09-04,Dhoot Transmission Limited,DHOOT TRANSMISSION,DHOOTTRANS,Financial Results,nse_official_file,,False,False,False,False,,0,2026-09-04T16:54:00.714486+00:00
+2026-09-05,Molbio Diagnostics Ltd,MOLBIO DIAGNOSTICS,MOLBIO,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-09-05T07:03:34.291240+00:00
+2026-09-07,Behari Lal Engineering Ltd,BEHARI LAL ENGINEERING,BLEL,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-09-05T07:03:34.291240+00:00
+2026-09-07,Kotyark Industries Ltd,KOTYARK INDUSTRIES,KOTYARK,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-09-05T07:03:34.291240+00:00
+2026-09-07,Shiprocket Ltd,SHIPROCKET,SHIPROCKET,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-09-05T07:03:34.291240+00:00
+2026-09-07,SSPN Finance Ltd,SSPN FINANCE,SSPNFIN,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-09-05T07:03:34.291240+00:00
+2026-09-08,Maruti Interior Products Ltd,MARUTI INTERIOR PRODUCTS,SPITZE,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-09-05T07:03:34.291240+00:00
+2026-09-08,SRU Steels Ltd,SRU STEELS,SRUSTEELS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-09-05T07:03:34.291240+00:00
+2026-09-09,Ind Agiv Commerce Ltd,IND AGIV COMMERCE,INDAGIV,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-09-05T07:03:34.291240+00:00
+2026-09-09,Nova Iron & Steel Ltd,NOVA IRON STEEL,NOVIS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-09-05T07:03:34.291240+00:00
+2026-09-10,Gaja Alternative Asset Management Ltd,GAJA ALTERNATIVE ASSET MANAGEMENT,GAJA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-09-05T07:03:34.291240+00:00
+2026-09-11,Lalithaa Jewellery Mart Ltd,LALITHAA JEWELLERY MART,LALITHAA,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-09-05T07:03:34.291240+00:00
+2026-09-11,Nova Iron & Steel Ltd,NOVA IRON STEEL,NOVIS,Forthcoming Results,bse_official_file,nan,False,False,False,False,nan,0,2026-09-05T07:03:34.291240+00:00
+2026-10-17,India Cements Ltd,INDIA CEMENTS,INDIACEM,Forthcoming Results,bse_official_file,Cement,True,False,False,False,mid,25,2026-09-05T07:03:34.291240+00:00
 2026-10-17,The India Cements Limited,THE INDIA CEMENTS,INDIACEM,Financial Results,nse_official_file,Cement,True,False,False,False,mid,25,2026-09-04T16:54:00.714486+00:00
-2026-10-19,UltraTech Cement Limited,ULTRATECH CEMENT,ULTRACEMCO,Financial Results,nse_official_file,Cement,True,True,False,False,large,75,2026-09-04T16:54:00.714486+00:00
+2026-10-19,UltraTech Cement Ltd,ULTRATECH CEMENT,ULTRACEMCO,Forthcoming Results,bse_official_file,Cement,True,True,False,False,large,75,2026-09-05T07:03:34.291240+00:00
