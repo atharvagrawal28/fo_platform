@@ -48,7 +48,7 @@ GODREJPROP,2026-10-27,2026-10-01,1607.0,1642.8,-2.18,9325225,-121550,2917,-1.29,
 GRASIM,2026-10-27,2026-10-01,2979.9,3068.0,-2.87,7250250,51500,5944,0.72,Neutral,Weak,Grasim Industries,Diversified,large,True,False,False,False,,
 HAL,2026-10-27,2026-10-01,4629.8,4704.0,-1.58,5143650,-67050,3436,-1.29,Neutral,Weak,Hindustan Aeronautics,Defence,large,False,False,False,False,,
 HAVELLS,2026-10-27,2026-10-01,1045.0,1022.7,2.18,10217500,-47500,5131,-0.46,Neutral,Weak,Havells India,Consumer Goods,large,False,False,True,False,,
-HCLTECH,2026-10-27,2026-10-01,1242.6,1224.6,1.47,24547600,215600,8959,0.89,Neutral,Weak,HCL Technologies,Information Technology,large,True,False,False,False,,
+HCLTECH,2026-10-27,2026-10-01,1242.6,1224.6,1.47,24547600,215600,8959,0.89,Neutral,Weak,HCL Technologies,Information Technology,large,True,False,False,True,2026-10-12,7.0
 HDFCAMC,2026-10-27,2026-10-01,2320.0,2301.6,0.8,6634200,-205500,3579,-3.0,Short Covering,Moderate,HDFC AMC,Financial Services,large,False,False,True,False,,
 HDFCBANK,2026-10-27,2026-10-01,723.0,715.55,1.04,361305100,-5285150,43170,-1.44,Neutral,Weak,HDFC Bank,Banking,large,True,True,False,False,,
 HDFCLIFE,2026-10-27,2026-10-01,537.5,519.45,3.47,41285200,-160600,5159,-0.39,Neutral,Weak,HDFC Life,Financial Services,large,True,False,False,False,,
@@ -129,7 +129,7 @@ SUNPHARMA,2026-10-27,2026-10-01,1812.9,1831.9,-1.04,15345400,351050,3882,2.34,Sh
 TATACONSUM,2026-10-27,2026-10-01,956.8,957.6,-0.08,15958800,-125950,2261,-0.78,Neutral,Weak,Tata Consumer Products,Consumer Goods,large,True,False,True,False,,
 TATAELXSI,2026-10-27,2026-10-01,3103.6,3089.3,0.46,2368500,27625,3087,1.18,Neutral,Weak,Tata Elxsi,Information Technology,mid,False,False,True,False,,
 TATASTEEL,2026-10-27,2026-10-01,178.98,186.07,-3.81,305063000,-3498000,15883,-1.13,Neutral,Weak,Tata Steel,Metals & Mining,large,True,False,False,False,,
-TCS,2026-10-27,2026-10-01,2076.4,2055.2,1.03,27495450,499725,16901,1.85,Neutral,Weak,Tata Consultancy Services,Information Technology,large,True,False,False,True,2026-10-08,4.0
+TCS,2026-10-27,2026-10-01,2076.4,2055.2,1.03,27495450,499725,16901,1.85,Neutral,Weak,Tata Consultancy Services,Information Technology,large,True,False,False,True,2026-10-08,3.0
 TECHM,2026-10-27,2026-10-01,1533.7,1531.0,0.18,15039000,251400,6203,1.7,Neutral,Weak,Tech Mahindra,Information Technology,large,True,False,False,False,,
 TIINDIA,2026-10-27,2026-10-01,2355.1,2400.5,-1.89,2620000,112600,1779,4.49,Short Buildup,Moderate,Tube Investments,Automobile,mid,False,False,False,False,,
 TITAN,2026-10-27,2026-10-01,4547.6,4627.5,-1.73,5289375,117950,5037,2.28,Short Buildup,Moderate,Titan Company,Consumer Goods,large,True,False,False,False,,
