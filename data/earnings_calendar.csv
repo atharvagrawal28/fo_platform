@@ -1,12 +1,13 @@
 result_date,company_name,name_norm,symbol,meeting_type,source,sector,is_fo,is_nifty50,is_nifty_next50,is_banknifty,market_cap_tier,importance_score,updated_at
-2026-11-16,Sandhar Technologies Limited,SANDHAR TECHNOLOGIES,SANDHAR,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-16T10:02:52.801707+00:00
-2026-11-17,Libas Consumer Products Limited,LIBAS CONSUMER PRODUCTS,LIBAS,Financial Results/Other business matters,nse_official_file,,False,False,False,False,,0,2026-11-16T10:02:52.801707+00:00
-2026-11-18,Ansal Properties & Infrastructure Limited,ANSAL PROPERTIES INFRASTRUCTURE,ANSALAPI,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-16T10:02:52.801707+00:00
-2026-11-18,BLS Polymers Limited,BLS POLYMERS,BLSPOLY,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-16T10:02:52.801707+00:00
-2026-11-18,GVP Infotech Limited,GVP INFOTECH,GVPTECH,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-16T10:02:52.801707+00:00
-2026-11-19,Antarctica Limited,ANTARCTICA,ANTGRAPHIC,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-16T10:02:52.801707+00:00
-2026-11-19,Muthoot Microfin Limited,MUTHOOT MICROFIN,MUTHOOTMF,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-16T10:02:52.801707+00:00
-2026-11-20,Valecha Engineering Limited,VALECHA ENGINEERING,VALECHAENG,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-16T10:02:52.801707+00:00
-2026-11-28,Bharat Road Network Limited,BHARAT ROAD NETWORK,BRNL,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-16T10:02:52.801707+00:00
-2026-12-05,Latteys Industries Limited,LATTEYS INDUSTRIES,LATTEYS,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-16T10:02:52.801707+00:00
-2026-12-05,R&B Denims Limited,R B DENIMS,RNBDENIMS,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-16T10:02:52.801707+00:00
+2026-11-16,Sandhar Technologies Limited,SANDHAR TECHNOLOGIES,SANDHAR,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-16T20:46:43.008863+00:00
+2026-11-17,Libas Consumer Products Limited,LIBAS CONSUMER PRODUCTS,LIBAS,Financial Results/Other business matters,nse_official_file,,False,False,False,False,,0,2026-11-16T20:46:43.008863+00:00
+2026-11-18,Ansal Properties & Infrastructure Limited,ANSAL PROPERTIES INFRASTRUCTURE,ANSALAPI,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-16T20:46:43.008863+00:00
+2026-11-18,BLS Polymers Limited,BLS POLYMERS,BLSPOLY,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-16T20:46:43.008863+00:00
+2026-11-18,GVP Infotech Limited,GVP INFOTECH,GVPTECH,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-16T20:46:43.008863+00:00
+2026-11-19,Antarctica Limited,ANTARCTICA,ANTGRAPHIC,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-16T20:46:43.008863+00:00
+2026-11-19,Muthoot Microfin Limited,MUTHOOT MICROFIN,MUTHOOTMF,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-16T20:46:43.008863+00:00
+2026-11-20,Valecha Engineering Limited,VALECHA ENGINEERING,VALECHAENG,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-16T20:46:43.008863+00:00
+2026-11-23,Bombay Coated and Special Steels Limited,BOMBAY COATED AND SPECIAL STEELS,BCSSL,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-16T20:46:43.008863+00:00
+2026-11-28,Bharat Road Network Limited,BHARAT ROAD NETWORK,BRNL,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-16T20:46:43.008863+00:00
+2026-12-05,Latteys Industries Limited,LATTEYS INDUSTRIES,LATTEYS,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-16T20:46:43.008863+00:00
+2026-12-05,R&B Denims Limited,R B DENIMS,RNBDENIMS,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-16T20:46:43.008863+00:00
