@@ -1,13 +1,13 @@
 result_date,company_name,name_norm,symbol,meeting_type,source,sector,is_fo,is_nifty50,is_nifty_next50,is_banknifty,market_cap_tier,importance_score,updated_at
-2026-11-23,Bombay Coated and Special Steels Limited,BOMBAY COATED AND SPECIAL STEELS,BCSSL,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-23T11:03:43.911855+00:00
-2026-11-23,SFC Environmental Technologies Limited,SFC ENVIRONMENTAL TECHNOLOGIES,SFCTECH,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-23T11:03:43.911855+00:00
-2026-11-24,Heads UP Ventures Limited,HEADS UP VENTURES,HEADSUP,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-23T11:03:43.911855+00:00
-2026-11-24,Lexus Granito (India) Limited,LEXUS GRANITO INDIA,LEXUS,Financial Results/Other business matters,nse_official_file,,False,False,False,False,,0,2026-11-23T11:03:43.911855+00:00
-2026-11-24,M. K. Sons Fine Jewels Limited,M K SONS FINE JEWELS,MKJEWELS,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-23T11:03:43.911855+00:00
-2026-11-24,Setco Automotive Limited,SETCO AUTOMOTIVE,SETCO,Financial Results/Other business matters,nse_official_file,,False,False,False,False,,0,2026-11-23T11:03:43.911855+00:00
-2026-11-25,Siemens Energy India Limited,SIEMENS ENERGY INDIA,ENRIN,Financial Results/Dividend,nse_official_file,,False,False,False,False,,0,2026-11-23T11:03:43.911855+00:00
-2026-11-25,Simbhaoli Sugars Limited,SIMBHAOLI SUGARS,SIMBHALS,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-23T11:03:43.911855+00:00
-2026-11-27,Setco Automotive Limited,SETCO AUTOMOTIVE,SETCO,Financial Results/Other business matters,nse_official_file,,False,False,False,False,,0,2026-11-23T11:03:43.911855+00:00
-2026-11-28,Bharat Road Network Limited,BHARAT ROAD NETWORK,BRNL,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-23T11:03:43.911855+00:00
-2026-12-05,Latteys Industries Limited,LATTEYS INDUSTRIES,LATTEYS,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-23T11:03:43.911855+00:00
-2026-12-05,R&B Denims Limited,R B DENIMS,RNBDENIMS,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-23T11:03:43.911855+00:00
+2026-11-23,Bombay Coated and Special Steels Limited,BOMBAY COATED AND SPECIAL STEELS,BCSSL,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-23T22:25:16.937015+00:00
+2026-11-23,SFC Environmental Technologies Limited,SFC ENVIRONMENTAL TECHNOLOGIES,SFCTECH,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-23T22:25:16.937015+00:00
+2026-11-24,Heads UP Ventures Limited,HEADS UP VENTURES,HEADSUP,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-23T22:25:16.937015+00:00
+2026-11-24,Lexus Granito (India) Limited,LEXUS GRANITO INDIA,LEXUS,Financial Results/Other business matters,nse_official_file,,False,False,False,False,,0,2026-11-23T22:25:16.937015+00:00
+2026-11-24,M. K. Sons Fine Jewels Limited,M K SONS FINE JEWELS,MKJEWELS,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-23T22:25:16.937015+00:00
+2026-11-24,Setco Automotive Limited,SETCO AUTOMOTIVE,SETCO,Financial Results/Other business matters,nse_official_file,,False,False,False,False,,0,2026-11-23T22:25:16.937015+00:00
+2026-11-25,Siemens Energy India Limited,SIEMENS ENERGY INDIA,ENRIN,Financial Results/Dividend,nse_official_file,,False,False,False,False,,0,2026-11-23T22:25:16.937015+00:00
+2026-11-25,Simbhaoli Sugars Limited,SIMBHAOLI SUGARS,SIMBHALS,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-23T22:25:16.937015+00:00
+2026-11-27,Setco Automotive Limited,SETCO AUTOMOTIVE,SETCO,Financial Results/Other business matters,nse_official_file,,False,False,False,False,,0,2026-11-23T22:25:16.937015+00:00
+2026-11-28,Bharat Road Network Limited,BHARAT ROAD NETWORK,BRNL,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-23T22:25:16.937015+00:00
+2026-12-05,Latteys Industries Limited,LATTEYS INDUSTRIES,LATTEYS,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-23T22:25:16.937015+00:00
+2026-12-05,R&B Denims Limited,R B DENIMS,RNBDENIMS,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-23T22:25:16.937015+00:00
