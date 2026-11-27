@@ -1,6 +1,6 @@
 result_date,company_name,name_norm,symbol,meeting_type,source,sector,is_fo,is_nifty50,is_nifty_next50,is_banknifty,market_cap_tier,importance_score,updated_at
-2026-11-27,Setco Automotive Limited,SETCO AUTOMOTIVE,SETCO,Financial Results/Other business matters,nse_official_file,,False,False,False,False,,0,2026-11-27T11:13:48.991495+00:00
-2026-11-28,Bharat Road Network Limited,BHARAT ROAD NETWORK,BRNL,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-27T11:13:48.991495+00:00
-2026-12-03,J.K.Shah Commerce Education Limited,J K SHAH COMMERCE EDUCATION,JKSHAH,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-27T11:13:48.991495+00:00
-2026-12-05,Latteys Industries Limited,LATTEYS INDUSTRIES,LATTEYS,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-27T11:13:48.991495+00:00
-2026-12-05,R&B Denims Limited,R B DENIMS,RNBDENIMS,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-27T11:13:48.991495+00:00
+2026-11-27,Setco Automotive Limited,SETCO AUTOMOTIVE,SETCO,Financial Results/Other business matters,nse_official_file,,False,False,False,False,,0,2026-11-27T19:46:15.795284+00:00
+2026-11-28,Bharat Road Network Limited,BHARAT ROAD NETWORK,BRNL,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-27T19:46:15.795284+00:00
+2026-12-03,J.K.Shah Commerce Education Limited,J K SHAH COMMERCE EDUCATION,JKSHAH,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-27T19:46:15.795284+00:00
+2026-12-05,Latteys Industries Limited,LATTEYS INDUSTRIES,LATTEYS,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-27T19:46:15.795284+00:00
+2026-12-05,R&B Denims Limited,R B DENIMS,RNBDENIMS,Financial Results,nse_official_file,,False,False,False,False,,0,2026-11-27T19:46:15.795284+00:00
